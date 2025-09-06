@@ -1,0 +1,13 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:33:27:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any ```, Triple quotes and Backtick in the output.
+
+BLEU_Smooth:{'bleu': 0.14440567609923036, 'precisions': [0.7225333907798362, 0.5749480558029089, 0.472911676265226, 0.4099049419673336], 'brevity_penalty': 0.271079598305922, 'length_ratio': 0.4337749719649458, 'translation_length': 20888, 'reference_length': 48154}
+EM: {'em_ratio': 0.021, 'matches': 21, 'total': 1000}
+CodeBleu: {'codebleu': 20.355800475284017, 'ngram_match_score': 0.14159300174528455, 'weighted_ngram_match_score': 0.22646291058877605, 'syntax_match_score': 0.22136038186157517, 'dataflow_match_score': 0.22481572481572482}
+
+BLEU_Smooth: {'bleu': 0.13610033024834664, 'precisions': [0.7559118236472946, 0.6028206989526081, 0.4967369209371991, 0.4311896218603367], 'brevity_penalty': 0.24349815240571104, 'length_ratio': 0.41448270133322257, 'translation_length': 19959, 'reference_length': 48154}
+EM: {'em_ratio': 0.026, 'matches': 26, 'total': 1000}
+CodeBleu: {'codebleu': 20.089023692593234, 'ngram_match_score': 0.13331700399813254, 'weighted_ngram_match_score': 0.22675893827337812, 'syntax_match_score': 0.22276428471149795, 'dataflow_match_score': 0.22072072072072071}
+

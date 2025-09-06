@@ -1,0 +1,13 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:32:11:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any ```, Triple quotes and Backtick in the output.
+
+BLEU_Smooth:{'bleu': 0.4047483427617088, 'precisions': [0.5444918058828202, 0.45953460749379116, 0.4021882559929624, 0.35996080078398435], 'brevity_penalty': 0.9277619087411324, 'length_ratio': 0.9302497413920496, 'translation_length': 37770, 'reference_length': 40602}
+EM: {'em_ratio': 0.046, 'matches': 46, 'total': 1000}
+CodeBleu: {'codebleu': 39.16641943889185, 'ngram_match_score': 0.4012292062598883, 'weighted_ngram_match_score': 0.4083629822082068, 'syntax_match_score': 0.33404066324516385, 'dataflow_match_score': 0.4230239258424151}
+
+BLEU_Smooth: {'bleu': 0.4047321422178005, 'precisions': [0.5779893587230468, 0.48848044820489367, 0.42823008333818985, 0.3839389167830298], 'brevity_penalty': 0.8719490553065902, 'length_ratio': 0.8794886951381705, 'translation_length': 35709, 'reference_length': 40602}
+EM: {'em_ratio': 0.084, 'matches': 84, 'total': 1000}
+CodeBleu: {'codebleu': 39.463499671485216, 'ngram_match_score': 0.4009884017710845, 'weighted_ngram_match_score': 0.41128158768612644, 'syntax_match_score': 0.34312080536912754, 'dataflow_match_score': 0.4231491920330703}
+

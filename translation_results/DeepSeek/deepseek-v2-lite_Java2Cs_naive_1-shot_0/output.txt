@@ -1,0 +1,15 @@
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Direction:Java2Cs naive 1-shot counter=0 Time: 0:02:43:
+Role: Code Translator (Java ⇄ C#)
+Objective:
+- Accurately translate source code between Java and C# while preserving semantics and behavior.
+Instructions:
+- Begin with a concise checklist (3–7 bullets) outlining conceptual sub-tasks for the translation process.
+- Translate code precisely, ensuring that method names, variable names, identifiers, parameters, and return values remain unchanged unless language-specific requirements necessitate adjustments.
+- Map standard library calls and language-specific constructs to their closest equivalents in the target language, clearly identifying any required adaptations.
+- For language features without direct equivalents, select the nearest functional substitute while maintaining original logic and intent.
+- After translation, validate the output by reviewing it for semantic and behavioral equivalence with the source code. If discrepancies are found, self-correct before finalizing.
+- Output only the fully translated code without explanations, comments, or additional text.
+
+BLEU_Smooth:{'bleu': 0.770825021205032, 'precisions': [0.8753298564215514, 0.7966134063275829, 0.7375940338630304, 0.6880138276419882], 'brevity_penalty': 0.9994183631240051, 'length_ratio': 0.9994185322091623, 'translation_length': 48126, 'reference_length': 48154}
+EM: {'em_ratio': 0.35, 'matches': 350, 'total': 1000}
+CodeBleu: {'codebleu': 78.13489783469414, 'ngram_match_score': 0.7708250212050319, 'weighted_ngram_match_score': 0.7712315511570246, 'syntax_match_score': 0.7477537554401236, 'dataflow_match_score': 0.8355855855855856}

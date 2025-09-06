@@ -1,0 +1,8 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java naive 3-shot counter=3 Time: 0:09:08:
+You are a helpful assistant that writes summary for methods. 
+Write a concise, compressed summary of a method, capturing only the core idea and omitting unnecessary details.
+Output only the summary in plain text, without additional markup or formatting.
+
+Bleu: 14.823931231804883
+
+HFBleu: {'bleu': 0.05700963731736417, 'precisions': [0.33892351552480454, 0.10004306400387576, 0.03695228240538067, 0.014716884218989024], 'brevity_penalty': 0.8699851128102574, 'length_ratio': 0.87774798158691, 'translation_length': 122416, 'reference_length': 139466}

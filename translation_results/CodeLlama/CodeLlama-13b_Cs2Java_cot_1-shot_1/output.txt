@@ -1,0 +1,13 @@
+codellama/CodeLlama-13b-Instruct-hf Direction:Cs2Java cot 1-shot counter=0 Time: 0:17:30:
+Your role is to serve as a professional code translator, converting source code to the designated target code.
+Ensure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.
+Your output should only contain your translated code.
+
+BLEU_Smooth:{'bleu': 0.3431201073717354, 'precisions': [0.4008106581614007, 0.35811953369094146, 0.32496007791884207, 0.2971579779373862], 'brevity_penalty': 1.0, 'length_ratio': 2.2239298556721345, 'translation_length': 90296, 'reference_length': 40602}
+EM: {'em_ratio': 0.255, 'matches': 255, 'total': 1000}
+CodeBleu: {'codebleu': 64.08652775183596, 'ngram_match_score': 0.3431201073717354, 'weighted_ngram_match_score': 0.7797732637356735, 'syntax_match_score': 0.6749407816818003, 'dataflow_match_score': 0.765626957284229}
+
+BLEU_Smooth: {'bleu': 0.5985827811001193, 'precisions': [0.6871728248825035, 0.6226091698804098, 0.5701998331413134, 0.5262453893234972], 'brevity_penalty': 1.0, 'length_ratio': 1.2891236884882518, 'translation_length': 52341, 'reference_length': 40602}
+EM: {'em_ratio': 0.392, 'matches': 392, 'total': 1000}
+CodeBleu: {'codebleu': 72.95165971749257, 'ngram_match_score': 0.5985827811001193, 'weighted_ngram_match_score': 0.7796429874384724, 'syntax_match_score': 0.7247335175681011, 'dataflow_match_score': 0.8151071025930101}
+

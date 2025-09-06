@@ -1,0 +1,1000 @@
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(field_1_vcenter);}```
+```csharppublic void AddAll(BlockList<T> src){if (src.Size == 0) return;int srcDirIdx = 0;for (; srcDirIdx < src.TailDirIdx; srcDirIdx++)AddAll(src.Directory[srcDirIdx], 0, BLOCK_SIZE);if (src.TailBlkIdx != 0)AddAll(src.TailBlock, 0, src.TailBlkIdx);}```
+```csharppublic void WriteByte(byte b){if (upto == blockSize){if (currentBlock != null){AddBlock(currentBlock);}currentBlock = new byte[blockSize];upto = 0;}currentBlock[upto++] = b;}```
+```csharppublic ObjectId GetObjectId() { return objectId; }```
+```csharppublic DeleteDomainEntryResult DeleteDomainEntry(DeleteDomainEntryRequest request){request = BeforeClientExecution(request);return ExecuteDeleteDomainEntry(request);}```
+```csharppublic long RamBytesUsed() => (termOffsets != null ? termOffsets.RamBytesUsed() : 0) + (termsDictOffsets != null ? termsDictOffsets.RamBytesUsed() : 0);```
+```csharppublic string GetFullMessage(){byte[] raw = buffer;int msgB = RawParseUtils.TagMessage(raw, 0);if (msgB < 0){return "";}return RawParseUtils.Decode(GuessEncoding(), raw, msgB, raw.Length);}```
+```csharppublic POIFSFileSystem() : this(true){_header.BATCount = 1;_header.BATArray = new int[] { 1 };BATBlock bb = BATBlock.CreateEmptyBATBlock(bigBlockSize, false);bb.OurBlockIndex = 1;_bat_blocks.Add(bb);SetNextBlock(0, POIFSConstants.END_OF_CHAIN);SetNextBlock(1, POIFSConstants.FAT_SECTOR_BLOCK);_property_table.StartBlock = 0;}```
+```csharppublic void Init(int address){slice = pool.buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];Debug.Assert(slice != null);upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;Debug.Assert(upto < slice.Length);}```
+```csharppublic SubmoduleAddCommand SetPath(string path) { this.path = path; return this; }```
+```csharppublic ListIngestionsResult ListIngestions(ListIngestionsRequest request) { request = BeforeClientExecution(request); return ExecuteListIngestions(request); }```
+```csharppublic QueryParserTokenManager(CharStream stream, int lexState){this(stream);SwitchTo(lexState);}```
+```csharppublic GetShardIteratorResult getShardIterator(GetShardIteratorRequest request){request = beforeClientExecution(request);return executeGetShardIterator(request);}```
+```csharppublic ModifyStrategyRequest() : base("aegis", "2016-11-11", "ModifyStrategy", "vipaegis"){SetMethod(MethodType.POST);}```
+```csharpusing System;using System.IO;public bool Ready(){lock (lockObject){if (inputStream == null){throw new IOException("StreamReader is closed");}try{return buffer.HasRemaining() || inputStream.Available > 0;}catch (IOException e){return false;}}}```
+```csharppublic EscherOptRecord GetOptRecord() { return _optRecord; }```
+```csharppublic lock (this){if (buffer == null){throw new ArgumentNullException("buffer", "buffer == null");}Array.CheckOffsetAndLength(offset, length, buffer.Length);if (length == 0){return 0;}int copylen = count - pos < length ? count - pos : length;for (int i = 0; i < copylen; i++){buffer[offset + i] = (byte)this.buffer[pos + i];}pos += copylen;return copylen;}```
+```csharppublic OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp) { this.sentenceOp = sentenceOp; }```
+```csharppublic void print(string str) { write(str ?? ((object)null).ToString()); }```
+```csharppublic class NotImplementedFunctionException : Exception{public string FunctionName { get; private set; }public NotImplementedFunctionException(string functionName, Exception cause) : base(functionName, cause){this.FunctionName = functionName;}}```
+```csharppublic V Next() { return base.NextEntry().Value; }```
+```csharppublic void ReadBytes(byte[] b, int offset, int len, bool useBuffer){int available = bufferLength - bufferPosition;if (len <= available){if (len > 0){Buffer.BlockCopy(buffer, bufferPosition, b, offset, len);}bufferPosition += len;}else{if (available > 0){Buffer.BlockCopy(buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len < bufferSize){Refill();if (bufferLength < len){Buffer.BlockCopy(buffer, 0, b, offset, bufferLength);throw new EndOfStreamException("read past EOF: " + this);}else{Buffer.BlockCopy(buffer, 0, b, offset, len);bufferPosition = len;}}else{long after = bufferStart + bufferPosition + len;if (after > Length()){throw new EndOfStreamException("read past EOF: " +
+```csharppublic TagQueueResult tagQueue(TagQueueRequest request) { request = beforeClientExecution(request); return executeTagQueue(request); }```
+```csharppublic void Remove() { throw new NotSupportedException(); }```
+```csharppublic CacheSubnetGroup ModifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request) { request = BeforeClientExecution(request); return ExecuteModifyCacheSubnetGroup(request); }```
+```csharppublic void SetParams(string params){base.SetParams(params);language = country = variant = "";string[] tokens = params.Split(',');if (tokens.Length > 0) language = tokens[0];if (tokens.Length > 1) country = tokens[1];if (tokens.Length > 2) variant = tokens[2];}```
+```csharppublic DeleteDocumentationVersionResult DeleteDocumentationVersion(DeleteDocumentationVersionRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteDocumentationVersion(request); }```
+```csharppublic bool Equals(object obj) {if (!(obj is FacetLabel other)) {return false;}if (length != other.length) {return false;}for (int i = length - 1; i >= 0; i--) {if (!components[i].Equals(other.components[i])) {return false;}}return true;}```
+```csharppublic GetInstanceAccessDetailsResult GetInstanceAccessDetails(GetInstanceAccessDetailsRequest request){request = BeforeClientExecution(request);return ExecuteGetInstanceAccessDetails(request);}```
+```csharppublic HSSFPolygon CreatePolygon(HSSFChildAnchor anchor){HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.SetParent(this);shape.SetAnchor(anchor);shapes.Add(shape);OnCreate(shape);return shape;}```
+```csharppublic string GetSheetName(int sheetIndex) { return GetBoundSheetRec(sheetIndex).GetSheetname(); }```
+```csharppublic GetDashboardResult GetDashboard(GetDashboardRequest request) { request = BeforeClientExecution(request); return ExecuteGetDashboard(request); }```
+```csharppublic AssociateSigninDelegateGroupsWithAccountResult AssociateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateSigninDelegateGroupsWithAccount(request); }```
+```csharppublic void AddMultipleBlanks(MulBlankRecord mbr){for (int j = 0; j < mbr.GetNumColumns(); j++){BlankRecord br = new BlankRecord();br.SetColumn((short)(j + mbr.GetFirstColumn()));br.SetRow(mbr.GetRow());br.SetXFIndex(mbr.GetXFAt(j));InsertCell(br);}}```
+```csharppublic static string Quote(string input){StringBuilder sb = new StringBuilder();sb.Append(@"\Q");int apos = 0;int k;while ((k = input.IndexOf(@"\E", apos)) >= 0){sb.Append(input.Substring(apos, k + 2)).Append(@"\\E\Q");apos = k + 2;}return sb.Append(input.Substring(apos)).Append(@"\E").ToString();}```
+```csharppublic void PutInt(int value) { throw new ReadOnlyBufferException(); }```
+```csharppublic ArrayPtg(object[,] values2d){int nColumns = values2d.GetLength(1);int nRows = values2d.GetLength(0);_nColumns = (short)nColumns;_nRows = (short)nRows;object[] vv = new object[_nColumns * _nRows];for (int r = 0; r < nRows; r++){object[] rowData = values2d[r];for (int c = 0; c < nColumns; c++){vv[GetValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}```
+```csharppublic GetIceServerConfigResult GetIceServerConfig(GetIceServerConfigRequest request) { request = BeforeClientExecution(request); return ExecuteGetIceServerConfig(request); }```
+```csharppublic string ToString() { return GetType().Name + " [" + GetValueAsString() + "]"; }```
+```csharppublic string ToString(string field) { return "ToChildBlockJoinQuery (" + parentQuery.ToString() + ")"; }```
+```csharppublic final void incRef() { refCount.InterlockedIncrement(); }```
+```csharppublic UpdateConfigurationSetSendingEnabledResult UpdateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateConfigurationSetSendingEnabled(request); }```
+```csharppublic int GetNextXBATChainOffset() { return GetXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE; }```
+```csharppublic void MultiplyByPowerOfTen(int pow10){TenPower tp = TenPower.GetInstance(Math.Abs(pow10));if (pow10 < 0){MulShift(tp.Divisor, tp.DivisorShift);}else{MulShift(tp.Multiplicand, tp.MultiplierShift);}}```
+```csharppublic string ToString(){StringBuilder b = new StringBuilder();int l = Length;b.Append(Path.DirectorySeparatorChar);for (int i = 0; i < l; i++){b.Append(GetComponent(i));if (i < l - 1){b.Append(Path.DirectorySeparatorChar);}}return b.ToString();}```
+```csharppublic InstanceProfileCredentialsProvider WithFetcher(ECSMetadataServiceCredentialsFetcher fetcher) { this.fetcher = fetcher; this.fetcher.SetRoleName(roleName); return this; }```
+```csharppublic void SetProgressMonitor(ProgressMonitor pm) { progressMonitor = pm; }```
+```csharppublic void Reset() { if (!First()) { ptr = 0; if (!Eof()) parseEntry(); } }```
+```csharppublic E Previous() {if (iterator.PreviousIndex() >= start) {return iterator.Previous();}throw new NoSuchElementException();}```
+```csharppublic string GetNewPrefix() { return this.newPrefix; }```
+```csharppublic int IndexOfValue(int value) { for (int i = 0; i < mSize; i++) if (mValues[i] == value) return i; return -1; }```
+```csharpusing System;using System.Collections.Generic;public class Program{public static List<CharsRef> UniqueStems(char[] word, int length){List<CharsRef> stems = Stem(word, length);if (stems.Count < 2){return stems;}HashSet<CharsRef> terms = new HashSet<CharsRef>(8, dictionary.IgnoreCase);List<CharsRef> deduped = new List<CharsRef>();foreach (CharsRef s in stems){if (!terms.Contains(s)){deduped.Add(s);terms.Add(s);}}return deduped;}}```
+```csharppublic GetGatewayResponsesResult GetGatewayResponses(GetGatewayResponsesRequest request) { request = BeforeClientExecution(request); return ExecuteGetGatewayResponses(request); }```
+```csharppublic void SetPosition(long pos) { currentBlockIndex = (int)(pos >> blockBits); currentBlock = blocks[currentBlockIndex]; currentBlockUpto = (int)(pos & blockMask); }```
+```csharppublic long Skip(long n) { int s = (int)Math.Min(Available(), Math.Max(0, n)); ptr += s; return s; }```
+```csharppublic BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig) { SetBootstrapActionConfig(bootstrapActionConfig); }```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(field_1_row);@out.WriteShort(field_2_col);@out.WriteShort(field_3_flags);@out.WriteShort(field_4_shapeid);@out.WriteShort((short)field_6_author.Length);@out.WriteByte(field_5_hasMultibyte ? (byte)0x01 : (byte)0x00);if (field_5_hasMultibyte) {StringUtil.PutUnicodeLE(field_6_author, @out);} else {StringUtil.PutCompressedUnicode(field_6_author, @out);}if (field_7_padding != null) {@out.WriteByte((byte)field_7_padding.Value);}}```
+```csharppublic int LastIndexOf(string @string) { return LastIndexOf(@string, count); }```
+```csharppublic bool Add(E obj) => AddLastImpl(obj);```
+```csharppublic void unsetSection(string section, string subsection){ConfigSnapshot src, res;do{src = state.Get();res = unsetSection(src, section, subsection);} while (!state.CompareAndSet(src, res));}```
+```csharppublic string GetTagName() { return tagName; }```
+```csharppublic void AddSubRecord(int index, SubRecord element) { subrecords.Insert(index, element); }```
+```csharppublic bool Remove(object o) {lock (mutex) {return delegate().Remove(o);}}```
+```csharppublic DoubleMetaphoneFilter Create(TokenStream input) => new DoubleMetaphoneFilter(input, maxCodeLength, inject);```
+```csharppublic long Length() { return InCoreLength(); }```
+```csharppublic void SetValue(bool newValue) { value = newValue; }```
+```csharppublic Pair(ContentSource oldSource, ContentSource newSource) { this.oldSource = oldSource; this.newSource = newSource; }```
+```csharppublic int Get(int i){if (count <= i)throw new IndexOutOfRangeException(i);return entries[i];}```
+```csharppublic CreateRepoRequest() : base("cr", "2016-06-07", "CreateRepo", "cr"){SetUriPattern("/repos");SetMethod(MethodType.PUT);}```
+```csharppublic bool IsDeltaBaseAsOffset() { return deltaBaseAsOffset; }```
+```csharppublic void Remove(){if (expectedModCount == list.modCount){if (lastLink != null){Link<ET> next = lastLink.next;Link<ET> previous = lastLink.previous;next.previous = previous;previous.next = next;if (lastLink == link){pos--;}link = previous;lastLink = null;expectedModCount++;list.size--;list.modCount++;}else{throw new InvalidOperationException();}}else{throw new InvalidOperationException();}}```
+```csharppublic MergeShardsResult MergeShards(MergeShardsRequest request) { request = BeforeClientExecution(request); return ExecuteMergeShards(request); }```
+```csharppublic AllocateHostedConnectionResult AllocateHostedConnection(AllocateHostedConnectionRequest request) { request = BeforeClientExecution(request); return ExecuteAllocateHostedConnection(request); }```
+```csharppublic int GetBeginIndex() { return start; }```
+```csharppublic static readonly WeightedTerm[] GetTerms(Query query) => GetTerms(query, false);```
+```csharppublic byte[] Compact() { throw new ReadOnlyBufferException(); }```
+```csharppublic void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int i = 0; i < iterations; ++i){final long byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = byte0 >> 2;final long byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | (byte1 >> 4);final long byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | (byte2 >> 6);values[valuesOffset++] = byte2 & 63;}}```
+```csharpusing System;using System.Text.RegularExpressions;public string GetHumanishName(){string s = GetPath();if ("/".Equals(s) || "".Equals(s))s = GetHost();if (s == null)throw new ArgumentException();string[] elements;if ("file".Equals(Scheme) || Regex.IsMatch(s, @"\\[" + Path.DirectorySeparatorChar + @"/]\+"))elements = s.Split(new char[] { Path.DirectorySeparatorChar, '/' }, StringSplitOptions.RemoveEmptyEntries);elseelements = s.Split('/', StringSplitOptions.RemoveEmptyEntries);if (elements.Length == 0)throw new ArgumentException();string result = elements[elements.Length - 1];if (Constants.DotGit.Equals(result))result = elements[elements.Length - 2];else if (result.EndsWith(Constants.DotGitExt))result = result.Substring(0, result.Length - Constants.DotGitExt.Length());return result;}```
+```csharppublic DescribeNotebookInstanceLifecycleConfigResult DescribeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeNotebookInstanceLifecycleConfig(request); }```
+```csharppublic string GetAccessKeySecret() { return this.accessKeySecret; }```
+```csharppublic CreateVpnConnectionResult CreateVpnConnection(CreateVpnConnectionRequest request) {request = BeforeClientExecution(request);return ExecuteCreateVpnConnection(request);}```
+```csharppublic DescribeVoicesResult DescribeVoices(DescribeVoicesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeVoices(request); }```
+```csharppublic ListMonitoringExecutionsResult ListMonitoringExecutions(ListMonitoringExecutionsRequest request) { request = BeforeClientExecution(request); return ExecuteListMonitoringExecutions(request); }```
+```csharppublic DescribeJobRequest(string vaultName, string jobId) { setVaultName(vaultName); setJobId(jobId); }```
+```csharppublic EscherRecord GetEscherRecord(int index) { return escherRecords[index]; }```
+```csharppublic GetApisResult GetApis(GetApisRequest request) { request = BeforeClientExecution(request); return ExecuteGetApis(request); }```
+```csharppublic DeleteSmsChannelResult DeleteSmsChannel(DeleteSmsChannelRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteSmsChannel(request); }```
+```csharppublic TrackingRefUpdate GetTrackingRefUpdate() { return trackingRefUpdate; }```
+```csharppublic void print(bool b) {print(b.ToString());}```
+```csharppublic QueryNode getChild() { return getChildren()[0]; }```
+```csharppublic NotIgnoredFilter(int workdirTreeIndex) { this.index = workdirTreeIndex; }```
+```csharppublic AreaRecord(RecordInputStream @in) { field_1_formatFlags = @in.ReadShort(); }```
+```csharppublic GetThumbnailRequest() : base("CloudPhoto", "2017-07-11", "GetThumbnail", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic DescribeTransitGatewayVpcAttachmentsResult DescribeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeTransitGatewayVpcAttachments(request); }```
+```csharppublic PutVoiceConnectorStreamingConfigurationResult PutVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request) { request = BeforeClientExecution(request); return ExecutePutVoiceConnectorStreamingConfiguration(request); }```
+```csharppublic OrdRange GetOrdRange(string dim) { return prefixToOrdRange[dim]; }```
+```csharppublic string ToString() {string symbol = "";if (startIndex >= 0 && startIndex < GetInputStream().Size) {symbol = GetInputStream().GetText(new Interval(startIndex, startIndex));symbol = Utils.EscapeWhitespace(symbol, false);}return string.Format(System.Globalization.CultureInfo.CurrentCulture, "{0}('{1}')", typeof(LexerNoViableAltException).Name, symbol);}```
+```csharppublic E Peek() { return PeekFirstImpl(); }```
+```csharppublic CreateWorkspacesResult CreateWorkspaces(CreateWorkspacesRequest request) { request = BeforeClientExecution(request); return ExecuteCreateWorkspaces(request); }```
+```csharppublic NumberFormatIndexRecord Clone() => Copy();```
+```csharppublic DescribeRepositoriesResult DescribeRepositories(DescribeRepositoriesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeRepositories(request); }```
+```csharppublic SparseIntArray(int initialCapacity){initialCapacity = ArrayUtils.idealIntArraySize(initialCapacity);mKeys = new int[initialCapacity];mValues = new int[initialCapacity];mSize = 0;}```
+```csharppublic HyphenatedWordsFilter Create(TokenStream input) { return new HyphenatedWordsFilter(input); }```
+```csharppublic CreateDistributionWithTagsResult CreateDistributionWithTags(CreateDistributionWithTagsRequest request) { request = BeforeClientExecution(request); return ExecuteCreateDistributionWithTags(request); }```
+```csharppublic RandomAccessFile(string fileName, string mode) : this(new File(fileName), mode) { }```
+```csharppublic DeleteWorkspaceImageResult DeleteWorkspaceImage(DeleteWorkspaceImageRequest request){request = BeforeClientExecution(request);return ExecuteDeleteWorkspaceImage(request);}```
+```csharppublic static string ToHex(long value) {StringBuilder sb = new StringBuilder(16);WriteHex(sb, value, 16, "");return sb.ToString();}```
+```csharppublic UpdateDistributionResult updateDistribution(UpdateDistributionRequest request) { request = beforeClientExecution(request); return executeUpdateDistribution(request); }```
+```csharppublic HSSFColor getColor(short index){if (index == HSSFColorPredefined.AUTOMATIC.GetIndex()){return HSSFColorPredefined.AUTOMATIC.GetColor();}byte[] b = _palette.GetColor(index);return (b == null) ? null : new CustomColor(index, b);}```
+```csharppublic IValue Evaluate(IValue[] operands, int srcRow, int srcCol) { throw new NotImplementedException(_functionName); }```
+```csharppublic void Serialize(BinaryWriter writer) {writer.Write((short)field_1_number_crn_records);writer.Write((short)field_2_sheet_table_index);}```
+```csharppublic DescribeDBEngineVersionsResult DescribeDBEngineVersions() { return DescribeDBEngineVersions(new DescribeDBEngineVersionsRequest()); }```
+```csharppublic FormatRun(short character, short fontIndex) { this._character = character; this._fontIndex = fontIndex; }```
+```csharppublic static byte[] ToBigEndianUtf16Bytes(char[] chars, int offset, int length){byte[] result = new byte[length * 2];int end = offset + length;int resultIndex = 0;for (int i = offset; i < end; ++i){char ch = chars[i];result[resultIndex++] = (byte)(ch >> 8);result[resultIndex++] = (byte)ch;}return result;}```
+```csharppublic UploadArchiveResult UploadArchive(UploadArchiveRequest request){request = BeforeClientExecution(request);return ExecuteUploadArchive(request);}```
+```csharppublic List<Token> GetHiddenTokensToLeft(int tokenIndex) { return GetHiddenTokensToLeft(tokenIndex, -1); }```
+```csharppublic bool Equals(object obj) {if (this == obj) return true;if (!base.Equals(obj)) return false;if (GetType() != obj.GetType()) return false;AutomatonQuery other = (AutomatonQuery)obj;if (!compiled.Equals(other.compiled)) return false;if (term == null) {if (other.term != null) return false;} else if (!term.Equals(other.term)) return false;return true;}```
+```csharppublic SpanQuery MakeSpanClause(){SpanQuery[] spanQueries = new SpanQuery[size()];IEnumerator<SpanQuery> sqi = weightBySpanQuery.Keys.GetEnumerator();int i = 0;while (sqi.MoveNext()){SpanQuery sq = sqi.Current;float boost = weightBySpanQuery[sq];if (boost != 1f){sq = new SpanBoostQuery(sq, boost);}spanQueries[i++] = sq;}if (spanQueries.Length == 1)return spanQueries[0];elsereturn new SpanOrQuery(spanQueries);}```
+```csharppublic StashCreateCommand StashCreate() { return new StashCreateCommand(repo); }```
+```csharppublic FieldInfo fieldInfo(string fieldName) { return byName[fieldName]; }```
+```csharppublic DescribeEventSourceResult DescribeEventSource(DescribeEventSourceRequest request){request = BeforeClientExecution(request);return ExecuteDescribeEventSource(request);}```
+```csharppublic GetDocumentAnalysisResult GetDocumentAnalysis(GetDocumentAnalysisRequest request) { request = BeforeClientExecution(request); return ExecuteGetDocumentAnalysis(request); }```
+```csharppublic CancelUpdateStackResult cancelUpdateStack(CancelUpdateStackRequest request){request = beforeClientExecution(request);return executeCancelUpdateStack(request);}```
+```csharppublic ModifyLoadBalancerAttributesResult ModifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest request) { request = BeforeClientExecution(request); return ExecuteModifyLoadBalancerAttributes(request); }```
+```csharppublic SetInstanceProtectionResult SetInstanceProtection(SetInstanceProtectionRequest request) { request = BeforeClientExecution(request); return ExecuteSetInstanceProtection(request); }```
+```csharppublic ModifyDBProxyResult modifyDBProxy(ModifyDBProxyRequest request) { request = beforeClientExecution(request); return executeModifyDBProxy(request); }```
+```csharppublic void Add(char[] output, int offset, int len, int endOffset, int posLength){if (count == outputs.Length){outputs = ArrayUtil.Grow(outputs, count + 1);}if (count == endOffsets.Length){int[] next = new int[ArrayUtil.Oversize(1 + count, sizeof(int))];Array.Copy(endOffsets, 0, next, 0, count);endOffsets = next;}if (count == posLengths.Length){int[] next = new int[ArrayUtil.Oversize(1 + count, sizeof(int))];Array.Copy(posLengths, 0, next, 0, count);posLengths = next;}if (outputs[count] == null){outputs[count] = new CharsRefBuilder();}outputs[count].CopyChars(output, offset, len);endOffsets[count] = endOffset;posLengths[count] = posLength;count++;}```
+```csharppublic FetchLibrariesRequest() : base("CloudPhoto", "2017-07-11", "FetchLibraries", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic bool Exists() { return fs.Exists(objects); }```
+```csharppublic FilterOutputStream(OutputStream out) { this.out = out; }```
+```csharppublic ScaleClusterRequest() : base("CS", "2015-12-15", "ScaleCluster", "csk"){SetUriPattern("/clusters/[ClusterId]");SetMethod(MethodType.PUT);}```
+```csharppublic DataValidationConstraint CreateTimeConstraint(int operatorType, string formula1, string formula2) { return DVConstraint.CreateTimeConstraint(operatorType, formula1, formula2); }```
+```csharppublic ListObjectParentPathsResult listObjectParentPaths(ListObjectParentPathsRequest request){request = BeforeClientExecution(request);return ExecuteListObjectParentPaths(request);}```
+```csharppublic DescribeCacheSubnetGroupsResult DescribeCacheSubnetGroups(DescribeCacheSubnetGroupsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeCacheSubnetGroups(request); }```
+```csharppublic void SetSharedFormula(bool flag) { field_5_options = sharedFormula.SetShortBoolean(field_5_options, flag); }```
+```csharppublic bool IsReuseObjects() { return reuseObjects; }```
+```csharppublic ErrorNode AddErrorNode(Token badToken){ErrorNodeImpl t = new ErrorNodeImpl(badToken);AddAnyChild(t);t.SetParent(this);return t;}```
+```csharppublic LatvianStemFilterFactory(Dictionary<string, string> args) : base(args){if (!args.Any()){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args));}}```
+```csharppublic EventSubscription RemoveSourceIdentifierFromSubscription(RemoveSourceIdentifierFromSubscriptionRequest request) { request = BeforeClientExecution(request); return ExecuteRemoveSourceIdentifierFromSubscription(request); }```
+```csharppublic static TokenFilterFactory ForName(string name, Dictionary<string, string> args) { return loader.NewInstance(name, args); }```
+```csharppublic AddAlbumPhotosRequest() : base("CloudPhoto", "2017-07-11", "AddAlbumPhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic GetThreatIntelSetResult GetThreatIntelSet(GetThreatIntelSetRequest request) { request = BeforeClientExecution(request); return ExecuteGetThreatIntelSet(request); }```
+```csharppublic RevFilter Clone() { return new Binary(a.Clone(), b.Clone()); }```
+```csharppublic bool Equals(object o) { return o is ArmenianStemmer; }```
+```csharppublic bool HasArray() { return ProtectedHasArray(); }```
+```csharppublic UpdateContributorInsightsResult UpdateContributorInsights(UpdateContributorInsightsRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateContributorInsights(request); }```
+```csharppublic void UnwriteProtectWorkbook() { records.Remove(fileShare); records.Remove(writeProtect); fileShare = null; writeProtect = null; }```
+```csharppublic SolrSynonymParser(bool dedup, bool expand, Analyzer analyzer) : base(dedup, analyzer){this.expand = expand;}```
+```csharppublic RequestSpotInstancesResult RequestSpotInstances(RequestSpotInstancesRequest request) { request = BeforeClientExecution(request); return ExecuteRequestSpotInstances(request); }```
+```csharppublic byte[] GetObjectData() { return FindObjectRecord().GetObjectData(); }```
+```csharppublic GetContactAttributesResult GetContactAttributes(GetContactAttributesRequest request) { request = BeforeClientExecution(request); return ExecuteGetContactAttributes(request); }```
+```csharppublic string ToString() { return GetKey() + ": " + GetValue(); }```
+```csharppublic ListTextTranslationJobsResult listTextTranslationJobs(ListTextTranslationJobsRequest request){request = beforeClientExecution(request);return executeListTextTranslationJobs(request);}```
+```csharppublic GetContactMethodsResult getContactMethods(GetContactMethodsRequest request) { request = beforeClientExecution(request); return executeGetContactMethods(request); }```
+```csharppublic static short LookupIndexByName(string name){FunctionMetadata fd = GetInstance().GetFunctionByNameInternal(name);if (fd == null){fd = GetInstanceCetab().GetFunctionByNameInternal(name);if (fd == null){return -1;}}return (short)fd.GetIndex();}```
+```csharppublic DescribeAnomalyDetectorsResponse DescribeAnomalyDetectors(DescribeAnomalyDetectorsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeAnomalyDetectors(request); }```
+```csharppublic static string InsertId(string message, ObjectId changeId) { return InsertId(message, changeId, false); }```
+```csharppublic long GetObjectSize(AnyObjectId objectId, int typeHint) throws MissingObjectException, IncorrectObjectTypeException, IOException {long sz = db.GetObjectSize(this, objectId);if (sz < 0) {if (typeHint == OBJ_ANY)throw new MissingObjectException(objectId.Copy(), JGitText.Get().UnknownObjectType2);throw new MissingObjectException(objectId.Copy(), typeHint);}return sz;}```
+```csharppublic ImportInstallationMediaResult ImportInstallationMedia(ImportInstallationMediaRequest request) { request = BeforeClientExecution(request); return ExecuteImportInstallationMedia(request); }```
+```csharppublic PutLifecycleEventHookExecutionStatusResult PutLifecycleEventHookExecutionStatus(PutLifecycleEventHookExecutionStatusRequest request){request = BeforeClientExecution(request);return ExecutePutLifecycleEventHookExecutionStatus(request);}```
+```csharppublic NumberPtg(LittleEndianInput in) : this(in.ReadDouble()) { }```
+```csharppublic GetFieldLevelEncryptionConfigResult GetFieldLevelEncryptionConfig(GetFieldLevelEncryptionConfigRequest request) { request = BeforeClientExecution(request); return ExecuteGetFieldLevelEncryptionConfig(request); }```
+```csharppublic DescribeDetectorResult DescribeDetector(DescribeDetectorRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDetector(request); }```
+```csharppublic ReportInstanceStatusResult reportInstanceStatus(ReportInstanceStatusRequest request) { request = beforeClientExecution(request); return executeReportInstanceStatus(request); }```
+```csharppublic DeleteAlarmResult DeleteAlarm(DeleteAlarmRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteAlarm(request); }```
+```csharppublic TokenStream Create(TokenStream input) { return new PortugueseStemFilter(input); }```
+```csharppublic FtCblsSubRecord() { reserved = new byte[ENCODED_SIZE]; }```
+```csharppublic override bool Remove(object obj) {lock (mutex) {return c.Remove(obj);}}```
+```csharppublic GetDedicatedIpResult getDedicatedIp(GetDedicatedIpRequest request){request = beforeClientExecution(request);return executeGetDedicatedIp(request);}```
+```csharppublic string ToString() { return precedence + " >= _p"; }```
+```csharppublic ListStreamProcessorsResult ListStreamProcessors(ListStreamProcessorsRequest request){request = BeforeClientExecution(request);return ExecuteListStreamProcessors(request);}```
+```csharppublic DeleteLoadBalancerPolicyRequest(string loadBalancerName, string policyName){SetLoadBalancerName(loadBalancerName);SetPolicyName(policyName);}```
+```csharppublic WindowProtectRecord(int options) { _options = options; }```
+```csharppublic UnbufferedCharStream(int bufferSize) { n = 0; data = new int[bufferSize]; }```
+```csharppublic GetOperationsResult getOperations(GetOperationsRequest request){request = beforeClientExecution(request);return executeGetOperations(request);}```
+```csharppublic void copyRawTo(byte[] b, int o) { NB.encodeInt32(b, o, w1); NB.encodeInt32(b, o + 4, w2); NB.encodeInt32(b, o + 8, w3); NB.encodeInt32(b, o + 12, w4); NB.encodeInt32(b, o + 16, w5); }```
+```csharppublic WindowOneRecord(RecordInputStream in){field_1_h_hold = in.ReadShort();field_2_v_hold = in.ReadShort();field_3_width = in.ReadShort();field_4_height = in.ReadShort();field_5_options = in.ReadShort();field_6_active_sheet = in.ReadShort();field_7_first_visible_tab = in.ReadShort();field_8_num_selected_tabs = in.ReadShort();field_9_tab_width_ratio = in.ReadShort();}```
+```csharppublic StopWorkspacesResult StopWorkspaces(StopWorkspacesRequest request) { request = BeforeClientExecution(request); return ExecuteStopWorkspaces(request); }```
+```csharppublic void Close(){if (isOpen){isOpen = false;try{Dump();}finally{try{channel.Truncate(fileLength);}finally{try{channel.Close();}finally{fos.Close();}}}}}```
+```csharppublic DescribeMatchmakingRuleSetsResult DescribeMatchmakingRuleSets(DescribeMatchmakingRuleSetsRequest request){request = BeforeClientExecution(request);return ExecuteDescribeMatchmakingRuleSets(request);}```
+```csharppublic string GetPronunciation(int wordId, char[] surface, int off, int len) { return null; }```
+```csharppublic string GetPath() { return pathStr; }```
+```csharppublic static double Devsq(double[] v){double r = double.NaN;if (v != null && v.Length >= 1){double m = 0;double s = 0;int n = v.Length;for (int i = 0; i < n; i++){s += v[i];}m = s / n;s = 0;for (int i = 0; i < n; i++){s += (v[i] - m) * (v[i] - m);}r = (n == 1) ? 0 : s;}return r;}```
+```csharppublic DescribeResizeResult DescribeResize(DescribeResizeRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeResize(request); }```
+```csharppublic bool HasPassedThroughNonGreedyDecision() => passedThroughNonGreedyDecision;```
+```csharppublic int End() { return End(0); }```
+```csharppublic void Traverse(CellHandler handler){int firstRow = range.GetFirstRow();int lastRow = range.GetLastRow();int firstColumn = range.GetFirstColumn();int lastColumn = range.GetLastColumn();int width = lastColumn - firstColumn + 1;SimpleCellWalkContext ctx = new SimpleCellWalkContext();Row currentRow = null;Cell currentCell = null;for (ctx.RowNumber = firstRow; ctx.RowNumber <= lastRow; ++ctx.RowNumber){currentRow = sheet.GetRow(ctx.RowNumber);if (currentRow == null){continue;}for (ctx.ColNumber = firstColumn; ctx.ColNumber <= lastColumn; ++ctx.ColNumber){currentCell = currentRow.GetCell(ctx.ColNumber);if (currentCell == null){continue;}if (IsEmpty(currentCell) && !traverseEmptyCells){continue;}long rowSize = ArithmeticUtils.MulAndCheck((long)ArithmeticUtils.SubAndCheck(ctx.RowNumber, firstRow), (long)width);ctx.OrdinalNumber = ArithmeticUtils.AddAndCheck
+```csharppublic int GetReadIndex() { return pos; }```
+```csharppublic int CompareTo(ScoreTerm other) {if (this.boost == other.boost)return other.bytes.Value.CompareTo(this.bytes.Value);elsereturn float.Compare(this.boost, other.boost);}```
+```csharppublic int Normalize(char[] s, int len) {for (int i = 0; i < len; i++) {switch (s[i]) {case FARSI_YEH:case YEH_BARREE:s[i] = YEH;break;case KEHEH:s[i] = KAF;break;case HEH_YEH:case HEH_GOAL:s[i] = HEH;break;case HAMZA_ABOVE:len = Delete(s, i, len);i--;break;default:break;}}return len;}```
+```csharppublic void Serialize(BinaryWriter writer) {writer.Write(_options);}```
+```csharppublic DiagnosticErrorListener(bool exactOnly) { this.exactOnly = exactOnly; }```
+```csharppublic KeySchemaElement(string attributeName, KeyType keyType) { SetAttributeName(attributeName); SetKeyType(keyType.ToString()); }```
+```csharppublic GetAssignmentResult GetAssignment(GetAssignmentRequest request) { request = BeforeClientExecution(request); return ExecuteGetAssignment(request); }```
+```csharppublic bool HasObject(AnyObjectId id) { return FindOffset(id) != -1; }```
+```csharppublic GroupingSearch SetAllGroups(bool allGroups) { this.allGroups = allGroups; return this; }```
+```csharppublic void SetMultiValued(string dimName, bool v){DimConfig ft = fieldTypes[dimName];if (ft == null){ft = new DimConfig();fieldTypes[dimName] = ft;}ft.multiValued = v;}```
+```csharppublic int GetCellsVal() {IEnumerator<char> i = cells.Keys.GetEnumerator();int size = 0;while (i.MoveNext()) {char c = i.Current;Cell e = At(c);if (e.cmd >= 0) {size++;}}return size;}```
+```csharppublic DeleteVoiceConnectorResult DeleteVoiceConnector(DeleteVoiceConnectorRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteVoiceConnector(request); }```
+```csharppublic DeleteLifecyclePolicyResult DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteLifecyclePolicy(request); }```
+```csharppublic void Write(byte[] b){int len = b.Length;CheckPosition(len);Array.Copy(b, 0, _buf, _writeIndex, len);_writeIndex += len;}```
+```csharppublic RebaseResult GetRebaseResult() { return this.rebaseResult; }```
+```csharppublic static int GetNearestSetSize(int maxNumberOfValuesExpected, float desiredSaturation){for (int i = 0; i < usableBitSetSizes.Length; i++){int numSetBitsAtDesiredSaturation = (int)(usableBitSetSizes[i] * desiredSaturation);int estimatedNumUniqueValues = GetEstimatedNumberUniqueValuesAllowingForCollisions(usableBitSetSizes[i], numSetBitsAtDesiredSaturation);if (estimatedNumUniqueValues > maxNumberOfValuesExpected){return usableBitSetSizes[i];}}return -1;}```
+```csharppublic DescribeDashboardResult DescribeDashboard(DescribeDashboardRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDashboard(request); }```
+```csharppublic CreateSegmentResult CreateSegment(CreateSegmentRequest request) { request = BeforeClientExecution(request); return ExecuteCreateSegment(request); }```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[DBCELL]\n");buffer.Append("    .rowoffset = ").Append(HexDump.IntToHex(field_1_row_offset)).Append("\n");for (int k = 0; k < field_2_cell_offsets.Length; k++){buffer.Append("    .cell_").Append(k).Append(" = ").Append(HexDump.ShortToHex(field_2_cell_offsets[k])).Append("\n");}buffer.Append("[/DBCELL]\n");return buffer.ToString();}```
+```csharppublic List<string> GetUndeletedList() { return undeletedList; }```
+```csharppublic string ToString() { return "[INTERFACEEND/]\\n"; }```
+```csharppublic MergeScheduler Clone() { return this; }```
+```csharppublic PlainTextDictionary(TextReader reader) {in = new StreamReader(reader);}```
+```csharppublic StringBuilder Append(string csq) {if (csq == null) {AppendNull();} else {Append0(csq, 0, csq.Length);}return this;}```
+```csharppublic ListAssociatedStacksResult ListAssociatedStacks(ListAssociatedStacksRequest request) { request = BeforeClientExecution(request); return ExecuteListAssociatedStacks(request); }```
+```csharppublic static double avedev(double[] v) {double r = 0;double m = 0;double s = 0;for (int i = 0, iSize = v.Length; i < iSize; i++) {s += v[i];}m = s / v.Length;s = 0;for (int i = 0, iSize = v.Length; i < iSize; i++) {s += Math.Abs(v[i] - m);}r = s / v.Length;return r;}```
+```csharppublic DescribeByoipCidrsResult DescribeByoipCidrs(DescribeByoipCidrsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeByoipCidrs(request); }```
+```csharppublic GetDiskResult GetDisk(GetDiskRequest request) { request = BeforeClientExecution(request); return ExecuteGetDisk(request); }```
+```csharppublic DBClusterParameterGroup CreateDBClusterParameterGroup(CreateDBClusterParameterGroupRequest request) { request = BeforeClientExecution(request); return ExecuteCreateDBClusterParameterGroup(request); }```
+```csharpusing System;public static CharBuffer Wrap(char[] array, int start, int charCount){Array.CheckOffsetAndLength(array.Length, start, charCount);CharBuffer buf = new ReadWriteCharArrayBuffer(array);buf.Position = start;buf.Limit = start + charCount;return buf;}```
+```csharppublic SubmoduleStatusType GetType() { return type; }```
+```csharppublic DescribeGameServerGroupResult DescribeGameServerGroup(DescribeGameServerGroupRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeGameServerGroup(request); }```
+```csharppublic Regex pattern() {return pattern;}```
+```csharppublic V SetValue(V obj) { throw new NotSupportedException(); }```
+```csharppublic StringBuilder Stem(CharSequence word) {CharSequence cmd = stemmer.GetLastOnPath(word);if (cmd == null)return null;buffer.Length = 0;buffer.Append(word);Diff.Apply(buffer, cmd);if (buffer.Length > 0)return buffer;elsereturn null;}```
+```csharppublic RenameFaceRequest() : base("CloudPhoto", "2017-07-11", "RenameFace", "cloudphoto"){setProtocol(ProtocolType.HTTPS);}```
+```csharppublic char RequireChar(Dictionary<string, string> args, string name) { return Require(args, name)[0]; }```
+```csharppublic static string ToStringTree(Tree t) => ToStringTree(t, null);```
+```csharppublic string ToString() { return "<deleted/>"; }```
+```csharppublic GetRepoWebhookLogListRequest() : base("cr", "2016-06-07", "GetRepoWebhookLogList", "cr"){SetUriPattern("/repos/{RepoNamespace}/{RepoName}/webhooks/{WebhookId}/logs");SetMethod(MethodType.GET);}```
+```csharppublic GetJobUnlockCodeResult GetJobUnlockCode(GetJobUnlockCodeRequest request) { request = BeforeClientExecution(request); return ExecuteGetJobUnlockCode(request); }```
+```csharppublic RemoveTagsRequest(string resourceId) { setResourceId(resourceId); }```
+```csharpusing System;public short GetGB2312Id(char ch){try{byte[] buffer = Encoding.GetEncoding("GB2312").GetBytes(new string(ch, 1));if (buffer.Length != 2){return -1;}int b0 = (buffer[0] & 0xFF) - 161;int b1 = (buffer[1] & 0xFF) - 161;return (short)(b0 * 94 + b1);}catch (EncoderFallbackException e){throw new InvalidOperationException(e);}}```
+```csharppublic BatchRefUpdate AddCommand(IEnumerable<ReceiveCommand> cmd) { commands.AddRange(cmd); return this; }```
+```csharppublic short CheckExternSheet(int sheetNumber){return (short)getOrCreateLinkTable().CheckExternSheet(sheetNumber);}```
+```csharppublic override bool Equals(object obj) { return c.Equals(obj); }```
+```csharppublic BooleanQuery Build(QueryNode queryNode){AnyQueryNode andNode = (AnyQueryNode)queryNode;BooleanQuery.Builder bQuery = new BooleanQuery.Builder();List<QueryNode> children = andNode.Children;if (children != null){foreach (QueryNode child in children){object obj = child.GetTag(QueryTreeBuilder.QUERY_TREE_BUILDER_TAGID);if (obj != null){Query query = (Query)obj;try{bQuery.Add(query, BooleanClause.Occur.SHOULD);}catch (TooManyClauses ex){throw new QueryNodeException(new MessageImpl(QueryParserMessages.EMPTY_MESSAGE), ex);}}}}bQuery.MinimumNumberShouldMatch = andNode.MinimumMatchingElements;return bQuery.Build();}```
+```csharppublic DescribeStreamProcessorResult DescribeStreamProcessor(DescribeStreamProcessorRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeStreamProcessor(request); }```
+```csharppublic DescribeDashboardPermissionsResult DescribeDashboardPermissions(DescribeDashboardPermissionsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDashboardPermissions(request); }```
+```csharppublic Ref peel(Ref ref){try{return getRefDatabase().peel(ref);}catch (IOException e){return ref;}}```
+```csharppublic long RamBytesUsed() {return RamUsageEstimator.AlignObjectSize(RamUsageEstimator.NUM_BYTES_OBJECT_HEADER + 2 * sizeof(int) + RamUsageEstimator.NUM_BYTES_OBJECT_REF) + RamUsageEstimator.SizeOf(blocks);}```
+```csharppublic GetDomainSuggestionsResult GetDomainSuggestions(GetDomainSuggestionsRequest request) { request = BeforeClientExecution(request); return ExecuteGetDomainSuggestions(request); }```
+```csharppublic DescribeStackEventsResult DescribeStackEvents(DescribeStackEventsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeStackEvents(request); }```
+```csharppublic void setRule(int idx, ConditionalFormattingRule cfRule) { setRule(idx, (HSSFConditionalFormattingRule)cfRule); }```
+```csharppublic CreateResolverRuleResult CreateResolverRule(CreateResolverRuleRequest request) { request = BeforeClientExecution(request); return ExecuteCreateResolverRule(request); }```
+```csharppublic SeriesIndexRecord(RecordInputStream @in) { field_1_index = @in.ReadShort(); }```
+```csharppublic GetStylesRequest() : base("lubancloud", "2018-05-09", "GetStyles", "luban"){SetMethod(MethodType.POST);}```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(field_1_gridset_flag);}```
+```csharppublic bool Equals(object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (GetType() != obj.GetType()) {return false;}Toffs other = (Toffs)obj;if (GetStartOffset() != other.GetStartOffset()) {return false;}if (GetEndOffset() != other.GetEndOffset()) {return false;}return true;}```
+```csharppublic CreateGatewayGroupResult CreateGatewayGroup(CreateGatewayGroupRequest request) { request = BeforeClientExecution(request); return ExecuteCreateGatewayGroup(request); }```
+```csharppublic CreateParticipantConnectionResult CreateParticipantConnection(CreateParticipantConnectionRequest request) { request = BeforeClientExecution(request); return ExecuteCreateParticipantConnection(request); }```
+```csharppublic static double IRR(double[] income) { return IRR(income, 0.1d); }```
+```csharppublic RegisterWorkspaceDirectoryResult registerWorkspaceDirectory(RegisterWorkspaceDirectoryRequest request){request = beforeClientExecution(request);return executeRegisterWorkspaceDirectory(request);}```
+```csharppublic RevertCommand Include(AnyObjectId commit) => Include(commit.Name, commit);```
+```csharpusing System;using System.Text.RegularExpressions;public class ComplexNumberEvaluator {private static readonly Regex COMPLEX_NUMBER_PATTERN = new Regex(@"^\s*([+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)\s*(?:\s*,\s*([+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)\s*)?$");private const int GROUP3_IMAGINARY_SIGN = 3;private const int GROUP4_IMAGINARY_INTEGER_OR_DOUBLE = 4;public string Evaluate(int srcRowIndex, int srcColumnIndex, object inumberVE) {object veText1;try {veText1 = OperandResolver.GetSingleValue(inumberVE, srcRowIndex, srcColumnIndex);} catch (EvaluationException e) {return e.GetErrorEval();}string iNumber = OperandResolver.CoerceValueToString(veText1);Match m = COMPLEX_NUMBER_PATTERN.Match(iNumber);bool result = m.Success;string imaginary = "";if (result) {string imaginaryGroup = m.Groups[5].Value;bool
+```csharppublic E PollLast() { var entry = backingMap.PollLastEntry(); return (entry == null) ? null : entry.Key; }```
+```csharppublic int ReadUShort() { int ch1 = ReadUByte(); int ch2 = ReadUByte(); return (ch2 << 8) + (ch1 << 0); }```
+```csharppublic ModifySnapshotAttributeRequest(string snapshotId, SnapshotAttributeName attribute, OperationType operationType){SetSnapshotId(snapshotId);SetAttribute(attribute.ToString());SetOperationType(operationType.ToString());}```
+```csharppublic ListBonusPaymentsResult ListBonusPayments(ListBonusPaymentsRequest request){request = BeforeClientExecution(request);return ExecuteListBonusPayments(request);}```
+```csharppublic V Get(string cs) { if (cs == null) throw new NullReferenceException(); return default(V); }```
+```csharppublic TokenFilter Create(TokenStream input) {CommonGramsFilter commonGrams = (CommonGramsFilter) base.Create(input);return new CommonGramsQueryFilter(commonGrams);}```
+```csharppublic string GetPath() { return path; }```
+```csharppublic InitiateMultipartUploadResult InitiateMultipartUpload(InitiateMultipartUploadRequest request) { request = BeforeClientExecution(request); return ExecuteInitiateMultipartUpload(request); }```
+```csharppublic StringBuilder Insert(int offset, int i) { Insert0(offset, i.ToString()); return this; }```
+```csharppublic void decode(long[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long block = blocks[blocksOffset++];for (int shift = 62; shift >= 0; shift -= 2) {values[valuesOffset++] = (int)((block >> shift) & 3);}}}```
+```csharppublic TokenStream Create(TokenStream input) { return new ElisionFilter(input, articles); }```
+```csharppublic bool Eat(Row inRow, int[] remap) {int sum = 0;foreach (var cell in inRow.Cells.Values) {sum += cell.Cnt;if (cell.Ref >= 0) {if (remap[cell.Ref] == 0) {cell.Ref = -1;}}}int frame = sum / 10;bool live = false;foreach (var cell in inRow.Cells.Values) {if (cell.Cnt < frame && cell.Cmd >= 0) {cell.Cnt = 0;cell.Cmd = -1;}if (cell.Cmd >= 0 || cell.Ref >= 0) {live |= true;}}return !live;}```
+```csharppublic Token GetToken(int index){Token t = jj_lookingAhead ? jj_scanpos : token;for (int i = 0; i < index; i++){if (t.next != null) t = t.next;else t = t.next = token_source.GetNextToken();}return t;}```
+```csharppublic string ToString(){StringBuilder sb = new StringBuilder();sb.Append(GetType().Name).Append(" [ARRAY]\n");sb.Append(" range=").Append(GetRange()).Append("\n");sb.Append(" options=").Append(HexDump.ShortToHex(_options)).Append("\n");sb.Append(" notUsed=").Append(HexDump.IntToHex(_field3notUsed)).Append("\n");sb.Append(" formula:\n");Ptg[] ptgs = _formula.GetTokens();for (int i = 0; i < ptgs.Length; i++){Ptg ptg = ptgs[i];sb.Append(ptg).Append(ptg.GetRVAType()).Append("\n");}sb.Append("]");return sb.ToString();}```
+```csharppublic GetFolderResult GetFolder(GetFolderRequest request) { request = BeforeClientExecution(request); return ExecuteGetFolder(request); }```
+```csharppublic override void Add(int location, E obj){throw new System.NotSupportedException();}```
+```csharppublic PositiveScoresOnlyCollector(Collector in) : base(in) {}```
+```csharppublic CreateRepoBuildRuleRequest() : base("cr", "2016-06-07", "CreateRepoBuildRule", "cr"){SetUriPattern("/repos/{RepoNamespace}/{RepoName}/rules");SetMethod(MethodType.PUT);}```
+```csharppublic BaseRef(AreaEval ae) { _refEval = null; _areaEval = ae; _firstRowIndex = ae.GetFirstRow(); _firstColumnIndex = ae.GetFirstColumn(); _height = ae.GetLastRow() - ae.GetFirstRow() + 1; _width = ae.GetLastColumn() - ae.GetFirstColumn() + 1; }```
+```csharppublic DrawingManager2(EscherDggRecord dgg) { this.dgg = dgg; }```
+```csharppublic void reset() { if (!first()) reset(raw); }```
+```csharppublic new Decoder Reset() { status = INIT; implReset(); return this; }```
+```csharppublic BufferedReader(Reader in, int size) : base(in){if (size <= 0){throw new ArgumentException("size <= 0");}this.in = in;buf = new char[size];}```
+```csharppublic DescribeCodeRepositoryResult DescribeCodeRepository(DescribeCodeRepositoryRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeCodeRepository(request); }```
+```csharppublic DBSubnetGroup CreateDBSubnetGroup(CreateDBSubnetGroupRequest request) { request = BeforeClientExecution(request); return ExecuteCreateDBSubnetGroup(request); }```
+```csharppublic RenameBranchCommand SetOldName(string oldName) { CheckCallable(); this.oldName = oldName; return this; }```
+```csharppublic DeleteBranchCommand SetForce(bool force) { checkCallable(); this.force = force; return this; }```
+```csharppublic StopCompilationJobResult stopCompilationJob(StopCompilationJobRequest request){request = beforeClientExecution(request);return executeStopCompilationJob(request);}```
+```csharppublic void IncrementSecondaryProgressBy(int diff) { setSecondaryProgress(mSecondaryProgress + diff); }```
+```csharppublic int[] Clear() { return bytesStart = null; }```
+```csharppublic string GetRawPath() { return path; }```
+```csharppublic GetUserSourceAccountRequest() : base("cr", "2016-06-07", "GetUserSourceAccount", "cr"){SetUriPattern("/users/sourceAccount");SetMethod(MethodType.GET);}```
+```csharppublic CreateExportJobResult CreateExportJob(CreateExportJobRequest request) { request = BeforeClientExecution(request); return ExecuteCreateExportJob(request); }```
+```csharppublic CreateDedicatedIpPoolResult CreateDedicatedIpPool(CreateDedicatedIpPoolRequest request){request = BeforeClientExecution(request);return ExecuteCreateDedicatedIpPool(request);}```
+```csharppublic bool Equals(object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (obj is HSSFCellStyle other) {if (_format == null) {if (other._format != null) {return false;}} else if (!_format.Equals(other._format)) {return false;}if (_index != other._index) {return false;}return true;}return false;}```
+```csharppublic ReleaseHostsResult ReleaseHosts(ReleaseHostsRequest request) { request = BeforeClientExecution(request); return ExecuteReleaseHosts(request); }```
+```csharppublic bool Equals(object obj){if (this == obj){return true;}if (obj is Set){Set s = (Set)obj;try{return Size() == s.Size() && ContainsAll(s);}catch (NullReferenceException){return false;}catch (InvalidCastException){return false;}}return false;}```
+```csharppublic void SetRefLogMessage(string msg, bool appendStatus){customRefLog = true;if (msg == null && !appendStatus){DisableRefLog();}else if (msg == null && appendStatus){refLogMessage = "";refLogIncludeResult = true;}else{refLogMessage = msg;refLogIncludeResult = appendStatus;}}```
+```csharppublic StreamIDRecord(RecordInputStream in) { idstm = in.ReadShort(); }```
+```csharppublic RecognizeCarRequest() : base("visionai-poc", "2020-04-08", "RecognizeCar"){SetMethod(MethodType.POST);}```
+```csharppublic final ByteOrder order() { return ByteOrder.NativeOrder; }```
+```csharppublic int GetAheadCount() { return aheadCount; }```
+```csharppublic bool IsNewFragment() { return false; }```
+```csharppublic GetCloudFrontOriginAccessIdentityConfigResult GetCloudFrontOriginAccessIdentityConfig(GetCloudFrontOriginAccessIdentityConfigRequest request){request = BeforeClientExecution(request);return ExecuteGetCloudFrontOriginAccessIdentityConfig(request);}```
+```csharppublic bool Matches(int symbol, int minVocabSymbol, int maxVocabSymbol) { return label == symbol; }```
+```csharppublic DeleteTransitGatewayResult DeleteTransitGateway(DeleteTransitGatewayRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteTransitGateway(request); }```
+```csharppublic static byte[] Grow(byte[] array, int minSize){Debug.Assert(minSize >= 0, "size must be positive (got " + minSize + "): likely integer overflow?");if (array.Length < minSize){return GrowExact(array, Oversize(minSize, sizeof(byte)));}else{return array;}}```
+```csharppublic class CreateTransactionRequest : BaseRequest{public CreateTransactionRequest(){this.Product = "CloudPhoto";this.Version = "2017-07-11";this.ActionName = "CreateTransaction";this.Domain = "cloudphoto";this.Protocol = ProtocolType.HTTPS;}}```
+```csharppublic BatchRefUpdate SetRefLogIdent(PersonIdent pi) { refLogIdent = pi; return this; }```
+```csharppublic GetLaunchTemplateDataResult GetLaunchTemplateData(GetLaunchTemplateDataRequest request){request = BeforeClientExecution(request);return ExecuteGetLaunchTemplateData(request);}```
+```csharppublic ParseInfo(ProfilingATNSimulator atnSimulator) { this.atnSimulator = atnSimulator; }```
+```csharppublic SimpleQQParser(string[] qqNames, string indexField) { this.qqNames = qqNames; this.indexField = indexField; }```
+```csharppublic DBCluster PromoteReadReplicaDBCluster(PromoteReadReplicaDBClusterRequest request) { request = BeforeClientExecution(request); return ExecutePromoteReadReplicaDBCluster(request); }```
+```csharppublic DescribeCapacityReservationsResult DescribeCapacityReservations(DescribeCapacityReservationsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeCapacityReservations(request); }```
+```csharppublic string ToString() { return $"IndexSearcher({reader}; executor={executor}; sliceExecutionControlPlane {sliceExecutor})"; }```
+```csharppublic bool IncrementToken() { return false; }```
+```csharppublic void Serialize(BinaryWriter writer) {writer.Write((short)(main + 1));writer.Write((short)subFrom);writer.Write((short)subTo);}```
+```csharppublic void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations){if (bitsPerValue > 32){throw new NotSupportedException("Cannot decode " + bitsPerValue + "-bits values into an int[]");}for (int i = 0; i < iterations; ++i){long block = readLong(blocks, blocksOffset);blocksOffset += 8;valuesOffset = decode(block, values, valuesOffset);}}```
+```csharppublic bool IsExpectedToken(int symbol){ATN atn = GetInterpreter().Atn;ParserRuleContext ctx = _ctx;ATNState s = atn.States[GetState()];IntervalSet following = atn.NextTokens(s);if (following.Contains(symbol)){return true;}if (!following.Contains(Token.Epsilon)){return false;}while (ctx != null && ctx.InvokingState >= 0 && following.Contains(Token.Epsilon)){ATNState invokingState = atn.States[ctx.InvokingState];RuleTransition rt = (RuleTransition)invokingState.Transition(0);following = atn.NextTokens(rt.FollowState);if (following.Contains(symbol)){return true;}ctx = (ParserRuleContext)ctx.Parent;}if (following.Contains(Token.Epsilon) && symbol == Token.Eof){return true;}return false;}```
+```csharppublic UpdateStreamResult updateStream(UpdateStreamRequest request) { request = beforeClientExecution(request); return executeUpdateStream(request); }```
+```csharppublic IValueEval Evaluate(int srcRowIndex, int srcColumnIndex, IValueEval arg0){try{OperandResolver.GetSingleValue(arg0, srcRowIndex, srcColumnIndex);return ErrorEval.NA;}catch (EvaluationException e){int result = TranslateErrorCodeToErrorTypeValue(e.ErrorEval.ErrorCode);return new NumberEval(result);}}```
+```csharppublic string ToString() { return GetType().Name + " [" + _index + " " + _name + "]"; }```
+```csharppublic ListAssignmentsForHITResult ListAssignmentsForHIT(ListAssignmentsForHITRequest request) { request = BeforeClientExecution(request); return ExecuteListAssignmentsForHIT(request); }```
+```csharppublic DeleteAccessControlRuleResult DeleteAccessControlRule(DeleteAccessControlRuleRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteAccessControlRule(request); }```
+```csharppublic Arc<long> GetFirstArc(Arc<long> arc) { return fst.GetFirstArc(arc); }```
+```csharppublic void decode(long[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long block = blocks[blocksOffset++];for (int shift = 48; shift >= 0; shift -= 16) {values[valuesOffset++] = (int)((block >> shift) & 65535);}}}```
+```csharpusing System;using System.IO;public long Skip(long charCount){if (charCount < 0){throw new ArgumentException("charCount < 0: " + charCount);}lock (lockObject){CheckNotClosed();if (charCount == 0){return 0;}long inSkipped;int availableFromBuffer = buffer.Length - position;if (availableFromBuffer > 0){long requiredFromIn = charCount - availableFromBuffer;if (requiredFromIn <= 0){position += (int)charCount;return charCount;}position += availableFromBuffer;inSkipped = input.Skip(requiredFromIn);}else{inSkipped = input.Skip(charCount);}return inSkipped + availableFromBuffer;}}```
+```csharppublic Dictionary<string, Ref> GetRefsMap() { return advertisedRefs; }```
+```csharppublic UpdateApiKeyResult UpdateApiKey(UpdateApiKeyRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateApiKey(request); }```
+```csharpusing System;using System.IO;public class MyClass {public ObjectStream OpenStream() {PackInputStream packIn;DfsReader ctx = db.NewReader();try {try {packIn = new PackInputStream(pack, objectOffset + headerLength, ctx);ctx = null;} catch (IOException packGone) {ObjectId obj = pack.GetReverseIdx(ctx).FindObject(objectOffset);return ctx.Open(obj, type).OpenStream();}} finally {if (ctx != null) {ctx.Close();}}int bufsz = 8192;InputStream in = new BufferedInputStream(new InflaterInputStream(packIn, packIn.ctx.Inflater(), bufsz), bufsz);return new ObjectStream.Filter(type, size, in);}}```
+```csharppublic ArrayList() { array = EmptyArray.OBJECT; }```
+```csharppublic UpdateDetectorVersionResult updateDetectorVersion(UpdateDetectorVersionRequest request){request = BeforeClientExecution(request);return ExecuteUpdateDetectorVersion(request);}```
+```csharppublic void Resize() => Resize(double.MaxValue);```
+```csharppublic RevFlagSet(IEnumerable<RevFlag> s) : this() { AddRange(s); }```
+```csharppublic int size() { return size; }```
+```csharppublic long GetLong(){int newPosition = position + SizeOf.LONG;if (newPosition > limit){throw new BufferUnderflowException();}long result = Memory.PeekLong(backingArray, offset + position, order);position = newPosition;return result;}```
+```csharppublic StringBuilder Insert(int offset, long l) {Insert0(offset, Long.ToString(l)); return this;}```
+```csharppublic TurkishLowerCaseFilter(TokenStream input) : base(input){}```
+```csharppublic ParseTreeMatch Match(ParseTree tree, ParseTreePattern pattern){MultiMap<string, ParseTree> labels = new MultiMap<string, ParseTree>();ParseTree mismatchedNode = MatchImpl(tree, pattern.GetPatternTree(), labels);return new ParseTreeMatch(tree, pattern, labels, mismatchedNode);}```
+```csharppublic void AddIfNoOverlap(WeightedPhraseInfo wpi){foreach (WeightedPhraseInfo existWpi in GetPhraseList()){if (existWpi.IsOffsetOverlap(wpi)){existWpi.GetTermsInfos().AddRange(wpi.GetTermsInfos());return;}}GetPhraseList().Add(wpi);}```
+```csharppublic ThreeWayMerger newMerger(Repository db) { return new InCoreMerger(db); }```
+```csharppublic float DocScore(int docId, string field, int numPayloadsSeen, float payloadScore) { return numPayloadsSeen > 0 ? (payloadScore / numPayloadsSeen) : 1; }```
+```csharppublic IEnumerable<ParseTree> Evaluate(ParseTree t) => Trees.FindAllRuleNodes(t, ruleIndex);```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[CFRULE]\n");buffer.Append("    .condition_type   =" + getConditionType() + "\n");buffer.Append("    OPTION FLAGS=0x" + Integer.toHexString(getOptions()) + "\n");if (containsFontFormattingBlock()){buffer.Append(_fontFormatting + "\n");}if (containsBorderFormattingBlock()){buffer.Append(_borderFormatting + "\n");}if (containsPatternFormattingBlock()){buffer.Append(_patternFormatting + "\n");}buffer.Append("    Formula 1 =" + Arrays.ToString(getFormula1().getTokens()) + "\n");buffer.Append("    Formula 2 =" + Arrays.ToString(getFormula2().getTokens()) + "\n");buffer.Append("[/CFRULE]\n");return buffer.ToString();}```
+```csharppublic DescribeServiceUpdatesResult DescribeServiceUpdates(DescribeServiceUpdatesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeServiceUpdates(request); }```
+```csharppublic string GetNameName(int index) { return GetNameAt(index).GetNameName(); }```
+```csharppublic DescribeLocationsResult DescribeLocations() { return DescribeLocations(new DescribeLocationsRequest()); }```
+```csharppublic string ToString() { return $"<phraseslop value='{GetValueString()}'>\n{GetChild().ToString()}\n</phraseslop>"; }```
+```csharppublic DirCacheEntry GetDirCacheEntry() => currentSubtree == null ? currentEntry : null;```
+```csharppublic void Put(int[] src, int srcOffset, int intCount){Array.CheckOffsetAndLength(src.Length, srcOffset, intCount);if (intCount > Remaining()){throw new BufferOverflowException();}for (int i = srcOffset; i < srcOffset + intCount; ++i){Put(src[i]);}}```
+```csharppublic void TrimToSize(){int s = size;if (s == array.Length){return;}if (s == 0){array = EmptyArray.Object;}else{object[] newArray = new object[s];Array.Copy(array, 0, newArray, 0, s);array = newArray;}modCount++;}```
+```csharppublic DescribeLocalGatewayVirtualInterfacesResult DescribeLocalGatewayVirtualInterfaces(DescribeLocalGatewayVirtualInterfacesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeLocalGatewayVirtualInterfaces(request); }```
+```csharppublic TokenStream Create(TokenStream input) { return new RussianLightStemFilter(input); }```
+```csharppublic int[] ToArray(int[] a){int[] rval;if (a.Length == _limit){Array.Copy(_array, 0, a, 0, _limit);rval = a;}else{rval = ToArray();}return rval;}```
+```csharppublic BasicSessionCredentials(string accessKeyId, string accessKeySecret, string sessionToken, long roleSessionDurationSeconds){if (accessKeyId == null){throw new ArgumentException("Access key ID cannot be null.");}if (accessKeySecret == null){throw new ArgumentException("Access key secret cannot be null.");}this.accessKeyId = accessKeyId;this.accessKeySecret = accessKeySecret;this.sessionToken = sessionToken;this.roleSessionDurationSeconds = roleSessionDurationSeconds;this.sessionStartedTimeInMilliSeconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();}```
+```csharppublic sealed ShortBuffer Get(short[] dst, int dstOffset, int shortCount){if (shortCount > Remaining()){throw new BufferUnderflowException();}Array.Copy(backingArray, offset + position, dst, dstOffset, shortCount);position += shortCount;return this;}```
+```csharppublic ActivateEventSourceResult ActivateEventSource(ActivateEventSourceRequest request) { request = BeforeClientExecution(request); return ExecuteActivateEventSource(request); }```
+```csharppublic DescribeReceiptRuleSetResult DescribeReceiptRuleSet(DescribeReceiptRuleSetRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeReceiptRuleSet(request); }```
+```csharppublic Filter(string name) { setName(name); }```
+```csharppublic double Put(double c) { throw new ReadOnlyBufferException(); }```
+```csharppublic CreateTrafficPolicyInstanceResult CreateTrafficPolicyInstance(CreateTrafficPolicyInstanceRequest request){request = BeforeClientExecution(request);return ExecuteCreateTrafficPolicyInstance(request);}```
+```csharppublic JapaneseIterationMarkCharFilter(Reader input, bool normalizeKanji, bool normalizeKana) : base(input){this.normalizeKanji = normalizeKanji;this.normalizeKana = normalizeKana;buffer.Reset(input);}```
+```csharppublic void WriteLong(long v) {WriteInt((int)(v >> 0));WriteInt((int)(v >> 32));}```
+```csharppublic class FileResolver {public ConcurrentDictionary<string, object> exports = new ConcurrentDictionary<string, object>();public List<object> exportBase = new List<object>();}```
+```csharppublic IValueEval GetRef3DEval(Ref3DPxg rptg){SheetRangeEvaluator sre = CreateExternSheetRefEvaluator(rptg.GetSheetName(), rptg.GetLastSheetName(), rptg.GetExternalWorkbookNumber());return new LazyRefEval(rptg.Row, rptg.Column, sre);}```
+```csharppublic DeleteDatasetResult DeleteDataset(DeleteDatasetRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteDataset(request); }```
+```csharppublic StartRelationalDatabaseResult StartRelationalDatabase(StartRelationalDatabaseRequest request) { request = BeforeClientExecution(request); return ExecuteStartRelationalDatabase(request); }```
+```csharppublic DescribeReservedCacheNodesOfferingsResponse DescribeReservedCacheNodesOfferings() {return DescribeReservedCacheNodesOfferings(new DescribeReservedCacheNodesOfferingsRequest());}```
+```csharpstatic public double pmt(double r, int nper, double pv, double fv, int type) { return -r * (pv * Math.Pow(1 + r, nper) + fv) / ((1 + r * type) * (Math.Pow(1 + r, nper) - 1)); }```
+```csharppublic DescribeDocumentVersionsResult DescribeDocumentVersions(DescribeDocumentVersionsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDocumentVersions(request); }```
+```csharppublic ListPublishingDestinationsResult ListPublishingDestinations(ListPublishingDestinationsRequest request) { request = BeforeClientExecution(request); return ExecuteListPublishingDestinations(request); }```
+```csharppublic DeleteAccountAliasRequest(string accountAlias) { SetAccountAlias(accountAlias); }```
+```csharppublic static long[] Grow(long[] array) { return Grow(array, 1 + array.Length); }```
+```csharppublic string outputToString(object output){if (!(output is List)){return outputs.outputToString((T)output);}else{List<T> outputList = (List<T>)output;StringBuilder b = new StringBuilder();b.Append('[');for (int i = 0; i < outputList.Count; i++){if (i > 0){b.Append(", ");}b.Append(outputs.outputToString(outputList[i]));}b.Append(']');return b.ToString();}}```
+```csharppublic void notifyDeleteCell(Cell cell) { _bookEvaluator.notifyDeleteCell(new HSSFEvaluationCell((HSSFCell)cell)); }```
+```csharppublic StringBuilder Replace(int start, int end, string str) {Replace0(start, end, str); return this;}```
+```csharppublic SetIdentityPoolConfigurationResult SetIdentityPoolConfiguration(SetIdentityPoolConfigurationRequest request) { request = BeforeClientExecution(request); return ExecuteSetIdentityPoolConfiguration(request); }```
+```csharpusing System;public class Program {public static double KthSmallest(double[] v, int k) {double r = double.NaN;int index = k - 1;if (v != null && v.Length > index && index >= 0) {Array.Sort(v);r = v[index];}return r;}}```
+```csharppublic void set(int index, long value) {int o = index >> 5;int b = index & 31;int shift = b << 1;blocks[o] = (blocks[o] & ~(3L << shift)) | (value << shift);}```
+```csharppublic string ToString() {if (GetChildren() == null || GetChildren().Count == 0)return "<boolean operation='and'/>";StringBuilder sb = new StringBuilder();sb.Append("<boolean operation='and'>");foreach (QueryNode child in GetChildren()) {sb.Append("\n");sb.Append(child.ToString());}sb.Append("\n</boolean>");return sb.ToString();}```
+```csharppublic int SumTokenSizes(int fromIx, int toIx) {int result = 0;for (int i = fromIx; i < toIx; i++) {result += _ptgs[i].GetSize();}return result;}```
+```csharppublic void SetReadonly(bool @readonly){if (this.readonly && !@readonly)throw new InvalidOperationException("can't alter readonly IntervalSet");this.readonly = @readonly;}```
+```csharppublic void ClearConsumingCell(FormulaCellCacheEntry cce){if (!_consumingCells.Remove(cce)){throw new InvalidOperationException("Specified formula cell is not consumed by this cell");}}```
+```csharppublic override List<E> SubList(int start, int end){lock (mutex){return new SynchronizedRandomAccessList<E>(list.GetRange(start, end), mutex);}}```
+```csharppublic FileHeader GetFileHeader() { return file; }```
+```csharppublic AttachLoadBalancersResponse AttachLoadBalancers(AttachLoadBalancersRequest request) { request = BeforeClientExecution(request); return ExecuteAttachLoadBalancers(request); }```
+```csharppublic InitiateJobRequest(string accountId, string vaultName, JobParameters jobParameters){SetAccountId(accountId);SetVaultName(vaultName);SetJobParameters(jobParameters);}```
+```csharppublic string ToString() { return "SPL"; }```
+```csharppublic ReplaceableAttribute(string name, string value, bool replace) { setName(name); setValue(value); setReplace(replace); }```
+```csharppublic void Add(IndexableField field) { fields.Add(field); }```
+```csharppublic DeleteStackSetResult DeleteStackSet(DeleteStackSetRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteStackSet(request); }```
+```csharppublic GetRepoBuildRuleListRequest() : base("cr", "2016-06-07", "GetRepoBuildRuleList", "cr"){SetUriPattern("/repos/{RepoNamespace}/{RepoName}/rules");SetMethod(MethodType.GET);}```
+```csharppublic SparseArray(int initialCapacity){initialCapacity = ArrayUtils.idealIntArraySize(initialCapacity);mKeys = new int[initialCapacity];mValues = new object[initialCapacity];mSize = 0;}```
+```csharppublic InvokeServiceRequest() : base("industry-brain", "2018-07-12", "InvokeService"){SetMethod(MethodType.POST);}```
+```csharppublic ListAlbumPhotosRequest() : base("CloudPhoto", "2017-07-11", "ListAlbumPhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic bool HasPrevious() { return link != list.VoidLink; }```
+```csharppublic DeleteHsmConfigurationResult DeleteHsmConfiguration(DeleteHsmConfigurationRequest request){request = BeforeClientExecution(request);return ExecuteDeleteHsmConfiguration(request);}```
+```csharppublic CreateLoadBalancerRequest(string loadBalancerName) { setLoadBalancerName(loadBalancerName); }```
+```csharppublic string GetUserInfo() { return Decode(userInfo); }```
+```csharppublic TagAttendeeResult TagAttendee(TagAttendeeRequest request) { request = BeforeClientExecution(request); return ExecuteTagAttendee(request); }```
+```csharppublic string GetRefName() { return name; }```
+```csharppublic SpanNearQuery Build() => new SpanNearQuery(clauses.ToArray(new SpanQuery[clauses.Count]), slop, ordered);```
+```csharppublic bool IsSubTotal(int rowIndex, int columnIndex) { return false; }```
+```csharppublic DescribeDBProxiesResponse DescribeDBProxies(DescribeDBProxiesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDBProxies(request); }```
+```csharppublic GetVoiceConnectorProxyResult GetVoiceConnectorProxy(GetVoiceConnectorProxyRequest request) { request = BeforeClientExecution(request); return ExecuteGetVoiceConnectorProxy(request); }```
+```csharppublic WindowCacheConfig FromConfig(Config rc){SetPackedGitUseStrongRefs(rc.GetBoolean(CONFIG_CORE_SECTION, CONFIG_KEY_PACKED_GIT_USE_STRONGREFS, IsPackedGitUseStrongRefs()));SetPackedGitOpenFiles(rc.GetInt(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_OPENFILES, GetPackedGitOpenFiles()));SetPackedGitLimit(rc.GetLong(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_LIMIT, GetPackedGitLimit()));SetPackedGitWindowSize(rc.GetInt(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_WINDOWSIZE, GetPackedGitWindowSize()));SetPackedGitMMAP(rc.GetBoolean(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_MMAP, IsPackedGitMMAP()));SetDeltaBaseCacheLimit(rc.GetInt(CONFIG_CORE_SECTION, null, CONFIG_KEY_DELTA_BASE_CACHE_LIMIT, GetDeltaBaseCacheLimit()));long maxMem = GC.MaxMemory();long sft = rc.GetLong(CONFIG_CORE_SECTION, null, CONFIG_KEY_STREAM_FILE_TRESHOLD, GetStreamFileThreshold());sft = Math.Min(sft, maxMem / 4);sft = Math.Min(sft
+```csharppublic static DateTime GetJavaDate(double date) { return GetJavaDate(date, false, null, false); }```
+```csharppublic StartPersonTrackingResult StartPersonTracking(StartPersonTrackingRequest request){request = BeforeClientExecution(request);return ExecuteStartPersonTracking(request);}```
+```csharppublic override int Size => totalSize;```
+```csharppublic GetRouteResult GetRoute(GetRouteRequest request) { request = BeforeClientExecution(request); return ExecuteGetRoute(request); }```
+```csharppublic DeleteClusterResult DeleteCluster(DeleteClusterRequest request){request = BeforeClientExecution(request);return ExecuteDeleteCluster(request);}```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[MMS]\n");buffer.Append("    .addMenu        = ").Append(Convert.ToString(GetAddMenuCount(), 16)).Append("\n");buffer.Append("    .delMenu        = ").Append(Convert.ToString(GetDelMenuCount(), 16)).Append("\n");buffer.Append("[/MMS]\n");return buffer.ToString();}```
+```csharppublic FileBasedConfig(Config base, File cfgLocation, FS fs) : base(base){configFile = cfgLocation;this.fs = fs;this.snapshot = FileSnapshot.DIRTY;this.hash = ObjectId.zeroId();}```
+```csharppublic int Following(int pos){if (pos < text.GetBeginIndex() || pos > text.GetEndIndex()){throw new ArgumentException("offset out of bounds");}else if (0 == sentenceStarts.Length){text.SetIndex(text.GetBeginIndex());return DONE;}else if (pos >= sentenceStarts[sentenceStarts.Length - 1]){text.SetIndex(text.GetEndIndex());currentSentence = sentenceStarts.Length - 1;return DONE;}else{currentSentence = (sentenceStarts.Length - 1) / 2;MoveToSentenceAt(pos, 0, sentenceStarts.Length - 2);text.SetIndex(sentenceStarts[++currentSentence]);return Current();}}```
+```csharppublic UpdateParameterGroupResult UpdateParameterGroup(UpdateParameterGroupRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateParameterGroup(request); }```
+```csharppublic SeriesChartGroupIndexRecord Clone() => Copy();```
+```csharpusing System;public static double CalcDistanceFromErrPct(Shape shape, double distErrPct, SpatialContext ctx){if (distErrPct < 0 || distErrPct > 0.5){throw new ArgumentException("distErrPct " + distErrPct + " must be between [0 to 0.5]");}if (distErrPct == 0 || shape is Point){return 0;}Rectangle bbox = shape.GetBoundingBox();Point ctr = bbox.GetCenter();double y = (ctr.Y >= 0 ? bbox.MaxY : bbox.MinY);double diagonalDist = ctx.GetDistCalc().Distance(ctr, bbox.MaxX, y);return diagonalDist * distErrPct;}```
+```csharppublic int CodePointAt(int index){if (index < 0 || index >= count){throw IndexAndLength(index);}return char.GetNumericValue(value[index]);}```
+```csharppublic void SetPasswordVerifier(int passwordVerifier) { this.passwordVerifier = passwordVerifier; }```
+```csharppublic ListVaultsRequest(string accountId) { setAccountId(accountId); }```
+```csharppublic SquashMessageFormatter() { dateFormatter = new GitDateFormatter(Format.DEFAULT); }```
+```csharppublic GetVideoCoverRequest() : base("CloudPhoto", "2017-07-11", "GetVideoCover", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic int LastIndexOf(object obj){int pos = size;Link<E> link = voidLink.Previous;if (obj != null){while (link != voidLink){pos--;if (obj.Equals(link.Data)){return pos;}link = link.Previous;}}else{while (link != voidLink){pos--;if (link.Data == null){return pos;}link = link.Previous;}}return -1;}```
+```csharppublic DescribeSpotFleetRequestsResult DescribeSpotFleetRequests(DescribeSpotFleetRequestsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeSpotFleetRequests(request); }```
+```csharppublic IndexFacesResult IndexFaces(IndexFacesRequest request) { request = BeforeClientExecution(request); return ExecuteIndexFaces(request); }```
+```csharppublic RuleBasedBreakIterator GetBreakIterator(int script){switch (script){case UScript.JAPANESE:return (RuleBasedBreakIterator)cjkBreakIterator.Clone();case UScript.MYANMAR:if (myanmarAsWords){return (RuleBasedBreakIterator)defaultBreakIterator.Clone();}else{return (RuleBasedBreakIterator)myanmarSyllableIterator.Clone();}default:return (RuleBasedBreakIterator)defaultBreakIterator.Clone();}}```
+```csharppublic string ToString(){StringBuilder b = new StringBuilder();b.Append("[DCONREF]\n");b.Append("    .ref\n");b.Append("        .firstrow   = ").Append(firstRow).Append("\n");b.Append("        .lastrow    = ").Append(lastRow).Append("\n");b.Append("        .firstcol   = ").Append(firstCol).Append("\n");b.Append("        .lastcol    = ").Append(lastCol).Append("\n");b.Append("    .cch            = ").Append(charCount).Append("\n");b.Append("    .stFile\n");b.Append("        .h          = ").Append(charType).Append("\n");b.Append("        .rgb        = ").Append(GetReadablePath()).Append("\n");b.Append("[/DCONREF]\n");return b.ToString();}```
+```csharppublic int GetPackedGitOpenFiles() { return packedGitOpenFiles; }```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[FEATURE HEADER]\n");buffer.Append("[/FEATURE HEADER]\n");return buffer.ToString();}```
+```csharpusing System.Text;public static byte[] GetToUnicodeLE(string str) { return Encoding.Unicode.GetBytes(str); }```
+```csharppublic static List<string> GetFooterLines(string keyName) => GetFooterLines(new FooterKey(keyName));```
+```csharppublic void refresh() {base.refresh(); clearReferences();}```
+```csharppublic float Get(int index) { CheckIndex(index); return byteBuffer.GetFloat(index * sizeof(float)); }```
+```csharppublic DeleteDetectorResult DeleteDetector(DeleteDetectorRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteDetector(request); }```
+```csharppublic int[] Grow() { Debug.Assert(bytesStart != null); return bytesStart = ArrayUtil.Grow(bytesStart, bytesStart.Length + 1); }```
+```csharppublic ListExclusionsResult ListExclusions(ListExclusionsRequest request) { request = BeforeClientExecution(request); return ExecuteListExclusions(request); }```
+```csharppublic static SpatialStrategy GetSpatialStrategy(int roundNumber){SpatialStrategy result = spatialStrategyCache.Get(roundNumber);if (result == null){throw new InvalidOperationException("Strategy should have been init'ed by SpatialDocMaker by now");}return result;}```
+```csharppublic DBCluster RestoreDBClusterToPointInTime(RestoreDBClusterToPointInTimeRequest request) { request = BeforeClientExecution(request); return ExecuteRestoreDBClusterToPointInTime(request); }```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(field_1_categoryDataType);@out.WriteShort(field_2_valuesDataType);@out.WriteShort(field_3_numCategories);@out.WriteShort(field_4_numValues);@out.WriteShort(field_5_bubbleSeriesType);@out.WriteShort(field_6_numBubbleValues);}```
+```csharppublic PostAgentProfileResult PostAgentProfile(PostAgentProfileRequest request) { request = BeforeClientExecution(request); return ExecutePostAgentProfile(request); }```
+```csharppublic ParseTreePattern CompileParseTreePattern(string pattern, int patternRuleIndex) {if (GetTokenStream() != null) {TokenSource tokenSource = GetTokenStream().GetTokenSource();if (tokenSource is Lexer) {Lexer lexer = (Lexer)tokenSource;return CompileParseTreePattern(pattern, patternRuleIndex, lexer);}}throw new NotSupportedException("Parser can't discover a lexer to use");}```
+```csharppublic BacktrackDBClusterResult BacktrackDBCluster(BacktrackDBClusterRequest request) { request = BeforeClientExecution(request); return ExecuteBacktrackDBCluster(request); }```
+```csharppublic string getName() { return strategyName; }```
+```csharppublic void CopyTo(byte[] b, int o) { FormatHexByte(b, o + 0, w1); FormatHexByte(b, o + 8, w2); FormatHexByte(b, o + 16, w3); FormatHexByte(b, o + 24, w4); FormatHexByte(b, o + 32, w5); }```
+```csharpusing System.Collections.Generic;public static List<int> LineMap(byte[] buf, int ptr, int end){List<int> map = new List<int>((end - ptr) / 36);map.AddRange(Enumerable.Repeat(int.MinValue, 1));for (; ptr < end; ptr = NextLF(buf, ptr)){map.Add(ptr);}map.Add(end);return map;}private static int NextLF(byte[] buf, int ptr){// Assuming NextLF is implemented elsewherereturn ptr + 1; // Placeholder implementation}```
+```csharppublic HashSet<object> GetAdditionalHaves() { return new HashSet<object>(); }```
+```csharppublic long RamBytesUsed() {long sizeInBytes = BASE_RAM_BYTES_USED + fields.Count * 2 * RamUsageEstimator.NUM_BYTES_OBJECT_REF;foreach (SimpleTextTerms simpleTextTerms in termsCache.Values) {sizeInBytes += (simpleTextTerms != null) ? simpleTextTerms.RamBytesUsed() : 0;}return sizeInBytes;}```
+```csharppublic string ToXml(string tab){StringBuilder builder = new StringBuilder();builder.Append(tab).Append("<").Append(GetRecordName()).Append(">\n");foreach (EscherRecord escherRecord in GetEscherRecords()){builder.Append(escherRecord.ToXml(tab + "\t"));}builder.Append(tab).Append("</").Append(GetRecordName()).Append(">\n");return builder.ToString();}```
+```csharppublic TokenStream Create(TokenStream input) { return new GalicianMinimalStemFilter(input); }```
+```csharppublic string ToString() {StringBuilder r = new StringBuilder();r.Append("Commit");r.Append("={\n");r.Append("tree ");r.Append(treeId != null ? treeId.Name : "NOT_SET");r.Append("\n");foreach (ObjectId p in parentIds) {r.Append("parent ");r.Append(p.Name);r.Append("\n");}r.Append("author ");r.Append(author != null ? author.ToString() : "NOT_SET");r.Append("\n");r.Append("committer ");r.Append(committer != null ? committer.ToString() : "NOT_SET");r.Append("\n");r.Append("gpgSignature ");r.Append(gpgSignature != null ? gpgSignature.ToString() : "NOT_SET");r.Append("\n");if (encoding != null && !References.IsSameObject(encoding, UTF_8)) {r.Append("encoding ");r.Append(encoding.Name);r.Append("\n");}r.Append("\n");r.Append(message != null ? message : "");r.Append("}");return r.ToString();}```
+```csharppublic IndicNormalizationFilterFactory(Dictionary<string, string> args) : base(args){if (!args.Any()){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args));}}```
+```csharppublic OptionGroup CreateOptionGroup(CreateOptionGroupRequest request) { request = BeforeClientExecution(request); return ExecuteCreateOptionGroup(request); }```
+```csharppublic AssociateMemberAccountResult AssociateMemberAccount(AssociateMemberAccountRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateMemberAccount(request); }```
+```csharppublic void run() { doRefreshProgress(mId, mProgress, mFromUser, true); mRefreshProgressRunnable = this; }```
+```csharppublic SetTerminationProtectionResult SetTerminationProtection(SetTerminationProtectionRequest request){request = BeforeClientExecution(request);return ExecuteSetTerminationProtection(request);}```
+```csharppublic string GetErrorHeader(RecognitionException e){int line = e.GetOffendingToken().GetLine();int charPositionInLine = e.GetOffendingToken().GetCharPositionInLine();return "line " + line + ":" + charPositionInLine;}```
+```csharppublic CharBuffer AsReadOnlyBuffer(){CharToByteBufferAdapter buf = new CharToByteBufferAdapter(byteBuffer.AsReadOnlyBuffer());buf.limit = limit;buf.position = position;buf.mark = mark;buf.byteBuffer.Order = byteBuffer.Order;return buf;}```
+```csharppublic StopSentimentDetectionJobResult stopSentimentDetectionJob(StopSentimentDetectionJobRequest request){request = beforeClientExecution(request);return executeStopSentimentDetectionJob(request);}```
+```csharppublic ObjectIdSubclassMap<ObjectId> GetNewObjectIds(){if (newObjectIds != null)return newObjectIds;return new ObjectIdSubclassMap<ObjectId>();}```
+```csharppublic void Clear() { hash = hash(new byte[0]); base.Clear(); }```
+```csharppublic void Reset(){lock (lockObject){CheckNotClosed();if (mark == -1){throw new IOException("Invalid mark");}pos = mark;}}```
+```csharppublic RefErrorPtg(LittleEndianInput input)  { field_1_reserved = input.ReadInt(); }```
+```csharppublic SuspendGameServerGroupResult SuspendGameServerGroup(SuspendGameServerGroupRequest request) { request = BeforeClientExecution(request); return ExecuteSuspendGameServerGroup(request); }```
+```csharppublic final object Evaluate(object[] args, int srcRowIndex, int srcColumnIndex){if (args.Length != 3){return ErrorEval.ValueInvalid;}return Evaluate(srcRowIndex, srcColumnIndex, args[0], args[1], args[2]);}```
+```csharppublic GetRepoRequest() : base("cr", "2016-06-07", "GetRepo", "cr"){SetUriPattern("/repos/[RepoNamespace]/[RepoName]");SetMethod(MethodType.GET);}```
+```csharppublic void SetDate(DateTime date) {if (date != null) {SetDate(DateTools.DateToString(date, DateTools.Resolution.Second));} else {this.date = null;}}```
+```csharppublic TokenStream Create(TokenStream input) { return new GermanMinimalStemFilter(input); }```
+```csharppublic object[] ToArray() { return a.Clone() as object[]; }```
+```csharppublic void Write(char[] buffer, int offset, int len) {Array.CheckOffsetAndLength(buffer.Length, offset, len);lock (lockObject) {Expand(len);Buffer.BlockCopy(buffer, offset * sizeof(char), this.buf, this.count * sizeof(char), len * sizeof(char));this.count += len;}}```
+```csharppublic static readonly RevFilter After(DateTime ts) => After(ts.Ticks);```
+```csharppublic DeleteGroupPolicyRequest(string groupName, string policyName) { SetGroupName(groupName); SetPolicyName(policyName); }```
+```csharppublic DeregisterTransitGatewayMulticastGroupMembersResult DeregisterTransitGatewayMulticastGroupMembers(DeregisterTransitGatewayMulticastGroupMembersRequest request) { request = BeforeClientExecution(request); return ExecuteDeregisterTransitGatewayMulticastGroupMembers(request); }```
+```csharppublic BatchDeleteScheduledActionResult batchDeleteScheduledAction(BatchDeleteScheduledActionRequest request){request = beforeClientExecution(request);return executeBatchDeleteScheduledAction(request);}```
+```csharppublic CreateAlgorithmResult CreateAlgorithm(CreateAlgorithmRequest request) { request = BeforeClientExecution(request); return ExecuteCreateAlgorithm(request); }```
+```csharppublic int ReadUByte() { return ReadByte() & 0x00FF; }```
+```csharppublic void SetLength(int sz) { NB.EncodeInt32(info, infoOffset + P_SIZE, sz); }```
+```csharppublic DescribeScalingProcessTypesResult DescribeScalingProcessTypes() { return DescribeScalingProcessTypes(new DescribeScalingProcessTypesRequest()); }```
+```csharppublic ListResourceRecordSetsResult listResourceRecordSets(ListResourceRecordSetsRequest request) { request = beforeClientExecution(request); return executeListResourceRecordSets(request); }```
+```csharppublic Token RecoverInline(Parser recognizer) => throw new RecognitionException(new InputMismatchException(recognizer).ToParseCancellationException());private static Exception ToParseCancellationException(this InputMismatchException e){var context = e.Recognizer.GetRuleContext();while (context != null){context.Exception = e;context = context.Parent;}return new ParseCancellationException(e);}```
+```csharppublic SetTagsForResourceResponse SetTagsForResource(SetTagsForResourceRequest request) { request = BeforeClientExecution(request); return ExecuteSetTagsForResource(request); }```
+```csharppublic ModifyStrategyRequest() : base("CloudCallCenter", "2017-07-05", "ModifyStrategy", "CloudCallCenter", "innerAPI") {}```
+```csharppublic DescribeVpcEndpointServicesResult DescribeVpcEndpointServices(DescribeVpcEndpointServicesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeVpcEndpointServices(request); }```
+```csharppublic EnableLoggingResult enableLogging(EnableLoggingRequest request){request = beforeClientExecution(request);return executeEnableLogging(request);}```
+```csharppublic bool Contains(object o) { return ConcurrentHashMap.this.ContainsValue(o); }```
+```csharppublic class SheetRangeIdentifier : Identifier{private readonly NameIdentifier _lastSheetIdentifier;public SheetRangeIdentifier(string bookName, NameIdentifier firstSheetIdentifier, NameIdentifier lastSheetIdentifier) : base(bookName, firstSheetIdentifier){_lastSheetIdentifier = lastSheetIdentifier;}}```
+```csharppublic DomainMetadataRequest(string domainName) { SetDomainName(domainName); }```
+```csharppublic ParseException(Token currentTokenVal, int[][] expectedTokenSequencesVal, string[] tokenImageVal) : base(new MessageImpl(QueryParserMessages.INVALID_SYNTAX, Initialise(currentTokenVal, expectedTokenSequencesVal, tokenImageVal))){this.currentToken = currentTokenVal;this.expectedTokenSequences = expectedTokenSequencesVal;this.tokenImage = tokenImageVal;}```
+```csharppublic FetchPhotosRequest() : base("CloudPhoto", "2017-07-11", "FetchPhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic PrintWriter writer() { return writer; }```
+```csharppublic class NGramTokenizerFactory : TokenizerFactory{private int minGramSize;private int maxGramSize;public NGramTokenizerFactory(Dictionary<string, string> args) : base(args){minGramSize = GetInt(args, "minGramSize", NGramTokenizer.DEFAULT_MIN_NGRAM_SIZE);maxGramSize = GetInt(args, "maxGramSize", NGramTokenizer.DEFAULT_MAX_NGRAM_SIZE);if (args.Count > 0){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args.Keys));}}private static int GetInt(Dictionary<string, string> args, string key, int defaultValue){if (args.ContainsKey(key)){if (int.TryParse(args[key], out int value)){return value;}}return defaultValue;}}```
+```csharppublic bool IsDirectoryFileConflict() { return dfConflict != null; }```
+```csharppublic IndonesianStemFilter(TokenStream input, bool stemDerivational) : base(input){this.stemDerivational = stemDerivational;}```
+```csharppublic CreateTrafficPolicyResult CreateTrafficPolicy(CreateTrafficPolicyRequest request) { request = BeforeClientExecution(request); return ExecuteCreateTrafficPolicy(request); }```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteInt(fSD);@out.WriteInt(passwordVerifier);StringUtil.WriteUnicodeString(@out, title);@out.Write(securityDescriptor);}```
+```csharppublic static double Floor(double n, double s) {if (s == 0 && n != 0) {return double.NaN;} else {return (n == 0 || s == 0) ? 0 : Math.Floor(n / s) * s;}}```
+```csharppublic ByteArrayDataOutput(byte[] bytes, int offset, int len) { Reset(bytes, offset, len); }```
+```csharpusing System.Collections.Generic;public static List<Tree> GetChildren(Tree t) {List<Tree> kids = new List<Tree>();for (int i = 0; i < t.GetChildCount(); i++) {kids.Add(t.GetChild(i));}return kids;}```
+```csharppublic void clear() { Hashtable.this.Clear(); }```
+```csharppublic RefreshAllRecord(bool refreshAll) : this(0){SetRefreshAll(refreshAll);}```
+```csharppublic DeleteNamedQueryResult DeleteNamedQuery(DeleteNamedQueryRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteNamedQuery(request); }```
+```csharppublic GraphvizFormatter(ConnectionCosts costs) {this.costs = costs;this.bestPathMap = new Dictionary<string, object>();sb.Append(formatHeader());sb.Append("  init [style=invis]\n");sb.Append("  init -> 0.0 [label=\"" + BOS_LABEL + "\"]\n");}```
+```csharppublic CheckMultiagentRequest() : base("visionai-poc", "2020-04-08", "CheckMultiagent"){SetMethod(MethodType.POST);}```
+```csharppublic ListUserProfilesResult ListUserProfiles(ListUserProfilesRequest request) { request = BeforeClientExecution(request); return ExecuteListUserProfiles(request); }```
+```csharppublic CreateRelationalDatabaseFromSnapshotResult CreateRelationalDatabaseFromSnapshot(CreateRelationalDatabaseFromSnapshotRequest request){request = BeforeClientExecution(request);return ExecuteCreateRelationalDatabaseFromSnapshot(request);}```
+```csharppublic StartTaskResult StartTask(StartTaskRequest request){request = BeforeClientExecution(request);return ExecuteStartTask(request);}```
+```csharppublic HashSet<string> GetIgnoredPaths() { return ignoredPaths; }```
+```csharppublic FeatSmartTag(RecordInputStream in) { data = in.ReadRemainder(); }```
+```csharppublic Change(ChangeAction action, ResourceRecordSet resourceRecordSet) { SetAction(action.ToString()); SetResourceRecordSet(resourceRecordSet); }```
+```csharppublic DeleteImageResult DeleteImage(DeleteImageRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteImage(request); }```
+```csharppublic CreateConfigurationSetResult CreateConfigurationSet(CreateConfigurationSetRequest request){request = BeforeClientExecution(request);return ExecuteCreateConfigurationSet(request);}```
+```csharppublic IEnumerator<E> GetEnumerator() { object[] snapshot = elements; return new CowIterator<E>(snapshot, 0, snapshot.Length); }```
+```csharppublic void VisitContainedRecords(RecordVisitor rv){if (_recs.Count == 0){return;}rv.VisitRecord(_bofRec);for (int i = 0; i < _recs.Count; i++){RecordBase rb = _recs[i];if (rb is RecordAggregate){((RecordAggregate)rb).VisitContainedRecords(rv);}else{rv.VisitRecord((org.apache.poi.hssf.record.Record)rb);}}rv.VisitRecord(EOFRecord.Instance);}```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[FtCbls ]\n");buffer.Append("  size     = ").Append(GetDataSize()).Append("\n");buffer.Append("  reserved = ").Append(HexDump.ToHex(reserved)).Append("\n");buffer.Append("[/FtCbls ]\n");return buffer.ToString();}```
+```csharppublic static BATBlock CreateEmptyBATBlock(POIFSBigBlockSize bigBlockSize, bool isXBAT){BATBlock block = new BATBlock(bigBlockSize);if (isXBAT){int entriesPerXbatBlock = bigBlockSize.GetXBATEntriesPerBlock();block._values[entriesPerXbatBlock] = POIFSConstants.END_OF_CHAIN;}return block;}```
+```csharppublic TagResourceResult TagResource(TagResourceRequest request) { request = BeforeClientExecution(request); return ExecuteTagResource(request); }```
+```csharppublic DeleteMailboxPermissionsResult deleteMailboxPermissions(DeleteMailboxPermissionsRequest request) { request = beforeClientExecution(request); return executeDeleteMailboxPermissions(request); }```
+```csharppublic ListDatasetGroupsResult ListDatasetGroups(ListDatasetGroupsRequest request){request = BeforeClientExecution(request);return ExecuteListDatasetGroups(request);}```
+```csharppublic ResumeProcessesResult ResumeProcesses(ResumeProcessesRequest request) { request = BeforeClientExecution(request); return ExecuteResumeProcesses(request); }```
+```csharppublic GetPersonTrackingResult GetPersonTracking(GetPersonTrackingRequest request) { request = BeforeClientExecution(request); return ExecuteGetPersonTracking(request); }```
+```csharppublic string ToFormulaString(string[] operands){if (space.IsSet(_options)){return operands[0];}else if (optiIf.IsSet(_options)){return ToFormulaString() + "(" + operands[0] + ")";}else if (optiSkip.IsSet(_options)){return ToFormulaString() + operands[0];}else{return ToFormulaString() + "(" + operands[0] + ")";}}```
+```csharppublic T Merge(T first, T second) { throw new NotSupportedException(); }```
+```csharppublic string ToString() { return this.message.GetKey() + ": " + GetLocalizedMessage(); }```
+```csharppublic XPath(Parser parser, string path) { this.parser = parser; this.path = path; elements = split(path); }```
+```csharppublic CreateAccountAliasRequest(string accountAlias) { setAccountAlias(accountAlias); }```
+```csharppublic void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int j = 0; j < iterations; ++j) {byte block = blocks[blocksOffset++];values[valuesOffset++] = (long)((block >> 7) & 1);values[valuesOffset++] = (long)((block >> 6) & 1);values[valuesOffset++] = (long)((block >> 5) & 1);values[valuesOffset++] = (long)((block >> 4) & 1);values[valuesOffset++] = (long)((block >> 3) & 1);values[valuesOffset++] = (long)((block >> 2) & 1);values[valuesOffset++] = (long)((block >> 1) & 1);values[valuesOffset++] = (long)(block & 1);}}```
+```csharppublic PushConnection OpenPush() => new TcpPushConnection();```
+```csharppublic static void strcpy(char[] dst, int di, char[] src, int si) {while (src[si] != 0) {dst[di++] = src[si++];}dst[di] = 0;}```
+```csharppublic K getKey() { return mapEntry.Key; }```
+```csharppublic static int NumNonnull(object[] data){int n = 0;if (data == null) return n;foreach (object o in data){if (o != null) n++;}return n;}```
+```csharppublic void Add(int location, E @object){if (location >= 0 && location <= size){Link<E> link = voidLink;if (location < (size / 2)){for (int i = 0; i <= location; i++){link = link.next;}}else{for (int i = size; i > location; i--){link = link.previous;}}Link<E> previous = link.previous;Link<E> newLink = new Link<E>(@object, previous, link);previous.next = newLink;link.previous = newLink;size++;modCount++;}else{throw new IndexOutOfRangeException();}}```
+```csharppublic DescribeDomainResult DescribeDomain(DescribeDomainRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDomain(request); }```
+```csharppublic void Flush() => base.Flush();```
+```csharppublic PersianCharFilterFactory(Dictionary<string, string> args) : base(args){if (!args.Any()){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args));}}```
+```csharppublic bool IncrementToken() { if (used) { return false; } ClearAttributes(); termAttribute.Append(value); offsetAttribute.SetOffset(0, length); used = true; return true; }```
+```csharppublic static FloatBuffer Allocate(int capacity){if (capacity < 0){throw new ArgumentException();}return new ReadWriteFloatArrayBuffer(capacity);}```
+```csharppublic final Edit After(Edit cut) { return new Edit(cut.EndA, EndA, cut.EndB, EndB); }```
+```csharppublic UpdateRuleVersionResult UpdateRuleVersion(UpdateRuleVersionRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateRuleVersion(request); }```
+```csharppublic ListVoiceConnectorTerminationCredentialsResult ListVoiceConnectorTerminationCredentials(ListVoiceConnectorTerminationCredentialsRequest request) { request = BeforeClientExecution(request); return ExecuteListVoiceConnectorTerminationCredentials(request); }```
+```csharppublic GetDeploymentTargetResult GetDeploymentTarget(GetDeploymentTargetRequest request){request = BeforeClientExecution(request);return ExecuteGetDeploymentTarget(request);}```
+```csharppublic void SetNoChildReport(){letChildReport = false;foreach (var task in tasks){if (task is TaskSequence seqTask){seqTask.SetNoChildReport();}}}```
+```csharppublic E Get(int location){try{return a[location];}catch (ArgumentOutOfRangeException e){throw System.Collections.Generic.List<T>.ThrowIndexOutOfRangeException(location, a.Length);}}```
+```csharppublic DescribeDataSetResult DescribeDataSet(DescribeDataSetRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDataSet(request); }```
+```csharppublic SkipWorkTreeFilter(int treeIdx) { this.treeIdx = treeIdx; }```
+```csharppublic DescribeNetworkInterfacesResult DescribeNetworkInterfaces() { return DescribeNetworkInterfaces(new DescribeNetworkInterfacesRequest()); }```
+```csharppublic bool Contains(int row, int col) { return _firstRow <= row && _lastRow >= row && _firstColumn <= col && _lastColumn >= col; }```
+```csharppublic string ToString() { return new string(this.chars); }```
+```csharppublic PatchType GetPatchType() { return patchType; }```
+```csharppublic IEnumerator<K> GetEnumerator() { return new KeyIterator(); }```
+```csharppublic CreateScriptResult createScript(CreateScriptRequest request){request = beforeClientExecution(request);return executeCreateScript(request);}```
+```csharppublic BytesRef next(){termUpto++;if (termUpto >= info.terms.Count){return null;}else{info.terms.Get(info.sortedTerms[termUpto], br);return br;}}```
+```csharppublic string outputToString(CharsRef output) { return output.ToString(); }```
+```csharppublic AssociateWebsiteAuthorizationProviderResult AssociateWebsiteAuthorizationProvider(AssociateWebsiteAuthorizationProviderRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateWebsiteAuthorizationProvider(request); }```
+```csharppublic void Unpop(RevCommit c){Block b = head;if (b == null){b = free.NewBlock();b.ResetToMiddle();b.Add(c);head = b;tail = b;return;}else if (b.CanUnpop()){b.Unpop(c);return;}b = free.NewBlock();b.ResetToEnd();b.Unpop(c);b.Next = head;head = b;}```
+```csharppublic EdgeNGramTokenizerFactory(Dictionary<string, string> args) : base(args){minGramSize = GetInt(args, "minGramSize", EdgeNGramTokenizer.DEFAULT_MIN_GRAM_SIZE);maxGramSize = GetInt(args, "maxGramSize", EdgeNGramTokenizer.DEFAULT_MAX_GRAM_SIZE);if (!args.isEmpty()){throw new ArgumentException("Unknown parameters: " + args);}}```
+```csharppublic ModifyDBParameterGroupRequest(string dBParameterGroupName, List<Parameter> parameters){SetDBParameterGroupName(dBParameterGroupName);SetParameters(parameters);}```
+```csharppublic GetHostedZoneLimitResult getHostedZoneLimit(GetHostedZoneLimitRequest request) { request = beforeClientExecution(request); return executeGetHostedZoneLimit(request); }```
+```csharppublic void Set(int index, long value){int o = index >> 6;int b = index & 63;int shift = b << 0;blocks[o] = (blocks[o] & ~(1L << shift)) | (value << shift);}```
+```csharppublic RevFilter Clone() { return new PatternSearch(Pattern()); }```
+```csharppublic string ToString() { return $"spans({term.ToString()})@{(doc == -1 ? "START" : (doc == NO_MORE_DOCS) ? "ENDDOC" : $"{doc} - {(position == NO_MORE_POSITIONS ? "ENDPOS" : position)}")}; }```
+```csharppublic bool CanAppendMatch() {foreach (Head head in heads) {if (head != LastHead.INSTANCE) {return true;}}return false;}```
+```csharppublic virtual int LastIndexOf(string subString, int start) { return base.LastIndexOf(subString, start); }```
+```csharppublic DeleteNetworkAclEntryResult DeleteNetworkAclEntry(DeleteNetworkAclEntryRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteNetworkAclEntry(request); }```
+```csharppublic AssociateMemberToGroupResult AssociateMemberToGroup(AssociateMemberToGroupRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateMemberToGroup(request); }```
+```csharppublic static readonly int committer(byte[] b, int ptr){int sz = b.Length;if (ptr == 0) ptr += 46;while (ptr < sz && b[ptr] == 'p') ptr += 48;if (ptr < sz && b[ptr] == 'a') ptr = nextLF(b, ptr);return match(b, ptr, committer);}```
+```csharppublic int GetLineNumber() { return row; }```
+```csharppublic SubmoduleUpdateCommand AddPath(string path) { paths.Add(path); return this; }```
+```csharppublic GetPushTemplateResult GetPushTemplate(GetPushTemplateRequest request) { request = BeforeClientExecution(request); return ExecuteGetPushTemplate(request); }```
+```csharppublic DescribeVaultResult DescribeVault(DescribeVaultRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeVault(request); }```
+```csharppublic DescribeVpcPeeringConnectionsResult DescribeVpcPeeringConnections() { return DescribeVpcPeeringConnections(new DescribeVpcPeeringConnectionsRequest()); }```
+```csharppublic void PutLong(int index, long value) { throw new ReadOnlyBufferException(); }```
+```csharppublic RegisterDeviceResult registerDevice(RegisterDeviceRequest request) { request = beforeClientExecution(request); return executeRegisterDevice(request); }```
+```csharppublic static Format byId(int id){foreach (Format format in Enum.GetValues(typeof(Format))){if (format.Id == id){return format;}}throw new ArgumentException("Unknown format id: " + id);}```
+```csharppublic DeleteAppResult DeleteApp(DeleteAppRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteApp(request); }```
+```csharppublic GetBaiduChannelResult GetBaiduChannel(GetBaiduChannelRequest request) {request = BeforeClientExecution(request);return ExecuteGetBaiduChannel(request);}```
+```csharppublic BytesReader GetBytesReader() { return fst.GetBytesReader(); }```
+```csharppublic static bool IsValidSchemeChar(int index, char c){if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){return true;}if (index > 0 && ((c >= '0' && c <= '9') || c == '+' || c == '-' || c == '.')){return true;}return false;}```
+```csharppublic ListAppliedSchemaArnsResult ListAppliedSchemaArns(ListAppliedSchemaArnsRequest request) { request = BeforeClientExecution(request); return ExecuteListAppliedSchemaArns(request); }```
+```csharppublic string name() { return this.name; }```
+```csharppublic ValueEval Evaluate(ValueEval[] args, OperationEvaluationContext ec){if (args.Length < 1){return ErrorEval.ValueInvalid;}bool isA1style;string text;try{ValueEval ve = OperandResolver.GetSingleValue(args[0], ec.RowIndex, ec.ColumnIndex);text = OperandResolver.CoerceValueToString(ve);switch (args.Length){case 1:isA1style = true;break;case 2:isA1style = EvaluateBooleanArg(args[1], ec);break;default:return ErrorEval.ValueInvalid;}}catch (EvaluationException e){return e.ErrorEval;}return EvaluateIndirect(ec, text, isA1style);}```
+```csharppublic final int CompareTo(int[] bs, int p){int cmp;cmp = NB.CompareUInt32(w1, bs[p]);if (cmp != 0) return cmp;cmp = NB.CompareUInt32(w2, bs[p + 1]);if (cmp != 0) return cmp;cmp = NB.CompareUInt32(w3, bs[p + 2]);if (cmp != 0) return cmp;cmp = NB.CompareUInt32(w4, bs[p + 3]);if (cmp != 0) return cmp;return NB.CompareUInt32(w5, bs[p + 4]);}```
+```csharppublic void removeName(int index) { names.RemoveAt(index); workbook.RemoveName(index); }```
+```csharppublic GetQueueAttributesRequest(string queueUrl, List<string> attributeNames) { setQueueUrl(queueUrl); setAttributeNames(attributeNames); }```
+```csharppublic static bool[] CopyOf(bool[] original, int newLength) {if (newLength < 0) {throw new IndexOutOfRangeException();}return CopyOfRange(original, 0, newLength);}```
+```csharppublic static void SetEnabled(bool enabled) { ENABLED = enabled; }```
+```csharppublic DeleteLogPatternResult DeleteLogPattern(DeleteLogPatternRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteLogPattern(request); }```
+```csharppublic bool Contains(char[] text, int off, int len) { return map.ContainsKey(text, off, len); }```
+```csharppublic int GetFirstSheetIndexFromExternSheetIndex(int externSheetNumber) { return linkTable.GetFirstInternalSheetIndexForExtIndex(externSheetNumber); }```
+```csharppublic bool Handles(string commandLine) { return command.Length + 1 < commandLine.Length && commandLine[command.Length] == ' ' && commandLine.StartsWith(command); }```
+```csharppublic static void register(MergeStrategy imp) { register(imp.Name, imp); }```
+```csharppublic long RamBytesUsed() => BASE_RAM_BYTES_USED + (index != null ? index.RamBytesUsed() : 0);```
+```csharppublic HostedZone(string id, string name, string callerReference) { setId(id); setName(name); setCallerReference(callerReference); }```
+```csharppublic GetFindingsResult GetFindings(GetFindingsRequest request) { request = BeforeClientExecution(request); return ExecuteGetFindings(request); }```
+```csharppublic DescribeTopicsDetectionJobResult DescribeTopicsDetectionJob(DescribeTopicsDetectionJobRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeTopicsDetectionJob(request); }```
+```csharppublic bool ProcessMatch(ValueEval eval){if (eval is NumericValueEval){if (minimumValue == null){minimumValue = eval;}else{double currentValue = ((NumericValueEval)eval).GetNumberValue();double oldValue = ((NumericValueEval)minimumValue).GetNumberValue();if (currentValue < oldValue){minimumValue = eval;}}}return true;}```
+```csharppublic void Write(LittleEndianOutput @out) { @out.WriteByte((byte)(sid + GetPtgClass())); @out.WriteInt(field_1_len_ref_subexpression); }```
+```csharpusing System;using System.IO;using Lucene.Net.Facet.Taxonomy;class Program {public static void Main(string[] args) {bool printTree = false;string path = null;for (int i = 0; i < args.Length; i++) {if (args[i] == "-printTree") {printTree = true;} else {path = args[i];}}if (args.Length != (printTree ? 2 : 1)) {Console.WriteLine("\nUsage: java -classpath ... org.apache.lucene.facet.util.PrintTaxonomyStats [-printTree] /path/to/taxononmy/index\n");Environment.Exit(1);}using (var dir = FSDirectory.Open(new DirectoryInfo(path))) {using (var r = new DirectoryTaxonomyReader(dir)) {PrintStats(r, Console.Out, printTree);}}}private static void PrintStats(TaxonomyReader r, TextWriter writer, bool printTree) {// Implementation of PrintStats method goes here}}```
+```csharppublic void SetByteValue(byte value){if (!(fieldsData is Byte)){throw new ArgumentException("cannot change value type from " + fieldsData.GetType().Name + " to Byte");}fieldsData = value;}```
+```csharppublic static int Initialize() => Initialize(DEFAULT_SEED);```
+```csharppublic CachingDoubleValueSource(DoubleValuesSource source) { this.source = source; cache = new Dictionary<long, double>(); }```
+```csharppublic AttributeDefinition(string attributeName, ScalarAttributeType attributeType){SetAttributeName(attributeName);SetAttributeType(attributeType.ToString());}```
+```csharpusing System;using System.Collections.Generic;using System.Linq;public static class StringUtils{public static string Join(IEnumerable<string> parts, string separator){return string.Join(separator, parts);}}```
+```csharppublic ListTaskDefinitionFamiliesResult ListTaskDefinitionFamilies(ListTaskDefinitionFamiliesRequest request) { request = BeforeClientExecution(request); return ExecuteListTaskDefinitionFamilies(request); }```
+```csharppublic ListComponentsResult ListComponents(ListComponentsRequest request){request = BeforeClientExecution(request);return ExecuteListComponents(request);}```
+```csharppublic ActivatePhotosRequest() : base("CloudPhoto", "2017-07-11", "ActivatePhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic CreateMatchmakingRuleSetResult CreateMatchmakingRuleSet(CreateMatchmakingRuleSetRequest request) { request = BeforeClientExecution(request); return ExecuteCreateMatchmakingRuleSet(request); }```
+```csharppublic ListAvailableManagementCidrRangesResult ListAvailableManagementCidrRanges(ListAvailableManagementCidrRangesRequest request){request = BeforeClientExecution(request);return ExecuteListAvailableManagementCidrRanges(request);}```
+```csharppublic ObjectIdSubclassMap<ObjectId> GetBaseObjectIds(){if (baseObjectIds != null)return baseObjectIds;return new ObjectIdSubclassMap<>();}```
+```csharppublic DeletePushTemplateResult DeletePushTemplate(DeletePushTemplateRequest request){request = BeforeClientExecution(request);return ExecuteDeletePushTemplate(request);}```
+```csharppublic CreateDomainEntryResult CreateDomainEntry(CreateDomainEntryRequest request){request = BeforeClientExecution(request);return ExecuteCreateDomainEntry(request);}```
+```csharppublic static int GetEncodedSize(object[] values) {int result = values.Length * 1;foreach (object value in values) {result += GetEncodedSize(value);}return result;}```
+```csharppublic OpenNLPTokenizerFactory(Dictionary<string, string> args) : base(args){sentenceModelFile = Require(args, SENTENCE_MODEL);tokenizerModelFile = Require(args, TOKENIZER_MODEL);if (!args.isEmpty()){throw new ArgumentException("Unknown parameters: " + args);}}```
+```csharppublic int GetInt(int index) { CheckIndex(index, SizeOf.INT); return Memory.ReadInt32(backingArray, offset + index, order); }```
+```csharppublic List<Head> GetNextHeads(char c) {if (Matches(c)) {return NewHeads;}return FileNameMatcher.EMPTY_HEAD_LIST;}```
+```csharppublic void PutShort(short value) { throw new ReadOnlyBufferException(); }```
+```csharppublic void WriteUnshared(object obj) where T : class { WriteObject(obj, true); }```
+```csharppublic int OffsetByCodePoints(int index, int codePointOffset) => char.OffsetByCodePoints(value, 0, count, index, codePointOffset);```
+```csharppublic static int GetUniqueAlt(IEnumerable<BitSet> altsets){BitSet all = GetAlts(altsets);if (all.Cardinality() == 1) return all.NextSetBit(0);return ATN.INVALID_ALT_NUMBER;}```
+```csharppublic DateTime GetWhen() { return new DateTime(when); }```
+```csharppublic RuleTagToken(string ruleName, int bypassTokenType, string label){if (string.IsNullOrEmpty(ruleName)){throw new ArgumentException("ruleName cannot be null or empty.");}this.ruleName = ruleName;this.bypassTokenType = bypassTokenType;this.label = label;}```
+```csharppublic DisableOrganizationAdminAccountResult DisableOrganizationAdminAccount(DisableOrganizationAdminAccountRequest request){request = BeforeClientExecution(request);return ExecuteDisableOrganizationAdminAccount(request);}```
+```csharppublic CreateRoomResult CreateRoom(CreateRoomRequest request) { request = BeforeClientExecution(request); return ExecuteCreateRoom(request); }```
+```csharppublic ReplicationGroup DeleteReplicationGroup(DeleteReplicationGroupRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteReplicationGroup(request); }```
+```csharpusing System;using System.Text;public final class MyClass {public static CharBuffer Decode(ByteBuffer buffer) {try {return Encoding.UTF8.GetString(buffer.ToArray()).ToCharArray();} catch (Exception ex) {throw new Exception(ex.Message, ex);}}}```
+```csharppublic Distribution(string id, string status, string domainName) { setId(id); setStatus(status); setDomainName(domainName); }```
+```csharppublic double[] Array() { return ProtectedArray(); }```
+```csharppublic DateWindow1904Record(RecordInputStream @in) { field_1_window = @in.ReadShort(); }```
+```csharppublic DeleteDBSnapshotRequest(string dBSnapshotIdentifier) { setDBSnapshotIdentifier(dBSnapshotIdentifier); }```
+```csharppublic final ParserExtension GetExtension(string key) { return this.extensions[key]; }```
+```csharppublic void inform(ResourceLoader loader){try{if (chunkerModelFile != null){OpenNLPOpsFactory.GetChunkerModel(chunkerModelFile, loader);}}catch (IOException e){throw new ArgumentException(e);}}```
+```csharppublic CompleteVaultLockResult CompleteVaultLock(CompleteVaultLockRequest request) { request = BeforeClientExecution(request); return ExecuteCompleteVaultLock(request); }```
+```csharppublic final int[] GetCharIntervals() { return points.Clone() as int[]; }```
+```csharppublic long RamBytesUsed() { return values.RamBytesUsed() + base.RamBytesUsed() + sizeof(long) + RamUsageEstimator.NUM_BYTES_OBJECT_REF; }```
+```csharppublic RegisterInstancesWithLoadBalancerResponse RegisterInstancesWithLoadBalancer(RegisterInstancesWithLoadBalancerRequest request) { request = BeforeClientExecution(request); return ExecuteRegisterInstancesWithLoadBalancer(request); }```
+```csharppublic DescribeClusterUserKubeconfigRequest() : base("CS", "2015-12-15", "DescribeClusterUserKubeconfig", "csk"){SetUriPattern("/k8s/[ClusterId]/user_config");SetMethod(MethodType.GET);}```
+```csharppublic PrecisionRecord(RecordInputStream @in) { field_1_precision = @in.readShort(); }```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(GetLeftRowGutter());@out.WriteShort(GetTopColGutter());@out.WriteShort(GetRowLevelMax());@out.WriteShort(GetColLevelMax());}```
+```csharppublic DeleteVirtualInterfaceResult DeleteVirtualInterface(DeleteVirtualInterfaceRequest request){request = BeforeClientExecution(request);return ExecuteDeleteVirtualInterface(request);}```
+```csharppublic Entry GetEntry(string name){if (excludes.Contains(name)){throw new FileNotFoundException(name);}Entry entry = directory.GetEntry(name);return WrapEntry(entry);}```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[BACKUP]\n");buffer.Append("    .backup          = ").Append(Convert.ToString(GetBackup(), 16)).Append("\n");buffer.Append("[/BACKUP]\n");return buffer.ToString();}```
+```csharppublic DeleteVoiceConnectorOriginationResult DeleteVoiceConnectorOrigination(DeleteVoiceConnectorOriginationRequest request){request = BeforeClientExecution(request);return ExecuteDeleteVoiceConnectorOrigination(request);}```
+```csharppublic IAppendable Append(char c) { Write(c); return this; }```
+```csharppublic static long GenerationFromSegmentsFileName(string fileName){if (fileName.Equals(OLD_SEGMENTS_GEN)){throw new ArgumentException("\"" + OLD_SEGMENTS_GEN + "\" is not a valid segment file name since 4.0");}else if (fileName.Equals(IndexFileNames.SEGMENTS)){return 0;}else if (fileName.StartsWith(IndexFileNames.SEGMENTS)){return long.Parse(fileName.Substring(1 + IndexFileNames.SEGMENTS.Length()), System.Globalization.NumberStyles.HexNumber);}else{throw new ArgumentException("fileName \"" + fileName + "\" is not a segments file");}}```
+```csharppublic static TagOpt FromOption(string o){if (string.IsNullOrEmpty(o))return AUTO_FOLLOW;foreach (TagOpt tagopt in Enum.GetValues(typeof(TagOpt))){if (tagopt.Option().Equals(o))return tagopt;}throw new ArgumentException(string.Format(JGitText.Get().InvalidTagOption, o));}```
+```csharppublic StartContentModerationResult StartContentModeration(StartContentModerationRequest request) { request = BeforeClientExecution(request); return ExecuteStartContentModeration(request); }```
+```csharppublic static string QuoteReplacement(string s) {StringBuilder result = new StringBuilder(s.Length);for (int i = 0; i < s.Length; i++) {char c = s[i];if (c == '\\' || c == '$') {result.Append('\\');}result.Append(c);}return result.ToString();}```
+```csharppublic void Set(V newValue) { value = newValue; }```
+```csharppublic QueryParserTokenManager(CharStream stream) { input_stream = stream; }```
+```csharppublic long valueFor(double elapsed){double val;if (modBy == 0)val = elapsed / factor;elseval = elapsed / factor % modBy;if (type == '0')return (long)Math.Round(val);elsereturn (long)val;}```
+```csharppublic unsafe LongBuffer Get(long[] dst, int dstOffset, int longCount){byteBuffer->Limit = limit * SizeOf.Long;byteBuffer->Position = position * SizeOf.Long;if (byteBuffer->IsDirect){((DirectByteBuffer*)byteBuffer)->Get(dst, dstOffset, longCount);}else{((HeapByteBuffer*)byteBuffer)->Get(dst, dstOffset, longCount);}this.position += longCount;return this;}```
+```csharppublic void RemoveErrorListeners() { _listeners.Clear(); }```
+```csharppublic CommonTokenStream(ITokenSource tokenSource, int channel) : this(tokenSource){this.channel = channel;}```
+```csharppublic ListObjectPoliciesResult ListObjectPolicies(ListObjectPoliciesRequest request) { request = BeforeClientExecution(request); return ExecuteListObjectPolicies(request); }```
+```csharppublic ObjectToPack(AnyObjectId src, int type) : base(src) { flags = type << TYPE_SHIFT; }```
+```csharppublic int Stem(char[] s, int len) {int numVowels = NumVowels(s, len);for (int i = 0; i < affixes.Length; i++) {Affix affix = affixes[i];if (numVowels > affix.VC && len >= affix.Affix.Length + 3 && EndsWith(s, len, affix.Affix)) {len -= affix.Affix.Length;return affix.Palatalizes ? Unpalatalize(s, len) : len;}}return len;}```
+```csharppublic void Recover(Parser recognizer, RecognitionException e){if (lastErrorIndex == recognizer.InputStream.Index && lastErrorStates != null && lastErrorStates.Contains(recognizer.State)){recognizer.Consume();}lastErrorIndex = recognizer.InputStream.Index;if (lastErrorStates == null){lastErrorStates = new IntervalSet();}lastErrorStates.Add(recognizer.State);IntervalSet followSet = GetErrorRecoverySet(recognizer);ConsumeUntil(recognizer, followSet);}```
+```csharppublic string ToFormulaString() {string value = field_3_string;int len = value.Length;StringBuilder sb = new StringBuilder(len + 4);sb.Append(FORMULA_DELIMITER);for (int i = 0; i < len; i++) {char c = value[i];if (c == FORMULA_DELIMITER) {sb.Append(FORMULA_DELIMITER);}sb.Append(c);}sb.Append(FORMULA_DELIMITER);return sb.ToString();}```
+```csharppublic UnlinkFaceRequest() : base("LinkFace", "2018-07-20", "UnlinkFace"){SetProtocol(ProtocolType.HTTPS);SetMethod(MethodType.POST);}```
+```csharppublic ConfigurationOptionSetting(string @namespace, string optionName, string value) { SetNamespace(@namespace); SetOptionName(optionName); SetValue(value); }```
+```csharppublic string GetFully(string key){StringBuilder result = new StringBuilder(tries.Count * 2);for (int i = 0; i < tries.Count; i++){string r = tries[i].GetFully(key);if (r == null || (r.Length == 1 && r[0] == EOM)){return result.ToString();}result.Append(r);}return result.ToString();}```
+```csharppublic DescribeMountTargetSecurityGroupsResult DescribeMountTargetSecurityGroups(DescribeMountTargetSecurityGroupsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeMountTargetSecurityGroups(request); }```
+```csharppublic GetApiMappingResult GetApiMapping(GetApiMappingRequest request) { request = BeforeClientExecution(request); return ExecuteGetApiMapping(request); }```
+```csharppublic HttpRequest(string strUrl) : base(strUrl){}```
+```csharppublic MemFuncPtg(int subExprLen) { field_1_len_ref_subexpression = subExprLen; }```
+```csharpusing System;using System.Collections.Generic;public class TermStats{// Assuming TermStats has the necessary properties and methods}public class TermStatsQueue{// Assuming TermStatsQueue has the necessary properties and methods}public class MultiTerms{public static Terms GetTerms(IndexReader reader, string field){// Implementation of GetTermsreturn null;}}public class FieldInfos{public static IEnumerable<string> GetIndexedFields(IndexReader reader){// Implementation of GetIndexedFieldsyield break;}}public class IndexReader{// Assuming IndexReader has the necessary properties and methods}public class Terms{public TermsEnum Iterator(){// Implementation of Iteratorreturn null;}}public class TermsEnum{// Assuming TermsEnum has the necessary properties and methods}public class Comparer<T>{public static readonly Comparer<T> Default = new Comparer<T>();}public static TermStats[] GetHighFreqTerms(IndexReader reader, int numTerms, string field, IComparer<TermStats> comparator){TermStatsQueue tiq = null;if (field != null)
+```csharppublic DeleteApnsVoipChannelResult DeleteApnsVoipChannel(DeleteApnsVoipChannelRequest request){request = BeforeClientExecution(request);return ExecuteDeleteApnsVoipChannel(request);}```
+```csharppublic ListFacesResult ListFaces(ListFacesRequest request) { request = BeforeClientExecution(request); return ExecuteListFaces(request); }```
+```csharppublic ShapeFieldCacheDistanceValueSource(SpatialContext ctx, ShapeFieldCacheProvider<Point> provider, Point from, double multiplier) {this.ctx = ctx;this.from = from;this.provider = provider;this.multiplier = multiplier;}```
+```csharppublic char Get(int index) { CheckIndex(index); return sequence[index]; }```
+```csharppublic UpdateConfigurationProfileResult UpdateConfigurationProfile(UpdateConfigurationProfileRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateConfigurationProfile(request); }```
+```csharppublic DescribeLifecycleHooksResult DescribeLifecycleHooks(DescribeLifecycleHooksRequest request){request = BeforeClientExecution(request);return ExecuteDescribeLifecycleHooks(request);}```
+```csharppublic DescribeHostReservationsResult DescribeHostReservations(DescribeHostReservationsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeHostReservations(request); }```
+```csharppublic static PredictionContext FromRuleContext(ATN atn, RuleContext outerContext){if (outerContext == null)outerContext = RuleContext.Empty;if (outerContext.Parent == null || outerContext == RuleContext.Empty){return PredictionContext.Empty;}PredictionContext parent = Empty;parent = PredictionContext.FromRuleContext(atn, outerContext.Parent);ATNState state = atn.States[outerContext.InvokingState];RuleTransition transition = (RuleTransition)state.Transition(0);return SingletonPredictionContext.Create(parent, transition.FollowState.StateNumber);}```
+```csharppublic string ToString() {StringBuilder buffer = new StringBuilder();buffer.Append("[SXVDEX]\n");buffer.Append("    .grbit1 =").Append(HexDump.IntToHex(_grbit1)).Append("\n");buffer.Append("    .grbit2 =").Append(HexDump.ByteToHex(_grbit2)).Append("\n");buffer.Append("    .citmShow =").Append(HexDump.ByteToHex(_citmShow)).Append("\n");buffer.Append("    .isxdiSort =").Append(HexDump.ShortToHex(_isxdiSort)).Append("\n");buffer.Append("    .isxdiShow =").Append(HexDump.ShortToHex(_isxdiShow)).Append("\n");buffer.Append("    .subtotalName =").Append(_subtotalName).Append("\n");buffer.Append("[/SXVDEX]\n");return buffer.ToString();}```
+```csharppublic string ToString() {StringBuilder r = new StringBuilder();r.Append("BlameResult: "); r.Append(GetResultPath());return r.ToString();}```
+```csharppublic ListChangeSetsResult ListChangeSets(ListChangeSetsRequest request) { request = BeforeClientExecution(request); return ExecuteListChangeSets(request); }```
+```csharppublic bool IsAllowNonFastForwards() { return allowNonFastForwards; }```
+```csharppublic FeatRecord() { futureHeader = new FtrHeader(); futureHeader.setRecordType(sid); }```
+```csharppublic ShortBuffer Put(short c) { throw new ReadOnlyBufferException(); }```
+```csharppublic void SetQuery(ICharSequence query){this.query = query;this.message = new MessageImpl(QueryParserMessages.INVALID_SYNTAX_CANNOT_PARSE, query, "");}```
+```csharppublic StashApplyCommand StashApply() { return new StashApplyCommand(repo); }```
+```csharppublic HashSet<string> NameSet() { return new HashSet<string>(dictionary.Values); }```
+```csharppublic static int GetEffectivePort(string scheme, int specifiedPort){if (specifiedPort != -1){return specifiedPort;}if ("http".Equals(scheme, StringComparison.OrdinalIgnoreCase)){return 80;}else if ("https".Equals(scheme, StringComparison.OrdinalIgnoreCase)){return 443;}else{return -1;}}```
+```csharppublic ListAssessmentTemplatesResult ListAssessmentTemplates(ListAssessmentTemplatesRequest request) { request = BeforeClientExecution(request); return ExecuteListAssessmentTemplates(request); }```
+```csharppublic Cluster RestoreFromClusterSnapshot(RestoreFromClusterSnapshotRequest request) { request = BeforeClientExecution(request); return ExecuteRestoreFromClusterSnapshot(request); }```
+```csharppublic void AddShape(IShape shape) { shape.SetPatriarch(this.GetPatriarch()); shape.SetParent(this); shapes.Add(shape); }```
+```csharppublic bool Equals(object o) {if (this == o) return true;if (o == null || GetType() != o.GetType()) return false;FacetEntry that = (FacetEntry) o;if (count != that.count) return false;if (!value.Equals(that.value)) return false;return true;}```
+```csharppublic static readonly int prev(byte[] b, int ptr, char chrA){if (ptr == b.Length) --ptr;while (ptr >= 0){if (b[ptr--] == chrA) return ptr;}return ptr;}```
+```csharppublic bool IsDeltaRepresentation() { return deltaBase != null; }```
+```csharppublic Token EmitEOF(){int cpos = GetCharPositionInLine();int line = GetLine();Token eof = _factory.Create(_tokenFactorySourcePair, Token.EOF, null, Token.DEFAULT_CHANNEL, _input.Index, _input.Index - 1, line, cpos);Emit(eof);return eof;}```
+```csharppublic UpdateUserRequest(string userName) { SetUserName(userName); }```
+```csharppublic RevFilter Negate() { return NotRevFilter.Create(this); }```
+```csharppublic void SetTagger(PersonIdent taggerIdent) { tagger = taggerIdent; }```
+```csharpusing System;public class Program{public static BufferSize Automatic(){Runtime rt = Runtime.getRuntime();long max = rt.maxMemory();long total = rt.totalMemory();long free = rt.freeMemory();long totalAvailableBytes = max - total + free;long sortBufferByteSize = free / 2;long minBufferSizeBytes = MIN_BUFFER_SIZE_MB * MB;if (sortBufferByteSize < minBufferSizeBytes || totalAvailableBytes > 10 * minBufferSizeBytes){if (totalAvailableBytes / 2 > minBufferSizeBytes){sortBufferByteSize = totalAvailableBytes / 2;}else{sortBufferByteSize = Math.Max(ABSOLUTE_MIN_SORT_BUFFER_SIZE, sortBufferByteSize);}}return new BufferSize(Math.Min((long)int.MaxValue, sortBufferByteSize));}private const long MIN_BUFFER_SIZE_MB = 64;private const long MB = 1024 * 1024;private const long ABSOLUTE_MIN_SORT_BUFFER_SIZE = 1 * 1024 * 1024;}```
+```csharppublic static int TrimTrailingWhitespace(byte[] raw, int start, int end){int ptr = end - 1;while (start <= ptr && IsWhitespace(raw[ptr]))ptr--;return ptr + 1;}```
+```csharppublic TopMarginRecord(RecordInputStream in) { field_1_margin = in.ReadDouble(); }```
+```csharppublic RetrieveEnvironmentInfoRequest(EnvironmentInfoType infoType) { setInfoType(infoType.ToString()); }```
+```csharppublic CreatePlayerSessionsResult CreatePlayerSessions(CreatePlayerSessionsRequest request){request = BeforeClientExecution(request);return ExecuteCreatePlayerSessions(request);}```
+```csharppublic CreateProxySessionResult CreateProxySession(CreateProxySessionRequest request) { request = BeforeClientExecution(request); return ExecuteCreateProxySession(request); }```
+```csharppublic int GetObjectType() { return type; }```
+```csharppublic string GetScheme() { return scheme; }```
+```csharppublic void Characters(char[] ch, int start, int length) { contents.Append(ch, start, length); }```
+```csharppublic class FetchAlbumTagPhotosRequest : Request{public FetchAlbumTagPhotosRequest(){this.ServiceName = "CloudPhoto";this.Version = "2017-07-11";this.ActionName = "FetchAlbumTagPhotos";this.Product = "cloudphoto";this.Protocol = ProtocolType.HTTPS;}}```
+```csharppublic DeleteMembersResult DeleteMembers(DeleteMembersRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteMembers(request); }```
+```csharppublic GetContactReachabilityStatusResult GetContactReachabilityStatus(GetContactReachabilityStatusRequest request) { request = BeforeClientExecution(request); return ExecuteGetContactReachabilityStatus(request); }```
+```csharppublic override bool Remove(object o) { return Impl.this.Remove(o) != null; }```
+```csharppublic E Last() => backingMap.LastKey();```
+```csharppublic CreateStreamingDistributionResult CreateStreamingDistribution(CreateStreamingDistributionRequest request) { request = BeforeClientExecution(request); return ExecuteCreateStreamingDistribution(request); }```
+```csharppublic bool IsAbsolute() { return absolute; }```
+```csharppublic DisableAddOnResult DisableAddOn(DisableAddOnRequest request) { request = BeforeClientExecution(request); return ExecuteDisableAddOn(request); }```
+```csharppublic DescribeAliasResult DescribeAlias(DescribeAliasRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeAlias(request); }```
+```csharppublic void Next(int delta) {while (--delta >= 0) {if (currentSubtree != null)ptr += currentSubtree.GetEntrySpan();elseptr++;if (Eof())break;ParseEntry();}}```
+```csharppublic RevFilter Clone() => new Binary(a.Clone(), b.Clone());```
+```csharppublic Reader Create(Reader input) { return new PersianCharFilter(input); }```
+```csharppublic string option() { return option; }```
+```csharppublic string ToString(){StringBuilder sb = new StringBuilder("[");foreach (object item in this){if (sb.Length > 1) sb.Append(", ");if (item is char[]){sb.Append((char[]) item);}else{sb.Append(item);}}return sb.Append(']').ToString();}```
+```csharppublic DescribeSignalingChannelResponse DescribeSignalingChannel(DescribeSignalingChannelRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeSignalingChannel(request); }```
+```csharppublic AttachStaticIpResult AttachStaticIp(AttachStaticIpRequest request){request = BeforeClientExecution(request);return ExecuteAttachStaticIp(request);}```
+```csharppublic string ToString(){StringBuilder sb = new StringBuilder(64);CellReference crA = new CellReference(_firstRowIndex, _firstColumnIndex, false, false);CellReference crB = new CellReference(_lastRowIndex, _lastColumnIndex, false, false);sb.Append(GetType().Name);sb.Append(" [").Append(crA.FormatAsString()).Append(':').Append(crB.FormatAsString()).Append("]");return sb.ToString();}```
+```csharppublic BloomFilteringPostingsFormat(PostingsFormat delegatePostingsFormat, BloomFilterFactory bloomFilterFactory) : base(BLOOM_CODEC_NAME){this.delegatePostingsFormat = delegatePostingsFormat;this.bloomFilterFactory = bloomFilterFactory;}```
+```csharppublic ListTemplatesResult ListTemplates(ListTemplatesRequest request) { request = BeforeClientExecution(request); return ExecuteListTemplates(request); }```
+```csharppublic class TimerThread : Thread {private const string THREAD_NAME = "TimerThread";private long resolution;private Counter counter;public TimerThread(long resolution, Counter counter) {base(ThreadName);this.resolution = resolution;this.counter = counter;this.IsBackground = true;}}```
+```csharppublic DrawingRecord() { recordData = EMPTY_BYTE_ARRAY; }```
+```csharppublic ListDirectoriesResult ListDirectories(ListDirectoriesRequest request) { request = BeforeClientExecution(request); return ExecuteListDirectories(request); }```
+```csharppublic void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations){for (int j = 0; j < iterations; ++j){byte block = blocks[blocksOffset++];values[valuesOffset++] = (block >> 7) & 1;values[valuesOffset++] = (block >> 6) & 1;values[valuesOffset++] = (block >> 5) & 1;values[valuesOffset++] = (block >> 4) & 1;values[valuesOffset++] = (block >> 3) & 1;values[valuesOffset++] = (block >> 2) & 1;values[valuesOffset++] = (block >> 1) & 1;values[valuesOffset++] = block & 1;}}```
+```csharppublic GroupingSearch DisableCaching() { this.maxCacheRAMMB = null; this.maxDocsToCache = null; return this; }```
+```csharppublic static int idealByteArraySize(int need) {for (int i = 4; i < 32; i++)if (need <= (1 << i) - 12)return (1 << i) - 12;return need;}```
+```csharppublic UpdateAssessmentTargetResult UpdateAssessmentTarget(UpdateAssessmentTargetRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateAssessmentTarget(request); }```
+```csharppublic ModifyVolumeResult ModifyVolume(ModifyVolumeRequest request){request = BeforeClientExecution(request);return ExecuteModifyVolume(request);}```
+```csharppublic Cell Merge(Cell m, Cell e){if (m.cmd == e.cmd && m.ref == e.ref && m.skip == e.skip){Cell c = new Cell(m);c.cnt += e.cnt;return c;}else{return null;}}```
+```csharpusing System;using System.IO;public ByteBuffer Read(int length, long position) {if (position >= Size()) {throw new IndexOutOfRangeException("Position " + position + " past the end of the file");}ByteBuffer dst;if (Writable) {dst = channel.Map(FileChannel.MapMode.READ_WRITE, position, length);buffersToClean.Add(dst);} else {channel.Position(position);dst = ByteBuffer.Allocate(length);int worked = IOUtils.ReadFully(channel, dst);if (worked == -1) {throw new IndexOutOfRangeException("Position " + position + " past the end of the file");}}dst.Position(0);return dst;}```
+```csharppublic void RespondActivityTaskCompleted(RespondActivityTaskCompletedRequest request) { request = BeforeClientExecution(request); ExecuteRespondActivityTaskCompleted(request); }```
+```csharppublic void IncrementProgressBy(int diff) { SetProgress(mProgress + diff); }```
+```csharppublic MetadataDiff CompareMetadata(DirCacheEntry entry){if (entry.IsAssumeValid())return MetadataDiff.EQUAL;if (entry.IsUpdateNeeded())return MetadataDiff.DIFFER_BY_METADATA;if (IsModeDifferent(entry.GetRawMode()))return MetadataDiff.DIFFER_BY_METADATA;int type = entry.GetRawMode() & FileMode.TYPE_MASK;if (type == FileMode.TYPE_TREE || type == FileMode.TYPE_GITLINK)return MetadataDiff.EQUAL;if (!entry.IsSmudged() && entry.GetLength() != (int)getEntryLength())return MetadataDiff.DIFFER_BY_METADATA;Instant cacheLastModified = entry.GetLastModifiedInstant();Instant fileLastModified = GetEntryLastModifiedInstant();if (TimestampComparator.Compare(cacheLastModified, fileLastModified, GetOptions().GetCheckStat() == CheckStat.MINIMAL) != 0){return MetadataDiff.DIFFER_BY_TIMESTAMP;}if (entry.IsSmudged()){return MetadataDiff.SMUDGED;}return MetadataDiff.EQUAL;}```
+```csharppublic static NumberRecord ConvertToNumberRecord(RKRecord rk) {NumberRecord num = new NumberRecord();num.SetColumn(rk.GetColumn());num.SetRow(rk.GetRow());num.SetXFIndex(rk.GetXFIndex());num.SetValue(rk.GetRKNumber());return num;}```
+```csharppublic CharBuffer Put(char[] src, int srcOffset, int charCount){byteBuffer.Limit(limit * SizeOf.CHAR);byteBuffer.Position(position * SizeOf.CHAR);if (byteBuffer is ReadWriteDirectByteBuffer){((ReadWriteDirectByteBuffer)byteBuffer).Put(src, srcOffset, charCount);}else{((ReadWriteHeapByteBuffer)byteBuffer).Put(src, srcOffset, charCount);}this.position += charCount;return this;}```
+```csharppublic int GetCells(){IEnumerator<char> i = cells.Keys.GetEnumerator();int size = 0;while (i.MoveNext()){char c = i.Current;Cell e = At(c);if (e.cmd >= 0 || e.ref >= 0){size++;}}return size;}```
+```csharpusing System;using System.Collections.Generic;public class BeiderMorseFilterFactory : BaseClass{private PhoneticEngine engine;private LanguageSet languageSet;public BeiderMorseFilterFactory(Dictionary<string, string> args){base(args);NameType nameType = Enum.Parse<NameType>(Get(args, "nameType", NameType.GENERIC.ToString()));RuleType ruleType = Enum.Parse<RuleType>(Get(args, "ruleType", RuleType.APPROX.ToString()));bool concat = GetBoolean(args, "concat", true);engine = new PhoneticEngine(nameType, ruleType, concat);HashSet<string> langs = GetSet(args, "languageSet");languageSet = (langs == null || (langs.Count == 1 && langs.Contains("auto"))) ? null : LanguageSet.From(langs);if (!args.IsNullOrEmpty()){throw new ArgumentException("Unknown parameters: " + String.Join(", ", args));}}private T Get<T>(Dictionary<string, string> args, string key, T defaultValue){if (args.ContainsKey(key)){return (T)Convert.ChangeType(args[key], typeof(T));}
+```csharppublic static double varp(double[] v){double r = double.NaN;if (v != null && v.Length > 1){r = devsq(v) / v.Length;}return r;}```
+```csharppublic class PersianNormalizationFilterFactory : FilterFactory{public PersianNormalizationFilterFactory(Dictionary<string, string> args) : base(args){if (!args.IsNullOrEmpty()){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args));}}}```
+```csharpusing System;using System.Collections.Generic;public static WeightedTerm[] GetTerms(Query query, bool prohibited, string fieldName){HashSet<WeightedTerm> terms = new HashSet<WeightedTerm>();Predicate<string> fieldSelector = fieldName == null ? f => true : f => f.Equals(fieldName);query.Visit(new BoostedTermExtractor(1, terms, prohibited, fieldSelector));return terms.ToArray();}```
+```csharppublic DeleteDocumentationPartResult DeleteDocumentationPart(DeleteDocumentationPartRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteDocumentationPart(request); }```
+```csharppublic string ToString(){StringBuilder sb = new StringBuilder();sb.Append("[CHART]\n");sb.Append("    .x     = ").Append(GetX()).Append('\n');sb.Append("    .y     = ").Append(GetY()).Append('\n');sb.Append("    .width = ").Append(GetWidth()).Append('\n');sb.Append("    .height= ").Append(GetHeight()).Append('\n');sb.Append("[/CHART]\n");return sb.ToString();}```
+```csharppublic final short Get(int index) { checkIndex(index); return backingArray[offset + index]; }```
+```csharppublic string ToString() { return image; }```
+```csharppublic ValueEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval arg1){try{AreaEval reA = evaluateRef(arg0);AreaEval reB = evaluateRef(arg1);AreaEval result = resolveRange(reA, reB);if (result == null){return ErrorEval.NULL_INTERSECTION;}return result;}catch (EvaluationException e){return e.GetErrorEval();}}```
+```csharppublic void Clear() { weightBySpanQuery.Clear(); }```
+```csharppublic int findEndOffset(StringBuilder buffer, int start){if (start > buffer.Length || start < 0) return start;bi.SetText(buffer.ToString().Substring(start));return bi.Next() + start;}```
+```csharppublic SrndQuery PrimaryQuery(){SrndQuery q;switch ((jj_ntk == -1) ? jj_ntk() : jj_ntk){case LPAREN:jj_consume_token(LPAREN);q = FieldsQuery();jj_consume_token(RPAREN);break;case OR:case AND:case W:case N:q = PrefixOperatorQuery();break;case TRUNCQUOTED:case QUOTED:case SUFFIXTERM:case TRUNCTERM:case TERM:q = SimpleTerm();break;default:jj_la1[5] = jj_gen;jj_consume_token(-1);throw new ParseException();}OptionalWeights(q);return q;}```
+```csharppublic DeleteApiKeyResult DeleteApiKey(DeleteApiKeyRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteApiKey(request); }```
+```csharppublic InsertTagsRequest() : base("Ots", "2016-06-20", "InsertTags", "ots"){SetMethod(MethodType.POST);}```
+```csharppublic DeleteUserByPrincipalIdResult DeleteUserByPrincipalId(DeleteUserByPrincipalIdRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteUserByPrincipalId(request); }```
+```csharppublic DescribeNetworkInterfacesResult DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeNetworkInterfaces(request); }```
+```csharppublic int Serialize(int offset, byte[] data, EscherSerializationListener listener){listener.BeforeRecordSerialize(offset, GetRecordId(), this);LittleEndian.PutShort(data, offset, GetOptions());LittleEndian.PutShort(data, offset + 2, GetRecordId());LittleEndian.PutInt(data, offset + 4, 8);LittleEndian.PutInt(data, offset + 8, field_1_numShapes);LittleEndian.PutInt(data, offset + 12, field_2_lastMSOSPID);listener.AfterRecordSerialize(offset + 16, GetRecordId(), GetRecordSize(), this);return GetRecordSize();}```
+```csharppublic CreateSecurityConfigurationResult CreateSecurityConfiguration(CreateSecurityConfigurationRequest request) { request = BeforeClientExecution(request); return ExecuteCreateSecurityConfiguration(request); }```
+```csharppublic DescribeClientVpnConnectionsResult DescribeClientVpnConnections(DescribeClientVpnConnectionsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeClientVpnConnections(request); }```
+```csharppublic static void Fill(double[] array, double value) {for (int i = 0; i < array.Length; i++) {array[i] = value;}}```
+```csharppublic bool HasNext() { return nextId < cells.Length; }```
+```csharppublic PostingsEnum Reset(int[] postings) { this.postings = postings; upto = -2; freq = 0; return this; }```
+```csharppublic bool HasAll(RevFlagSet set) { return (flags & set.mask) == set.mask; }```
+```csharppublic ModifyAccountResult ModifyAccount(ModifyAccountRequest request) { request = BeforeClientExecution(request); return ExecuteModifyAccount(request); }```
+```csharppublic Token LT(int k){lazyInit();if (k == 0) return null;if (k < 0) return LB(-k);int i = p + k - 1;sync(i);if (i >= tokens.Count){return tokens[tokens.Count - 1];}return tokens[i];}```
+```csharppublic void removeSheet(int sheetIndex) {if (boundsheets.Count > sheetIndex) {records.RemoveAt(records.GetBspos() - (boundsheets.Count - 1) + sheetIndex);boundsheets.RemoveAt(sheetIndex);fixTabIdRecord();}int sheetNum1Based = sheetIndex + 1;for (int i = 0; i < getNumNames(); i++) {NameRecord nr = getNameRecord(i);if (nr.getSheetNumber() == sheetNum1Based) {nr.setSheetNumber(0);} else if (nr.getSheetNumber() > sheetNum1Based) {nr.setSheetNumber(nr.getSheetNumber() - 1);}}if (linkTable != null) {linkTable.removeSheet(sheetIndex);}}```
+```csharppublic void removeName(string name) { int index = getNameIndex(name); removeName(index); }```
+```csharppublic bool Equals(object o){if (!(o is Property)){return false;}var p = (Property)o;var pValue = p.GetValue();var pId = p.GetID();if (id != pId || (id != 0 && !TypesAreEqual(type, p.GetType()))){return false;}if (value == null && pValue == null){return true;}if (value == null || pValue == null){return false;}var valueClass = value.GetType();var pValueClass = pValue.GetType();if (!(valueClass.IsAssignableFrom(pValueClass)) && !(pValueClass.IsAssignableFrom(valueClass))){return false;}if (value is byte[]){var thisVal = (byte[])value;var otherVal = (byte[])pValue;int len = UnpaddedLength(thisVal);if (len != UnpaddedLength(otherVal)){return false;}for (int i = 0; i < len; i++){if (thisVal[i] != other
+```csharppublic GetRepoBuildListRequest() : base("cr", "2016-06-07", "GetRepoBuildList", "cr"){SetUriPattern("/repos/{RepoNamespace}/{RepoName}/build");SetMethod(MethodType.GET);}```
+```csharppublic MessageWriter() { buf = new MemoryStream(); enc = new StreamWriter(GetRawStream(), Encoding.UTF8); }```
+```csharppublic void Append(RecordBase r) { _recs.Add(r); }```
+```csharpusing System;using System.IO;public void Close(){if (Read(skipBuffer) != -1 || actualSize != expectedSize){throw new CorruptObjectException(string.Format(JGitText.Get().PackfileCorruptionDetected, JGitText.Get().WrongDecompressedLength));}int used = bAvail - inf.GetRemaining();if (0 < used){OnObjectData(src, buf, p, used);Use(used);}inf.Reset();}```
+```csharppublic DescribeModelPackageResult DescribeModelPackage(DescribeModelPackageRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeModelPackage(request); }```
+```csharppublic void Construct(CellValueRecordInterface rec, RecordStream rs, SharedValueManager sfh){if (rec is FormulaRecord){FormulaRecord formulaRec = (FormulaRecord)rec;StringRecord cachedText;Type nextClass = rs.PeekNextClass();if (nextClass == typeof(StringRecord)){cachedText = (StringRecord)rs.GetNext();}else{cachedText = null;}insertCell(new FormulaRecordAggregate(formulaRec, cachedText, sfh));}else{insertCell(rec);}}```
+```csharppublic Decompressor Clone() => new DeflateDecompressor();```
+```csharppublic UpdateS3ResourcesResult UpdateS3Resources(UpdateS3ResourcesRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateS3Resources(request); }```
+```csharppublic GroupQueryNode(QueryNode query){if (query == null){throw new QueryNodeError(new MessageImpl(QueryParserMessages.PARAMETER_VALUE_NOT_SUPPORTED, "query", "null"));}allocate();setLeaf(false);add(query);}```
+```csharppublic string ToQueryString(EscapeQuerySyntax escaper){StringBuilder path = new StringBuilder();path.Append("/").Append(GetFirstPathElement());foreach (QueryText pathelement in GetPathElements(1)){CharSequence value = escaper.Escape(pathelement.Value, CultureInfo.CurrentCulture, Type.STRING);path.Append("/\"").Append(value).Append("\"");}return path.ToString();}```
+```csharppublic void RemoveCellComment(){HSSFComment comment = _sheet.FindCellComment(_record.Row, _record.Column);_comment = null;if (comment == null){return;}_sheet.DrawingPatriarch.RemoveShape(comment);}```
+```csharppublic void reset() { arriving = -1; leaving = -1; }```
+```csharppublic ActivateUserResult ActivateUser(ActivateUserRequest request) { request = BeforeClientExecution(request); return ExecuteActivateUser(request); }```
+```csharppublic bool IsCharsetDetected() { throw new NotSupportedException(); }```
+```csharppublic Cluster ModifySnapshotCopyRetentionPeriod(ModifySnapshotCopyRetentionPeriodRequest request){request = BeforeClientExecution(request);return ExecuteModifySnapshotCopyRetentionPeriod(request);}```
+```csharppublic DeleteClusterSubnetGroupResult DeleteClusterSubnetGroup(DeleteClusterSubnetGroupRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteClusterSubnetGroup(request); }```
+```csharppublic static string decode(byte[] buffer) { return decode(buffer, 0, buffer.Length); }```
+```csharppublic int getDefaultPort() { return -1; }```
+```csharppublic StopTaskResult stopTask(StopTaskRequest request) { request = beforeClientExecution(request); return executeStopTask(request); }```
+```csharppublic void SeekExact(BytesRef target, TermState otherState){Debug.Assert(otherState != null && otherState is BlockTermState);Debug.Assert(!doOrd || ((BlockTermState)otherState).ord < numTerms);state.CopyFrom(otherState);seekPending = true;indexIsCurrent = false;term.CopyBytes(target);}```
+```csharppublic SeriesToChartGroupRecord(RecordInputStream @in) { field_1_chartGroupIndex = @in.readShort(); }```
+```csharppublic static void WriteUnicodeStringFlagAndData(LittleEndianOutput @out, string value){bool is16Bit = HasMultibyte(value);@out.WriteByte(is16Bit ? (byte)0x01 : (byte)0x00);if (is16Bit){PutUnicodeLE(value, @out);}else{PutCompressedUnicode(value, @out);}}```
+```csharppublic AuthorizeSecurityGroupIngressResponse AuthorizeSecurityGroupIngress(AuthorizeSecurityGroupIngressRequest request) { request = BeforeClientExecution(request); return ExecuteAuthorizeSecurityGroupIngress(request); }```
+```csharppublic void addFile(string file) { checkFileNames(new HashSet<string> { file }); setFiles.Add(namedForThisSegment(file)); }```
+```csharppublic void SetSize(int width, int height) { mWidth = width; mHeight = height; }```
+```csharppublic final void SetPrecedenceFilterSuppressed(bool value) {if (value) {this.reachesIntoOuterContext |= 0x40000000;} else {this.reachesIntoOuterContext &= ~SUPPRESS_PRECEDENCE_FILTER;}}```
+```csharppublic IntervalSet LOOK(ATNState s, RuleContext ctx) { return LOOK(s, null, ctx); }```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(GetOptionFlags());@out.WriteShort(GetRowHeight());}```
+```csharppublic Builder(bool dedup) { this.dedup = dedup; }```
+```csharppublic Hashtable(int capacity, float loadFactor){this(capacity);if (loadFactor <= 0 || Single.IsNaN(loadFactor)){throw new ArgumentException("Load factor: " + loadFactor);}}```
+```csharppublic object Get(string key) { final int bucket = normalCompletion.GetBucket(key); return bucket == -1 ? null : new System.Int64(bucket); }```
+```csharppublic ListHyperParameterTuningJobsResult ListHyperParameterTuningJobs(ListHyperParameterTuningJobsRequest request) { request = BeforeClientExecution(request); return ExecuteListHyperParameterTuningJobs(request); }```
+```csharppublic DeleteTableResult DeleteTable(string tableName) => DeleteTable(new DeleteTableRequest().WithTableName(tableName));```
+```csharppublic bool LessThan(TextFragment fragA, TextFragment fragB){if (fragA.GetScore() == fragB.GetScore())return fragA.FragNum > fragB.FragNum;elsereturn fragA.GetScore() < fragB.GetScore();}```
+```csharppublic void FreeBefore(int pos){Debug.Assert(pos >= 0);Debug.Assert(pos <= nextPos);int newCount = nextPos - pos;Debug.Assert(newCount <= count, "newCount=" + newCount + " count=" + count);Debug.Assert(newCount <= buffer.Length, "newCount=" + newCount + " buf.length=" + buffer.Length);count = newCount;}```
+```csharppublic UpdateHITTypeOfHITResult updateHITTypeOfHIT(UpdateHITTypeOfHITRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateHITTypeOfHIT(request); }```
+```csharppublic UpdateRecommenderConfigurationResult updateRecommenderConfiguration(UpdateRecommenderConfigurationRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateRecommenderConfiguration(request); }```
+```csharppublic int CompareTo(BytesRef other) { return BitConverter.ToUInt64(this.bytes, this.offset).CompareTo(BitConverter.ToUInt64(other.bytes, other.offset)); }```
+```csharppublic int stem(char[] s, int len) {if (len > 4 && s[len - 1] == 's') len--;if (len > 5 && (endsWith(s, len, "ene") || (endsWith(s, len, "ane") && useNynorsk))) return len - 3;if (len > 4 && (endsWith(s, len, "er") || endsWith(s, len, "en") || endsWith(s, len, "et") || (endsWith(s, len, "ar") && useNynorsk))) return len - 2;if (len > 3) switch (s[len - 1]) {case 'a':case 'e':return len - 1;}return len;}private bool endsWith(char[] array, int length, string value) {for (int i = 0; i < value.Length; i++) {if (array[length - value.Length + i] != value[i]) return false;}return true;}```
+```csharppublic DescribeDBSnapshotsResult DescribeDBSnapshots(DescribeDBSnapshotsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeDBSnapshots(request);}```
+```csharppublic class SortedSetDocValuesFacetField : FacetField{public SortedSetDocValuesFacetField(string dim, string label) : base("dummy", TYPE){FacetField.VerifyLabel(label);FacetField.VerifyLabel(dim);this.dim = dim;this.label = label;}}```
+```csharppublic CreateDocumentationPartResult CreateDocumentationPart(CreateDocumentationPartRequest request) { request = BeforeClientExecution(request); return ExecuteCreateDocumentationPart(request); }```
+```csharppublic string GetValue() { return value; }```
+```csharppublic ReadOnlyMemory<byte> AsReadOnlyBuffer() => Duplicate();```
+```csharppublic UpdateDataSourcePermissionsResult UpdateDataSourcePermissions(UpdateDataSourcePermissionsRequest request) { request = BeforeClientExecution(request); return ExecuteUpdateDataSourcePermissions(request); }```
+```csharpusing Apache.Poi.Hssf.Record;using System.Collections.Generic;public static Record CreateSingleRecord(RecordInputStream @in){I_RecordCreator constructor = _recordCreatorsById[Integer.ValueOf(@in.GetSid())];if (constructor == null){return new UnknownRecord(@in);}return constructor.Create(@in);}```
+```csharppublic int GetCount() { return mTabs.Count; }```
+```csharppublic DeleteApplicationReferenceDataSourceResult DeleteApplicationReferenceDataSource(DeleteApplicationReferenceDataSourceRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteApplicationReferenceDataSource(request); }```
+```csharppublic CreateProjectVersionResult CreateProjectVersion(CreateProjectVersionRequest request) { request = BeforeClientExecution(request); return ExecuteCreateProjectVersion(request); }```
+```csharppublic ReadOnlyIntArrayBuffer Slice() => new ReadOnlyIntArrayBuffer(Remaining(), BackingArray, Offset + Position);```
+```csharppublic byte Get() {if (position == limit) {throw new BufferUnderflowException();}return this.block.PeekByte(offset + position++);}```
+```csharppublic LongBuffer Put(int index, long c) { CheckIndex(index); backingArray[offset + index] = c; return this; }```
+```csharppublic StoredField(string name, float value) : base(name, TYPE){fieldsData = value;}```
+```csharppublic IntervalSet GetExpectedTokensWithinCurrentRule(){ATN atn = Interpreter.atn;ATNState s = atn.states[GetState()];return atn.NextTokens(s);}```
+```csharppublic string ToString() {StringBuilder buffer = new StringBuilder();buffer.Append("[FILESHARING]\n");buffer.Append("    .readonly       = ").Append(GetReadOnly() == 1 ? "true" : "false").Append("\n");buffer.Append("    .password       = ").Append(Convert.ToString(GetPassword(), 16)).Append("\n");buffer.Append("    .username       = ").Append(GetUsername()).Append("\n");buffer.Append("[/FILESHARING]\n");return buffer.ToString();}```
+```csharppublic SubmoduleInitCommand(Repository repo) : base(repo){paths = new List<string>();}```
+```csharppublic void Include(string name, AnyObjectId id){bool validRefName = Repository.IsValidRefName(name) || Constants.HEAD.Equals(name);if (!validRefName)throw new ArgumentException(string.Format(JGitText.Get().InvalidRefName, name));if (include.ContainsKey(name))throw new InvalidOperationException(JGitText.Get().DuplicateRef + name);include[name] = id.ToObjectId();}```
+```csharppublic Cluster EnableSnapshotCopy(EnableSnapshotCopyRequest request) { request = BeforeClientExecution(request); return ExecuteEnableSnapshotCopy(request); }```
+```csharppublic ValueFiller GetValueFiller() { return new ValueFiller() { private readonly MutableValueFloat mval = new MutableValueFloat(); public override```
+```csharppublic void Serialize(BinaryWriter out){out.Write(GetPane());out.Write(GetActiveCellRow());out.Write(GetActiveCellCol());out.Write(GetActiveCellRef());int nRefs = field_6_refs.Length;out.Write((short)nRefs);foreach (CellRangeAddress8Bit field_6_ref in field_6_refs){field_6_ref.Serialize(out);}}```
+```csharppublic static Counter NewCounter() { return NewCounter(false); }```
+```csharppublic bool Get(string name, bool dflt){bool[] vals = (bool[])valByRound[name];if (vals != null){return vals[roundNumber % vals.Length];}string sval = props.GetProperty(name, "" + dflt);if (sval.IndexOf(":") < 0){return Convert.ToBoolean(sval);}int k = sval.IndexOf(":");string colName = sval.Substring(0, k);sval = sval.Substring(k + 1);colForValByRound[name] = colName;vals = PropToBooleanArray(sval);valByRound[name] = vals;return vals[roundNumber % vals.Length];}```
+```csharppublic void PreSerialize(){if (records.GetTabpos() > 0){TabIdRecord tir = (TabIdRecord)records[records.GetTabpos()];if (tir._tabids.Length < boundsheets.Count){FixTabIdRecord();}}}```
+```csharppublic LimitTokenCountAnalyzer(Analyzer @delegate, int maxTokenCount, bool consumeAllTokens) : base(@delegate.GetReuseStrategy()){this.@delegate = @delegate;this.maxTokenCount = maxTokenCount;this.consumeAllTokens = consumeAllTokens;}```
+```csharppublic ExternalBookBlock(int numberOfSheets){_externalBookRecord = SupBookRecord.CreateInternalReferences((short)numberOfSheets);_externalNameRecords = new ExternalNameRecord[0];_crnBlocks = new CRNBlock[0];}```
+```csharppublic string ToString() { StringBuilder buffer = new StringBuilder(); buffer.Append("[SCENARIOPROTECT]\n"); buffer.Append("    .protect         = ").Append(GetProtect()).Append("\n"); buffer.Append("[/SCENARIOPROTECT]\n"); return buffer.ToString(); }```
+```csharppublic PushCommand SetThin(bool thin) { CheckCallable(); this.thin = thin; return this; }```
+```csharppublic int CompareTo(SearcherTracker other) { return double.Compare(other.recordTimeSec, recordTimeSec); }```
+```csharppublic ReverseStringFilter Create(TokenStream in) { return new ReverseStringFilter(in); }```
+```csharppublic BlockList() { directory = BlockList<T>.newDirectory(256); directory[0] = BlockList<T>.newBlock(); tailBlock = directory[0]; }```
+```csharppublic QueryScorer(WeightedSpanTerm[] weightedTerms){this.fieldWeightedSpanTerms = new Dictionary<string, WeightedSpanTerm>(weightedTerms.Length);foreach (var term in weightedTerms){var existingTerm = fieldWeightedSpanTerms.ContainsKey(term.term) ? fieldWeightedSpanTerms[term.term] : null;if ((existingTerm == null) || (existingTerm.weight < term.weight)){fieldWeightedSpanTerms[term.term] = term;maxTermWeight = Math.Max(maxTermWeight, term.GetWeight());}}skipInitExtractor = true;}```
+```csharppublic bool Equals(object _other){Assert.NeverEquals(_other);if (_other is MergedGroup other){if (groupValue == null){return other == null;}else{return groupValue.Equals(other);}}else{return false;}}```
+```csharppublic readonly Encoding charset() { return cs; }```
+```csharppublic DescribeExperimentResult DescribeExperiment(DescribeExperimentRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeExperiment(request); }```
+```csharppublic EscherGraphics(HSSFShapeGroup escherGroup, HSSFWorkbook workbook, Color forecolor, float verticalPointsPerPixel){this.escherGroup = escherGroup;this.workbook = workbook;this.verticalPointsPerPixel = verticalPointsPerPixel;this.verticalPixelsPerPoint = 1 / verticalPointsPerPixel;this.font = new Font("Arial", 0, 10);this.foreground = forecolor;}```
+```csharppublic string pattern() { return patternText; }```
+```csharppublic DeleteRouteTableResult DeleteRouteTable(DeleteRouteTableRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteRouteTable(request); }```
+```csharppublic AssociateVPCWithHostedZoneResult AssociateVPCWithHostedZone(AssociateVPCWithHostedZoneRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateVPCWithHostedZone(request); }```
+```csharppublic PutIntegrationResult PutIntegration(PutIntegrationRequest request) { request = BeforeClientExecution(request); return ExecutePutIntegration(request); }```
+```csharppublic SimpleEntry<K, V>(K theKey, V theValue) { key = theKey; value = theValue; }```
+```csharppublic void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {final long byte0 = blocks[blocksOffset++] & 0xFF;final long byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = (byte0 << 4) | (byte1 >> 4);final long byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 8) | byte2;}}```
+```csharppublic DisassociateConnectionFromLagResponse DisassociateConnectionFromLag(DisassociateConnectionFromLagRequest request) { request = BeforeClientExecution(request); return ExecuteDisassociateConnectionFromLag(request); }```
+```csharppublic FileMode GetOldMode() { return oldMode; }```
+```csharppublic override string ToString() { return m.ToString(); }```
+```csharppublic StopKeyPhrasesDetectionJobResult StopKeyPhrasesDetectionJob(StopKeyPhrasesDetectionJobRequest request){request = BeforeClientExecution(request);return ExecuteStopKeyPhrasesDetectionJob(request);}```
+```csharppublic string ToString() { return "[Array Formula or Shared Formula]\n" + "row = " + GetRow() + "\n" + "col = " + GetColumn() + "\n"; }```
+```csharppublic ListDominantLanguageDetectionJobsResult listDominantLanguageDetectionJobs(ListDominantLanguageDetectionJobsRequest request) { request = beforeClientExecution(request); return executeListDominantLanguageDetectionJobs(request); }```
+```csharppublic string ToString() { return "slice start=" + start + " length=" + length + " readerIndex=" + readerIndex; }```
+```csharppublic static readonly int ParseHexInt4(byte digit){byte r = digits16[digit];if (r < 0)throw new IndexOutOfRangeException();return r;}```
+```csharppublic Attribute(string name, string value) { setName(name); setValue(value); }```
+```csharppublic DescribeStackSetOperationResult DescribeStackSetOperation(DescribeStackSetOperationRequest request){request = BeforeClientExecution(request);return ExecuteDescribeStackSetOperation(request);}```
+```csharppublic HSSFCell GetCell(int cellnum) { return GetCell(cellnum, book.GetMissingCellPolicy()); }```
+```csharppublic void write(byte[] b) { writeContinueIfRequired(b.Length); _ulrOutput.Write(b); }```
+```csharppublic ResetImageAttributeRequest(string imageId, ResetImageAttributeName attribute){SetImageId(imageId);SetAttribute(attribute.ToString());}```
+```csharppublic void discardResultContents() { resultContents = null; }```
+```csharppublic ObjectId GetPeeledObjectId() { return GetLeaf().GetPeeledObjectId(); }```
+```csharppublic void UndeprecateDomain(UndeprecateDomainRequest request) { request = BeforeClientExecution(request); ExecuteUndeprecateDomain(request); }```
+```csharppublic void Write(LittleEndianOutput @out){@out.WriteByte((byte)(sid + GetPtgClass()));@out.WriteByte((byte)field_3_string.Length);@out.WriteByte(_is16bitUnicode ? (byte)0x01 : (byte)0x00);if (_is16bitUnicode){StringUtil.PutUnicodeLE(field_3_string, @out);}else{StringUtil.PutCompressedUnicode(field_3_string, @out);}}```
+```csharppublic DeleteQueueResult DeleteQueue(string queueUrl) { return DeleteQueue(new DeleteQueueRequest().WithQueueUrl(queueUrl)); }```
+```csharppublic void SetCheckEofAfterPackFooter(bool b) { checkEofAfterPackFooter = b; }```
+```csharppublic void Swap(){int sBegin = beginA;int sEnd = endA;beginA = beginB;endA = endB;beginB = sBegin;endB = sEnd;}```
+```csharppublic int GetPackedGitWindowSize() { return packedGitWindowSize; }```
+```csharppublic PutMetricDataResult PutMetricData(PutMetricDataRequest request) { request = BeforeClientExecution(request); return ExecutePutMetricData(request); }```
+```csharppublic GetCelebrityRecognitionResult GetCelebrityRecognition(GetCelebrityRecognitionRequest request) { request = BeforeClientExecution(request); return ExecuteGetCelebrityRecognition(request); }```
+```csharppublic CreateQueueRequest(string queueName) { setQueueName(queueName); }```
+```csharppublic Area3DPxg(int externalWorkbookNumber, SheetIdentifier sheetName, AreaReference arearef) : base(arearef){this.externalWorkbookNumber = externalWorkbookNumber;this.firstSheetName = sheetName.GetSheetIdentifier().GetName();if (sheetName is SheetRangeIdentifier){this.lastSheetName = ((SheetRangeIdentifier)sheetName).GetLastSheetIdentifier().GetName();}else{this.lastSheetName = null;}}```
+```csharppublic void SetBaseline(long clockTime) { t0 = clockTime; timeout = t0 + ticksAllowed; }```
+```csharppublic MoveAddressToVpcResult MoveAddressToVpc(MoveAddressToVpcRequest request) { request = BeforeClientExecution(request); return ExecuteMoveAddressToVpc(request); }```
+```csharppublic string ToString(){string coll = collectionModel.GetName();if (coll != null){return string.Format(System.Globalization.CultureInfo.InvariantCulture, "LM {0} - {1}", GetName(), coll);}else{return string.Format(System.Globalization.CultureInfo.InvariantCulture, "LM {0}", GetName());}}```
+```csharppublic DescribeLagsResult DescribeLags(DescribeLagsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeLags(request); }```
+```csharppublic AreaEval offset(int relFirstRowIx, int relLastRowIx, int relFirstColIx, int relLastColIx){if (_refEval == null){return _areaEval.offset(relFirstRowIx, relLastRowIx, relFirstColIx, relLastColIx);}return _refEval.offset(relFirstRowIx, relLastRowIx, relFirstColIx, relLastColIx);}```
+```csharppublic ShortBuffer Put(short[] src, int srcOffset, int shortCount){byteBuffer.Limit(limit * SizeOf.SHORT);byteBuffer.Position(position * SizeOf.SHORT);if (byteBuffer is ReadWriteDirectByteBuffer readWriteDirectByteBuffer){readWriteDirectByteBuffer.Put(src, srcOffset, shortCount);}else{((ReadWriteHeapByteBuffer)byteBuffer).Put(src, srcOffset, shortCount);}this.position += shortCount;return this;}```
+```csharppublic void Initialize(string cat) { this._cat = cat; }```
+```csharppublic void Write(int oneByte) { out.Write(oneByte); written++; }```
+```csharppublic DescribeImportImageTasksResult DescribeImportImageTasks(DescribeImportImageTasksRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeImportImageTasks(request); }```
+```csharppublic ColumnInfoRecord(RecordInputStream in){_firstCol = in.ReadUShort();_lastCol = in.ReadUShort();_colWidth = in.ReadUShort();_xfIndex = in.ReadUShort();_options = in.ReadUShort();switch (in.Remaining()){case 2:field_6_reserved = in.ReadUShort();break;case 1:field_6_reserved = in.ReadByte();break;case 0:field_6_reserved = 0;break;default:throw new RuntimeException("Unusual record size remaining=(" + in.Remaining() + ")");}}```
+```csharppublic Status(IndexDiff diff) : base(){this.diff = diff;hasUncommittedChanges = !diff.GetAdded().IsEmpty() || !diff.GetChanged().IsEmpty() || !diff.GetRemoved().IsEmpty() || !diff.GetMissing().IsEmpty() || !diff.GetModified().IsEmpty() || !diff.GetConflicting().IsEmpty();clean = !hasUncommittedChanges && diff.GetUntracked().IsEmpty();}```
+```csharppublic CreateExperimentResult CreateExperiment(CreateExperimentRequest request) { request = BeforeClientExecution(request); return ExecuteCreateExperiment(request); }```
+```csharppublic UnknownRecord Clone() { return Copy(); }```
+```csharppublic unsafe float* Slice() {fixed (byte* ptr = &byteBuffer[0]) {byteBuffer.Limit = limit * sizeof(float);byteBuffer.Position = position * sizeof(float);ByteBuffer bb = byteBuffer.Slice();bb.Order = byteBuffer.Order;float* result = (float*)bb.Pointer;byteBuffer.Clear();return result;}}```
+```csharppublic DescribeSnapshotSchedulesResult DescribeSnapshotSchedules(DescribeSnapshotSchedulesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeSnapshotSchedules(request); }```
+```csharppublic ListImagesResult ListImages(ListImagesRequest request) { request = BeforeClientExecution(request); return ExecuteListImages(request); }```
+```csharppublic Diff(int ins, int del, int rep, int noop) { INSERT = ins; DELETE = del; REPLACE = rep; NOOP = noop; }```
+```csharppublic string ToFormulaString(string[] operands){StringBuilder buffer = new StringBuilder();buffer.Append(operands[0]);buffer.Append(",");buffer.Append(operands[1]);return buffer.ToString();}```
+```csharppublic static void setupEnvironment(string[] workbookNames, ForkedEvaluator[] evaluators) {WorkbookEvaluator[] wbEvals = new WorkbookEvaluator[evaluators.Length];for (int i = 0; i < wbEvals.Length; i++) {wbEvals[i] = evaluators[i]._evaluator;}CollaboratingWorkbooksEnvironment.setup(workbookNames, wbEvals);}```
+```csharppublic ListPhotoTagsRequest() : base("CloudPhoto", "2017-07-11", "ListPhotoTags", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic RandomSamplingFacetsCollector(int sampleSize, long seed) : base(false){this.sampleSize = sampleSize;this.random = new XORShift64Random(seed);this.sampledDocs = null;}```
+```csharppublic AllocateStaticIpResult AllocateStaticIp(AllocateStaticIpRequest request) {request = BeforeClientExecution(request);return ExecuteAllocateStaticIp(request);}```
+```csharppublic FeatRecord(RecordInputStream in){futureHeader = new FtrHeader(in);isf_sharedFeatureType = in.ReadShort();reserved1 = in.ReadByte();reserved2 = in.ReadInt();int cref = in.ReadUShort();cbFeatData = in.ReadInt();reserved3 = in.ReadShort();cellRefs = new CellRangeAddress[cref];for(int i = 0; i < cellRefs.Length; i++){cellRefs[i] = new CellRangeAddress(in);}switch(isf_sharedFeatureType){case FeatHdrRecord.SHAREDFEATURES_ISFPROTECTION:sharedFeature = new FeatProtection(in);break;case FeatHdrRecord.SHAREDFEATURES_ISFFEC2:sharedFeature = new FeatFormulaErr2(in);break;case FeatHdrRecord.SHAREDFEATURES_ISFFACTOID:sharedFeature = new FeatSmartTag(in);break;default:logger.Log(POILogger.ERROR, "Unknown Shared Feature " + isf_sharedFeatureType + " found!");break;}}```
+```csharpusing System;using System.IO;public class GitService{public RevCommit TryFastForward(RevCommit newCommit) throws IOException, GitAPIException{Ref head = GetHead();ObjectId headId = head.GetObjectId();if (headId == null)throw new RefNotFoundException(String.Format(JGitText.Get().refNotResolved, Constants.HEAD));RevCommit headCommit = walk.LookupCommit(headId);if (walk.IsMergedInto(newCommit, headCommit))return newCommit;string headName = GetHeadName(head);return TryFastForward(headName, headCommit, newCommit);}}```
+```csharppublic CreateSnapshotScheduleResult CreateSnapshotSchedule(CreateSnapshotScheduleRequest request) { request = BeforeClientExecution(request); return ExecuteCreateSnapshotSchedule(request); }```
+```csharppublic Record GetNext() {if (!HasNext()) {throw new RuntimeException("Attempt to read past end of record stream");}_countRead++;return _list[_nextIndex++];}```
+```csharppublic string ToString() { return RawParseUtils.Decode(buf.ToArray()); }```
+```csharppublic ListTablesRequest(string exclusiveStartTableName) { setExclusiveStartTableName(exclusiveStartTableName); }```
+```csharppublic EnableAlarmActionsResult EnableAlarmActions(EnableAlarmActionsRequest request) { request = BeforeClientExecution(request); return ExecuteEnableAlarmActions(request); }```
+```csharppublic Builder() : this(true) { }```
+```csharppublic bool Equals(object obj) { var other = (State)obj; return is_final == other.is_final && labels.SequenceEqual(other.labels) && ReferenceEquals(states, other.states); }```
+```csharppublic TokenStream Create(TokenStream input) { return new EnglishPossessiveFilter(input); }```
+```csharppublic void ClearFormatting() { _string = CloneStringIfRequired(); _string.ClearFormatting(); AddToSSTIfRequired(); }```
+```csharppublic int Get(int index, long[] arr, int off, int len){Debug.Assert(len > 0, "len must be > 0 (got " + len + ")");Debug.Assert(index >= 0 && index < valueCount);len = Math.Min(len, valueCount - index);Array.Fill(arr, off, off + len, 0);return len;}```
+```csharppublic DeleteRouteResponseResult DeleteRouteResponse(DeleteRouteResponseRequest request){request = BeforeClientExecution(request);return ExecuteDeleteRouteResponse(request);}```
+```csharppublic string ToPrivateString() { return Format(true, false); }```
+```csharppublic CreatePresignedDomainUrlResult CreatePresignedDomainUrl(CreatePresignedDomainUrlRequest request) { request = BeforeClientExecution(request); return ExecuteCreatePresignedDomainUrl(request); }```
+```csharppublic void Write(int oneChar) { doWrite(new char[] { (char)oneChar }, 0, 1); }```
+```csharppublic SSTRecord GetSSTRecord() { return sstRecord; }```
+```csharppublic string ToString() { return $"term={term},field={field},value={valueToString()},docIDUpto={docIDUpto}"; }```
+```csharppublic bool IsSaturated(FuzzySet bloomFilter, FieldInfo fieldInfo) { return bloomFilter.GetSaturation() > 0.9f; }```
+```csharppublic Builder(bool ignoreCase) { this.ignoreCase = ignoreCase; }```
+```csharppublic string ToString() { return this.GetType().Name + "(maxBasicQueries: " + maxBasicQueries + ", queriesMade: " + queriesMade + ")"; }```
+```csharppublic DeleteDataSourceResult DeleteDataSource(DeleteDataSourceRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteDataSource(request); }```
+```csharppublic RebootNodeResult RebootNode(RebootNodeRequest request) { request = BeforeClientExecution(request); return ExecuteRebootNode(request); }```
+```csharppublic void processChildRecords() { convertRawBytesToEscherRecords(); }```
+```csharppublic CreateOrUpdateTagsResult CreateOrUpdateTags(CreateOrUpdateTagsRequest request){request = BeforeClientExecution(request);return ExecuteCreateOrUpdateTags(request);}```
+```csharppublic FileSnapshot GetSnapShot() { return snapShot; }```
+```csharppublic Stream OpenResource(string resource){Stream stream = (clazz != null) ? clazz.ResourceManager.GetStream(resource) : loader.ResourceManager.GetStream(resource);if (stream == null)throw new IOException("Resource not found: " + resource);return stream;}```
+```csharppublic string ToString() {StringBuilder sb = new StringBuilder(64);sb.Append(GetType().Name).Append(" [");sb.Append("sid=").Append(HexDump.ShortToHex(_sid));sb.Append(" size=").Append(_data.Length);sb.Append(" : ").Append(HexDump.ToHex(_data));sb.Append("]\n");return sb.ToString();}```
+```csharppublic int NextIndex() { return index; }```
+```csharppublic string ToQueryString(EscapeQuerySyntax escaper){if (IsDefaultField(this.Field)){return $"\"{GetTermEscapeQuoted(escaper)}\"";}else{return $"{this.Field}:{\"{GetTermEscapeQuoted(escaper)}\"}";}}```
+```csharppublic CalcModeRecord Clone() { return Copy(); }```
+```csharppublic bool IsOutput() { return output; }```
+```csharppublic CreateNetworkInterfaceResult CreateNetworkInterface(CreateNetworkInterfaceRequest request){request = BeforeClientExecution(request);return ExecuteCreateNetworkInterface(request);}```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(field_1_password);}```
+```csharppublic StopDominantLanguageDetectionJobResult StopDominantLanguageDetectionJob(StopDominantLanguageDetectionJobRequest request){request = BeforeClientExecution(request);return ExecuteStopDominantLanguageDetectionJob(request);}```
+```csharppublic ECSMetadataServiceCredentialsFetcher WithConnectionTimeout(int milliseconds) { this.connectionTimeoutInMilliseconds = milliseconds; return this; }```
+```csharppublic GetGatewayGroupResult GetGatewayGroup(GetGatewayGroupRequest request) { request = BeforeClientExecution(request); return ExecuteGetGatewayGroup(request); }```
+```csharppublic ReadOnlySpan<float> Slice() => backingArray.AsSpan(offset + position, remaining());```
+```csharpusing System;using System.Collections.Generic;public static string Join(IEnumerable<string> parts, string separator, string lastSeparator){StringBuilder sb = new StringBuilder();int i = 0;int lastIndex = parts.Count() - 1;foreach (string part in parts){sb.Append(part);if (i == lastIndex - 1){sb.Append(lastSeparator);}else if (i != lastIndex){sb.Append(separator);}i++;}return sb.ToString();}```
+```csharppublic string ToString() { return $"({a.ToString()} AND {b.ToString()})"; }```
+```csharppublic ListSubscriptionsByTopicRequest(string topicArn, string nextToken) { SetTopicArn(topicArn); SetNextToken(nextToken); }```
+```csharppublic byte ReadByte() { return bytes[pos--]; }```
+```csharppublic TerminateClientVpnConnectionsResponse TerminateClientVpnConnections(TerminateClientVpnConnectionsRequest request) { request = BeforeClientExecution(request); return ExecuteTerminateClientVpnConnections(request); }```
+```csharppublic ReceiveMessageRequest(string queueUrl) { SetQueueUrl(queueUrl); }```
+```csharppublic void Serialize(LittleEndianOutput @out) { @out.WriteShort(field_1_barSpace); @out.WriteShort(field_2_categorySpace); @out.WriteShort(field_3_formatFlags); }```
+```csharppublic object Common(object output1, object output2) => Outputs.Common((T)output1, (T)output2);```
+```csharppublic CreateVariableResult CreateVariable(CreateVariableRequest request) { request = BeforeClientExecution(request); return ExecuteCreateVariable(request); }```
+```csharppublic static int Match(byte[] b, int ptr, byte[] src) {if (ptr + src.Length > b.Length) return -1;for (int i = 0; i < src.Length; i++, ptr++) {if (b[ptr] != src[i]) return -1;}return ptr;}```
+```csharppublic int FillFields(byte[] data, int offset, EscherRecordFactory recordFactory){int bytesRemaining = ReadHeader(data, offset);int pos = offset + 8;int size = 0;field_1_rectX1 = LittleEndian.GetInt(data, pos + size);size += 4;field_2_rectY1 = LittleEndian.GetInt(data, pos + size);size += 4;field_3_rectX2 = LittleEndian.GetInt(data, pos + size);size += 4;field_4_rectY2 = LittleEndian.GetInt(data, pos + size);size += 4;bytesRemaining -= size;if (bytesRemaining != 0){throw new RecordFormatException("Expected no remaining bytes but got " + bytesRemaining);}return 8 + size + bytesRemaining;}```
+```csharppublic CreateCloudFrontOriginAccessIdentityResult CreateCloudFrontOriginAccessIdentity(CreateCloudFrontOriginAccessIdentityRequest request) { request = BeforeClientExecution(request); return ExecuteCreateCloudFrontOriginAccessIdentity(request); }```
+```csharppublic bool IsNamespaceAware() { return GetFeature(XmlPullParser.Feature.ProcessNamespaces); }```
+```csharppublic void SetOverridable(bool on) { overridable = on; }```
+```csharppublic string GetClassName() { return className; }```
+```csharppublic DirectoryReader GetIndexReader() {if (indexReader != null) {indexReader.IncRef();}return indexReader;}```
+```csharppublic int IndexOfKey(int key) { return BinarySearch(mKeys, 0, mSize, key); }```
+```csharppublic BlankRecord(RecordInputStream in) { field_1_row = in.ReadUShort(); field_2_col = in.ReadShort(); field_3_xf = in.ReadShort(); }```
+```csharppublic long Length() { return length; }```
+```csharppublic PasswordRecord(RecordInputStream in) { field_1_password = in.ReadShort(); }```
+```csharppublic Dictionary<TKey, TValue>(int capacity, float loadFactor) : this(capacity){if (loadFactor <= 0 || float.IsNaN(loadFactor)){throw new ArgumentException("Load factor: " + loadFactor);}}```
+```csharppublic void run(){long lastReopenStartNS = DateTime.Now.Ticks;while (!finish){while (!finish){reopenLock.Enter();try{bool hasWaiting = waitingGen > searchingGen;long nextReopenStartNS = lastReopenStartNS + (hasWaiting ? targetMinStaleNS : targetMaxStaleNS);long sleepNS = nextReopenStartNS - DateTime.Now.Ticks;if (sleepNS > 0){reopenCond.Wait(TimeSpan.FromTicks(sleepNS));}else{break;}}catch (ThreadInterruptedException ie){Thread.CurrentThread.Interrupt();return;}finally{reopenLock.Exit();}}if (finish){break;}lastReopenStartNS = DateTime.Now.Ticks;refreshStartGen = writer.GetMaxCompletedSequenceNumber();try{manager.MaybeRefreshBlocking();}catch (IOException ioe){throw new RuntimeException(ioe);}}}```
+```csharppublic DeleteLoginProfileRequest(string userName) { SetUserName(userName); }```
+```csharppublic E PollFirst() => (size == 0) ? default(E) : RemoveFirstImpl();```
+```csharppublic CreatePhotoRequest() : base("CloudPhoto", "2017-07-11", "CreatePhoto", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}```
+```csharppublic string GetName() { return "resolve"; }```
+```csharppublic int FindEndOffset(StringBuilder buffer, int start){if (start > buffer.Length || start < 0) return start;int offset, count = maxScan;for (offset = start; offset < buffer.Length && count > 0; count--){if (boundaryChars.Contains(buffer[offset])) return offset;offset++;}return start;}```
+```csharppublic void SetObjectChecker(ObjectChecker oc) { objCheck = oc; }```
+```csharppublic BaseRef(AreaEval ae) { _refEval = null; _areaEval = ae; _firstRowIndex = ae.GetFirstRow(); _firstColumnIndex = ae.GetFirstColumn(); _height = ae.GetLastRow() - ae.GetFirstRow() + 1; _width = ae.GetLastColumn() - ae.GetFirstColumn() + 1; }```
+```csharppublic CreateVpcEndpointResult CreateVpcEndpoint(CreateVpcEndpointRequest request) { request = BeforeClientExecution(request); return ExecuteCreateVpcEndpoint(request); }```
+```csharppublic DeregisterWorkspaceDirectoryResult DeregisterWorkspaceDirectory(DeregisterWorkspaceDirectoryRequest request) { request = BeforeClientExecution(request); return ExecuteDeregisterWorkspaceDirectory(request); }```
+```csharppublic ChartFRTInfoRecord(RecordInputStream in) {rt = in.ReadShort();grbitFrt = in.ReadShort();verOriginator = in.ReadByte();verWriter = in.ReadByte();int cCFRTID = in.ReadShort();rgCFRTID = new CFRTID[cCFRTID];for (int i = 0; i < cCFRTID; i++) {rgCFRTID[i] = new CFRTID(in);}}```
+```csharppublic Merger newMerger(Repository db) { return new OneSide(db, treeIndex); }```
+```csharppublic CreateDataSourceFromRedshiftResult CreateDataSourceFromRedshift(CreateDataSourceFromRedshiftRequest request) { request = BeforeClientExecution(request); return ExecuteCreateDataSourceFromRedshift(request); }```
+```csharppublic void clearDFA() {for (int d = 0; d < decisionToDFA.Length; d++) {decisionToDFA[d] = new DFA(atn.GetDecisionState(d), d);}}```
+```csharppublic void RemoveName(string name) { int index = GetNameIndex(name); RemoveName(index); }```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[RightMargin]\n");buffer.Append("    .margin               = " + " (" + GetMargin() + " )\n");buffer.Append("[/RightMargin]\n");return buffer.ToString();}```
+```csharppublic RefreshAllRecord Clone() => Copy();```
+```csharppublic StandardQueryNodeProcessorPipeline(QueryConfigHandler queryConfig) : base(queryConfig){add(new WildcardQueryNodeProcessor());add(new MultiFieldQueryNodeProcessor());add(new FuzzyQueryNodeProcessor());add(new RegexpQueryNodeProcessor());add(new MatchAllDocsQueryNodeProcessor());add(new OpenRangeQueryNodeProcessor());add(new PointQueryNodeProcessor());add(new PointRangeQueryNodeProcessor());add(new TermRangeQueryNodeProcessor());add(new AllowLeadingWildcardProcessor());add(new AnalyzerQueryNodeProcessor());add(new PhraseSlopQueryNodeProcessor());add(new BooleanQuery2ModifierNodeProcessor());add(new NoChildOptimizationQueryNodeProcessor());add(new RemoveDeletedQueryNodesProcessor());add(new RemoveEmptyNonLeafQueryNodeProcessor());add(new BooleanSingleChildOptimizationQueryNodeProcessor());add(new DefaultPhraseSlopQueryNodeProcessor());add(new BoostQueryNodeProcessor());add(new MultiTermRewriteMethodProcessor());}```
+```csharppublic string FormatAsString(string sheetName, bool useAbsoluteAddress){StringBuilder sb = new StringBuilder();if (sheetName != null){sb.Append(SheetNameFormatter.Format(sheetName));sb.Append("!");}CellReference cellRefFrom = new CellReference(GetFirstRow(), GetFirstColumn(), useAbsoluteAddress, useAbsoluteAddress);CellReference cellRefTo = new CellReference(GetLastRow(), GetLastColumn(), useAbsoluteAddress, useAbsoluteAddress);sb.Append(cellRefFrom.FormatAsString());if (!cellRefFrom.Equals(cellRefTo) || IsFullColumnRange() || IsFullRowRange()){sb.Append(':');sb.Append(cellRefTo.FormatAsString());}return sb.ToString();}```
+```csharppublic void Put(int index, byte value) { throw new ReadOnlyBufferException(); }```
+```csharppublic void Mode(int m) { _mode = m; }```
+```csharppublic ShortBuffer Slice() { return new ReadWriteShortArrayBuffer(Remaining(), BackingArray, Offset + Position); }```
+```csharppublic void Set(int index, long n) {if (count < index) throw new IndexOutOfRangeException(index);else if (count == index) Add(n);else entries[index] = n;}```
+```csharppublic void PutFloat(float value) { throw new ReadOnlyBufferException(); }```
+```csharppublic static double Max(double[] values) {double max = double.MinValue;foreach (double value in values) {max = Math.Max(max, value);}return max;}```
+```csharppublic UpdateRepoWebhookRequest() : base("cr", "2016-06-07", "UpdateRepoWebhook", "cr"){SetUriPattern("/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]");SetMethod(MethodType.POST);}```
+```csharppublic DeleteAttributesRequest(string domainName, string itemName, List<Attribute> attributes, UpdateCondition expected){SetDomainName(domainName);SetItemName(itemName);SetAttributes(attributes);SetExpected(expected);}```
+```csharppublic string ToString() {StringBuilder sb = new StringBuilder();sb.Append("[SXPI]\n");for (int i = 0; i < _fieldInfos.Length; i++) {sb.Append("    item[").Append(i).Append("]=");_fieldInfos[i].AppendDebugInfo(sb);sb.Append('\n');}sb.Append("[/SXPI]\n");return sb.ToString();}```
+```csharppublic bool IsSuccessful(){if (mergeResult != null)return mergeResult.GetMergeStatus().IsSuccessful();else if (rebaseResult != null)return rebaseResult.Status.IsSuccessful();return true;}```
+```csharppublic void SetBytesValue(byte[] value) => SetBytesValue(new BytesRef(value));```
+```csharppublic DescribeConnectionsResult DescribeConnections(DescribeConnectionsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeConnections(request); }```
+```csharppublic DeletePhotosRequest() : base("CloudPhoto", "2017-07-11", "DeletePhotos", "cloudphoto"){setProtocol(ProtocolType.HTTPS);}```
+```csharppublic void add(E obj) { iterator.Add(obj); subList.sizeChanged(true); end++; }```
+```csharpusing System;public static ByteBuffer Allocate(int capacity){if (capacity < 0){throw new ArgumentException();}return new ReadWriteHeapByteBuffer(capacity);}```
+```csharppublic SrndQuery GetSubQuery(int qn) { return queries[qn]; }```
+```csharppublic float CurrentScore(int docId, string field, int start, int end, int numPayloadsSeen, float currentScore, float currentPayloadScore){if (numPayloadsSeen == 0){return currentPayloadScore;}else{return Math.Min(currentPayloadScore, currentScore);}}```
+```csharppublic string ToString() {StringBuilder sb = new StringBuilder();sb.Append("[BLANK]\n");sb.Append("    row= ").Append(HexDump.ShortToHex(GetRow())).Append("\n");sb.Append("    col= ").Append(HexDump.ShortToHex(GetColumn())).Append("\n");sb.Append("    xf = ").Append(HexDump.ShortToHex(GetXFIndex())).Append("\n");sb.Append("[/BLANK]\n");return sb.ToString();}```
+```csharppublic DescribeLogPatternResult DescribeLogPattern(DescribeLogPatternRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeLogPattern(request); }```
+```csharppublic RegisterTransitGatewayMulticastGroupMembersResponse RegisterTransitGatewayMulticastGroupMembers(RegisterTransitGatewayMulticastGroupMembersRequest request) { request = BeforeClientExecution(request); return ExecuteRegisterTransitGatewayMulticastGroupMembers(request); }```
+```csharppublic GetPhoneNumberSettingsResult GetPhoneNumberSettings(GetPhoneNumberSettingsRequest request) { request = BeforeClientExecution(request); return ExecuteGetPhoneNumberSettings(request); }```
+```csharppublic ObjectId GetData() { return data; }```
+```csharppublic bool IsDirect() { return false; }```
+```csharppublic DeleteServerCertificateRequest(string serverCertificateName) { SetServerCertificateName(serverCertificateName); }```
+```csharppublic StringBuilder Append(double d) { RealToString.GetInstance().AppendDouble(this, d); return this; }```
+```csharppublic GetEvaluationResult GetEvaluation(GetEvaluationRequest request) { request = BeforeClientExecution(request); return ExecuteGetEvaluation(request); }```
+```csharppublic LinkedDataRecord GetDataName() { return dataName; }```
+```csharppublic bool Find(int start){findPos = start;if (findPos < regionStart){findPos = regionStart;}else if (findPos >= regionEnd){matchFound = false;return false;}matchFound = findImpl(address, input, findPos, matchOffsets);if (matchFound){findPos = matchOffsets[1];}return matchFound;}```
+```csharppublic GetLifecyclePolicyPreviewResult GetLifecyclePolicyPreview(GetLifecyclePolicyPreviewRequest request) { request = BeforeClientExecution(request); return ExecuteGetLifecyclePolicyPreview(request); }```
+```csharppublic SinglePositionTokenStream(string word){termAtt = AddAttribute(typeof(CharTermAttribute));posIncrAtt = AddAttribute(typeof(PositionIncrementAttribute));this.word = word;returned = true;}```
+```csharppublic void Serialize(LittleEndianOutput @out) {@out.WriteShort(field_1_print_gridlines);}```
+```csharppublic string ToString(){StringBuilder s = new StringBuilder();s.Append(Constants.typeString(GetType()));s.Append(' ');s.Append(Name());s.Append(' ');s.Append(commitTime);s.Append(' ');AppendCoreFlags(s);return s.ToString();}```
+```csharppublic LsRemoteCommand SetRemote(string remote) { CheckCallable(); this.remote = remote; return this; }```
+```csharppublic void CollapseRow(int rowNumber){int startRow = FindStartOfRowOutlineGroup(rowNumber);RowRecord rowRecord = GetRow(startRow);int nextRowIx = WriteHidden(rowRecord, startRow);RowRecord row = GetRow(nextRowIx);if (row == null){row = CreateRow(nextRowIx);InsertRow(row);}row.SetCollapsed(true);}```
+```csharppublic AssociateSkillGroupWithRoomResult AssociateSkillGroupWithRoom(AssociateSkillGroupWithRoomRequest request){request = BeforeClientExecution(request);return ExecuteAssociateSkillGroupWithRoom(request);}```
+```csharppublic string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[SERIESLIST]\n");buffer.Append("    .seriesNumbers= ").Append(" (").Append(string.Join(", ", GetSeriesNumbers())).Append(" )");buffer.Append("\n");buffer.Append("[/SERIESLIST]\n");return buffer.ToString();}```
+```csharppublic QueryConfigHandler GetQueryConfigHandler() { return this.queryConfig; }```
+```csharppublic string GetClassArg(){if (originalArgs != null){string className = originalArgs[CLASS_NAME];if (className != null){return className;}}return this.GetType().Name;}```

@@ -1,0 +1,8 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Language:go cot 3-shot counter=3 Time: 2:53:35:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 8.844252287520632
+
+HFBleu: {'bleu': 0.025847054770192997, 'precisions': [0.22366547613301802, 0.04205417750428218, 0.012400674211413436, 0.0038264043116008656], 'brevity_penalty': 1.0, 'length_ratio': 1.3116221284946705, 'translation_length': 165751, 'reference_length': 126371}

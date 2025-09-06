@@ -1,0 +1,7 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java retrieval 3-shot counter=0 Time: 0:42:13:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+Bleu: 13.456808551432143
+
+

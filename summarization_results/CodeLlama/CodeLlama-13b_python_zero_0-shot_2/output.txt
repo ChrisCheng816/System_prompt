@@ -1,0 +1,6 @@
+codellama/CodeLlama-13b-Instruct-hf Language:python zero 0-shot counter=0 Time: 5:39:13:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 8.149120367556648
+
+HFBleu: {'bleu': 0.022264410359454968, 'precisions': [0.045502581135252046, 0.025995854719807032, 0.017296598403945273, 0.01201002623042573], 'brevity_penalty': 1.0, 'length_ratio': 16.807654793941033, 'translation_length': 2860562, 'reference_length': 170194}

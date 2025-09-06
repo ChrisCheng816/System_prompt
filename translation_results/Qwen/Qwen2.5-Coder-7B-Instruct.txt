@@ -1,0 +1,495 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Csharp to Java naive 1-shot counter=0 Time: 0:06:38:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.7251127507748865, 'precisions': [0.8034591194968553, 0.7469842387954565, 0.699513820113442, 0.6584922170028553], 'brevity_penalty': 1.0, 'length_ratio': 1.1434658391212256, 'translation_length': 46427, 'reference_length': 40602}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java to Csharp naive 1-shot counter=1 Time: 0:06:27:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.7142560972686632, 'precisions': [0.8531420910387095, 0.7594746798286621, 0.6925385077015404, 0.6404264508649496], 'brevity_penalty': 0.9755330612289184, 'length_ratio': 0.975827553266603, 'translation_length': 46990, 'reference_length': 48154}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:06:20:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.5686678375932828, 'precisions': [0.7288988026346247, 0.6108424152533265, 0.526899672678544, 0.4702050717638867], 'brevity_penalty': 0.9867468558222731, 'length_ratio': 0.9868339078788886, 'translation_length': 47520, 'reference_length': 48154}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:07:03:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.4920875814998804, 'precisions': [0.5980093166661081, 0.5154231568901462, 0.45929123756024826, 0.4141995130385688], 'brevity_penalty': 1.0, 'length_ratio': 1.4698044431308803, 'translation_length': 59677, 'reference_length': 40602}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 3-shot counter=3 Time: 0:07:31:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.7631716450135034, 'precisions': [0.8661192578957165, 0.7865002428773575, 0.7294224255107985, 0.6827052415709277], 'brevity_penalty': 1.0, 'length_ratio': 1.0040287411222328, 'translation_length': 48348, 'reference_length': 48154}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 3-shot counter=3 Time: 0:07:15:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.7401919588596088, 'precisions': [0.8214585264644859, 0.762966641086986, 0.7137117258578488, 0.6710632061646102], 'brevity_penalty': 1.0, 'length_ratio': 1.115831732426974, 'translation_length': 45305, 'reference_length': 40602}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:07:00:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.7952009805191587, 'precisions': [0.9108878946915598, 0.8443242767959201, 0.7948844736132339, 0.7546905177963763], 'brevity_penalty': 0.9648618349065401, 'length_ratio': 0.965464966565602, 'translation_length': 46491, 'reference_length': 48154}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:06:43:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.8137481322150941, 'precisions': [0.8788974137729997, 0.8306391919963707, 0.7921772950759521, 0.7582056618439859], 'brevity_penalty': 1.0, 'length_ratio': 1.056105610561056, 'translation_length': 42880, 'reference_length': 40602}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:09:24:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.8479953413674663, 'precisions': [0.926224010731053, 0.8733301935262887, 0.8321666083304166, 0.7972580067990696], 'brevity_penalty': 0.9907579026327601, 'length_ratio': 0.9908003488806745, 'translation_length': 47711, 'reference_length': 48154}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:09:13:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+ {'bleu': 0.8399480020886131, 'precisions': [0.8987467721683922, 0.856251971560991, 0.8204222725124966, 0.7883757108974523], 'brevity_penalty': 1.0, 'length_ratio': 1.0396039603960396, 'translation_length': 42210, 'reference_length': 40602}
+
+---------------------
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:06:37:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.5653555886421522, 'precisions': [0.717219882751218, 0.5997386392378383, 0.5163207303419172, 0.45999471877475573], 'brevity_penalty': 1.0, 'length_ratio': 1.006001578269718, 'translation_length': 48443, 'reference_length': 48154}
+{'em_ratio': 0.018, 'matches': 18, 'total': 1000}
+{'codebleu': 0.32836148256992403, 'ngram_match_score': 0.12343453449566534, 'weighted_ngram_match_score': 0.1926041462182805, 'syntax_match_score': 0.4753966025551032, 'dataflow_match_score': 0.522010647010647}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:07:48:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.4848152441906275, 'precisions': [0.5894895930872472, 0.5081255323768643, 0.45244849081922106, 0.40765123632782124], 'brevity_penalty': 1.0, 'length_ratio': 1.4992364908132605, 'translation_length': 60872, 'reference_length': 40602}
+{'em_ratio': 0.078, 'matches': 78, 'total': 1000}
+{'codebleu': 0.4481730545396716, 'ngram_match_score': 0.12695967179384404, 'weighted_ngram_match_score': 0.28244345924579195, 'syntax_match_score': 0.6134030793525463, 'dataflow_match_score': 0.7698860077665038}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 1-shot counter=0 Time: 0:06:42:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7178647999558696, 'precisions': [0.8484387222257458, 0.7570894797088615, 0.6922805236087504, 0.6419268188077019], 'brevity_penalty': 0.9821070461320556, 'length_ratio': 0.9822652323794493, 'translation_length': 47300, 'reference_length': 48154}
+{'em_ratio': 0.244, 'matches': 244, 'total': 1000}
+{'codebleu': 0.4993348588178058, 'ngram_match_score': 0.232876064384576, 'weighted_ngram_match_score': 0.3259332025551311, 'syntax_match_score': 0.679418784220132, 'dataflow_match_score': 0.7591113841113841}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 1-shot counter=0 Time: 0:06:38:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7182706337282407, 'precisions': [0.7971150563332196, 0.7403192046049188, 0.6925820256776034, 0.6512401969724604], 'brevity_penalty': 1.0, 'length_ratio': 1.1542042263927885, 'translation_length': 46863, 'reference_length': 40602}
+{'em_ratio': 0.271, 'matches': 271, 'total': 1000}
+{'codebleu': 0.5882526643355338, 'ngram_match_score': 0.2966183973346491, 'weighted_ngram_match_score': 0.4581885304477459, 'syntax_match_score': 0.741758784050533, 'dataflow_match_score': 0.856444945509207}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 3-shot counter=0 Time: 0:07:21:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7646606691124829, 'precisions': [0.8663114804681875, 0.7877050385398946, 0.7313839486838436, 0.6850020827395699], 'brevity_penalty': 1.0, 'length_ratio': 1.00951115172156, 'translation_length': 48612, 'reference_length': 48154}
+{'em_ratio': 0.319, 'matches': 319, 'total': 1000}
+{'codebleu': 0.5859336133815826, 'ngram_match_score': 0.3316782037497361, 'weighted_ngram_match_score': 0.44726962576281876, 'syntax_match_score': 0.7395409237680752, 'dataflow_match_score': 0.8252457002457002}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 3-shot counter=0 Time: 0:07:31:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7291189456535363, 'precisions': [0.8112857454704213, 0.7520419549207766, 0.7024195389180552, 0.6594487269329596], 'brevity_penalty': 1.0, 'length_ratio': 1.1282449140436432, 'translation_length': 45809, 'reference_length': 40602}
+{'em_ratio': 0.35, 'matches': 350, 'total': 1000}
+{'codebleu': 0.6154887896492934, 'ngram_match_score': 0.351509312202568, 'weighted_ngram_match_score': 0.5077816229379206, 'syntax_match_score': 0.7514804579549941, 'dataflow_match_score': 0.8511837655016911}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:06:52:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.79879279952988, 'precisions': [0.9114820217969621, 0.8451723230728756, 0.7964449027167578, 0.7575208658167477], 'brevity_penalty': 0.9674381596578719, 'length_ratio': 0.967956971383478, 'translation_length': 46611, 'reference_length': 48154}
+{'em_ratio': 0.424, 'matches': 424, 'total': 1000}
+{'codebleu': 0.6106459652751537, 'ngram_match_score': 0.37915286326695735, 'weighted_ngram_match_score': 0.4623765673358745, 'syntax_match_score': 0.7713042257475783, 'dataflow_match_score': 0.8297502047502048}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:06:34:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.8193426546656276, 'precisions': [0.8836719900858139, 0.8362582900375894, 0.7978266735349671, 0.7644026454095104], 'brevity_penalty': 1.0, 'length_ratio': 1.053297867100143, 'translation_length': 42766, 'reference_length': 40602}
+{'em_ratio': 0.494, 'matches': 494, 'total': 1000}
+{'codebleu': 0.6846303987168774, 'ngram_match_score': 0.46807032744283217, 'weighted_ngram_match_score': 0.5794651131714057, 'syntax_match_score': 0.814498618239242, 'dataflow_match_score': 0.8764875360140298}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:09:25:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.8484224651992148, 'precisions': [0.9258367193063294, 0.8729944808111924, 0.8320508896952739, 0.7973226657131364], 'brevity_penalty': 0.9914702445369672, 'length_ratio': 0.991506416912406, 'translation_length': 47745, 'reference_length': 48154}
+{'em_ratio': 0.545, 'matches': 545, 'total': 1000}
+{'codebleu': 0.69147433487295, 'ngram_match_score': 0.4790695985709068, 'weighted_ngram_match_score': 0.5748578421617202, 'syntax_match_score': 0.8221255089147831, 'dataflow_match_score': 0.8898443898443898}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:09:22:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.8327957883935897, 'precisions': [0.8947268857886025, 0.8494550738677646, 0.8121618267560189, 0.7792568083481802], 'brevity_penalty': 1.0, 'length_ratio': 1.0415496773557953, 'translation_length': 42289, 'reference_length': 40602}
+{'em_ratio': 0.54, 'matches': 540, 'total': 1000}
+{'codebleu': 0.7219403720318901, 'ngram_match_score': 0.5442325063408916, 'weighted_ngram_match_score': 0.6391808120503375, 'syntax_match_score': 0.8253553099091986, 'dataflow_match_score': 0.8789928598271327}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs cot 1-shot counter=1 Time: 0:08:01:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7697435383854034, 'precisions': [0.8815922281100177, 0.8029255090643526, 0.7459829660198437, 0.6991875392764162], 'brevity_penalty': 0.9874830553025485, 'length_ratio': 0.9875607426174358, 'translation_length': 47555, 'reference_length': 48154}
+{'em_ratio': 0.332, 'matches': 332, 'total': 1000}
+{'codebleu': 0.5895509127406656, 'ngram_match_score': 0.3459927563161041, 'weighted_ngram_match_score': 0.4498055876638261, 'syntax_match_score': 0.7447353643127895, 'dataflow_match_score': 0.8176699426699426}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 1-shot counter=1 Time: 0:07:53:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7695843233902144, 'precisions': [0.8530139245144742, 0.7931276954809675, 0.7421034946236559, 0.6986523706472556], 'brevity_penalty': 1.0, 'length_ratio': 1.0753903748583813, 'translation_length': 43663, 'reference_length': 40602}
+{'em_ratio': 0.402, 'matches': 402, 'total': 1000}
+{'codebleu': 0.6453247688559517, 'ngram_match_score': 0.41402903893568016, 'weighted_ngram_match_score': 0.5417764886860191, 'syntax_match_score': 0.7706770627714173, 'dataflow_match_score': 0.8548164850306902}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs cot 3-shot counter=3 Time: 0:11:45:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7719025629472281, 'precisions': [0.8860652623580565, 0.8081633533140713, 0.7513993565163736, 0.7045382847356798], 'brevity_penalty': 0.983733390707045, 'length_ratio': 0.983864268804253, 'translation_length': 47377, 'reference_length': 48154}
+{'em_ratio': 0.325, 'matches': 325, 'total': 1000}
+{'codebleu': 0.6170107122203068, 'ngram_match_score': 0.40340579596992787, 'weighted_ngram_match_score': 0.4966802357441777, 'syntax_match_score': 0.7468061210164256, 'dataflow_match_score': 0.8211506961506961}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 3-shot counter=3 Time: 0:12:07:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7672422322132708, 'precisions': [0.8487167224613422, 0.7901470485423318, 0.7404977213619336, 0.6978074356530028], 'brevity_penalty': 1.0, 'length_ratio': 1.0814738190236934, 'translation_length': 43910, 'reference_length': 40602}
+{'em_ratio': 0.413, 'matches': 413, 'total': 1000}
+{'codebleu': 0.652436564503045, 'ngram_match_score': 0.4263736900972629, 'weighted_ngram_match_score': 0.553004963571716, 'syntax_match_score': 0.7730457954994078, 'dataflow_match_score': 0.857321808843793}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:06:12:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.569110431220525, 'precisions': [0.7620335554236207, 0.6394765834026576, 0.5524300204705936, 0.49318454693128044], 'brevity_penalty': 0.9428121651709548, 'length_ratio': 0.9443867591477344, 'translation_length': 45476, 'reference_length': 48154}
+{'em_ratio': 0.028, 'matches': 28, 'total': 1000}
+{'codebleu': 0.3355322492506324, 'ngram_match_score': 0.13751269828370455, 'weighted_ngram_match_score': 0.19392732046000266, 'syntax_match_score': 0.48550470307454724, 'dataflow_match_score': 0.5251842751842751}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:06:43:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.5276094540668349, 'precisions': [0.6385022719954202, 0.5525884367372218, 0.49294964562692495, 0.44553669325872436], 'brevity_penalty': 1.0, 'length_ratio': 1.3767055810058617, 'translation_length': 55897, 'reference_length': 40602}
+{'em_ratio': 0.089, 'matches': 89, 'total': 1000}
+{'codebleu': 0.4508439992662556, 'ngram_match_score': 0.14304455184192336, 'weighted_ngram_match_score': 0.27309072410722995, 'syntax_match_score': 0.6154757204895381, 'dataflow_match_score': 0.7717650006263309}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 1-shot counter=1 Time: 0:06:22:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7535524961615804, 'precisions': [0.8749311411500488, 0.7930862807913762, 0.7343687773795301, 0.6862301461604597], 'brevity_penalty': 0.9799274776018639, 'length_ratio': 0.9801262615774391, 'translation_length': 47197, 'reference_length': 48154}
+{'em_ratio': 0.295, 'matches': 295, 'total': 1000}
+{'codebleu': 0.5807873155279851, 'ngram_match_score': 0.35053546763873134, 'weighted_ngram_match_score': 0.44653550855005464, 'syntax_match_score': 0.7231503579952268, 'dataflow_match_score': 0.8029279279279279}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:06:22:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.5760225597147105, 'precisions': [0.7337225723499778, 0.6188876687552484, 0.5363862421054948, 0.47996309880071103], 'brevity_penalty': 0.985104256748286, 'length_ratio': 0.9852141047472692, 'translation_length': 47442, 'reference_length': 48154}
+{'em_ratio': 0.007, 'matches': 7, 'total': 1000}
+{'codebleu': 0.3274942674938625, 'ngram_match_score': 0.13293644960243084, 'weighted_ngram_match_score': 0.19702743679392234, 'syntax_match_score': 0.46219991576582903, 'dataflow_match_score': 0.5178132678132679}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:06:52:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.5114260289339068, 'precisions': [0.6150880019194187, 0.535491970497463, 0.4794413586271761, 0.4332171053820166], 'brevity_penalty': 1.0, 'length_ratio': 1.4371213240727059, 'translation_length': 58350, 'reference_length': 40602}
+{'em_ratio': 0.038, 'matches': 38, 'total': 1000}
+{'codebleu': 0.454261193498123, 'ngram_match_score': 0.14394931228820698, 'weighted_ngram_match_score': 0.2875291064524347, 'syntax_match_score': 0.6021515988945914, 'dataflow_match_score': 0.7834147563572592}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 1-shot counter=0 Time: 0:06:40:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.737484533814199, 'precisions': [0.8434622090042047, 0.7612396607685059, 0.7027483691583788, 0.6555786252868538], 'brevity_penalty': 1.0, 'length_ratio': 1.01246002408938, 'translation_length': 48754, 'reference_length': 48154}
+{'em_ratio': 0.253, 'matches': 253, 'total': 1000}
+{'codebleu': 0.5596380224797829, 'ngram_match_score': 0.3172324074108171, 'weighted_ngram_match_score': 0.435005062015679, 'syntax_match_score': 0.6982310824090973, 'dataflow_match_score': 0.788083538083538}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 1-shot counter=0 Time: 0:06:46:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.6966614827505545, 'precisions': [0.7755817593655432, 0.7184269423425343, 0.6709136447783949, 0.6301013024602026], 'brevity_penalty': 1.0, 'length_ratio': 1.1800896507561205, 'translation_length': 47914, 'reference_length': 40602}
+{'em_ratio': 0.205, 'matches': 205, 'total': 1000}
+{'codebleu': 0.5749252010857192, 'ngram_match_score': 0.276024770727911, 'weighted_ngram_match_score': 0.44180656034273064, 'syntax_match_score': 0.7303099091985787, 'dataflow_match_score': 0.8515595640736565}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 3-shot counter=3 Time: 0:07:38:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7427021779961663, 'precisions': [0.8438679624126576, 0.7664740595033194, 0.7096268094720107, 0.6629134262028886], 'brevity_penalty': 1.0, 'length_ratio': 1.0342442995389791, 'translation_length': 49803, 'reference_length': 48154}
+{'em_ratio': 0.278, 'matches': 278, 'total': 1000}
+{'codebleu': 0.5850291224930297, 'ngram_match_score': 0.35088951704975424, 'weighted_ngram_match_score': 0.4785804653117971, 'syntax_match_score': 0.7154990874631475, 'dataflow_match_score': 0.7951474201474201}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 3-shot counter=3 Time: 0:07:40:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7076333489602384, 'precisions': [0.7850435736743263, 0.7294949451402212, 0.6824040007931088, 0.6416165438940326], 'brevity_penalty': 1.0, 'length_ratio': 1.1671838825673613, 'translation_length': 47390, 'reference_length': 40602}
+{'em_ratio': 0.236, 'matches': 236, 'total': 1000}
+{'codebleu': 0.5910393140562324, 'ngram_match_score': 0.30470382540670715, 'weighted_ngram_match_score': 0.4691909496841862, 'syntax_match_score': 0.7368239242005526, 'dataflow_match_score': 0.8534385569334837}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs cot 1-shot counter=0 Time: 0:08:25:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7499498066474803, 'precisions': [0.8506529111918929, 0.7731804896250077, 0.7169831290616202, 0.6707899915659263], 'brevity_penalty': 1.0, 'length_ratio': 1.0225526436017776, 'translation_length': 49240, 'reference_length': 48154}
+{'em_ratio': 0.298, 'matches': 298, 'total': 1000}
+{'codebleu': 0.569789167832421, 'ngram_match_score': 0.31186691054659, 'weighted_ngram_match_score': 0.439634743060689, 'syntax_match_score': 0.7209392110065983, 'dataflow_match_score': 0.8067158067158067}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 1-shot counter=0 Time: 0:08:22:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7267157754422038, 'precisions': [0.8086625312874088, 0.7493158304594505, 0.6997383092501991, 0.6577948538828734], 'brevity_penalty': 1.0, 'length_ratio': 1.131569873405251, 'translation_length': 45944, 'reference_length': 40602}
+{'em_ratio': 0.327, 'matches': 327, 'total': 1000}
+{'codebleu': 0.6007397717814253, 'ngram_match_score': 0.3243345073526353, 'weighted_ngram_match_score': 0.47985880905391176, 'syntax_match_score': 0.7508389261744967, 'dataflow_match_score': 0.8479268445446574}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs cot 3-shot counter=0 Time: 0:12:03:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7617117589739645, 'precisions': [0.863116770366083, 0.785001160900859, 0.7283998533755957, 0.6821076756947352], 'brevity_penalty': 1.0, 'length_ratio': 1.0046102089130706, 'translation_length': 48376, 'reference_length': 48154}
+{'em_ratio': 0.294, 'matches': 294, 'total': 1000}
+{'codebleu': 0.5873293146728309, 'ngram_match_score': 0.3498027401748575, 'weighted_ngram_match_score': 0.46375762458885783, 'syntax_match_score': 0.7263793345500491, 'dataflow_match_score': 0.8093775593775594}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 3-shot counter=0 Time: 0:12:32:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7264158128491013, 'precisions': [0.8049149175088538, 0.7484550189811954, 0.7008666606481899, 0.659462454973677], 'brevity_penalty': 1.0, 'length_ratio': 1.1405103196886852, 'translation_length': 46307, 'reference_length': 40602}
+{'em_ratio': 0.32, 'matches': 320, 'total': 1000}
+{'codebleu': 0.606549512959387, 'ngram_match_score': 0.33349793177666653, 'weighted_ngram_match_score': 0.4928485503588016, 'syntax_match_score': 0.7568101065929728, 'dataflow_match_score': 0.8430414631091069}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:06:57:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8457506947222286, 'precisions': [0.9142411966344656, 0.8622891694070224, 0.8231061016581771, 0.7898083527196189], 'brevity_penalty': 0.999584579600525, 'length_ratio': 0.9995846658636873, 'translation_length': 48134, 'reference_length': 48154}
+{'em_ratio': 0.475, 'matches': 475, 'total': 1000}
+{'codebleu': 0.6859377267267198, 'ngram_match_score': 0.49427716189045384, 'weighted_ngram_match_score': 0.5902522476649266, 'syntax_match_score': 0.8064368945668959, 'dataflow_match_score': 0.8527846027846028}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:06:58:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8052273602282934, 'precisions': [0.8683068017366136, 0.8223732160910352, 0.7841956998049744, 0.750770976735006], 'brevity_penalty': 1.0, 'length_ratio': 1.0721639328111916, 'translation_length': 43532, 'reference_length': 40602}
+{'em_ratio': 0.458, 'matches': 458, 'total': 1000}
+{'codebleu': 0.6791716467847815, 'ngram_match_score': 0.46012255483063497, 'weighted_ngram_match_score': 0.5778238227168393, 'syntax_match_score': 0.806010659297276, 'dataflow_match_score': 0.8727295502943756}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:09:33:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8470156143622349, 'precisions': [0.911518958756749, 0.8628408543103268, 0.8252659973025626, 0.793003872153311], 'brevity_penalty': 1.0, 'length_ratio': 1.011546288989492, 'translation_length': 48710, 'reference_length': 48154}
+{'em_ratio': 0.495, 'matches': 495, 'total': 1000}
+{'codebleu': 0.6867582775595554, 'ngram_match_score': 0.49166385090229886, 'weighted_ngram_match_score': 0.5972629075436241, 'syntax_match_score': 0.8166853853713323, 'dataflow_match_score': 0.8414209664209664}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:09:39:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8271845293707641, 'precisions': [0.8840589838563142, 0.8425835380542371, 0.8080729103037115, 0.777794474916723], 'brevity_penalty': 1.0, 'length_ratio': 1.0572385596768632, 'translation_length': 42926, 'reference_length': 40602}
+{'em_ratio': 0.464, 'matches': 464, 'total': 1000}
+{'codebleu': 0.7089598108229541, 'ngram_match_score': 0.5155920692567177, 'weighted_ngram_match_score': 0.6263381708478579, 'syntax_match_score': 0.8134129490722464, 'dataflow_match_score': 0.8804960541149943}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:06:39:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5650410373216148, 'precisions': [0.7154676705415133, 0.59893127191315, 0.5164847020239072, 0.46056984077978214], 'brevity_penalty': 1.0, 'length_ratio': 1.003966441001786, 'translation_length': 48345, 'reference_length': 48154}
+{'em_ratio': 0.0, 'matches': 0, 'total': 1000}
+{'codebleu': 0.31928236924545705, 'ngram_match_score': 0.12718285036032778, 'weighted_ngram_match_score': 0.19211288033836502, 'syntax_match_score': 0.4499508634002527, 'dataflow_match_score': 0.5078828828828829}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:06:48:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.49826911291086373, 'precisions': [0.6118188129121833, 0.5246909219357118, 0.462891046386192, 0.41481142438667157], 'brevity_penalty': 1.0, 'length_ratio': 1.4191172848628146, 'translation_length': 57619, 'reference_length': 40602}
+{'em_ratio': 0.0, 'matches': 0, 'total': 1000}
+{'codebleu': 0.44041403349958713, 'ngram_match_score': 0.13232261645587326, 'weighted_ngram_match_score': 0.26210554781268186, 'syntax_match_score': 0.5955882352941176, 'dataflow_match_score': 0.7716397344356758}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 1-shot counter=0 Time: 0:07:12:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6923255637969974, 'precisions': [0.7896453089244851, 0.7144828926905132, 0.660685963521015, 0.6163430420711974], 'brevity_penalty': 1.0, 'length_ratio': 1.0889853387049881, 'translation_length': 52439, 'reference_length': 48154}
+{'em_ratio': 0.059, 'matches': 59, 'total': 1000}
+{'codebleu': 0.44771018105178906, 'ngram_match_score': 0.1957723789881076, 'weighted_ngram_match_score': 0.3127103104392814, 'syntax_match_score': 0.643127895549628, 'dataflow_match_score': 0.6392301392301393}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 1-shot counter=0 Time: 0:07:21:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6735574973613264, 'precisions': [0.7469884331861678, 0.6941720855331553, 0.6496868302224442, 0.6109611747455214], 'brevity_penalty': 1.0, 'length_ratio': 1.232845672626964, 'translation_length': 50056, 'reference_length': 40602}
+{'em_ratio': 0.0, 'matches': 0, 'total': 1000}
+{'codebleu': 0.5230785114576879, 'ngram_match_score': 0.1942451256699646, 'weighted_ngram_match_score': 0.3406120186786156, 'syntax_match_score': 0.6983813659692065, 'dataflow_match_score': 0.859075535512965}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs naive 3-shot counter=0 Time: 0:07:59:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7043517782794556, 'precisions': [0.7990991334885674, 0.7263493793049772, 0.6733738143429774, 0.6297323561566183], 'brevity_penalty': 1.0, 'length_ratio': 1.0880300701914691, 'translation_length': 52393, 'reference_length': 48154}
+{'em_ratio': 0.08, 'matches': 80, 'total': 1000}
+{'codebleu': 0.4687384314977445, 'ngram_match_score': 0.2219933064445737, 'weighted_ngram_match_score': 0.34469668346082366, 'syntax_match_score': 0.6580794609013056, 'dataflow_match_score': 0.6501842751842751}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java naive 3-shot counter=0 Time: 0:08:01:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6794994098304175, 'precisions': [0.7524569034960529, 0.6998109174613614, 0.6557201611549438, 0.6174125514403292], 'brevity_penalty': 1.0, 'length_ratio': 1.2229693118565588, 'translation_length': 49655, 'reference_length': 40602}
+{'em_ratio': 0.002, 'matches': 2, 'total': 1000}
+{'codebleu': 0.5608418315039052, 'ngram_match_score': 0.2584367409334301, 'weighted_ngram_match_score': 0.42567810056601674, 'syntax_match_score': 0.7021812080536913, 'dataflow_match_score': 0.8570712764624828}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs cot 1-shot counter=0 Time: 0:08:59:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6925070831662242, 'precisions': [0.7856041807654711, 0.7141543413288375, 0.6620048441284475, 0.6192126862698223], 'brevity_penalty': 1.0, 'length_ratio': 1.1046849690576068, 'translation_length': 53195, 'reference_length': 48154}
+{'em_ratio': 0.069, 'matches': 69, 'total': 1000}
+{'codebleu': 0.45251782127261586, 'ngram_match_score': 0.19929629120364786, 'weighted_ngram_match_score': 0.3228951424452629, 'syntax_match_score': 0.6515162150779166, 'dataflow_match_score': 0.6363636363636364}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 1-shot counter=0 Time: 0:09:03:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.676566652088988, 'precisions': [0.749964893979819, 0.6967594014207046, 0.6526991159689858, 0.6143354180452091], 'brevity_penalty': 1.0, 'length_ratio': 1.2277227722772277, 'translation_length': 49848, 'reference_length': 40602}
+{'em_ratio': 0.04, 'matches': 40, 'total': 1000}
+{'codebleu': 0.5300622877641292, 'ngram_match_score': 0.2050475196647376, 'weighted_ngram_match_score': 0.3582721040340241, 'syntax_match_score': 0.708251085669167, 'dataflow_match_score': 0.8486784416885883}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs cot 3-shot counter=0 Time: 0:12:54:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6964355207245526, 'precisions': [0.7909607720928475, 0.7181742930294338, 0.6655936561524721, 0.6221995315033936], 'brevity_penalty': 1.0, 'length_ratio': 1.0995140590605141, 'translation_length': 52946, 'reference_length': 48154}
+{'em_ratio': 0.075, 'matches': 75, 'total': 1000}
+{'codebleu': 0.45843275563213665, 'ngram_match_score': 0.20961722994308898, 'weighted_ngram_match_score': 0.33436810711465637, 'syntax_match_score': 0.6560438017689176, 'dataflow_match_score': 0.6337018837018837}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 3-shot counter=0 Time: 0:13:08:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6743450693497771, 'precisions': [0.7502519450155198, 0.695067264573991, 0.6494728441214769, 0.6105676406229888], 'brevity_penalty': 1.0, 'length_ratio': 1.2219348800551697, 'translation_length': 49613, 'reference_length': 40602}
+{'em_ratio': 0.074, 'matches': 74, 'total': 1000}
+{'codebleu': 0.544140580674978, 'ngram_match_score': 0.22622985755200437, 'weighted_ngram_match_score': 0.38683203868403265, 'syntax_match_score': 0.7126924595341493, 'dataflow_match_score': 0.8508079669297257}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:07:45:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7778484509002256, 'precisions': [0.8464080878779041, 0.7941508872806583, 0.7548902599372914, 0.721461752864664], 'brevity_penalty': 1.0, 'length_ratio': 1.0681147983552768, 'translation_length': 51434, 'reference_length': 48154}
+{'em_ratio': 0.19, 'matches': 190, 'total': 1000}
+{'codebleu': 0.527980421004994, 'ngram_match_score': 0.27766826250402343, 'weighted_ngram_match_score': 0.41092764465234044, 'syntax_match_score': 0.724308577846413, 'dataflow_match_score': 0.699017199017199}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:07:42:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.723757417438037, 'precisions': [0.7902895830257525, 0.7404606468015427, 0.7014291062030696, 0.6684979623083331], 'brevity_penalty': 1.0, 'length_ratio': 1.1677257277966602, 'translation_length': 47412, 'reference_length': 40602}
+{'em_ratio': 0.142, 'matches': 142, 'total': 1000}
+{'codebleu': 0.5823108009859518, 'ngram_match_score': 0.28171423272241236, 'weighted_ngram_match_score': 0.43355690246632855, 'syntax_match_score': 0.7411172522700356, 'dataflow_match_score': 0.8728548164850307}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:10:31:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7744545803413471, 'precisions': [0.83954012451778, 0.790019859039757, 0.7524522457408364, 0.7208176329970423], 'brevity_penalty': 1.0, 'length_ratio': 1.0873655355733687, 'translation_length': 52361, 'reference_length': 48154}
+{'em_ratio': 0.14, 'matches': 140, 'total': 1000}
+{'codebleu': 0.5127544525281049, 'ngram_match_score': 0.259376883770616, 'weighted_ngram_match_score': 0.39630165384403054, 'syntax_match_score': 0.7253966025551032, 'dataflow_match_score': 0.6699426699426699}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:10:27:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7315169095065285, 'precisions': [0.7940419426980041, 0.7471873787663261, 0.7105819639631702, 0.6792197846749853], 'brevity_penalty': 1.0, 'length_ratio': 1.1673562878675927, 'translation_length': 47397, 'reference_length': 40602}
+{'em_ratio': 0.126, 'matches': 126, 'total': 1000}
+{'codebleu': 0.612660498849204, 'ngram_match_score': 0.3375242913524032, 'weighted_ngram_match_score': 0.5034046857716215, 'syntax_match_score': 0.7411172522700356, 'dataflow_match_score': 0.8685957660027559}
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:07:25:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+  CodeBleu: 
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:07:27:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+  CodeBleu: 
+
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:08:17:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+  CodeBleu: 
+

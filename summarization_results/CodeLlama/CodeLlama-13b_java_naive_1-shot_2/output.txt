@@ -1,0 +1,6 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java naive 1-shot counter=1 Time: 2:24:42:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 4.193624602476624
+
+HFBleu: {'bleu': 0.001212129483867008, 'precisions': [0.019103299532509766, 0.0021813259058882433, 0.0004211170465332302, 0.00012301676338399907], 'brevity_penalty': 1.0, 'length_ratio': 17.779408601379547, 'translation_length': 2479623, 'reference_length': 139466}

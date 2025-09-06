@@ -1,0 +1,8 @@
+codellama/CodeLlama-13b-Instruct-hf Language:python cot 3-shot counter=3 Time: 1:03:37:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 39.49600527915403
+
+HFBleu: {'bleu': 0.15325440288987782, 'precisions': [0.26535672879356786, 0.17293512058738994, 0.1269154640072214, 0.09471614062331744], 'brevity_penalty': 1.0, 'length_ratio': 2.3363103282136857, 'translation_length': 397626, 'reference_length': 170194}

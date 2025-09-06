@@ -1,0 +1,17 @@
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 3-shot counter=0 Time: 0:49:16:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+
+BLEU_Smooth:{'bleu': 0.3448662807141542, 'precisions': [0.4017432352066607, 0.35655999099572294, 0.3267686714134222, 0.30219086946547374], 'brevity_penalty': 1.0, 'length_ratio': 2.234809153964364, 'translation_length': 107615, 'reference_length': 48154}
+EM: {'em_ratio': 0.278, 'matches': 278, 'total': 1000}
+CodeBleu: {'codebleu': 68.54047693502497, 'ngram_match_score': 0.3448662807141542, 'weighted_ngram_match_score': 0.7840354087694006, 'syntax_match_score': 0.7574757826758388, 'dataflow_match_score': 0.8552416052416052}
+
+BLEU_Smooth: {'bleu': 0.6883937911973619, 'precisions': [0.7818546310601044, 0.7101476429588548, 0.657775147025128, 0.614887487347193], 'brevity_penalty': 1.0, 'length_ratio': 1.1291066162727914, 'translation_length': 54371, 'reference_length': 48154}
+EM: {'em_ratio': 0.342, 'matches': 342, 'total': 1000}
+CodeBleu: {'codebleu': 76.87472483060068, 'ngram_match_score': 0.6883937911973619, 'weighted_ngram_match_score': 0.7800290730858346, 'syntax_match_score': 0.7571599045346062, 'dataflow_match_score': 0.8494062244062244}
+

@@ -1,0 +1,162 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python retrieval 1-shot counter=0 Time: 2:12:37:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.20938708089564753, 'precisions': [0.3385053389070669, 0.23039397683491683, 0.17735533870396997, 0.1389692198524588], 'brevity_penalty': 1.0, 'length_ratio': 2.018373150639858, 'translation_length': 343515, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python zero 0-shot counter=0 Time: 4:07:02:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.037476739778516704, 'precisions': [0.09585930734224922, 0.045542946880905696, 0.02704075714839328, 0.016709865336803808], 'brevity_penalty': 1.0, 'length_ratio': 6.710025030259586, 'translation_length': 1142006, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python retrieval 3-shot counter=0 Time: 2:22:36:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.4127681777207518, 'precisions': [0.5351617383112295, 0.43784148281347257, 0.37820317337103676, 0.32756515870337655], 'brevity_penalty': 1.0, 'length_ratio': 1.4469429004547751, 'translation_length': 246261, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python naive 1-shot counter=1 Time: 1:53:56:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.23712892618655082, 'precisions': [0.3766858626003731, 0.2598915129880978, 0.2020518052078207, 0.159846814260393], 'brevity_penalty': 1.0, 'length_ratio': 1.8110156644770086, 'translation_length': 308224, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python naive 3-shot counter=3 Time: 1:12:07:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.5127635700174317, 'precisions': [0.642804901712017, 0.5381113863913626, 0.47448803715930005, 0.4212035484325196], 'brevity_penalty': 1.0, 'length_ratio': 1.1809464493460404, 'translation_length': 200990, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python cot 1-shot counter=1 Time: 1:39:09:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.15292308381048395, 'precisions': [0.32830154569285, 0.17908401842252708, 0.11757201569560932, 0.0791149334309915], 'brevity_penalty': 1.0, 'length_ratio': 1.7550559949234403, 'translation_length': 298700, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php zero 0-shot counter=0 Time: 2:45:03:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.009541486177638624, 'precisions': [0.06968540554556575, 0.016159202566778275, 0.004795183163423893, 0.0015349602886719456], 'brevity_penalty': 1.0, 'length_ratio': 7.029528307867875, 'translation_length': 887014, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python cot 3-shot counter=3 Time: 1:50:34:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.31445225019769707, 'precisions': [0.5028147522125971, 0.34451978370955283, 0.26693566440439204, 0.2114414109171318], 'brevity_penalty': 1.0, 'length_ratio': 1.2514189689413258, 'translation_length': 212984, 'reference_length': 170194}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php naive 1-shot counter=1 Time: 0:43:52:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.040073954124967615, 'precisions': [0.24078701436296215, 0.06269211753831604, 0.022043354448770848, 0.007750417573518247], 'brevity_penalty': 1.0, 'length_ratio': 1.585755721803081, 'translation_length': 200097, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php naive 3-shot counter=3 Time: 0:39:55:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.04671854922528864, 'precisions': [0.2701019545603533, 0.07162558556980868, 0.02583068833848622, 0.009532910154028167], 'brevity_penalty': 1.0, 'length_ratio': 1.3781461992011665, 'translation_length': 173900, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php naive 1-shot counter=1 Time: 0:28:08:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a very concise summary of what the method does in only one sentence.
+ {'bleu': 0.04612607941286901, 'precisions': [0.274qq93989117138395, 0.07120150064172179, 0.0253333430007033, 0.009127813602137087], 'brevity_penalty': 1.0, 'length_ratio': 1.3151271159576492, 'translation_length': 165948, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php naive 3-shot counter=3 Time: 0:36:54:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a very concise summary of what the method does in only one sentence.
+ {'bleu': 0.049569729642138786, 'precisions': [0.2885701978868422, 0.07611189122304558, 0.027495378927911276, 0.009997755253570011], 'brevity_penalty': 1.0, 'length_ratio': 1.251085716097128, 'translation_length': 157867, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php retrieval 1-shot counter=0 Time: 1:09:19:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a very concise summary of what the method does in only one sentence.
+ {'bleu': 0.038043067824302924, 'precisions': [0.2303970312925321, 0.059621559425772755, 0.02065226688071161, 0.007383362436871889], 'brevity_penalty': 1.0, 'length_ratio': 1.4265675521460723, 'translation_length': 180010, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php retrieval 3-shot counter=0 Time: 1:20:49:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a very concise summary of what the method does in only one sentence.
+ {'bleu': 0.04725222812650983, 'precisions': [0.2715755436121234, 0.073348345747445, 0.026060531647123825, 0.00960339772854281], 'brevity_penalty': 1.0, 'length_ratio': 1.254818360489444, 'translation_length': 158338, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:go zero 0-shot counter=0 Time: 2:07:18:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.012420203751063565, 'precisions': [0.09717281884532908, 0.020575674064046156, 0.006089475609437463, 0.0019545019743614357], 'brevity_penalty': 1.0, 'length_ratio': 4.974329553457676, 'translation_length': 628611, 'reference_length': 126371}
+ 
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php naive 1-shot counter=1 Time: 0:33:50:
+You are a helpful assistant that writes summary for methods. Write the shortest possible summary of the method, preserving only the core functionality. Omit all details and redundancy.
+ {'bleu': 0.0475196493867785, 'precisions': [0.3133628549101328, 0.07657557711252917, 0.025441166036550136, 0.008352531159548704], 'brevity_penalty': 1.0, 'length_ratio': 1.0039783173777974, 'translation_length': 126686, 'reference_length': 126184}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java naive 1-shot counter=1 Time: 0:47:27:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.044690101882560326, 'precisions': [0.2569720783869732, 0.06870612428203371, 0.024400876965749056, 0.009258882146105703], 'brevity_penalty': 1.0, 'length_ratio': 1.291942122094274, 'translation_length': 180182, 'reference_length': 139466}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 1-shot counter=1 Time: 0:03:20:
+You are a helpful assistant that writes summary for methods. 
+Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.016614272140598213, 'precisions': [0.21537377828651932, 0.042194928684627576, 0.012337294850028296, 0.004753102719831001], 'brevity_penalty': 0.6149202043731555, 'length_ratio': 0.672828534186515, 'translation_length': 11356, 'reference_length': 16878}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 3-shot counter=3 Time: 0:04:05:
+You are a helpful assistant that writes summary for methods. 
+Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.021006766302826725, 'precisions': [0.21038469929459674, 0.043154523618895116, 0.012645827767388013, 0.004213483146067416], 'brevity_penalty': 0.796529662643329, 'length_ratio': 0.8146699845953312, 'translation_length': 13750, 'reference_length': 16878}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:php naive 3-shot counter=3 Time: 0:33:17:
+You are a helpful assistant that writes summary for methods. Write the shortest possible summary of the method, preserving only the core functionality. Omit all details and redundancy.
+ {'bleu': 0.050864384824990234, 'precisions': [0.3206300042308951, 0.08040088085928722, 0.027436986456330147, 0.009744433897653405], 'brevity_penalty': 0.9927143476023869, 'length_ratio': 0.9927407595257719, 'translation_length': 125268, 'reference_length': 126184}
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 1-shot counter=1 Time: 0:02:06:
+You are a helpful assistant that writes summary for methods. 
+Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.0205813212688637, 'precisions': [0.2853844787781922, 0.0504949505049495, 0.014988558352402747, 0.005883139457146677], 'brevity_penalty': 0.6130013420060533, 'length_ratio': 0.6714166467922729, 'translation_length': 11261, 'reference_length': 16772}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 3-shot counter=3 Time: 0:02:45:
+You are a helpful assistant that writes summary for methods. 
+Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.026774393921728798, 'precisions': [0.28608021077283374, 0.05667983552366363, 0.015257583916711542, 0.005161420908814897], 'brevity_penalty': 0.7964835086870482, 'length_ratio': 0.8146315287383735, 'translation_length': 13663, 'reference_length': 16772}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 1-shot counter=1 Time: 0:02:06:
+You are a helpful assistant that writes summary for methods. 
+Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.0007560073267539921, 'precisions': [0.28303721382480335, 0.049243931555909275, 0.012057786372426346, 0.003851261620185923], 'brevity_penalty': 0.026653809403770736, 'length_ratio': 0.21622448199403624, 'translation_length': 11312, 'reference_length': 52316}
+
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 1-shot counter=1 Time: 0:02:07:
+You are a helpful assistant that writes summary for methods. 
+Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.000768122838171081, 'precisions': [0.28081095500622444, 0.05217826740110165, 0.0135259055479138, 0.0038858367948546163], 'brevity_penalty': 0.025929373652695382, 'length_ratio': 0.2149438030430461, 'translation_length': 11245, 'reference_length': 52316}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 3-shot counter=3 Time: 0:03:04:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.02377301733549207, 'precisions': [0.2800903987752424, 0.05258509955041747, 0.013130861991960696, 0.004026575397624321], 'brevity_penalty': 0.8002705006542873, 'length_ratio': 0.8177915573575006, 'translation_length': 13716, 'reference_length': 16772}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:go naive 3-shot counter=3 Time: 0:47:11:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.045098159308887706, 'precisions': [0.29349612031351957, 0.06446140797285835, 0.023919175896969097, 0.009140856712208878], 'brevity_penalty': 1.0, 'length_ratio': 1.0068707849159357, 'translation_length': 127200, 'reference_length': 126332}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby naive 3-shot counter=3 Time: 0:02:44:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.02748617460335677, 'precisions': [0.2795910916392844, 0.055734276982467426, 0.015931262865837285, 0.005649717514124294], 'brevity_penalty': 0.7986999207754918, 'length_ratio': 0.8164798473646554, 'translation_length': 13694, 'reference_length': 16772}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby zero 0-shot counter=0 Time: 0:02:35:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.0266393537539457, 'precisions': [0.26853146853146853, 0.0428740779768177, 0.012497306614953674, 0.003790870320644448], 'brevity_penalty': 0.9802511300030122, 'length_ratio': 0.9804435964703077, 'translation_length': 16444, 'reference_length': 16772}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby zero 0-shot counter=0 Time: 0:02:12:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.02562860442570903, 'precisions': [0.2769604707688372, 0.04411048493703472, 0.011668700427089689, 0.004050291114673867], 'brevity_penalty': 0.9297321952994482, 'length_ratio': 0.9320891962795135, 'translation_length': 15633, 'reference_length': 16772}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby zero 0-shot counter=0 Time: 0:02:48:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.01899107204560255, 'precisions': [0.18902258313081619, 0.029724535554131966, 0.00843264338978326, 0.0027506112469437654], 'brevity_penalty': 0.9995258978398651, 'length_ratio': 0.9995260101907809, 'translation_length': 16870, 'reference_length': 16878}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby zero 0-shot counter=0 Time: 0:02:15:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.019101629706541213, 'precisions': [0.19998764364265414, 0.03175879396984924, 0.009074941451990632, 0.0027412722728372167], 'brevity_penalty': 0.9580862981038801, 'length_ratio': 0.9589406327763953, 'translation_length': 16185, 'reference_length': 16878}
+
+Qwen/Qwen2.5-Coder-7B-Instruct Language:ruby zero 0-shot counter=0 Time: 0:02:39:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+ {'bleu': 0.017895763656113246, 'precisions': [0.19402985074626866, 0.029958137100994243, 0.008412347615313323, 0.002271659094469685], 'brevity_penalty': 0.9802555392737466, 'length_ratio': 0.9804479203697121, 'translation_length': 16548, 'reference_length': 16878}
+

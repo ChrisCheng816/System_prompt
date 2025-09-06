@@ -1,0 +1,391 @@
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs zero 0-shot counter=0 Time: 0:10:12:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.26441192700811966, 'precisions': [0.3484256040027184, 0.2804607533994489, 0.23859902944811165, 0.20963960580933919], 'brevity_penalty': 1.0, 'length_ratio': 2.1084437429912364, 'translation_length': 101530, 'reference_length': 48154}
+{'em_ratio': 0.017, 'matches': 17, 'total': 1000}
+{'codebleu': 0.34216273006010434, 'ngram_match_score': 0.03951387925113926, 'weighted_ngram_match_score': 0.18885904810353554, 'syntax_match_score': 0.5316580092657588, 'dataflow_match_score': 0.6086199836199836}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java zero 0-shot counter=0 Time: 0:10:18:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.2941316400567876, 'precisions': [0.36910414688192467, 0.31158152927375493, 0.2715209658294707, 0.23968617195161818], 'brevity_penalty': 1.0, 'length_ratio': 2.334096842520073, 'translation_length': 94769, 'reference_length': 40602}
+{'em_ratio': 0.088, 'matches': 88, 'total': 1000}
+{'codebleu': 0.4106403446436485, 'ngram_match_score': 0.05615949045743561, 'weighted_ngram_match_score': 0.26459554791703216, 'syntax_match_score': 0.6200651401500198, 'dataflow_match_score': 0.7017412000501064}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs naive 1-shot counter=0 Time: 0:10:14:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7152033791505215, 'precisions': [0.8221115900673912, 0.7403589944849523, 0.6802564697445849, 0.6319350182061061], 'brevity_penalty': 1.0, 'length_ratio': 1.0261245171740665, 'translation_length': 49412, 'reference_length': 48154}
+{'em_ratio': 0.23, 'matches': 230, 'total': 1000}
+{'codebleu': 0.46999076817969493, 'ngram_match_score': 0.14708090182647446, 'weighted_ngram_match_score': 0.24221605520864076, 'syntax_match_score': 0.711182086199635, 'dataflow_match_score': 0.7794840294840295}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java naive 1-shot counter=0 Time: 0:09:35:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.806166582484118, 'precisions': [0.8904689718231912, 0.8294829754185261, 0.7785838873581233, 0.7344588811950518], 'brevity_penalty': 1.0, 'length_ratio': 1.023545638145904, 'translation_length': 41558, 'reference_length': 40602}
+{'em_ratio': 0.47, 'matches': 470, 'total': 1000}
+{'codebleu': 0.5930282372672252, 'ngram_match_score': 0.314446041280177, 'weighted_ngram_match_score': 0.4435989792419834, 'syntax_match_score': 0.7772897749703909, 'dataflow_match_score': 0.8367781535763498}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs naive 3-shot counter=0 Time: 0:12:40:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7321121556909562, 'precisions': [0.8469223197268938, 0.7627013498192398, 0.7026908868341093, 0.6549265872572463], 'brevity_penalty': 0.9914911881569404, 'length_ratio': 0.9915271836192217, 'translation_length': 47746, 'reference_length': 48154}
+{'em_ratio': 0.145, 'matches': 145, 'total': 1000}
+{'codebleu': 0.46889864189108843, 'ngram_match_score': 0.16389401649554433, 'weighted_ngram_match_score': 0.24552155954937147, 'syntax_match_score': 0.6969324722729188, 'dataflow_match_score': 0.7692465192465192}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java naive 3-shot counter=0 Time: 0:11:50:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7823535953818197, 'precisions': [0.8725311203319502, 0.8073102610807529, 0.7525575606720597, 0.7067262284620294], 'brevity_penalty': 1.0, 'length_ratio': 1.0387173045662774, 'translation_length': 42174, 'reference_length': 40602}
+{'em_ratio': 0.457, 'matches': 457, 'total': 1000}
+{'codebleu': 0.590516921306828, 'ngram_match_score': 0.316571591418481, 'weighted_ngram_match_score': 0.45256822582010864, 'syntax_match_score': 0.7606592972759574, 'dataflow_match_score': 0.8322685707127646}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:12:21:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.6833968374595757, 'precisions': [0.7626465509406526, 0.6994168286587059, 0.6565123078374046, 0.6228587907334423], 'brevity_penalty': 1.0, 'length_ratio': 1.1424596087552437, 'translation_length': 55014, 'reference_length': 48154}
+{'em_ratio': 0.353, 'matches': 353, 'total': 1000}
+{'codebleu': 0.5345549043076385, 'ngram_match_score': 0.20001567862411695, 'weighted_ngram_match_score': 0.3687998855929496, 'syntax_match_score': 0.7559314895409238, 'dataflow_match_score': 0.8134725634725635}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:10:27:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.8432097259215582, 'precisions': [0.9070795391415666, 0.8602014801613821, 0.8218065531331692, 0.7883648863310851], 'brevity_penalty': 1.0, 'length_ratio': 1.0196542042263927, 'translation_length': 41400, 'reference_length': 40602}
+{'em_ratio': 0.612, 'matches': 612, 'total': 1000}
+{'codebleu': 0.6717077369544001, 'ngram_match_score': 0.4379165073178459, 'weighted_ngram_match_score': 0.5653526632746712, 'syntax_match_score': 0.833004342676668, 'dataflow_match_score': 0.8505574345484154}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:16:50:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.8051181647554303, 'precisions': [0.8672578552046876, 0.8195675719042079, 0.7843137254901961, 0.7537297839441681], 'brevity_penalty': 1.0, 'length_ratio': 1.0561324085226564, 'translation_length': 50857, 'reference_length': 48154}
+{'em_ratio': 0.489, 'matches': 489, 'total': 1000}
+{'codebleu': 0.5927428082982286, 'ngram_match_score': 0.2534554548376789, 'weighted_ngram_match_score': 0.40074060241608345, 'syntax_match_score': 0.8292854134493893, 'dataflow_match_score': 0.8874897624897625}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:16:14:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.8642220052025761, 'precisions': [0.925404264716708, 0.8808140266143436, 0.8437024230382164, 0.8111408364898154], 'brevity_penalty': 1.0, 'length_ratio': 1.0036943992906753, 'translation_length': 40752, 'reference_length': 40602}
+{'em_ratio': 0.646, 'matches': 646, 'total': 1000}
+{'codebleu': 0.6438533155619474, 'ngram_match_score': 0.374604128755944, 'weighted_ngram_match_score': 0.4985368750175974, 'syntax_match_score': 0.8430714567706277, 'dataflow_match_score': 0.8592008017036202}
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs cot 1-shot counter=0 Time: 0:13:50:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7715483261056751, 'precisions': [0.8677860696517413, 0.7945596951735817, 0.739878892733564, 0.6946286472148541], 'brevity_penalty': 1.0, 'length_ratio': 1.0017651700793289, 'translation_length': 48239, 'reference_length': 48154}
+{'em_ratio': 0.336, 'matches': 336, 'total': 1000}
+{'codebleu': 0.5045417493522243, 'ngram_match_score': 0.16950429420075408, 'weighted_ngram_match_score': 0.2690063794306625, 'syntax_match_score': 0.75400112312228, 'dataflow_match_score': 0.8256552006552007}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 1-shot counter=0 Time: 0:13:29:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7907373065829603, 'precisions': [0.8727572792644112, 0.8133285041651576, 0.7638747989607819, 0.7210199162755296], 'brevity_penalty': 1.0, 'length_ratio': 1.0446283434313581, 'translation_length': 42414, 'reference_length': 40602}
+{'em_ratio': 0.473, 'matches': 473, 'total': 1000}
+{'codebleu': 0.5870048699181689, 'ngram_match_score': 0.2954189116589285, 'weighted_ngram_match_score': 0.43598933522183814, 'syntax_match_score': 0.7780793525463877, 'dataflow_match_score': 0.8385318802455217}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs cot 3-shot counter=0 Time: 0:22:44:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7517968868553835, 'precisions': [0.8493019463976358, 0.774326432955373, 0.7200254966535642, 0.6746336698143927], 'brevity_penalty': 1.0, 'length_ratio': 1.0188977032022262, 'translation_length': 49064, 'reference_length': 48154}
+{'em_ratio': 0.201, 'matches': 201, 'total': 1000}
+{'codebleu': 0.4948379062360563, 'ngram_match_score': 0.15907847408139128, 'weighted_ngram_match_score': 0.2556065800892856, 'syntax_match_score': 0.7413659974729748, 'dataflow_match_score': 0.8233005733005733}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 3-shot counter=0 Time: 0:22:10:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7636288667179433, 'precisions': [0.8472168024790543, 0.7865852226007283, 0.7360279080957537, 0.6932577345001849], 'brevity_penalty': 1.0, 'length_ratio': 1.0729520713265357, 'translation_length': 43564, 'reference_length': 40602}
+{'em_ratio': 0.47, 'matches': 470, 'total': 1000}
+{'codebleu': 0.5921100579246257, 'ngram_match_score': 0.3026035785969295, 'weighted_ngram_match_score': 0.4567833346577564, 'syntax_match_score': 0.7710225029609159, 'dataflow_match_score': 0.8380308154829011}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs zero 0-shot counter=0 Time: 0:08:59:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.5354067380204277, 'precisions': [0.7853587868308526, 0.6484197430437592, 0.5511434664313553, 0.4831017413372867], 'brevity_penalty': 0.8823216413735672, 'length_ratio': 0.8887319848818375, 'translation_length': 42796, 'reference_length': 48154}
+{'em_ratio': 0.077, 'matches': 77, 'total': 1000}
+{'codebleu': 0.3445010370241973, 'ngram_match_score': 0.12620367565999932, 'weighted_ngram_match_score': 0.17728230661229258, 'syntax_match_score': 0.5303944967008283, 'dataflow_match_score': 0.5441236691236692}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java zero 0-shot counter=0 Time: 0:08:33:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.575667206134121, 'precisions': [0.7207951006416822, 0.6112759643916914, 0.5293719869991056, 0.47084271792698973], 'brevity_penalty': 1.0, 'length_ratio': 1.1783163390965963, 'translation_length': 47842, 'reference_length': 40602}
+{'em_ratio': 0.169, 'matches': 169, 'total': 1000}
+{'codebleu': 0.44026213846917045, 'ngram_match_score': 0.14441079576062738, 'weighted_ngram_match_score': 0.24641795155810992, 'syntax_match_score': 0.6193742597710225, 'dataflow_match_score': 0.7508455467869222}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs naive 1-shot counter=0 Time: 0:10:19:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7596190582267532, 'precisions': [0.8871309144555387, 0.8074763496537108, 0.7481852091755824, 0.6992986223755454], 'brevity_penalty': 0.9708419264282413, 'length_ratio': 0.9712588777671637, 'translation_length': 46770, 'reference_length': 48154}
+{'em_ratio': 0.346, 'matches': 346, 'total': 1000}
+{'codebleu': 0.49863621664575486, 'ngram_match_score': 0.17073482726514458, 'weighted_ngram_match_score': 0.2571607575906766, 'syntax_match_score': 0.7476484627263793, 'dataflow_match_score': 0.819000819000819}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java naive 1-shot counter=0 Time: 0:10:10:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7939638013409565, 'precisions': [0.8807994460230665, 0.8180239242642922, 0.7653652298202062, 0.7205946655006559], 'brevity_penalty': 1.0, 'length_ratio': 1.0314270232993448, 'translation_length': 41878, 'reference_length': 40602}
+{'em_ratio': 0.471, 'matches': 471, 'total': 1000}
+{'codebleu': 0.5823725188711217, 'ngram_match_score': 0.2946033406117164, 'weighted_ngram_match_score': 0.4258181723297552, 'syntax_match_score': 0.7732925384919068, 'dataflow_match_score': 0.8357760240511086}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs naive 3-shot counter=0 Time: 0:12:22:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7609398586966214, 'precisions': [0.8948606196599638, 0.815603775249184, 0.7572382069089925, 0.7090292516379072], 'brevity_penalty': 0.9617617695402555, 'length_ratio': 0.9624745607841508, 'translation_length': 46347, 'reference_length': 48154}
+{'em_ratio': 0.308, 'matches': 308, 'total': 1000}
+{'codebleu': 0.49713017027054063, 'ngram_match_score': 0.1797846202712503, 'weighted_ngram_match_score': 0.2602914379945359, 'syntax_match_score': 0.7396813140530675, 'dataflow_match_score': 0.8087633087633087}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java naive 3-shot counter=0 Time: 0:12:00:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7888475810308808, 'precisions': [0.8807612108429403, 0.8143555239054098, 0.7584774563854694, 0.7117991891124138], 'brevity_penalty': 1.0, 'length_ratio': 1.0275848480370424, 'translation_length': 41722, 'reference_length': 40602}
+{'em_ratio': 0.461, 'matches': 461, 'total': 1000}
+{'codebleu': 0.5881429498011577, 'ngram_match_score': 0.3179609839264361, 'weighted_ngram_match_score': 0.44772608282338616, 'syntax_match_score': 0.7610047374654559, 'dataflow_match_score': 0.8258799949893524}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs cot 1-shot counter=0 Time: 0:13:35:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7752287926571945, 'precisions': [0.8964227711770236, 0.8217093195912307, 0.765537101526922, 0.7194035985021463], 'brevity_penalty': 0.9713760890897898, 'length_ratio': 0.9717780454375545, 'translation_length': 46795, 'reference_length': 48154}
+{'em_ratio': 0.335, 'matches': 335, 'total': 1000}
+{'codebleu': 0.5101358774486546, 'ngram_match_score': 0.18260682721426735, 'weighted_ngram_match_score': 0.2716582433431869, 'syntax_match_score': 0.7552997332584586, 'dataflow_match_score': 0.8309787059787059}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 1-shot counter=0 Time: 0:13:08:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8107015877996484, 'precisions': [0.8954219899341851, 0.8340854989089467, 0.782953620829943, 0.7387027760384054], 'brevity_penalty': 1.0, 'length_ratio': 1.0178562632382642, 'translation_length': 41327, 'reference_length': 40602}
+{'em_ratio': 0.481, 'matches': 481, 'total': 1000}
+{'codebleu': 0.5885662157044383, 'ngram_match_score': 0.30942571278883857, 'weighted_ngram_match_score': 0.43325755507924396, 'syntax_match_score': 0.7776845637583892, 'dataflow_match_score': 0.8338970311912814}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs cot 3-shot counter=0 Time: 0:21:26:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7672431195064756, 'precisions': [0.8958167544897301, 0.8186613913616881, 0.7621755253399258, 0.7151166800781699], 'brevity_penalty': 0.9649263212073679, 'length_ratio': 0.9655272666860489, 'translation_length': 46494, 'reference_length': 48154}
+{'em_ratio': 0.244, 'matches': 244, 'total': 1000}
+{'codebleu': 0.5018182648610763, 'ngram_match_score': 0.17838523936174858, 'weighted_ngram_match_score': 0.2604569701165389, 'syntax_match_score': 0.7442089007440685, 'dataflow_match_score': 0.8242219492219492}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 3-shot counter=0 Time: 0:21:18:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8023681764690619, 'precisions': [0.8892936408375953, 0.8264609908039158, 0.7734462131197405, 0.7291168209716009], 'brevity_penalty': 1.0, 'length_ratio': 1.0209102999852224, 'translation_length': 41451, 'reference_length': 40602}
+{'em_ratio': 0.477, 'matches': 477, 'total': 1000}
+{'codebleu': 0.5977093358887816, 'ngram_match_score': 0.331915008434924, 'weighted_ngram_match_score': 0.45786710593425806, 'syntax_match_score': 0.7697887879984209, 'dataflow_match_score': 0.8312664411875235}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:11:41:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8539371280005171, 'precisions': [0.9170500227941482, 0.8686571585763257, 0.8326343551385706, 0.8016925184497768], 'brevity_penalty': 1.0, 'length_ratio': 1.0021389708020103, 'translation_length': 48257, 'reference_length': 48154}
+{'em_ratio': 0.549, 'matches': 549, 'total': 1000}
+{'codebleu': 0.6164960743886636, 'ngram_match_score': 0.30519291922615205, 'weighted_ngram_match_score': 0.4265195888306846, 'syntax_match_score': 0.8400252702512986, 'dataflow_match_score': 0.8942465192465192}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:10:44:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8590282305017471, 'precisions': [0.9283219814241486, 0.8811428571428571, 0.8421628664495114, 0.8085351170568562], 'brevity_penalty': 0.9943687167609714, 'length_ratio': 0.9943845130781734, 'translation_length': 40374, 'reference_length': 40602}
+{'em_ratio': 0.623, 'matches': 623, 'total': 1000}
+{'codebleu': 0.6763351240934262, 'ngram_match_score': 0.45494208515283274, 'weighted_ngram_match_score': 0.5600303600636035, 'syntax_match_score': 0.8384326885116463, 'dataflow_match_score': 0.851935362645622}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:16:46:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8658245608396333, 'precisions': [0.9361290050945223, 0.8920691583157714, 0.8580062414838908, 0.828659386095007], 'brevity_penalty': 0.9863469805736245, 'length_ratio': 0.9864393404493915, 'translation_length': 47501, 'reference_length': 48154}
+{'em_ratio': 0.594, 'matches': 594, 'total': 1000}
+{'codebleu': 0.627622660742749, 'ngram_match_score': 0.32063841812328786, 'weighted_ngram_match_score': 0.44020151898122234, 'syntax_match_score': 0.8506949319107118, 'dataflow_match_score': 0.898955773955774}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:16:26:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8700094289055673, 'precisions': [0.9350349754427743, 0.8920995065371115, 0.8565015399070836, 0.8252398563541834], 'brevity_penalty': 0.9928567319605005, 'length_ratio': 0.9928821240332989, 'translation_length': 40313, 'reference_length': 40602}
+{'em_ratio': 0.651, 'matches': 651, 'total': 1000}
+{'codebleu': 0.6481097172013932, 'ngram_match_score': 0.3855448775561934, 'weighted_ngram_match_score': 0.501972109283364, 'syntax_match_score': 0.8450947493091197, 'dataflow_match_score': 0.8598271326568959}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs zero 0-shot counter=0 Time: 0:09:46:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5360126231108039, 'precisions': [0.7636338847482276, 0.6293712797619048, 0.5344220148543135, 0.4685183378852907], 'brevity_penalty': 0.9100688635834213, 'length_ratio': 0.9138804668355692, 'translation_length': 44007, 'reference_length': 48154}
+{'em_ratio': 0.072, 'matches': 72, 'total': 1000}
+{'codebleu': 0.34344880967962665, 'ngram_match_score': 0.11951922848493622, 'weighted_ngram_match_score': 0.17594971481124813, 'syntax_match_score': 0.5335883756844026, 'dataflow_match_score': 0.5447379197379197}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java zero 0-shot counter=0 Time: 0:09:36:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5035641464375211, 'precisions': [0.6659182132496125, 0.5434051007582208, 0.4539585316392832, 0.39143388412289226], 'brevity_penalty': 1.0, 'length_ratio': 1.2394709620215754, 'translation_length': 50325, 'reference_length': 40602}
+{'em_ratio': 0.101, 'matches': 101, 'total': 1000}
+{'codebleu': 0.416655318659514, 'ngram_match_score': 0.11509862890937271, 'weighted_ngram_match_score': 0.21924024034681644, 'syntax_match_score': 0.5920844848006317, 'dataflow_match_score': 0.7401979205812351}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs naive 1-shot counter=0 Time: 0:11:08:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7599718930928748, 'precisions': [0.8705581092710367, 0.7919516326136826, 0.7348114716385864, 0.6873642004345586], 'brevity_penalty': 0.9893107207264676, 'length_ratio': 0.9893674461103958, 'translation_length': 47642, 'reference_length': 48154}
+{'em_ratio': 0.295, 'matches': 295, 'total': 1000}
+{'codebleu': 0.49113471487923177, 'ngram_match_score': 0.15754033428162037, 'weighted_ngram_match_score': 0.2485096444103315, 'syntax_match_score': 0.7425593148954093, 'dataflow_match_score': 0.8159295659295659}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java naive 1-shot counter=0 Time: 0:10:34:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.8039694183655827, 'precisions': [0.8898556313417367, 0.8270479859721913, 0.7759236281684434, 0.7316255748096958], 'brevity_penalty': 1.0, 'length_ratio': 1.021870843800798, 'translation_length': 41490, 'reference_length': 40602}
+{'em_ratio': 0.437, 'matches': 437, 'total': 1000}
+{'codebleu': 0.5431218493754106, 'ngram_match_score': 0.2215892374005028, 'weighted_ngram_match_score': 0.33412355087057916, 'syntax_match_score': 0.783754441373865, 'dataflow_match_score': 0.8330201678566955}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs naive 3-shot counter=0 Time: 0:13:27:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7585090067953504, 'precisions': [0.886913961875322, 0.8084415584415584, 0.7508523237035708, 0.703629772393539], 'brevity_penalty': 0.9668375906695733, 'length_ratio': 0.9673755035926402, 'translation_length': 46583, 'reference_length': 48154}
+{'em_ratio': 0.281, 'matches': 281, 'total': 1000}
+{'codebleu': 0.4881270022793915, 'ngram_match_score': 0.16733262524394846, 'weighted_ngram_match_score': 0.25024384339666056, 'syntax_match_score': 0.7335392390846553, 'dataflow_match_score': 0.8013923013923014}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java naive 3-shot counter=0 Time: 0:12:32:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7968751510693155, 'precisions': [0.8876230932612473, 0.8215027700831025, 0.7665855143031041, 0.7213780183180682], 'brevity_penalty': 1.0, 'length_ratio': 1.0204177134131323, 'translation_length': 41431, 'reference_length': 40602}
+{'em_ratio': 0.441, 'matches': 441, 'total': 1000}
+{'codebleu': 0.5502831552909359, 'ngram_match_score': 0.24594936403637774, 'weighted_ngram_match_score': 0.36134424821684974, 'syntax_match_score': 0.7649526253454402, 'dataflow_match_score': 0.8288863835650758}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs cot 1-shot counter=0 Time: 0:15:07:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7355933637783116, 'precisions': [0.8322471350274041, 0.7584138281647178, 0.7042864556305137, 0.6586327503974563], 'brevity_penalty': 1.0, 'length_ratio': 1.041948747767579, 'translation_length': 50174, 'reference_length': 48154}
+{'em_ratio': 0.314, 'matches': 314, 'total': 1000}
+{'codebleu': 0.4978260911531055, 'ngram_match_score': 0.15721055301634013, 'weighted_ngram_match_score': 0.26486464279510336, 'syntax_match_score': 0.7471570967289064, 'dataflow_match_score': 0.8220720720720721}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 1-shot counter=0 Time: 0:16:05:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7371139713748268, 'precisions': [0.8208576390435054, 0.7605091770278272, 0.7097683739572168, 0.6662690270553991], 'brevity_penalty': 1.0, 'length_ratio': 1.1061770356140093, 'translation_length': 44913, 'reference_length': 40602}
+{'em_ratio': 0.452, 'matches': 452, 'total': 1000}
+{'codebleu': 0.5712759372857428, 'ngram_match_score': 0.2611758799405944, 'weighted_ngram_match_score': 0.42586766042572183, 'syntax_match_score': 0.7690485590209238, 'dataflow_match_score': 0.8290116497557309}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs cot 3-shot counter=0 Time: 0:22:42:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7561330646884603, 'precisions': [0.8574439943787716, 0.7792268084747194, 0.7230533758730706, 0.6766325901119239], 'brevity_penalty': 1.0, 'length_ratio': 1.0048386426880425, 'translation_length': 48387, 'reference_length': 48154}
+{'em_ratio': 0.191, 'matches': 191, 'total': 1000}
+{'codebleu': 0.4942673193914657, 'ngram_match_score': 0.16519484052277805, 'weighted_ngram_match_score': 0.2557044823577572, 'syntax_match_score': 0.7339955075108803, 'dataflow_match_score': 0.8221744471744472}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 3-shot counter=0 Time: 0:22:38:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7867963518277404, 'precisions': [0.8757942835383993, 0.8116482605621785, 0.7574402158974487, 0.7117558112714318], 'brevity_penalty': 1.0, 'length_ratio': 1.034875129303975, 'translation_length': 42018, 'reference_length': 40602}
+{'em_ratio': 0.469, 'matches': 469, 'total': 1000}
+{'codebleu': 0.5916397550946239, 'ngram_match_score': 0.3183035784741697, 'weighted_ngram_match_score': 0.45268548592948216, 'syntax_match_score': 0.7648045795499407, 'dataflow_match_score': 0.8307653764249029}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:13:02:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7943355375209181, 'precisions': [0.867498741821842, 0.8101900359527479, 0.7696486628211852, 0.7359828602035351], 'brevity_penalty': 1.0, 'length_ratio': 1.0315653943597625, 'translation_length': 49674, 'reference_length': 48154}
+{'em_ratio': 0.386, 'matches': 386, 'total': 1000}
+{'codebleu': 0.5576522639536482, 'ngram_match_score': 0.22708579869688866, 'weighted_ngram_match_score': 0.35146732705391215, 'syntax_match_score': 0.7966095746174364, 'dataflow_match_score': 0.8554463554463555}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:11:34:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.8463628382048958, 'precisions': [0.9147303867673288, 0.8636830373913696, 0.8235505664157826, 0.7886577552796014], 'brevity_penalty': 1.0, 'length_ratio': 1.0080291611250678, 'translation_length': 40928, 'reference_length': 40602}
+{'em_ratio': 0.527, 'matches': 527, 'total': 1000}
+{'codebleu': 0.6104079438649452, 'ngram_match_score': 0.3207218048459699, 'weighted_ngram_match_score': 0.4396599554686191, 'syntax_match_score': 0.8318199763126727, 'dataflow_match_score': 0.8494300388325191}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:17:58:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.8344638085257956, 'precisions': [0.897482968220944, 0.8489984591679507, 0.8131459192786968, 0.7825794116369009], 'brevity_penalty': 1.0, 'length_ratio': 1.0180878016364165, 'translation_length': 49025, 'reference_length': 48154}
+{'em_ratio': 0.478, 'matches': 478, 'total': 1000}
+{'codebleu': 0.5877990677648828, 'ngram_match_score': 0.25331230487928247, 'weighted_ngram_match_score': 0.381702531340945, 'syntax_match_score': 0.8287940474519163, 'dataflow_match_score': 0.8873873873873874}
+
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:17:11:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.861366643291688, 'precisions': [0.9248603283207403, 0.8783275718503192, 0.8400248505086588, 0.8067284951237012], 'brevity_penalty': 1.0, 'length_ratio': 1.000689621200926, 'translation_length': 40630, 'reference_length': 40602}
+{'em_ratio': 0.613, 'matches': 613, 'total': 1000}
+{'codebleu': 0.6156699624459634, 'ngram_match_score': 0.3253622909446533, 'weighted_ngram_match_score': 0.445795586244357, 'syntax_match_score': 0.8367054875641532, 'dataflow_match_score': 0.8548164850306902}
+

@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python cot 3-shot counter=3 Time: 0:20:53:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 53.99510076154271
+
+HFBleu: {'bleu': 0.43041667849587556, 'precisions': [0.6038143894483485, 0.46110428907329803, 0.3830684592909895, 0.3217935624155767], 'brevity_penalty': 1.0, 'length_ratio': 1.1546705524284053, 'translation_length': 196518, 'reference_length': 170194}

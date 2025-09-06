@@ -1,0 +1,84 @@
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java zero 0-shot counter=0 Time: 4:07:32:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable. 
+3. An @return line describing what the method returns, if applicable. 
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.07831253888149808, 'precisions': [0.2430568106921786, 0.11039025534204246, 0.055884474511698916, 0.025083926031294453], 'brevity_penalty': 1.0, 'length_ratio': 2.1309008774215967, 'translation_length': 735864, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java naive 1-shot counter=1 Time: 5:44:41:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable. 
+3. An @return line describing what the method returns, if applicable. 
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.0965178416020077, 'precisions': [0.2868665046056356, 0.13460689310518334, 0.0703266304926056, 0.031956812427096075], 'brevity_penalty': 1.0, 'length_ratio': 1.72370775779689, 'translation_length': 595248, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java naive 3-shot counter=3 Time: 4:57:42:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable.
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.11137018843165217, 'precisions': [0.31865241135297284, 0.15418839682960606, 0.08180996928512638, 0.03827372094216657], 'brevity_penalty': 1.0, 'length_ratio': 1.5059189760518923, 'translation_length': 520039, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java cot 1-shot counter=1 Time: 8:51:31:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable. 
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.08464791251116177, 'precisions': [0.2576809717832527, 0.11959043945660425, 0.06160585551870031, 0.02704358143860437], 'brevity_penalty': 1.0, 'length_ratio': 1.9011496249963802, 'translation_length': 656524, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java cot 3-shot counter=3 Time: 6:15:50:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable. 
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.1180036607837221, 'precisions': [0.3323957231913582, 0.16316764207849369, 0.08691248493551117, 0.041134885227106135], 'brevity_penalty': 1.0, 'length_ratio': 1.4186343497524108, 'translation_length': 489897, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java cot 1-shot counter=1 Time: 5:03:18:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes:
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable.
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.10413379972935055, 'precisions': [0.3105160486144364, 0.1465103716919191, 0.07622527452248724, 0.03390903605849383], 'brevity_penalty': 1.0, 'length_ratio': 1.5542003301190166, 'translation_length': 536712, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java retrieval 1-shot counter=0 Time: 5:29:29:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes:
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable.
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.09046045049049155, 'precisions': [0.2747699603799941, 0.12832980044824885, 0.065001298203321, 0.02921569245975416], 'brevity_penalty': 1.0, 'length_ratio': 1.7475516172936032, 'translation_length': 603482, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:java retrieval 3-shot counter=0 Time: 6:36:54:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s purpose.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable. 
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.10189426411326542, 'precisions': [0.2968317623659633, 0.14226719620963874, 0.07382934267633477, 0.03457441206264949], 'brevity_penalty': 1.0, 'length_ratio': 1.6073639706946978, 'translation_length': 555071, 'reference_length': 345330}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:javascript naive 1-shot counter=1 Time: 0:21:18:
+You are a helpful assistant that writes summary for methods. Write the shortest possible summary of the method, preserving only the core functionality. Omit all details and redundancy.
+ {'bleu': 0.009243986499197115, 'precisions': [0.2696276357110812, 0.052176505664877755, 0.012389643148601527, 0.003435414212799372], 'brevity_penalty': 0.3323073732762711, 'length_ratio': 0.47580645161290325, 'translation_length': 20060, 'reference_length': 42160}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:javascript naive 1-shot counter=1 Time: 0:26:56:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.023527739576343406, 'precisions': [0.22056113045259063, 0.05131110391712528, 0.014819377513678032, 0.00464867533322363], 'brevity_penalty': 0.7917814553836432, 'length_ratio': 0.8107210626185958, 'translation_length': 34180, 'reference_length': 42160}
+
+Qwen/Qwen2.5-Coder-32B-Instruct Language:javascript naive 3-shot counter=3 Time: 0:39:08:
+You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a concise and informative summary of what the method does.
+ {'bleu': 0.03698261891350034, 'precisions': [0.23509616629132044, 0.06389360498019242, 0.0217791506755281, 0.008241185061548091], 'brevity_penalty': 0.9126710521647036, 'length_ratio': 0.9162713472485768, 'translation_length': 38630, 'reference_length': 42160}
+

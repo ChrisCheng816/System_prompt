@@ -1,0 +1,8 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java naive 3-shot counter=3 Time: 0:47:54:
+You are a helpful assistant that writes summary for methods. 
+Write a concise, compressed summary of a method, capturing only the core idea and omitting unnecessary details.
+Output only the summary in plain text, without additional markup or formatting.
+
+Bleu: 12.799094368823011
+
+HFBleu: {'bleu': 0.024066944008513717, 'precisions': [0.14495040854498917, 0.038525824495942385, 0.012907843997506177, 0.004654346338124572], 'brevity_penalty': 1.0, 'length_ratio': 2.330711427874894, 'translation_length': 325055, 'reference_length': 139466}

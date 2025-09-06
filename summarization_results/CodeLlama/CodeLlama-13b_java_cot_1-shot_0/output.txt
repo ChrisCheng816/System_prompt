@@ -1,0 +1,8 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java cot 1-shot counter=1 Time: 12:12:15:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 14.819615696121515
+
+HFBleu: {'bleu': 0.04997985414081774, 'precisions': [0.24506352609850546, 0.07472511287225184, 0.028948131326552797, 0.011771021297787437], 'brevity_penalty': 1.0, 'length_ratio': 1.34427745830525, 'translation_length': 187481, 'reference_length': 139466}

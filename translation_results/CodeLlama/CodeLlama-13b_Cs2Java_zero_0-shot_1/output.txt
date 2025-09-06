@@ -1,0 +1,15 @@
+codellama/CodeLlama-13b-Instruct-hf Direction:Cs2Java zero 0-shot counter=0 Time: 0:13:32:
+Your role is to translate source code to target code with high accuracy and consistency.
+Ensure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. 
+Begin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. 
+Set reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. 
+Output only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.
+
+BLEU_Smooth:{'bleu': 0.3847870609863222, 'precisions': [0.49007016797788644, 0.410482421453735, 0.3519585673645051, 0.30962603262961536], 'brevity_penalty': 1.0, 'length_ratio': 1.7374513570760062, 'translation_length': 70544, 'reference_length': 40602}
+EM: {'em_ratio': 0.103, 'matches': 103, 'total': 1000}
+CodeBleu: {'codebleu': 58.986787125386634, 'ngram_match_score': 0.38478423344037965, 'weighted_ngram_match_score': 0.6824144557865222, 'syntax_match_score': 0.579007106198184, 'dataflow_match_score': 0.7132656895903795}
+
+BLEU_Smooth: {'bleu': 0.5076860935095122, 'precisions': [0.6405587381891228, 0.5405200515502995, 0.46584498879530173, 0.41187826258248794], 'brevity_penalty': 1.0, 'length_ratio': 1.324146593763854, 'translation_length': 53763, 'reference_length': 40602}
+EM: {'em_ratio': 0.151, 'matches': 151, 'total': 1000}
+CodeBleu: {'codebleu': 63.267159862896435, 'ngram_match_score': 0.5076811414777233, 'weighted_ngram_match_score': 0.6821172878452221, 'syntax_match_score': 0.5978089222266088, 'dataflow_match_score': 0.7430790429663034}
+

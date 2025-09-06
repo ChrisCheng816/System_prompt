@@ -1,0 +1,15 @@
+Qwen/Qwen2.5-Coder-32B-Instruct Direction:Java2Cs zero 0-shot counter=0 Time: 0:04:56:
+Your role is to translate source code to target code with high accuracy and consistency.
+Ensure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. 
+Begin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. 
+Set reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. 
+Output only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.
+
+BLEU_Smooth:{'bleu': 0.5754394081906328, 'precisions': [0.8551594103531025, 0.7265424971133089, 0.6337350018023585, 0.5702204133410856], 'brevity_penalty': 0.8359589688006624, 'length_ratio': 0.848050006230012, 'translation_length': 40837, 'reference_length': 48154}
+EM: {'em_ratio': 0.105, 'matches': 105, 'total': 1000}
+CodeBleu: {'codebleu': 56.71863161608613, 'ngram_match_score': 0.5754394081906329, 'weighted_ngram_match_score': 0.5817904669295608, 'syntax_match_score': 0.5466095746174364, 'dataflow_match_score': 0.5649058149058149}
+
+BLEU_Smooth: {'bleu': 0.5751532426664276, 'precisions': [0.8573708897129245, 0.7286573852622039, 0.6356240799566127, 0.5719890777020757], 'brevity_penalty': 0.8331314462142723, 'length_ratio': 0.8456203015325829, 'translation_length': 40720, 'reference_length': 48154}
+EM: {'em_ratio': 0.105, 'matches': 105, 'total': 1000}
+CodeBleu: {'codebleu': 56.758874867356894, 'ngram_match_score': 0.5751532426664276, 'weighted_ngram_match_score': 0.5817412355594699, 'syntax_match_score': 0.5466095746174364, 'dataflow_match_score': 0.5668509418509419}
+

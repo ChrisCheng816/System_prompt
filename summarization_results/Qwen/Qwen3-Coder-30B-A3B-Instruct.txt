@@ -1,0 +1,9 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Language:java cot 1-shot counter=1 Time: 11:57:25:
+You are a helpful assistant that writes Java-style documentation for methods. For each method, generate a output that includes: 
+1. A one- or two-sentence summary of the method’s functionality, written in a concise and informative manner.
+2. One @param line per parameter, explaining its role, if applicable.
+3. An @return line describing what the method returns, if applicable.
+4. Any other relevant JavaDoc tags such as @throws, @see, or @deprecated, depending on the method signature and behavior.
+Remember, do not include markdown, hashtags or triple quotes, and do not put a dash between parameter name and description. Add exactly one empty line between the main description and the tags.
+ {'bleu': 0.09413513614369735, 'precisions': [0.286035289606241, 0.13304219243599677, 0.068750935684434, 0.030013690261513435], 'brevity_penalty': 1.0, 'length_ratio': 1.6688848347957026, 'translation_length': 576316, 'reference_length': 345330}
+

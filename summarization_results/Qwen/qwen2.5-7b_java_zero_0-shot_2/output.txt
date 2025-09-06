@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java zero 0-shot counter=0 Time: 1:01:11:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 2.3864672835695098
+
+HFBleu: {'bleu': 0.010370518652169885, 'precisions': [0.06508446800915231, 0.016373912728764282, 0.0052950660028096685, 0.0020497490753514074], 'brevity_penalty': 1.0, 'length_ratio': 7.21068934363931, 'translation_length': 1005646, 'reference_length': 139466}

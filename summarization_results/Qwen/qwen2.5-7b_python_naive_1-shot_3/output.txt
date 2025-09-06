@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python naive 1-shot counter=1 Time: 0:29:17:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 53.51502776472548
+
+HFBleu: {'bleu': 0.33506487495835113, 'precisions': [0.4660758694333384, 0.3608392237068336, 0.29967942359727984, 0.25008539439559746], 'brevity_penalty': 1.0, 'length_ratio': 1.6562158477972198, 'translation_length': 281878, 'reference_length': 170194}

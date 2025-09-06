@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python zero 0-shot counter=0 Time: 1:27:52:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 3.3316734796380776
+
+HFBleu: {'bleu': 0.03817796509219269, 'precisions': [0.07816652531728058, 0.04456174583451182, 0.029679832036303155, 0.020549755688613443], 'brevity_penalty': 1.0, 'length_ratio': 9.332068110509184, 'translation_length': 1588262, 'reference_length': 170194}

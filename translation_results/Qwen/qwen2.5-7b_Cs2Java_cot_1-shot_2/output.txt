@@ -1,0 +1,13 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Cs2Java cot 1-shot counter=0 Time: 0:01:26:
+Your role is to serve as a professional code translator, converting source code to the designated target code.
+Ensure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.
+Your output should only contain your translated code.
+
+BLEU_Smooth:{'bleu': 0.7852514279093612, 'precisions': [0.8752647183396866, 0.8104245987758446, 0.7561361054866907, 0.7088966529950883], 'brevity_penalty': 1.0, 'length_ratio': 1.0466725777055317, 'translation_length': 42497, 'reference_length': 40602}
+EM: {'em_ratio': 0.399, 'matches': 399, 'total': 1000}
+CodeBleu: {'codebleu': 80.9337662936782, 'ngram_match_score': 0.7852514279093611, 'weighted_ngram_match_score': 0.823417093893159, 'syntax_match_score': 0.770232925384919, 'dataflow_match_score': 0.8584492045596893}
+
+BLEU_Smooth: {'bleu': 0.7907813981215378, 'precisions': [0.8809067914805097, 0.8159939955935405, 0.7616058357938615, 0.7142966185787345], 'brevity_penalty': 1.0, 'length_ratio': 1.0418698586276538, 'translation_length': 42302, 'reference_length': 40602}
+EM: {'em_ratio': 0.423, 'matches': 423, 'total': 1000}
+CodeBleu: {'codebleu': 81.44232835758613, 'ngram_match_score': 0.7907813981215378, 'weighted_ngram_match_score': 0.8265834235352991, 'syntax_match_score': 0.7786221871298855, 'dataflow_match_score': 0.861706125516723}
+

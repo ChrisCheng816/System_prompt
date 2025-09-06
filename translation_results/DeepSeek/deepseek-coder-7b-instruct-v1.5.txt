@@ -1,0 +1,400 @@
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs zero 0-shot counter=0 Time: 0:10:34:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.17585583251860348, 'precisions': [0.23598292309580246, 0.18568670406750354, 0.15764023843642241, 0.13845181091886266], 'brevity_penalty': 1.0, 'length_ratio': 3.2152676828508535, 'translation_length': 154828, 'reference_length': 48154}
+{'em_ratio': 0.006, 'matches': 6, 'total': 1000}
+{'codebleu': 0.34855138260645857, 'ngram_match_score': 0.023578978694655382, 'weighted_ngram_match_score': 0.18699866037831203, 'syntax_match_score': 0.5123543450793205, 'dataflow_match_score': 0.6712735462735463}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java zero 0-shot counter=0 Time: 0:10:35:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.23306987637111506, 'precisions': [0.28688898309829863, 0.24519219139311546, 0.21669362770999132, 0.1935877787521411], 'brevity_penalty': 1.0, 'length_ratio': 3.079060144820452, 'translation_length': 125016, 'reference_length': 40602}
+{'em_ratio': 0.108, 'matches': 108, 'total': 1000}
+{'codebleu': 0.4257544967324083, 'ngram_match_score': 0.041251459076995636, 'weighted_ngram_match_score': 0.2830512701190575, 'syntax_match_score': 0.6241117252270035, 'dataflow_match_score': 0.7546035325065765}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 1-shot counter=0 Time: 0:10:51:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.504432532153102, 'precisions': [0.5798865887818542, 0.5208284269585094, 0.4799185221605675, 0.4466908883664601], 'brevity_penalty': 1.0, 'length_ratio': 1.5197906715952985, 'translation_length': 73184, 'reference_length': 48154}
+{'em_ratio': 0.274, 'matches': 274, 'total': 1000}
+{'codebleu': 0.520986575650185, 'ngram_match_score': 0.1209778061620421, 'weighted_ngram_match_score': 0.3646359673887746, 'syntax_match_score': 0.7531236838410782, 'dataflow_match_score': 0.8452088452088452}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 1-shot counter=0 Time: 0:10:49:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.504432532153102, 'precisions': [0.5798865887818542, 0.5208284269585094, 0.4799185221605675, 0.4466908883664601], 'brevity_penalty': 1.0, 'length_ratio': 1.5197906715952985, 'translation_length': 73184, 'reference_length': 48154}
+{'em_ratio': 0.274, 'matches': 274, 'total': 1000}
+{'codebleu': 0.5215496387132481, 'ngram_match_score': 0.1209778061620421, 'weighted_ngram_match_score': 0.3646359673887746, 'syntax_match_score': 0.7531236838410782, 'dataflow_match_score': 0.8474610974610974}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java naive 1-shot counter=0 Time: 0:11:47:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.36641659876954263, 'precisions': [0.42397261060879354, 0.38141118768958987, 0.34830258345974296, 0.32004616794183793], 'brevity_penalty': 1.0, 'length_ratio': 2.143736761735875, 'translation_length': 87040, 'reference_length': 40602}
+{'em_ratio': 0.168, 'matches': 168, 'total': 1000}
+{'codebleu': 0.4876275125253209, 'ngram_match_score': 0.08148634300734534, 'weighted_ngram_match_score': 0.34678520595410495, 'syntax_match_score': 0.7126431109356495, 'dataflow_match_score': 0.8095953902041839}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 3-shot counter=0 Time: 0:12:03:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.5943942665361964, 'precisions': [0.6766272801005073, 0.6125466621418529, 0.5676155122287742, 0.5305856615620982], 'brevity_penalty': 1.0, 'length_ratio': 1.3058105245670142, 'translation_length': 62880, 'reference_length': 48154}
+{'em_ratio': 0.352, 'matches': 352, 'total': 1000}
+{'codebleu': 0.5857093290756938, 'ngram_match_score': 0.22660618156918869, 'weighted_ngram_match_score': 0.5002496726900721, 'syntax_match_score': 0.7607398568019093, 'dataflow_match_score': 0.8552416052416052}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java naive 3-shot counter=0 Time: 0:12:23:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.6048532059625513, 'precisions': [0.6746342170070984, 0.624004131012098, 0.5823124906057418, 0.5459941789215687], 'brevity_penalty': 1.0, 'length_ratio': 1.3601054135264272, 'translation_length': 55223, 'reference_length': 40602}
+{'em_ratio': 0.446, 'matches': 446, 'total': 1000}
+{'codebleu': 0.5396442860285707, 'ngram_match_score': 0.16660695648247317, 'weighted_ngram_match_score': 0.37924982879980873, 'syntax_match_score': 0.7769443347808922, 'dataflow_match_score': 0.8357760240511086}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:11:26:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.6573819755136996, 'precisions': [0.7184719363360832, 0.6704723306809008, 0.6372133536575152, 0.6084090018569311], 'brevity_penalty': 1.0, 'length_ratio': 1.2812642771109357, 'translation_length': 61698, 'reference_length': 48154}
+{'em_ratio': 0.455, 'matches': 455, 'total': 1000}
+{'codebleu': 0.5994505324160172, 'ngram_match_score': 0.2245750763479659, 'weighted_ngram_match_score': 0.46299444121630023, 'syntax_match_score': 0.8197739716411624, 'dataflow_match_score': 0.8904586404586404}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:12:32:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.47606408390404464, 'precisions': [0.5349430393351007, 0.4906302246129243, 0.4569004942096334, 0.42832971475630754], 'brevity_penalty': 1.0, 'length_ratio': 1.7187330673365844, 'translation_length': 69784, 'reference_length': 40602}
+{'em_ratio': 0.346, 'matches': 346, 'total': 1000}
+{'codebleu': 0.5472982831404395, 'ngram_match_score': 0.1473436354710359, 'weighted_ngram_match_score': 0.44477651991592343, 'syntax_match_score': 0.7582905645479668, 'dataflow_match_score': 0.8387824126268321}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:14:51:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7715566988418672, 'precisions': [0.8319949320862291, 0.7852708321467221, 0.7512144142749317, 0.7220500878214363], 'brevity_penalty': 1.0, 'length_ratio': 1.1145491547950326, 'translation_length': 53670, 'reference_length': 48154}
+{'em_ratio': 0.547, 'matches': 547, 'total': 1000}
+{'codebleu': 0.7084715594391103, 'ngram_match_score': 0.44301668498631375, 'weighted_ngram_match_score': 0.6478256844279298, 'syntax_match_score': 0.8400954653937948, 'dataflow_match_score': 0.902948402948403}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:15:04:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7905242722546286, 'precisions': [0.8477338691672248, 0.8065540077643297, 0.7713718158448235, 0.7404642258913615], 'brevity_penalty': 1.0, 'length_ratio': 1.1031229988670508, 'translation_length': 44789, 'reference_length': 40602}
+{'em_ratio': 0.612, 'matches': 612, 'total': 1000}
+{'codebleu': 0.6314878108133672, 'ngram_match_score': 0.31976357157176694, 'weighted_ngram_match_score': 0.4892137096911142, 'syntax_match_score': 0.8433675483616265, 'dataflow_match_score': 0.8736064136289615}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 1-shot counter=0 Time: 0:14:46:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.515838647093956, 'precisions': [0.5925786163522012, 0.5323175053153791, 0.49089863407620415, 0.45724288840262584], 'brevity_penalty': 1.0, 'length_ratio': 1.4858371059517381, 'translation_length': 71549, 'reference_length': 48154}
+{'em_ratio': 0.323, 'matches': 323, 'total': 1000}
+{'codebleu': 0.5278372750406856, 'ngram_match_score': 0.12988069964205298, 'weighted_ngram_match_score': 0.3772976592588345, 'syntax_match_score': 0.7544573915485049, 'dataflow_match_score': 0.8497133497133497}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java cot 1-shot counter=0 Time: 0:13:45:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.4932586991543302, 'precisions': [0.5556739877797962, 0.5107070460745912, 0.473386884586216, 0.4406470578987911], 'brevity_penalty': 1.0, 'length_ratio': 1.6405595783458944, 'translation_length': 66610, 'reference_length': 40602}
+{'em_ratio': 0.213, 'matches': 213, 'total': 1000}
+{'codebleu': 0.5147263788739637, 'ngram_match_score': 0.10981645631295073, 'weighted_ngram_match_score': 0.3490552093700935, 'syntax_match_score': 0.7596229767074615, 'dataflow_match_score': 0.8404108731053489}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 3-shot counter=0 Time: 0:20:39:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.6702743716487662, 'precisions': [0.764235294117647, 0.6922027649769585, 0.6395868544600939, 0.596555023923445], 'brevity_penalty': 1.0, 'length_ratio': 1.1473397848569173, 'translation_length': 55249, 'reference_length': 48154}
+{'em_ratio': 0.332, 'matches': 332, 'total': 1000}
+{'codebleu': 0.5213788235710136, 'ngram_match_score': 0.16849447460717892, 'weighted_ngram_match_score': 0.31595969160816634, 'syntax_match_score': 0.7592306612382423, 'dataflow_match_score': 0.8418304668304668}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java cot 3-shot counter=0 Time: 0:19:15:
+You are a professional code translator trained to translate source code to target code.
+All keywords, method names, identifiers, and values in the method must be completely equivalent.
+Do not include any Triple quotes and Backtick in the output.
+{'bleu': 0.7355973280816402, 'precisions': [0.8179095273752367, 0.7591766878349773, 0.7087960189835507, 0.6652596330707918], 'brevity_penalty': 1.0, 'length_ratio': 1.1182946652874242, 'translation_length': 45405, 'reference_length': 40602}
+{'em_ratio': 0.444, 'matches': 444, 'total': 1000}
+{'codebleu': 0.5595764640943829, 'ngram_match_score': 0.23396368312064533, 'weighted_ngram_match_score': 0.38432610352837354, 'syntax_match_score': 0.7733418870904066, 'dataflow_match_score': 0.846674182638106}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs zero 0-shot counter=0 Time: 0:10:42:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.3102379874448093, 'precisions': [0.40253324460585826, 0.32854975416661913, 0.2813260867056692, 0.24898145013483383], 'brevity_penalty': 1.0, 'length_ratio': 1.8411762262740374, 'translation_length': 88660, 'reference_length': 48154}
+{'em_ratio': 0.042, 'matches': 42, 'total': 1000}
+{'codebleu': 0.34241108672529663, 'ngram_match_score': 0.04641582575525695, 'weighted_ngram_match_score': 0.19238362573554219, 'syntax_match_score': 0.5311315456970378, 'dataflow_match_score': 0.5997133497133497}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java zero 0-shot counter=0 Time: 0:10:59:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.30915108228362803, 'precisions': [0.3775848810138317, 0.32522065007931694, 0.2882585255092707, 0.2580525852034767], 'brevity_penalty': 1.0, 'length_ratio': 2.3379636471109797, 'translation_length': 94926, 'reference_length': 40602}
+{'em_ratio': 0.165, 'matches': 165, 'total': 1000}
+{'codebleu': 0.43426841211637857, 'ngram_match_score': 0.05703901437037144, 'weighted_ngram_match_score': 0.28009224640483843, 'syntax_match_score': 0.6318101065929728, 'dataflow_match_score': 0.7681322810973318}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 1-shot counter=0 Time: 0:10:59:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.5850470798967841, 'precisions': [0.6707628800508058, 0.6039848350407356, 0.5571370009018611, 0.5190464282737351], 'brevity_penalty': 1.0, 'length_ratio': 1.30797026207584, 'translation_length': 62984, 'reference_length': 48154}
+{'em_ratio': 0.34, 'matches': 340, 'total': 1000}
+{'codebleu': 0.5644963875298156, 'ngram_match_score': 0.19947936416229192, 'weighted_ngram_match_score': 0.4665179956429339, 'syntax_match_score': 0.7532289765548225, 'dataflow_match_score': 0.8387592137592138}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java naive 1-shot counter=0 Time: 0:10:43:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.5085856851797335, 'precisions': [0.5713493701296701, 0.526339662777239, 0.4884958845774939, 0.45543643233119124], 'brevity_penalty': 1.0, 'length_ratio': 1.599256194276144, 'translation_length': 64933, 'reference_length': 40602}
+{'em_ratio': 0.196, 'matches': 196, 'total': 1000}
+{'codebleu': 0.5143003348479608, 'ngram_match_score': 0.1140367954135398, 'weighted_ngram_match_score': 0.3472189192474242, 'syntax_match_score': 0.7599190682984603, 'dataflow_match_score': 0.8360265564324189}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 3-shot counter=0 Time: 0:11:50:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.6491374142532432, 'precisions': [0.7357271530520335, 0.6686349855460763, 0.6208820785186249, 0.5813418110063583], 'brevity_penalty': 1.0, 'length_ratio': 1.1988827511733189, 'translation_length': 57731, 'reference_length': 48154}
+{'em_ratio': 0.364, 'matches': 364, 'total': 1000}
+{'codebleu': 0.5953044643480866, 'ngram_match_score': 0.2668930266880421, 'weighted_ngram_match_score': 0.5054189211701481, 'syntax_match_score': 0.7603186859469325, 'dataflow_match_score': 0.8485872235872236}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java naive 3-shot counter=0 Time: 0:11:26:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7005791396271092, 'precisions': [0.7771648278167836, 0.7219139491207103, 0.6756149685973483, 0.6355225610843588], 'brevity_penalty': 1.0, 'length_ratio': 1.1786365203684548, 'translation_length': 47855, 'reference_length': 40602}
+{'em_ratio': 0.461, 'matches': 461, 'total': 1000}
+{'codebleu': 0.5725910129861891, 'ngram_match_score': 0.25075917960654853, 'weighted_ngram_match_score': 0.430441272171074, 'syntax_match_score': 0.7785234899328859, 'dataflow_match_score': 0.8306401102342478}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 1-shot counter=0 Time: 0:14:03:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.565129809734405, 'precisions': [0.6466808439025137, 0.5830679116883924, 0.5386108612281616, 0.5022369032920161], 'brevity_penalty': 1.0, 'length_ratio': 1.3573534908834157, 'translation_length': 65362, 'reference_length': 48154}
+{'em_ratio': 0.33, 'matches': 330, 'total': 1000}
+{'codebleu': 0.5332144162528983, 'ngram_match_score': 0.14974428855049807, 'weighted_ngram_match_score': 0.379545474072471, 'syntax_match_score': 0.758563807384529, 'dataflow_match_score': 0.845004095004095}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java cot 1-shot counter=0 Time: 0:13:46:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.52482000756349, 'precisions': [0.5894574285168439, 0.5430498932246166, 0.504160363086233, 0.470089614124256], 'brevity_penalty': 1.0, 'length_ratio': 1.5469927589773902, 'translation_length': 62811, 'reference_length': 40602}
+{'em_ratio': 0.231, 'matches': 231, 'total': 1000}
+{'codebleu': 0.5180585381889196, 'ngram_match_score': 0.12075838214251579, 'weighted_ngram_match_score': 0.3504549055583795, 'syntax_match_score': 0.7622384524279511, 'dataflow_match_score': 0.8387824126268321}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 3-shot counter=0 Time: 0:20:46:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.665421664024895, 'precisions': [0.760093558834113, 0.6871015023818249, 0.6345651362448674, 0.5915937618866489], 'brevity_penalty': 1.0, 'length_ratio': 1.1541927981060764, 'translation_length': 55579, 'reference_length': 48154}
+{'em_ratio': 0.332, 'matches': 332, 'total': 1000}
+{'codebleu': 0.5238852717861626, 'ngram_match_score': 0.17075127024348827, 'weighted_ngram_match_score': 0.31971846793679065, 'syntax_match_score': 0.7586340025270252, 'dataflow_match_score': 0.8464373464373465}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java cot 3-shot counter=0 Time: 0:19:02:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7420904271203723, 'precisions': [0.8242237675510475, 0.7656157992480862, 0.7153218705102655, 0.671846088152963], 'brevity_penalty': 1.0, 'length_ratio': 1.1120880744790897, 'translation_length': 45153, 'reference_length': 40602}
+{'em_ratio': 0.445, 'matches': 445, 'total': 1000}
+{'codebleu': 0.5639327644440072, 'ngram_match_score': 0.24386266417130786, 'weighted_ngram_match_score': 0.39131706807033295, 'syntax_match_score': 0.7743782076589025, 'dataflow_match_score': 0.8461731178754854}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:10:51:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.7612506647990401, 'precisions': [0.8281917684983882, 0.7760524104209642, 0.7390567801230625, 0.7069862578441497], 'brevity_penalty': 1.0, 'length_ratio': 1.1080076421481082, 'translation_length': 53355, 'reference_length': 48154}
+{'em_ratio': 0.478, 'matches': 478, 'total': 1000}
+{'codebleu': 0.6378934631769066, 'ngram_match_score': 0.3350652748284856, 'weighted_ngram_match_score': 0.5137229172807608, 'syntax_match_score': 0.8182647760774955, 'dataflow_match_score': 0.8845208845208845}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:11:30:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.571107390153401, 'precisions': [0.639891246364841, 0.5885875369880763, 0.5486785593356264, 0.5147968718814073], 'brevity_penalty': 1.0, 'length_ratio': 1.4312595438648343, 'translation_length': 58112, 'reference_length': 40602}
+{'em_ratio': 0.413, 'matches': 413, 'total': 1000}
+{'codebleu': 0.5599994584903484, 'ngram_match_score': 0.20024642077627097, 'weighted_ngram_match_score': 0.4503729414435282, 'syntax_match_score': 0.7536024476904856, 'dataflow_match_score': 0.8357760240511086}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:14:15:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.826247010162849, 'precisions': [0.8869967809879585, 0.8400843368608847, 0.805798121094235, 0.7761906774288975], 'brevity_penalty': 1.0, 'length_ratio': 1.0450845204967396, 'translation_length': 50325, 'reference_length': 48154}
+{'em_ratio': 0.57, 'matches': 570, 'total': 1000}
+{'codebleu': 0.7474187683781324, 'ngram_match_score': 0.5578215512492959, 'weighted_ngram_match_score': 0.6844663941552013, 'syntax_match_score': 0.8453601010810052, 'dataflow_match_score': 0.902027027027027}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:15:29:
+You are a professional code translator trained to translate source code to target code.
+The number of return parameters, method names, variable names, identifiers, and method parameters must be consistent with the source program.
+Do not include any Triple quotes, Backtick or any extra text. Return only the translated code.
+{'bleu': 0.8287753622061296, 'precisions': [0.8862913783429961, 0.844671581769437, 0.8093731606827546, 0.7786353580048271], 'brevity_penalty': 1.0, 'length_ratio': 1.0535195310575833, 'translation_length': 42775, 'reference_length': 40602}
+{'em_ratio': 0.632, 'matches': 632, 'total': 1000}
+{'codebleu': 0.6501124294961763, 'ngram_match_score': 0.37125366601618115, 'weighted_ngram_match_score': 0.5112350314639869, 'syntax_match_score': 0.8476115278326095, 'dataflow_match_score': 0.8703494926719278}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs zero 0-shot counter=0 Time: 0:10:22:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.48808453187870393, 'precisions': [0.6183794850073243, 0.5172203158405346, 0.44620478952086495, 0.3976631072846201], 'brevity_penalty': 1.0, 'length_ratio': 1.1766416081737758, 'translation_length': 56660, 'reference_length': 48154}
+{'em_ratio': 0.081, 'matches': 81, 'total': 1000}
+{'codebleu': 0.3494640364171042, 'ngram_match_score': 0.08678050331148934, 'weighted_ngram_match_score': 0.1941341999381582, 'syntax_match_score': 0.5441527446300716, 'dataflow_match_score': 0.5727886977886978}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java zero 0-shot counter=0 Time: 0:10:28:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.3932400916977978, 'precisions': [0.48127624983064626, 0.41487433044911415, 0.36613285057791395, 0.3271006919926564], 'brevity_penalty': 1.0, 'length_ratio': 1.817866114969706, 'translation_length': 73809, 'reference_length': 40602}
+{'em_ratio': 0.177, 'matches': 177, 'total': 1000}
+{'codebleu': 0.44368984231911146, 'ngram_match_score': 0.08323212726479495, 'weighted_ngram_match_score': 0.28481285797636974, 'syntax_match_score': 0.6329451243584682, 'dataflow_match_score': 0.7737692596768132}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 1-shot counter=0 Time: 0:11:45:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5545695366092123, 'precisions': [0.6394463880193948, 0.5727887552203453, 0.5267681884379155, 0.4902367625297562], 'brevity_penalty': 1.0, 'length_ratio': 1.3533870498816298, 'translation_length': 65171, 'reference_length': 48154}
+{'em_ratio': 0.253, 'matches': 253, 'total': 1000}
+{'codebleu': 0.4794770006187836, 'ngram_match_score': 0.1075053419093614, 'weighted_ngram_match_score': 0.2789516148651135, 'syntax_match_score': 0.7298539941036081, 'dataflow_match_score': 0.8015970515970516}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java naive 1-shot counter=0 Time: 0:11:37:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.42787511435361913, 'precisions': [0.5080892059657894, 0.448793550408797, 0.4028552437649915, 0.36486526112072254], 'brevity_penalty': 1.0, 'length_ratio': 1.7537313432835822, 'translation_length': 71205, 'reference_length': 40602}
+{'em_ratio': 0.195, 'matches': 195, 'total': 1000}
+{'codebleu': 0.47235150844216145, 'ngram_match_score': 0.10889499913282162, 'weighted_ngram_match_score': 0.3402550208077818, 'syntax_match_score': 0.6577181208053692, 'dataflow_match_score': 0.7825378930226732}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 3-shot counter=0 Time: 0:12:29:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6768711000289279, 'precisions': [0.7676530964448562, 0.6969859566673451, 0.6470865458932644, 0.6062789401886757], 'brevity_penalty': 1.0, 'length_ratio': 1.143124143373344, 'translation_length': 55046, 'reference_length': 48154}
+{'em_ratio': 0.319, 'matches': 319, 'total': 1000}
+{'codebleu': 0.5969021846978837, 'ngram_match_score': 0.2944666358284332, 'weighted_ngram_match_score': 0.5012766247962057, 'syntax_match_score': 0.7512635125649305, 'dataflow_match_score': 0.8406019656019657}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java naive 3-shot counter=0 Time: 0:12:12:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6755259022034242, 'precisions': [0.7556153987392129, 0.6978153570610409, 0.649573558500117, 0.6079926983506095], 'brevity_penalty': 1.0, 'length_ratio': 1.207231170878282, 'translation_length': 49016, 'reference_length': 40602}
+{'em_ratio': 0.432, 'matches': 432, 'total': 1000}
+{'codebleu': 0.5485670633352112, 'ngram_match_score': 0.21014444584325026, 'weighted_ngram_match_score': 0.38398359516620884, 'syntax_match_score': 0.76248519542045, 'dataflow_match_score': 0.8376550169109357}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 1-shot counter=0 Time: 0:14:54:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5492930082316841, 'precisions': [0.6299792838117786, 0.5671522979873836, 0.5231168039036291, 0.4870703004026014], 'brevity_penalty': 1.0, 'length_ratio': 1.4033932798936744, 'translation_length': 67579, 'reference_length': 48154}
+{'em_ratio': 0.299, 'matches': 299, 'total': 1000}
+{'codebleu': 0.5567902266435656, 'ngram_match_score': 0.17532802698850003, 'weighted_ngram_match_score': 0.4466443087577139, 'syntax_match_score': 0.7554752211146989, 'dataflow_match_score': 0.8497133497133497}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java cot 1-shot counter=0 Time: 0:14:08:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5305989639190226, 'precisions': [0.5972765160081414, 0.5492233934259351, 0.5091810503121557, 0.47453570094727193], 'brevity_penalty': 1.0, 'length_ratio': 1.5246785872617112, 'translation_length': 61905, 'reference_length': 40602}
+{'em_ratio': 0.25, 'matches': 250, 'total': 1000}
+{'codebleu': 0.5254256086057657, 'ngram_match_score': 0.13203685155004305, 'weighted_ngram_match_score': 0.36795388071121615, 'syntax_match_score': 0.7613008290564548, 'dataflow_match_score': 0.8404108731053489}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs cot 3-shot counter=0 Time: 0:20:52:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6781825466396023, 'precisions': [0.7781108049743093, 0.7013999544730253, 0.6456029081908887, 0.6003628046375897], 'brevity_penalty': 1.0, 'length_ratio': 1.115483656601736, 'translation_length': 53715, 'reference_length': 48154}
+{'em_ratio': 0.286, 'matches': 286, 'total': 1000}
+{'codebleu': 0.5216369193245507, 'ngram_match_score': 0.18618141665939422, 'weighted_ngram_match_score': 0.3250355184893101, 'syntax_match_score': 0.7469114137301699, 'dataflow_match_score': 0.8284193284193284}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java cot 3-shot counter=0 Time: 0:20:42:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6863367393267837, 'precisions': [0.7670455721887488, 0.7089455990866228, 0.6601723653800462, 0.6180983288076473], 'brevity_penalty': 1.0, 'length_ratio': 1.1894980542830402, 'translation_length': 48296, 'reference_length': 40602}
+{'em_ratio': 0.344, 'matches': 344, 'total': 1000}
+{'codebleu': 0.5497202536449574, 'ngram_match_score': 0.20751794405591864, 'weighted_ngram_match_score': 0.37746997312620834, 'syntax_match_score': 0.7690979076194236, 'dataflow_match_score': 0.8447951897782788}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:11:15:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.6684488754985871, 'precisions': [0.7775046344805352, 0.6907748622192975, 0.6310573612160914, 0.589066655228618], 'brevity_penalty': 1.0, 'length_ratio': 1.0305893591394277, 'translation_length': 49627, 'reference_length': 48154}
+{'em_ratio': 0.262, 'matches': 262, 'total': 1000}
+{'codebleu': 0.4872669669221878, 'ngram_match_score': 0.24910515583845952, 'weighted_ngram_match_score': 0.3776844810714291, 'syntax_match_score': 0.6466025551031869, 'dataflow_match_score': 0.6756756756756757}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:12:29:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.5334745044842739, 'precisions': [0.6113132924539276, 0.5525795494871318, 0.5082248998745209, 0.4717806110848768], 'brevity_penalty': 1.0, 'length_ratio': 1.4820944781045269, 'translation_length': 60176, 'reference_length': 40602}
+{'em_ratio': 0.333, 'matches': 333, 'total': 1000}
+{'codebleu': 0.5404368013534145, 'ngram_match_score': 0.19725723566292488, 'weighted_ngram_match_score': 0.44796824071530134, 'syntax_match_score': 0.7096821950256613, 'dataflow_match_score': 0.8068395340097707}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:14:47:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.8125282000969338, 'precisions': [0.8789722515908955, 0.8274338985120805, 0.7898564275177128, 0.7587472681363916], 'brevity_penalty': 1.0, 'length_ratio': 1.0409934792540598, 'translation_length': 50128, 'reference_length': 48154}
+{'em_ratio': 0.503, 'matches': 503, 'total': 1000}
+{'codebleu': 0.7225974758969784, 'ngram_match_score': 0.5258363692865767, 'weighted_ngram_match_score': 0.6552982501478359, 'syntax_match_score': 0.8251439000421171, 'dataflow_match_score': 0.8841113841113841}
+
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:16:22:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+{'bleu': 0.7032839072468727, 'precisions': [0.7738008984205188, 0.7219438983659924, 0.679659662685987, 0.6443154479440263], 'brevity_penalty': 1.0, 'length_ratio': 1.1897443475690852, 'translation_length': 48306, 'reference_length': 40602}
+{'em_ratio': 0.518, 'matches': 518, 'total': 1000}
+{'codebleu': 0.600033691187994, 'ngram_match_score': 0.2847120973296201, 'weighted_ngram_match_score': 0.4756939003754847, 'syntax_match_score': 0.7866660086853533, 'dataflow_match_score': 0.8530627583615182}
+

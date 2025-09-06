@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java naive 1-shot counter=1 Time: 0:14:46:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 12.651855136071871
+
+HFBleu: {'bleu': 0.0472904639069829, 'precisions': [0.26700424489132263, 0.07276808969811227, 0.026068211153841035, 0.009874700386089303], 'brevity_penalty': 1.0, 'length_ratio': 1.2347525561785668, 'translation_length': 172206, 'reference_length': 139466}

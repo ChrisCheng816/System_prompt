@@ -1,0 +1,8 @@
+codellama/CodeLlama-13b-Instruct-hf Language:python zero 0-shot counter=0 Time: 1:25:25:
+You are a helpful assistant that writes summary for methods. 
+Write a concise, compressed summary of a method, capturing only the core idea and omitting unnecessary details.
+Output only the summary in plain text, without additional markup or formatting.
+
+Bleu: 13.946724795731168
+
+HFBleu: {'bleu': 0.05061930224605149, 'precisions': [0.10530772260212667, 0.05891285947948106, 0.03918315698092525, 0.02700815204976079], 'brevity_penalty': 1.0, 'length_ratio': 6.564502861440474, 'translation_length': 1117239, 'reference_length': 170194}

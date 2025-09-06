@@ -1,0 +1,8 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python cot 1-shot counter=1 Time: 0:17:34:
+You are a helpful assistant that writes summary for methods. 
+Write a concise, compressed summary of a method, capturing only the core idea and omitting unnecessary details.
+Output only the summary in plain text, without additional markup or formatting.
+
+Bleu: 30.135367546239923
+
+HFBleu: {'bleu': 0.2042468779285508, 'precisions': [0.38502869027775727, 0.23258563768760682, 0.16419431829482548, 0.11835526896917234], 'brevity_penalty': 1.0, 'length_ratio': 1.5933052869078816, 'translation_length': 271171, 'reference_length': 170194}
