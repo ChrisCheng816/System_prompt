@@ -1,0 +1,8 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:01:28:
+Your role is to serve as a professional code translator, converting source code to the designated target code.
+Ensure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.
+Your output should only contain your translated code.
+
+BLEU_Smooth:{'bleu': 0.821547770380248, 'precisions': [0.9266628034254073, 0.8679402539863575, 0.8231785257775884, 0.7868006331291721], 'brevity_penalty': 0.9670306687438804, 'length_ratio': 0.967562403953981, 'translation_length': 46592, 'reference_length': 48154}
+EM: {'em_ratio': 0.491, 'matches': 491, 'total': 1000}
+CodeBleu: {'codebleu': 81.98276791648473, 'ngram_match_score': 0.821547770380248, 'weighted_ngram_match_score': 0.8214081633569008, 'syntax_match_score': 0.7927839393513969, 'dataflow_match_score': 0.8435708435708436}

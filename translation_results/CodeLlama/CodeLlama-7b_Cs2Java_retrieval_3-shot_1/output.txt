@@ -1,0 +1,10 @@
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:02:59:
+Your role is to translate source code to target code with high accuracy and consistency.
+Ensure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. 
+Begin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. 
+Set reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. 
+Output only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.
+
+BLEU_Smooth:{'bleu': 0.6075295755505294, 'precisions': [0.6711245326430831, 0.6241763069263435, 0.5867765513126492, 0.5542255661954705], 'brevity_penalty': 1.0, 'length_ratio': 1.3701541795970642, 'translation_length': 55631, 'reference_length': 40602}
+EM: {'em_ratio': 0.397, 'matches': 397, 'total': 1000}
+CodeBleu: {'codebleu': 75.37320671743569, 'ngram_match_score': 0.6075295755505294, 'weighted_ngram_match_score': 0.8421164997729903, 'syntax_match_score': 0.7679628898539281, 'dataflow_match_score': 0.7973193035199799}

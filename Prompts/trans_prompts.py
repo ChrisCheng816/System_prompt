@@ -49,5 +49,5 @@ for k, v in items:
         pairs.append((int(m.group(1)), v))
 
 trans_prompts = [v for _, v in sorted(pairs)]
-codes = [prompt_to_code(p) for p in trans_prompts]
-print(f"Unique code for translation prompts: {codes}")
+# codes = [prompt_to_code(p) for p in trans_prompts]
+# print(f"Unique code for translation prompts: {codes}")

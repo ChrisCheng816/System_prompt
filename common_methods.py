@@ -21,7 +21,7 @@ em_metric = evaluate.load("exact_match")
 # ---------------------
 # Public methods
 # ---------------------
-os.environ["CUDA_VISIBLE_DEVICES"] = "1,2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
 logging.getLogger("vllm").setLevel(logging.ERROR)
 
 def load_model(model_name, dataset):
@@ -37,7 +37,7 @@ def load_model(model_name, dataset):
     )
     # print(f"Model dtype: {next(llm.parameters()).dtype}")
     # print(f"Model loaded into {llm.device} successfully")
-    batch_size = 16
+    batch_size = 32
     return tokenizer, llm, batch_size
 
 def load_prompt(length, task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length=4096):
@@ -326,34 +326,24 @@ def clean_code_blocks(text: str) -> str:
     text = re.sub(r"\n?```$", "", text.strip())
     return text.strip()
 
-def check_prompt(style, example_num, language, task, prompt=None):
-    code = prompt_to_code(prompt)
-    prompts_file = f"Intermediate_output/{task}/{style}_{example_num}_{language}_{code}.jsonl"
-    references_file = f"Intermediate_output/{task}/{language}_references.jsonl"
+def check_prompt(number, language, task):
+    prompts_file = f"Intermediate_output/{task}/{number}_{language}.jsonl"
+    references_file = f"Intermediate_output/{task}/{number}_{language}_references.jsonl"
     return os.path.exists(prompts_file) and os.path.exists(references_file)
 
-def save_prompt(prompts, references, style, example_num, language, task, prompt=None):
+def save_prompt(number, language, task, prompts):
     # Save prompts and references to disk
-    code = prompt_to_code(prompt)
     os.makedirs(f"Intermediate_output/{task}", exist_ok=True)
-    with open(f"Intermediate_output/{task}/{style}_{example_num}_{language}_{code}.jsonl", "w", encoding="utf-8") as f:
+    with open(f"Intermediate_output/{task}/{number}_{language}.jsonl", "w", encoding="utf-8") as f:
         json.dump(prompts, f, ensure_ascii=False, indent=2)
 
-    with open(f"Intermediate_output/{task}/{language}_references.jsonl", "w", encoding="utf-8") as f:
-        json.dump(references, f, ensure_ascii=False, indent=2)
+    print(f"Prompts saved for {language}.")
 
-    print(f"Prompts and references saved for {style}_{example_num}-shot_{language}_{code}.")
-
-def extract_prompt(style, example_num, language, task, prompt=None):
-    code = prompt_to_code(prompt)
-    with open(f"Intermediate_output/{task}/{style}_{example_num}_{language}_{code}.jsonl", "r", encoding="utf-8") as f:
+def extract_prompt(number, language, task, prompt=None):
+    with open(f"Intermediate_output/{task}/{number}_{language}.jsonl", "r", encoding="utf-8") as f:
         prompts = json.load(f)
 
-    with open(f"Intermediate_output/{task}/{language}_references.jsonl", "r", encoding="utf-8") as f:
+    with open(f"Intermediate_output/{task}/{number}_{language}_references.jsonl", "r", encoding="utf-8") as f:
         references = json.load(f)
 
     return prompts, references
-
-def prompt_to_code(prompt: str) -> str:
-    total = sum(ord(c) for c in prompt)
-    return f"{total % 1000:03d}"

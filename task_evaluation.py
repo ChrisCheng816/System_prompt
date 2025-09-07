@@ -35,21 +35,24 @@ def evaluate_summarization(model_name, style, example_num = None, test_num = Non
         base_prompt = "".join(base_prompt)
         base_prompt = pre_prompt + base_prompt
         print(f"Counter = {counter[0]}")
-    elif style == "retrieval" and check_prompt(style, example_num, language, task="summarization") == False:
-        example_db = [
-            {
-                "source_code": dataset_summarization["train"][i]["code"],
-                "target_code": smart_join(dataset_summarization["train"][i]["docstring_tokens"])  # Join tokens into a single string
-            }
-            for i in range(5000)
-        ]
-        print("Starting to integrate example database...")
-        query_code_arr = [test_data["code"][i] for i in range(len(test_data["code"]))]
-        base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
-        pre_prompt = "The following are a few retrieval-based example(s) for code summarization."
-        base_prompt = [pre_prompt + prompt for prompt in base_prompt]
-        print("Retrieval data integration completed")
-        
+    elif style == "retrieval":
+        if check_prompt(example_num, language, task="summarization") == False:
+            example_db = [
+                {
+                    "source_code": dataset_summarization["train"][i]["code"],
+                    "target_code": smart_join(dataset_summarization["train"][i]["docstring_tokens"])  # Join tokens into a single string
+                }
+                for i in range(5000)
+            ]
+            print("Starting to integrate example database...")
+            query_code_arr = [test_data["code"][i] for i in range(len(test_data["code"]))]
+            base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
+            pre_prompt = "The following are a few retrieval-based example(s) for code summarization."
+            base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            print("Retrieval data integration completed")
+            save_prompt(example_num, language, task = "summarization", prompts = base_prompt)
+        else:
+            base_prompt = extract_prompt(example_num, language, task = "summarization")
 
     after_description = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n" if style == "cot" else "Please output the answer directly as shown in the example(s) if provided.###\n"
     task_description = f"### It is your turn now! Summarizing the follwing code into summary. {after_description}"
@@ -60,8 +63,7 @@ def evaluate_summarization(model_name, style, example_num = None, test_num = Non
 
     predictions= []
     print(f"Loading {len(test_data[src_key])} prompts...")
-    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length) if check_prompt(style, example_num, language, task = "summarization", prompt=system_prompt) == False else extract_prompt(style, example_num, language, task = "summarization", prompt=system_prompt)
-    save_prompt(prompts, references, style, example_num, language, task = "summarization", prompt=system_prompt) if check_prompt(style, example_num, language, task = "summarization", prompt=system_prompt) == False else None
+    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length)
     print("Prompts loaded successfully")
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
     print("Starting to generate...")
@@ -100,30 +102,34 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
         base_prompt = pre_prompt + base_prompt
         print(f"Counter = {counter[0]}")
     elif style == "retrieval":
-        if order == 0:
-            example_db = [
-                {
-                    "source_code": dataset_translation["train"][i]["java"],
-                    "target_code": dataset_translation["train"][i]["cs"]
-                }
-                for i in range(5000)
-            ]
-            query_code_arr = [test_data["java"][i] for i in range(len(test_data["java"]))]
-            base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
-            pre_prompt = "The following are a few retrieval-based example(s) for code translation."
-            base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+        if check_prompt(example_num, language, task="translation") == False:
+            if order == 0:
+                example_db = [
+                    {
+                        "source_code": dataset_translation["train"][i]["java"],
+                        "target_code": dataset_translation["train"][i]["cs"]
+                    }
+                    for i in range(5000)
+                ]
+                query_code_arr = [test_data["java"][i] for i in range(len(test_data["java"]))]
+                base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
+                pre_prompt = "The following are a few retrieval-based example(s) for code translation."
+                base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            else:
+                example_db = [
+                    {
+                        "source_code": dataset_translation["train"][i]["cs"],
+                        "target_code": dataset_translation["train"][i]["java"]
+                    }
+                    for i in range(3000)
+                ]
+                query_code_arr = [test_data["cs"][i] for i in range(len(test_data["cs"]))]
+                base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
+                pre_prompt = "The following are a few retrieval-based example(s) for code translation."
+                base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            save_prompt(example_num, language, task = "translation", prompts = base_prompt)
         else:
-            example_db = [
-                {
-                    "source_code": dataset_translation["train"][i]["cs"],
-                    "target_code": dataset_translation["train"][i]["java"]
-                }
-                for i in range(3000)
-            ]
-            query_code_arr = [test_data["cs"][i] for i in range(len(test_data["cs"]))]
-            base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
-            pre_prompt = "The following are a few retrieval-based example(s) for code translation."
-            base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            base_prompt = extract_prompt(example_num, language, task = "translation")
     else:
         base_prompt = ""
 
@@ -137,8 +143,7 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
 
     predictions= []
     print(f"Loading {len(test_data[src_key])} prompts...")
-    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length) if check_prompt(style, example_num, language, task = "translation", prompt=system_prompt) == False else extract_prompt(style, example_num, language, task = "translation", prompt=system_prompt)
-    save_prompt(prompts, references, style, example_num, language, task = "translation", prompt=system_prompt) if check_prompt(style, example_num, language, task = "translation", prompt=system_prompt) == False else None
+    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length)
     print(f"{len(prompts)} Prompts loaded successfully")
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
     print("Starting to generate...")

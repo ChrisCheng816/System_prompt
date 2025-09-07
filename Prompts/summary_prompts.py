@@ -53,5 +53,5 @@ for k, v in items:
         pairs.append((int(m.group(1)), v))
 
 summary_prompts = [v for _, v in sorted(pairs)]
-codes = [prompt_to_code(p) for p in summary_prompts]
-print(f"Unique code for summary prompts: {codes}")
+# codes = [prompt_to_code(p) for p in summary_prompts]
+# print(f"Unique code for summary prompts: {codes}")

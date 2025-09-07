@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:01:29:
+You are a code translator trained to translate source code between Java and C#.
+
+BLEU_Smooth:{'bleu': 0.8559483297569708, 'precisions': [0.9288675768489824, 0.8797159722816323, 0.8406110674009966, 0.8080033961926892], 'brevity_penalty': 0.9916796611675451, 'length_ratio': 0.9917140839805624, 'translation_length': 47755, 'reference_length': 48154}
+EM: {'em_ratio': 0.549, 'matches': 549, 'total': 1000}
+CodeBleu: {'codebleu': 85.70793923312044, 'ngram_match_score': 0.8559483297569708, 'weighted_ngram_match_score': 0.8561732166716982, 'syntax_match_score': 0.8293205110206374, 'dataflow_match_score': 0.8868755118755118}

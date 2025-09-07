@@ -1,0 +1,8 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python retrieval 3-shot counter=0 Time: 0:14:35:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 48.9621913852811
+
+HFBleu: {'bleu': 0.4056415232123717, 'precisions': [0.6550420140719478, 0.482572934162816, 0.3962005072452062, 0.3326751949161103], 'brevity_penalty': 0.8978432333665582, 'length_ratio': 0.9027227751859642, 'translation_length': 153638, 'reference_length': 170194}

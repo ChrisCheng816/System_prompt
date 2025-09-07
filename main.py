@@ -27,8 +27,8 @@ if __name__ == "__main__":
     # evaluate_summarization("Qwen/Qwen2.5-Coder-7B-Instruct", "retrieval", example_num=1, max_length=2048, system_prompt = SUM[0], dataset_summarization=dataset_summarization_python)
     # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "retrieval", example_num=1, max_length=2048, system_prompt = SUM[0], dataset_summarization=dataset_summarization_python)
     # evaluate_summarization("Qwen/Qwen2.5-Coder-7B-Instruct", "retrieval", example_num=3, max_length=4096, system_prompt = SUM[0], dataset_summarization=dataset_summarization_python)
-    # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "retrieval", example_num=3, max_length=4096, system_prompt = SUM[0], dataset_summarization=dataset_summarization_python)
-
+    # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "naive", example_num=3, max_length=4096, system_prompt = SUM[3], dataset_summarization=dataset_summarization_java)
+    # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "naive", example_num=3, max_length=4096, system_prompt = SUM[3], dataset_summarization=dataset_summarization_python)
     # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "cot", example_num=3, max_length=4096, system_prompt = SUM[1], dataset_summarization=dataset_summarization_python)
     # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "zero", example_num=0, max_length=2048, system_prompt = SUM[3], dataset_summarization=dataset_summarization_python)
     # evaluate_summarization("codellama/CodeLlama-13b-Instruct-hf", "cot", example_num=3, max_length=4096, system_prompt = SUM[1], dataset_summarization=dataset_summarization_java)
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # evaluate_translation("codellama/CodeLlama-13b-Instruct-hf", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[2], order = 1)
 
     models = [
-        # "Qwen/Qwen2.5-Coder-7B-Instruct",
+        "Qwen/Qwen2.5-Coder-7B-Instruct",
         # "Qwen/Qwen2.5-Coder-32B-Instruct",
         "codellama/CodeLlama-13b-Instruct-hf",
         # "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         # "Qwen/Qwen3-Coder-30B-A3B-Instruct",
     ]
 
-    methods = ["naive", "cot"]
+    methods = ["retrieval"]
     example_nums = [0, 1, 3]
     max_lengths = {0: 1024, 1: 2048, 3: 4096}
     orders = [0, 1]
@@ -90,20 +90,19 @@ if __name__ == "__main__":
                 #             order=order
                 #         )
 
-
+                # evaluate_summarization(
+                #     model,
+                #     method,
+                #     example_num=example_num,
+                #     max_length=max_lengths[example_num],
+                #     system_prompt=SUM[3],
+                #     dataset_summarization=dataset_summarization_java
+                # )
                 evaluate_summarization(
                     model,
                     method,
                     example_num=example_num,
                     max_length=max_lengths[example_num],
-                    system_prompt=SUM[3],
-                    dataset_summarization=dataset_summarization_java
-                )
-                evaluate_summarization(
-                    model,
-                    method,
-                    example_num=example_num,
-                    max_length=max_lengths[example_num],
-                    system_prompt=SUM[3],
+                    system_prompt=SUM[0],
                     dataset_summarization=dataset_summarization_python
                 )

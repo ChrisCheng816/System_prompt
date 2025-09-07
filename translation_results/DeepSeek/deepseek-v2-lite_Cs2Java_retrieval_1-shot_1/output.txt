@@ -1,0 +1,10 @@
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Direction:Cs2Java retrieval 1-shot counter=0 Time: 0:03:00:
+Your role is to translate source code to target code with high accuracy and consistency.
+Ensure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. 
+Begin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. 
+Set reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. 
+Output only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.
+
+BLEU_Smooth:{'bleu': 0.3394206444259621, 'precisions': [0.40084629321141524, 0.3510542706269002, 0.31968694308395956, 0.2950366603147361], 'brevity_penalty': 1.0, 'length_ratio': 2.0255159844342643, 'translation_length': 82240, 'reference_length': 40602}
+EM: {'em_ratio': 0.133, 'matches': 133, 'total': 1000}
+CodeBleu: {'codebleu': 58.01479300693465, 'ngram_match_score': 0.3394206444259621, 'weighted_ngram_match_score': 0.7028976052178395, 'syntax_match_score': 0.5835471772601658, 'dataflow_match_score': 0.6947262933734185}

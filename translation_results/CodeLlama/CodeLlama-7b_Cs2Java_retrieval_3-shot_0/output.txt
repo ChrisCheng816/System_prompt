@@ -1,0 +1,8 @@
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java retrieval 3-shot counter=0 Time: 0:03:04:
+Your role is to serve as a professional code translator, converting source code to the designated target code.
+Ensure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.
+Your output should only contain your translated code.
+
+BLEU_Smooth:{'bleu': 0.511666375991014, 'precisions': [0.5671945152287344, 0.5261674470182356, 0.49357089225378553, 0.4653095601322146], 'brevity_penalty': 1.0, 'length_ratio': 1.6237377469090193, 'translation_length': 65927, 'reference_length': 40602}
+EM: {'em_ratio': 0.34, 'matches': 340, 'total': 1000}
+CodeBleu: {'codebleu': 70.33023670882254, 'ngram_match_score': 0.5116663759910142, 'weighted_ngram_match_score': 0.8440443456419651, 'syntax_match_score': 0.7160481642321358, 'dataflow_match_score': 0.7414505824877865}

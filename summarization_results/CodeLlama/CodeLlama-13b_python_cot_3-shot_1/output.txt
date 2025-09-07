@@ -1,0 +1,6 @@
+codellama/CodeLlama-13b-Instruct-hf Language:python cot 3-shot counter=3 Time: 1:13:46:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 39.922889025084416
+
+HFBleu: {'bleu': 0.0840863178676833, 'precisions': [0.14024601292412756, 0.09439885574269391, 0.07056306534726146, 0.0535139056237244], 'brevity_penalty': 1.0, 'length_ratio': 5.0417993583792615, 'translation_length': 858084, 'reference_length': 170194}

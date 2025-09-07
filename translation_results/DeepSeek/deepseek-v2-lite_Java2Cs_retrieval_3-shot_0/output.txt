@@ -1,0 +1,8 @@
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:02:13:
+Your role is to serve as a professional code translator, converting source code to the designated target code.
+Ensure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.
+Your output should only contain your translated code.
+
+BLEU_Smooth:{'bleu': 0.8522922491915044, 'precisions': [0.9189609420349946, 0.86774917435854, 0.8298295700320097, 0.797395879388098], 'brevity_penalty': 1.0, 'length_ratio': 1.0016821032520662, 'translation_length': 48235, 'reference_length': 48154}
+EM: {'em_ratio': 0.52, 'matches': 520, 'total': 1000}
+CodeBleu: {'codebleu': 85.57633397810723, 'ngram_match_score': 0.8522922491915044, 'weighted_ngram_match_score': 0.8538191127366811, 'syntax_match_score': 0.8279166081707146, 'dataflow_match_score': 0.8890253890253891}

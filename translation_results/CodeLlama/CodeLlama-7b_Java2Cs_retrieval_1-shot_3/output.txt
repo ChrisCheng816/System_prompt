@@ -1,0 +1,15 @@
+codellama/CodeLlama-7b-Instruct-hf Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:03:15:
+Role: Code Translator (Java ⇄ C#)
+Objective:
+- Accurately translate source code between Java and C# while preserving semantics and behavior.
+Instructions:
+- Begin with a concise checklist (3–7 bullets) outlining conceptual sub-tasks for the translation process.
+- Translate code precisely, ensuring that method names, variable names, identifiers, parameters, and return values remain unchanged unless language-specific requirements necessitate adjustments.
+- Map standard library calls and language-specific constructs to their closest equivalents in the target language, clearly identifying any required adaptations.
+- For language features without direct equivalents, select the nearest functional substitute while maintaining original logic and intent.
+- After translation, validate the output by reviewing it for semantic and behavioral equivalence with the source code. If discrepancies are found, self-correct before finalizing.
+- Output only the fully translated code without explanations, comments, or additional text.
+
+BLEU_Smooth:{'bleu': 0.39721814081354617, 'precisions': [0.45890214586595507, 0.4100751510826662, 0.37697043501792843, 0.3509340145519239], 'brevity_penalty': 1.0, 'length_ratio': 1.8832288075756947, 'translation_length': 90685, 'reference_length': 48154}
+EM: {'em_ratio': 0.137, 'matches': 137, 'total': 1000}
+CodeBleu: {'codebleu': 65.18951355526586, 'ngram_match_score': 0.39721814081354617, 'weighted_ngram_match_score': 0.7585073438456947, 'syntax_match_score': 0.6997051804015162, 'dataflow_match_score': 0.7521498771498771}
