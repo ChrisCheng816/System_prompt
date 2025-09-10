@@ -1,0 +1,8 @@
+codellama/CodeLlama-13b-Instruct-hf Language:python cot 3-shot counter=3 Time: 1:02:30:
+You are an expert writer that writes summary for methods. Your task is to generate clear, concise, and accurate natural language summaries for code snippets. 
+The summary should describe the purpose and behavior of the code function. Output only the summary in plain text, without additional markup or formatting.
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 41.50466689529093
+
+HFBleu: {'bleu': 0.11421055346242966, 'precisions': [0.19395336698910998, 0.12895477269259836, 0.09520729047271084, 0.07145292229077926], 'brevity_penalty': 1.0, 'length_ratio': 3.399661562687286, 'translation_length': 578602, 'reference_length': 170194}

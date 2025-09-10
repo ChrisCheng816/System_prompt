@@ -1,0 +1,12 @@
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Direction:Java2Cs naive 3-shot counter=0 Time: 0:01:55:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+
+BLEU_Smooth:{'bleu': 0.7761877654681782, 'precisions': [0.8958320089843833, 0.8164440499642803, 0.7583475316973868, 0.7099993211594596], 'brevity_penalty': 0.9798215546542236, 'length_ratio': 0.9800224280433609, 'translation_length': 47192, 'reference_length': 48154}
+EM: {'em_ratio': 0.352, 'matches': 352, 'total': 1000}
+CodeBleu: {'codebleu': 78.4900473708855, 'ngram_match_score': 0.7761877654681782, 'weighted_ngram_match_score': 0.7759712038820586, 'syntax_match_score': 0.750526463568721, 'dataflow_match_score': 0.836916461916462}

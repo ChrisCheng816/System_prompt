@@ -28,9 +28,9 @@ sum_prompt_2 = """You are a helpful assistant that writes summary for methods.
 Write a concise, compressed summary of a method, capturing only the core idea and omitting unnecessary details.
 Output only the summary in plain text, without additional markup or formatting."""
 
-sum_prompt_3 = """You are an expert software engineer and technical writer. Your task is to generate clear, concise, and accurate natural language summaries for code snippets. 
-The summary should describe the purpose and behavior of the code function. 
-Do not explain line by line, and do not include extra details beyond the function’s main functionality."""
+sum_prompt_3 = """You are an expert writer that writes summary for methods. Your task is to generate clear, concise, and accurate natural language summaries for code snippets. 
+The summary should describe the purpose and behavior of the code function. Output only the summary in plain text, without additional markup or formatting.
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length."""
 
 sum_prompt_4 = """You are a helpful documentation assistant that writes summary for methods."""
 

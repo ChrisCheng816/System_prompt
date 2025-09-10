@@ -10,10 +10,7 @@ meta-llama/CodeLlama-34b-Instruct-hf,0,translation,generation 暫定
 deepseek-ai/deepseek-coder-6.7b-instruct,0,translation,generation 暂定
 Qwen2.5 coder 32b,summarization,translation,generation
 
-
 Qwen3-Coder-30B-A3B-Instruct,0,translation,generation
-
-
 
 google/gemma-3-27b-it,0,0,generation xxx
 bigcode/starcoder2-15b-instruct-v0.1,0,translation,generation 不行用不了system

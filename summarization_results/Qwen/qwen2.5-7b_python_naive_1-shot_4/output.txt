@@ -1,0 +1,8 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python naive 1-shot counter=1 Time: 0:09:33:
+You are an expert writer that writes summary for methods. Your task is to generate clear, concise, and accurate natural language summaries for code snippets. 
+The summary should describe the purpose and behavior of the code function. Output only the summary in plain text, without additional markup or formatting.
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 37.56918537188392
+
+HFBleu: {'bleu': 0.2947692521699008, 'precisions': [0.5424674407230967, 0.3387590160779812, 0.24658109272474207, 0.18607190721223052], 'brevity_penalty': 0.9727604372840502, 'length_ratio': 0.9731247870077676, 'translation_length': 165620, 'reference_length': 170194}

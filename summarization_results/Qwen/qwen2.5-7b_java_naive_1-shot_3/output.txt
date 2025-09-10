@@ -1,0 +1,8 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java naive 1-shot counter=1 Time: 0:05:45:
+You are an expert writer that writes summary for methods. Your task is to generate clear, concise, and accurate natural language summaries for code snippets. 
+The summary should describe the purpose and behavior of the code function. Output only the summary in plain text, without additional markup or formatting.
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 14.029106107066069
+
+HFBleu: {'bleu': 0.04912517856553614, 'precisions': [0.32000230792690465, 0.08707391769204284, 0.03131412706715487, 0.012141355219426168], 'brevity_penalty': 0.8610769708855319, 'length_ratio': 0.8698894354179513, 'translation_length': 121320, 'reference_length': 139466}

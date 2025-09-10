@@ -1,0 +1,6 @@
+deepseek-ai/deepseek-coder-7b-instruct-v1.5 Direction:Java2Cs naive 1-shot counter=0 Time: 0:03:26:
+You are a code translator trained to translate source code between Java and C#.
+
+BLEU_Smooth:{'bleu': 0.2500766871186871, 'precisions': [0.30253616573802933, 0.260499194491647, 0.2335425636769207, 0.21249225393649349], 'brevity_penalty': 1.0, 'length_ratio': 2.843751297919176, 'translation_length': 136938, 'reference_length': 48154}
+EM: {'em_ratio': 0.093, 'matches': 93, 'total': 1000}
+CodeBleu: {'codebleu': 60.380164581688994, 'ngram_match_score': 0.25007668711868714, 'weighted_ngram_match_score': 0.7226906747366062, 'syntax_match_score': 0.6616243155973607, 'dataflow_match_score': 0.7808149058149059}

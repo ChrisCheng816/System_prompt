@@ -1,0 +1,350 @@
+Task: deepseek-v2-lite_Java2Cs_retrieval_3-shot
+  bleu: min=0.7521, max=0.8718
+  em: min=0.4170, max=0.5740
+  codebleu: min=79.5703, max=87.6257
+
+Task: deepseek-v2-lite_Cs2Java_cot_1-shot
+  bleu: min=0.4858, max=0.7907
+  em: min=0.1600, max=0.2760
+  codebleu: min=71.3654, max=80.2271
+
+Task: deepseek-7b-v1.5_Cs2Java_zero_0-shot
+  bleu: min=0.1622, max=0.4462
+  em: min=0.0360, max=0.1510
+  codebleu: min=50.4850, max=64.7797
+
+Task: deepseek-v2-lite_Java2Cs_zero_0-shot
+  bleu: min=0.3278, max=0.5637
+  em: min=0.0360, max=0.0880
+  codebleu: min=41.1460, max=55.7418
+
+Task: deepseek-7b-v1.5_Java2Cs_naive_1-shot
+  bleu: min=0.2501, max=0.6613
+  em: min=0.0930, max=0.3670
+  codebleu: min=60.3802, max=76.2095
+
+Task: deepseek-7b-v1.5_Java2Cs_cot_3-shot
+  bleu: min=0.6123, max=0.6884
+  em: min=0.2100, max=0.3420
+  codebleu: min=71.5083, max=76.7979
+
+Task: deepseek-7b-v1.5_Cs2Java_naive_1-shot
+  bleu: min=0.2071, max=0.6252
+  em: min=0.0620, max=0.3390
+  codebleu: min=54.2823, max=72.7008
+
+Task: deepseek-7b-v1.5_Java2Cs_zero_0-shot
+  bleu: min=0.1488, max=0.3878
+  em: min=0.0150, max=0.0730
+  codebleu: min=44.0839, max=51.4637
+
+Task: deepseek-v2-lite_Cs2Java_naive_3-shot
+  bleu: min=0.4203, max=0.6441
+  em: min=0.1360, max=0.2310
+  codebleu: min=64.5160, max=71.9027
+
+Task: deepseek-v2-lite_Cs2Java_retrieval_3-shot
+  bleu: min=0.6467, max=0.7824
+  em: min=0.2750, max=0.5260
+  codebleu: min=72.3906, max=82.0367
+
+Task: deepseek-7b-v1.5_Java2Cs_naive_3-shot
+  bleu: min=0.3073, max=0.6701
+  em: min=0.1730, max=0.3580
+  codebleu: min=64.1672, max=76.4646
+
+Task: deepseek-v2-lite_Java2Cs_cot_1-shot
+  bleu: min=0.6340, max=0.7621
+  em: min=0.2290, max=0.2890
+  codebleu: min=73.7551, max=77.7661
+
+Task: deepseek-7b-v1.5_Cs2Java_retrieval_3-shot
+  bleu: min=0.6638, max=0.7936
+  em: min=0.4740, max=0.6200
+  codebleu: min=78.5586, max=85.0667
+
+Task: deepseek-7b-v1.5_Cs2Java_retrieval_1-shot
+  bleu: min=0.5043, max=0.6888
+  em: min=0.2900, max=0.5040
+  codebleu: min=70.1883, max=80.4124
+
+Task: deepseek-v2-lite_Java2Cs_cot_3-shot
+  bleu: min=0.7578, max=0.7680
+  em: min=0.2120, max=0.2630
+  codebleu: min=77.0288, max=77.7839
+
+Task: deepseek-v2-lite_Cs2Java_naive_1-shot
+  bleu: min=0.3946, max=0.7670
+  em: min=0.0670, max=0.1970
+  codebleu: min=62.1316, max=79.8474
+
+Task: deepseek-7b-v1.5_Cs2Java_naive_3-shot
+  bleu: min=0.2716, max=0.7552
+  em: min=0.1660, max=0.4470
+  codebleu: min=59.3900, max=80.4055
+
+Task: deepseek-7b-v1.5_Java2Cs_cot_1-shot
+  bleu: min=0.2788, max=0.6467
+  em: min=0.1410, max=0.3070
+  codebleu: min=64.6101, max=75.5416
+
+Task: deepseek-7b-v1.5_Cs2Java_cot_1-shot
+  bleu: min=0.2913, max=0.7296
+  em: min=0.1780, max=0.4290
+  codebleu: min=66.5851, max=80.0831
+
+Task: deepseek-v2-lite_Java2Cs_retrieval_1-shot
+  bleu: min=0.4970, max=0.8656
+  em: min=0.1620, max=0.5260
+  codebleu: min=59.7649, max=87.0215
+
+Task: deepseek-v2-lite_Java2Cs_naive_1-shot
+  bleu: min=0.2631, max=0.7712
+  em: min=0.0140, max=0.3520
+  codebleu: min=47.3839, max=78.2370
+
+Task: deepseek-7b-v1.5_Cs2Java_cot_3-shot
+  bleu: min=0.6544, max=0.7705
+  em: min=0.3500, max=0.4470
+  codebleu: min=77.3457, max=81.1576
+
+Task: deepseek-7b-v1.5_Java2Cs_retrieval_1-shot
+  bleu: min=0.5933, max=0.8066
+  em: min=0.2160, max=0.4760
+  codebleu: min=64.9445, max=82.2870
+
+Task: deepseek-v2-lite_Cs2Java_cot_3-shot
+  bleu: min=0.7686, max=0.7859
+  em: min=0.2350, max=0.2590
+  codebleu: min=79.6863, max=80.6024
+
+Task: deepseek-v2-lite_Java2Cs_naive_3-shot
+  bleu: min=0.2871, max=0.7762
+  em: min=0.0060, max=0.3650
+  codebleu: min=54.5062, max=78.4900
+
+Task: deepseek-v2-lite_Cs2Java_zero_0-shot
+  bleu: min=0.2848, max=0.6060
+  em: min=0.0890, max=0.2100
+  codebleu: min=48.2711, max=69.9525
+
+Task: deepseek-7b-v1.5_Java2Cs_retrieval_3-shot
+  bleu: min=0.7157, max=0.8451
+  em: min=0.4400, max=0.5850
+  codebleu: min=80.8303, max=87.0163
+
+Task: deepseek-v2-lite_Cs2Java_retrieval_1-shot
+  bleu: min=0.4756, max=0.7129
+  em: min=0.2200, max=0.3250
+  codebleu: min=64.8990, max=76.9619
+
+Task: qwen2.5-7b_Java2Cs_retrieval_1-shot
+  bleu: min=0.8191, max=0.8559
+  em: min=0.4710, max=0.5530
+  codebleu: min=81.7706, max=85.6978
+
+Task: qwen2.5-7b_Cs2Java_zero_0-shot
+  bleu: min=0.4047, max=0.5957
+  em: min=0.0840, max=0.1890
+  codebleu: min=39.4635, max=68.4997
+
+Task: qwen2.5-7b_Cs2Java_naive_3-shot
+  bleu: min=0.7924, max=0.8016
+  em: min=0.4440, max=0.4930
+  codebleu: min=81.1166, max=82.5359
+
+Task: qwen2.5-7b_Cs2Java_retrieval_3-shot
+  bleu: min=0.8112, max=0.8531
+  em: min=0.5260, max=0.6080
+  codebleu: min=82.7584, max=86.1301
+
+Task: qwen2.5-7b_Java2Cs_naive_1-shot
+  bleu: min=0.6994, max=0.7664
+  em: min=0.2140, max=0.3310
+  codebleu: min=70.0738, max=77.5999
+
+Task: qwen2.5-7b_Cs2Java_naive_1-shot
+  bleu: min=0.7583, max=0.7958
+  em: min=0.4220, max=0.4850
+  codebleu: min=79.0798, max=82.2681
+
+Task: qwen2.5-7b_Cs2Java_cot_1-shot
+  bleu: min=0.7766, max=0.7976
+  em: min=0.4190, max=0.4730
+  codebleu: min=80.2482, max=82.0257
+
+Task: qwen2.5-7b_Java2Cs_zero_0-shot
+  bleu: min=0.1361, max=0.5713
+  em: min=0.0260, max=0.0860
+  codebleu: min=20.1044, max=56.2725
+
+Task: qwen2.5-7b_Cs2Java_cot_3-shot
+  bleu: min=0.7805, max=0.8006
+  em: min=0.4350, max=0.4720
+  codebleu: min=80.2435, max=81.7812
+
+Task: qwen2.5-7b_Cs2Java_retrieval_1-shot
+  bleu: min=0.7783, max=0.8407
+  em: min=0.4850, max=0.5700
+  codebleu: min=80.9554, max=85.0666
+
+Task: qwen2.5-7b_Java2Cs_naive_3-shot
+  bleu: min=0.7620, max=0.7763
+  em: min=0.3220, max=0.3490
+  codebleu: min=77.1217, max=78.3080
+
+Task: qwen2.5-7b_Java2Cs_cot_1-shot
+  bleu: min=0.7537, max=0.7827
+  em: min=0.2950, max=0.3480
+  codebleu: min=75.8375, max=78.9258
+
+Task: qwen2.5-7b_Java2Cs_retrieval_3-shot
+  bleu: min=0.8308, max=0.8738
+  em: min=0.5050, max=0.6000
+  codebleu: min=83.1831, max=87.8575
+
+Task: qwen2.5-7b_Java2Cs_cot_3-shot
+  bleu: min=0.7751, max=0.7808
+  em: min=0.3290, max=0.3400
+  codebleu: min=78.4979, max=78.7907
+
+Task: CodeLlama-7b_Java2Cs_cot_1-shot
+  bleu: min=0.2813, max=0.5804
+  em: min=0.0570, max=0.1940
+  codebleu: min=60.6101, max=66.4102
+
+Task: CodeLlama-7b_Java2Cs_zero_0-shot
+  bleu: min=0.2995, max=0.5429
+  em: min=0.0080, max=0.0800
+  codebleu: min=47.3367, max=54.5709
+
+Task: CodeLlama-7b_Cs2Java_cot_1-shot
+  bleu: min=0.2437, max=0.5028
+  em: min=0.1020, max=0.2150
+  codebleu: min=55.1848, max=69.2680
+
+Task: CodeLlama-7b_Java2Cs_retrieval_1-shot
+  bleu: min=0.6876, max=0.7869
+  em: min=0.2810, max=0.3890
+  codebleu: min=72.1745, max=80.1293
+
+Task: CodeLlama-13b_Java2Cs_retrieval_1-shot
+  bleu: min=0.7804, max=0.8080
+  em: min=0.3960, max=0.4640
+  codebleu: min=81.2111, max=83.1882
+
+Task: CodeLlama-13b_Cs2Java_naive_1-shot
+  bleu: min=0.6415, max=0.7996
+  em: min=0.3470, max=0.4730
+  codebleu: min=72.7152, max=81.0026
+
+Task: CodeLlama-7b_Java2Cs_naive_1-shot
+  bleu: min=0.4288, max=0.6434
+  em: min=0.0890, max=0.2300
+  codebleu: min=62.7707, max=69.1839
+
+Task: CodeLlama-7b_Cs2Java_retrieval_1-shot
+  bleu: min=0.6335, max=0.7537
+  em: min=0.3010, max=0.4920
+  codebleu: min=74.9206, max=80.8880
+
+Task: CodeLlama-13b_Cs2Java_retrieval_3-shot
+  bleu: min=0.6935, max=0.8025
+  em: min=0.4770, max=0.5520
+  codebleu: min=77.8526, max=83.0719
+
+Task: CodeLlama-13b_Java2Cs_naive_1-shot
+  bleu: min=0.6911, max=0.7835
+  em: min=0.2420, max=0.3830
+  codebleu: min=72.5642, max=79.3056
+
+Task: CodeLlama-13b_Java2Cs_naive_3-shot
+  bleu: min=0.6948, max=0.7433
+  em: min=0.2380, max=0.2700
+  codebleu: min=73.3877, max=75.0649
+
+Task: CodeLlama-13b_Cs2Java_retrieval_1-shot
+  bleu: min=0.7082, max=0.7729
+  em: min=0.4520, max=0.5160
+  codebleu: min=78.2319, max=81.4065
+
+Task: CodeLlama-7b_Cs2Java_naive_1-shot
+  bleu: min=0.3882, max=0.5771
+  em: min=0.1380, max=0.2640
+  codebleu: min=60.0378, max=70.7944
+
+Task: CodeLlama-7b_Cs2Java_naive_3-shot
+  bleu: min=0.3986, max=0.5349
+  em: min=0.1510, max=0.2610
+  codebleu: min=60.6047, max=69.3635
+
+Task: CodeLlama-7b_Java2Cs_retrieval_3-shot
+  bleu: min=0.6762, max=0.7833
+  em: min=0.3220, max=0.4220
+  codebleu: min=74.1393, max=81.1694
+
+Task: CodeLlama-7b_Cs2Java_cot_3-shot
+  bleu: min=0.4747, max=0.5907
+  em: min=0.2450, max=0.3200
+  codebleu: min=67.8838, max=72.2429
+
+Task: CodeLlama-7b_Cs2Java_zero_0-shot
+  bleu: min=0.2613, max=0.5294
+  em: min=0.0150, max=0.0970
+  codebleu: min=49.4265, max=62.7116
+
+Task: CodeLlama-13b_Cs2Java_zero_0-shot
+  bleu: min=0.4570, max=0.5960
+  em: min=0.1310, max=0.1980
+  codebleu: min=61.2182, max=67.8926
+
+Task: CodeLlama-7b_Cs2Java_retrieval_3-shot
+  bleu: min=0.5459, max=0.7754
+  em: min=0.2710, max=0.5370
+  codebleu: min=71.4658, max=81.3148
+
+Task: CodeLlama-13b_Cs2Java_naive_3-shot
+  bleu: min=0.6258, max=0.7010
+  em: min=0.3300, max=0.3540
+  codebleu: min=71.7763, max=75.8923
+
+Task: CodeLlama-13b_Java2Cs_zero_0-shot
+  bleu: min=0.5106, max=0.5616
+  em: min=0.0680, max=0.0860
+  codebleu: min=52.8074, max=55.8861
+
+Task: CodeLlama-13b_Java2Cs_cot_3-shot
+  bleu: min=0.6234, max=0.6905
+  em: min=0.2430, max=0.2930
+  codebleu: min=70.3721, max=73.6584
+
+Task: CodeLlama-7b_Java2Cs_naive_3-shot
+  bleu: min=0.4173, max=0.6232
+  em: min=0.0910, max=0.2300
+  codebleu: min=61.6731, max=68.5637
+
+Task: CodeLlama-7b_Java2Cs_cot_3-shot
+  bleu: min=0.5456, max=0.6487
+  em: min=0.1730, max=0.2090
+  codebleu: min=65.9277, max=70.6206
+
+Task: CodeLlama-13b_Java2Cs_cot_1-shot
+  bleu: min=0.6365, max=0.6905
+  em: min=0.2870, max=0.3060
+  codebleu: min=71.4014, max=73.1437
+
+Task: CodeLlama-13b_Cs2Java_cot_1-shot
+  bleu: min=0.5986, max=0.7004
+  em: min=0.3620, max=0.4070
+  codebleu: min=72.3360, max=76.1777
+
+Task: CodeLlama-13b_Cs2Java_cot_3-shot
+  bleu: min=0.6166, max=0.6942
+  em: min=0.3570, max=0.3960
+  codebleu: min=73.5319, max=76.7137
+
+Task: CodeLlama-13b_Java2Cs_retrieval_3-shot
+  bleu: min=0.7698, max=0.8119
+  em: min=0.4300, max=0.4490
+  codebleu: min=80.9248, max=82.8015
+

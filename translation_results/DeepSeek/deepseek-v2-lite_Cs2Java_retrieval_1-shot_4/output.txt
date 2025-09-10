@@ -4,3 +4,8 @@ You are a code translator trained to translate source code between Java and C#.
 BLEU_Smooth:{'bleu': 0.6412653924018497, 'precisions': [0.7449657590086418, 0.6655500998668442, 0.6080231174570797, 0.5609369572768322], 'brevity_penalty': 1.0, 'length_ratio': 1.2083887493226935, 'translation_length': 49063, 'reference_length': 40602}
 EM: {'em_ratio': 0.253, 'matches': 253, 'total': 1000}
 CodeBleu: {'codebleu': 72.74544132714564, 'ngram_match_score': 0.6412653924018497, 'weighted_ngram_match_score': 0.7826758382290148, 'syntax_match_score': 0.6855507303592578, 'dataflow_match_score': 0.8003256920957034}
+
+BLEU_Smooth: {'bleu': 0.6479648976343005, 'precisions': [0.7526908275194995, 0.6723540165157278, 0.6143890450945462, 0.5669540040797526], 'brevity_penalty': 1.0, 'length_ratio': 1.196739076892764, 'translation_length': 48590, 'reference_length': 40602}
+EM: {'em_ratio': 0.263, 'matches': 263, 'total': 1000}
+CodeBleu: {'codebleu': 73.10965453996133, 'ngram_match_score': 0.6479648976343005, 'weighted_ngram_match_score': 0.7833058616289189, 'syntax_match_score': 0.6905349388077379, 'dataflow_match_score': 0.8025804835274959}
+

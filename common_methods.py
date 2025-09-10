@@ -328,8 +328,7 @@ def clean_code_blocks(text: str) -> str:
 
 def check_prompt(number, language, task):
     prompts_file = f"Intermediate_output/{task}/{number}_{language}.jsonl"
-    references_file = f"Intermediate_output/{task}/{number}_{language}_references.jsonl"
-    return os.path.exists(prompts_file) and os.path.exists(references_file)
+    return os.path.exists(prompts_file)
 
 def save_prompt(number, language, task, prompts):
     # Save prompts and references to disk
@@ -343,7 +342,4 @@ def extract_prompt(number, language, task, prompt=None):
     with open(f"Intermediate_output/{task}/{number}_{language}.jsonl", "r", encoding="utf-8") as f:
         prompts = json.load(f)
 
-    with open(f"Intermediate_output/{task}/{number}_{language}_references.jsonl", "r", encoding="utf-8") as f:
-        references = json.load(f)
-
-    return prompts, references
+    return prompts

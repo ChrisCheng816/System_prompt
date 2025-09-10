@@ -1,0 +1,6 @@
+codellama/CodeLlama-7b-Instruct-hf Direction:Cs2Java cot 1-shot counter=0 Time: 0:03:31:
+You are a code translator trained to translate source code between Java and C#.
+
+BLEU_Smooth:{'bleu': 0.24365363416388208, 'precisions': [0.28698006983870583, 0.25456736716923, 0.23011320208221028, 0.2096503394408351], 'brevity_penalty': 1.0, 'length_ratio': 3.110437909462588, 'translation_length': 126290, 'reference_length': 40602}
+EM: {'em_ratio': 0.102, 'matches': 102, 'total': 1000}
+CodeBleu: {'codebleu': 55.18484247291968, 'ngram_match_score': 0.24365363416388214, 'weighted_ngram_match_score': 0.7779022804640545, 'syntax_match_score': 0.5600078957757599, 'dataflow_match_score': 0.6258298885130903}

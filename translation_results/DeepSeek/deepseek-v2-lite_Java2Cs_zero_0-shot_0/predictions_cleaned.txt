@@ -1,0 +1,1000 @@
+public void Serialize(LittleEndianOutput out) { out.WriteShort(field_1_vcenter); }
+public void addAll(BlockList<T> src) {if (src.size == 0)return;int srcDirIdx = 0;for (; srcDirIdx < src.tailDirIdx; srcDirIdx++)addAll(src.directory[srcDirIdx], 0, BLOCK_SIZE);if (src.tailBlkIdx != 0)addAll(src.tailBlock, 0, src.tailBlkIdx);}
+public void writeByte(byte b) {if (upto == blockSize) {if (currentBlock != null) {addBlock(currentBlock);}currentBlock = new byte[blockSize];upto = 0;}currentBlock[upto++] = b;}
+public ObjectId GetObjectId() { return objectId; }
+public DeleteDomainEntryResult DeleteDomainEntry(DeleteDomainEntryRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteDomainEntry(request);}
+public long ramBytesUsed() { return ((termOffsets != null) ? termOffsets.ramBytesUsed() : 0) + ((termsDictOffsets != null) ? termsDictOffsets.ramBytesUsed() : 0); }
+public final string GetFullMessage() {byte[] raw = buffer;int msgB = RawParseUtils.TagMessage(raw, 0);if (msgB < 0) {return "";}return RawParseUtils.Decode(guessEncoding(), raw, msgB, raw.Length);}
+public POIFSFileSystem() { this(true); _header.setBATCount(1); _header.setBATArray(new int[] { 1 }); BATBlock bb = BATBlock.createEmptyBATBlock(bigBlockSize, false); bb.setOurBlockIndex(1); _bat_blocks.add(bb); setNextBlock(0, POIFSConstants.END_OF_CHAIN); setNextBlock(1, POIFSConstants.FAT_SECTOR_BLOCK); _property_table.setStartBlock(0); }
+public void Init(int address) {slice = pool.buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];Debug.Assert(slice != null);upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;Debug.Assert(upto < slice.Length);}
+public SubmoduleAddCommand SetPath(string path) { this.path = path; return this; }
+public ListIngestionsResult ListIngestions(ListIngestionsRequest request) {request = BeforeClientExecution(request);return ExecuteListIngestions(request);}
+public QueryParserTokenManager(CharStream stream, int lexState) : this(stream) { SwitchTo(lexState); }
+public GetShardIteratorResult GetShardIterator(GetShardIteratorRequest request) { request = BeforeClientExecution(request); return ExecuteGetShardIterator(request); }
+public ModifyStrategyRequest() : base("aegis", "2016-11-11", "ModifyStrategy", "vipaegis") {Method = MethodType.POST;}
+public bool Ready(){lock (lock){if (in == null){throw new IOException("InputStreamReader is closed");}try{return bytes.HasRemaining() || in.Available() > 0;}catch (IOException e){return false;}}}
+public EscherOptRecord GetOptRecord() { return _optRecord; }
+public int Read(byte[] buffer, int offset, int length) {if (buffer == null) {throw new ArgumentNullException("buffer == null");}System.Array.ConstrainedCopy(this.buffer, pos, buffer, offset, length);if (length == 0) {return 0;}int copylen = count - pos < length ? count - pos : length;for (int i = 0; i < copylen; i++) {buffer[offset + i] = (byte) this.buffer.Chars[pos + i];}pos += copylen;return copylen;}
+public OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp) { this.sentenceOp = sentenceOp; }
+public void print(String str) { write(str != null ? str : str == null ? "" : str.ToString()); }
+public NotImplementedFunctionException(string functionName, NotImplementedException cause) : base(functionName, cause) { this.functionName = functionName; }
+### Checklist:1. Identify the method being overridden or replicated in C#.2. Translate the Java syntax to match C# syntax.3. Ensure the method's return type and parameter types are correctly mapped.4. Validate the translation by comparing the original and translated code's behavior and semantics.### Java to C# Translation:1. Identify the method being overridden or replicated in C#: In this case, it seems `next()` method is being replicated in C#.2. Translate the Java syntax to match C# syntax: Java uses `super.nextEntry().getValue()` while C# uses `base.NextEntry().Value`.3. Ensure the method's return type and parameter types are correctly mapped: The method in Java returns `V` (a type) and does not take any parameters, which matches the C# method signature.4. Validate the translation by comparing the original and translated code's behavior and semantics: The logic and intent are preserved in the translation, as `next()` method in Java retrieves the next entry's value, which is replicated in C#.
+public final void readBytes(byte[] b, int offset, int len, bool useBuffer){int available = bufferLength - bufferPosition;if (len <= available){if (len > 0) System.arraycopy(buffer, bufferPosition, b, offset, len);bufferPosition += len;}else{if (available > 0){System.arraycopy(buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len < bufferSize){refill();if (bufferLength < len){System.arraycopy(buffer, 0, b, offset, bufferLength);throw new EndOfStreamException("read past EOF: " + this);}else{System.arraycopy(buffer, 0, b, offset, len);bufferPosition = len;}}else{long after = bufferStart + bufferPosition + len;if (after > length()) throw new EndOfStreamException("read past EOF: " + this);readInternal(b, offset, len);bufferStart = after;bufferPosition = 0;bufferLength = 0;}}}
+public TagQueueResult TagQueue(TagQueueRequest request) {request = BeforeClientExecution(request);return ExecuteTagQueue(request);}
+public void remove(){throw new System.NotSupportedException();}
+public CacheSubnetGroup ModifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request) {request = BeforeClientExecution(request);return ExecuteModifyCacheSubnetGroup(request);}
+public void setParams(string params) { base.setParams(params); language = country = variant = ""; string[] tokens = params.Split(','); if (tokens.Length > 0) language = tokens[0]; if (tokens.Length > 1) country = tokens[1]; if (tokens.Length > 2) variant = tokens[2]; }
+public DeleteDocumentationVersionResult DeleteDocumentationVersion(DeleteDocumentationVersionRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteDocumentationVersion(request);}
+public bool Equals(Object obj) {if (!(obj is FacetLabel)) {return false;}FacetLabel other = (FacetLabel) obj;if (length != other.length) {return false; }for (int i = length - 1; i >= 0; i--) {if (!components[i].Equals(other.components[i])) {return false;}}return true;}
+public GetInstanceAccessDetailsResult GetInstanceAccessDetails(GetInstanceAccessDetailsRequest request) {request = BeforeClientExecution(request);return ExecuteGetInstanceAccessDetails(request);}
+public HSSFPolygon CreatePolygon(HSSFChildAnchor anchor) {HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.Parent = this;shape.Anchor = anchor;shapes.Add(shape);OnCreate(shape);return shape;}
+public string GetSheetName(int sheetIndex) { return GetBoundSheetRec(sheetIndex).GetSheetname(); }
+public GetDashboardResult GetDashboard(GetDashboardRequest request) {request = BeforeClientExecution(request);return ExecuteGetDashboard(request);}
+public AssociateSigninDelegateGroupsWithAccountResult AssociateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateSigninDelegateGroupsWithAccount(request); }
+public void addMultipleBlanks(MulBlankRecord mbr) {for (int j = 0; j < mbr.getNumColumns(); j++) {BlankRecord br = new BlankRecord();br.setColumn((short)(j + mbr.getFirstColumn()));br.setRow(mbr.getRow());br.setXFIndex(mbr.getXFAt(j));insertCell(br);}}
+public static class Program{public static string Quote(string str){StringBuilder sb = new StringBuilder();sb.Append("\\Q");int apos = 0;int k;while ((k = str.IndexOf("\\E", apos)) >= 0){sb.Append(str.Substring(apos, k + 2)).Append("\\\\E\\Q");apos = k + 2;}return sb.Append(str.Substring(apos)).Append("\\E").ToString();}}
+public class ByteBuffer{public ByteBuffer PutInt(int value){throw new InvalidOperationException("This buffer is read-only.");}}
+public ArrayPtg(Object[][] values2d) {int nColumns = values2d[0].Length;int nRows = values2d.Length;_nColumns = (short)nColumns;_nRows = (short)nRows;Object[] vv = new Object[_nColumns * _nRows];for (int r = 0; r < nRows; r++) {Object[] rowData = values2d[r];for (int c = 0; c < nColumns; c++) {vv[GetValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}
+public GetIceServerConfigResult GetIceServerConfig(GetIceServerConfigRequest request) {request = BeforeClientExecution(request);return ExecuteGetIceServerConfig(request);}
+public string ToString() { return GetType().Name + " [" + GetValueAsString() + "]"; }
+public string ToString(string field) { return "ToChildBlockJoinQuery (" + parentQuery.ToString() + ")"; }
+public void incRef() {refCount.IncrementAndGet();}
+public UpdateConfigurationSetSendingEnabledResult updateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request) {request = beforeClientExecution(request);return executeUpdateConfigurationSetSendingEnabled(request);}
+public int getNextXBATChainOffset() {return getXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE;}
+public void multiplyByPowerOfTen(int pow10) {TenPower tp = TenPower.getInstance(Math.Abs(pow10));if (pow10 < 0) {mulShift(tp._divisor, tp._divisorShift);} else {mulShift(tp._multiplicand, tp._multiplierShift);}}
+public class MyClass{public string ToString(){StringBuilder b = new StringBuilder();int l = this.Length();b.Append(Path.DirectorySeparatorChar);for (int i = 0; i < l; i++){b.Append(this.GetComponent(i));if (i < l - 1){b.Append(Path.DirectorySeparatorChar);}}return b.ToString();}private int Length(){// Assume this method is implementedthrow new NotImplementedException();}private string GetComponent(int i){// Assume this method is implementedthrow new NotImplementedException();}}
+public InstanceProfileCredentialsProvider WithFetcher(ECSMetadataServiceCredentialsFetcher fetcher) { this.fetcher = fetcher; this.fetcher.SetRoleName(roleName); return this; }
+public void SetProgressMonitor(ProgressMonitor pm) { progressMonitor = pm; }
+public void reset() {if (!first()) {ptr = 0;if (!eof())parseEntry();}}
+public E Previous() {if (iterator.PreviousIndex() >= start) {return iterator.Previous();}throw new System.InvalidOperationException("No such element");}
+public string GetNewPrefix() { return this.newPrefix; }
+public int IndexOfValue(int value) {for (int i = 0; i < mSize; i++)if (mValues[i] == value)return i;return -1;}
+public List<CharsRef> uniqueStems(char[] word, int length) {List<CharsRef> stems = stem(word, length);if (stems.Count < 2) {return stems;}CharArraySet terms = new CharArraySet(8, dictionary.ignoreCase);List<CharsRef> deduped = new ArrayList<CharsRef>();foreach (CharsRef s in stems) {if (!terms.contains(s)) {deduped.Add(s);terms.Add(s);}}return deduped;}
+public GetGatewayResponsesResult GetGatewayResponses(GetGatewayResponsesRequest request) {request = BeforeClientExecution(request);return ExecuteGetGatewayResponses(request);}
+public void setPosition(long pos) {currentBlockIndex = (int) (pos >> blockBits);currentBlock = blocks[currentBlockIndex];currentBlockUpto = (int) (pos & blockMask);}
+public long skip(long n) {int s = (int) Math.Min(available(), Math.Max(0, n));ptr += s;return s;}
+public BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig) { setBootstrapActionConfig(bootstrapActionConfig); }
+public void Serialize(LittleEndianOutput out) {out.WriteShort(field_1_row);out.WriteShort(field_2_col);out.WriteShort(field_3_flags);out.WriteShort(field_4_shapeid);out.WriteShort(field_6_author.Length);out.WriteByte(field_5_hasMultibyte ? (byte)0x01 : (byte)0x00);if (field_5_hasMultibyte) {StringUtil.PutUnicodeLE(field_6_author, out);} else {StringUtil.PutCompressedUnicode(field_6_author, out);}if (field_7_padding != null) {out.WriteByte((byte)field_7_padding.IntValue());}}
+public int LastIndexOf(string string) { return LastIndexOf(string, count); }
+public bool add(E object) {return addLastImpl(object);}
+public void unsetSection(string section, string subsection) {ConfigSnapshot src, res;do {src = state.get();res = unsetSection(src, section, subsection);} while (!state.compareAndSet(src, res));}
+public final string GetTagName() { return tagName; }
+public void addSubRecord(int index, SubRecord element) {subrecords.Insert(index, element);}
+public bool Remove(object o) {lock (mutex) {return delegate().Remove(o);}}
+public DoubleMetaphoneFilter Create(TokenStream input) { return new DoubleMetaphoneFilter(input, maxCodeLength, inject); }
+public long Length() { return InCoreLength(); }
+public void setValue(bool newValue) { value = newValue; }
+public Pair(ContentSource oldSource, ContentSource newSource) { this.oldSource = oldSource; this.newSource = newSource; }
+public int Get(int i){if (count <= i)throw new IndexOutOfRangeException(i);return entries[i];}
+public CreateRepoRequest() : base("cr", "2016-06-07", "CreateRepo", "cr") {setUriPattern("/repos");setMethod(MethodType.PUT);}
+public bool IsDeltaBaseAsOffset() { return deltaBaseAsOffset; }
+public void remove() {if (expectedModCount == list.modCount) {if (lastLink != null) {Link<ET> next = lastLink.next;Link<ET> previous = lastLink.previous;next.previous = previous;previous.next = next;if (lastLink == link) {pos--;}link = previous;lastLink = null;expectedModCount++;list.size--;list.modCount++;} else {throw new System.InvalidOperationException();}} else {throw new System.InvalidOperationException();}}
+public MergeShardsResult MergeShards(MergeShardsRequest request) {request = BeforeClientExecution(request);return ExecuteMergeShards(request);}
+public AllocateHostedConnectionResult AllocateHostedConnection(AllocateHostedConnectionRequest request) {request = BeforeClientExecution(request);return ExecuteAllocateHostedConnection(request);}
+public int GetBeginIndex() { return start; }
+public static WeightedTerm[] GetTerms(Query query) { return GetTerms(query, false); }
+public MemoryStream Compact() { throw new InvalidOperationException(); }
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = byte0 >> 2;long byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | (byte1 >> 4);long byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | (byte2 >> 6);values[valuesOffset++] = byte2 & 63;}}
+public string GetHumanishName(){string s = GetPath();if (s == "/" || s == "")s = GetHost();if (s == null)throw new ArgumentException();string[] elements;if (scheme == "file" || LOCAL_FILE.IsMatch(s))elements = s.Split(new[] { Path.DirectorySeparatorChar, '/' }, StringSplitOptions.RemoveEmptyEntries);elseelements = s.Split(new[] { "/" }, StringSplitOptions.RemoveEmptyEntries);if (elements.Length == 0)throw new ArgumentException();string result = elements[elements.Length - 1];if (Constants.DOT_GIT.Equals(result))result = elements[elements.Length - 2];else if (result.EndsWith(Constants.DOT_GIT_EXT))result = result.Substring(0, result.Length - Constants.DOT_GIT_EXT.Length);return result;}
+public DescribeNotebookInstanceLifecycleConfigResult describeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request) {request = beforeClientExecution(request);return executeDescribeNotebookInstanceLifecycleConfig(request);}
+public string GetAccessKeySecret() {return this.accessKeySecret;}
+### Checklist1. Review the Java method signature and identify the method names, parameters, and return type.2. Translate the method names, parameters, and return type to their C# equivalents.3. Ensure the method body is translated correctly, considering any language-specific syntax and constructs.4. Validate the C# code for semantic and behavioral equivalence with the original Java code.
+public DescribeVoicesResult DescribeVoices(DescribeVoicesRequest request) {request = beforeClientExecution(request);return executeDescribeVoices(request);}
+public ListMonitoringExecutionsResult ListMonitoringExecutions(ListMonitoringExecutionsRequest request) { request = BeforeClientExecution(request); return ExecuteListMonitoringExecutions(request); }
+public DescribeJobRequest(string vaultName, string jobId) { SetVaultName(vaultName); SetJobId(jobId); }
+public EscherRecord GetEscherRecord(int index){return escherRecords.get(index);}
+public GetApisResult GetApis(GetApisRequest request) {request = BeforeClientExecution(request);return ExecuteGetApis(request);}
+public DeleteSmsChannelResult deleteSmsChannel(DeleteSmsChannelRequest request) {request = beforeClientExecution(request);return executeDeleteSmsChannel(request);}
+public TrackingRefUpdate GetTrackingRefUpdate() { return trackingRefUpdate; }
+public void print(bool b) { print(Convert.ToString(b)); }
+public QueryNode getChild() { return getChildren().get(0); }
+public NotIgnoredFilter(int workdirTreeIndex) { this.index = workdirTreeIndex; }
+public AreaRecord(RecordInputStream in) {field_1_formatFlags = in.readShort();}
+public GetThumbnailRequest() : base("CloudPhoto", "2017-07-11", "GetThumbnail", "cloudphoto"){Protocol = ProtocolType.HTTPS;}
+public DescribeTransitGatewayVpcAttachmentsResult DescribeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeTransitGatewayVpcAttachments(request); }
+public PutVoiceConnectorStreamingConfigurationResult putVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request) {request = beforeClientExecution(request);return executePutVoiceConnectorStreamingConfiguration(request);}
+public OrdRange GetOrdRange(string dim) {return prefixToOrdRange.Get(dim);}
+public string ToString() {string symbol = "";if (startIndex >= 0 && startIndex < getInputStream().size()) {symbol = getInputStream().getText(Interval.of(startIndex, startIndex));symbol = Utils.escapeWhitespace(symbol, false);}return string.Format(CultureInfo.InvariantCulture, "{0}('{1}')", typeof(LexerNoViableAltException).Name, symbol);}
+public E Peek() { return PeekFirstImpl(); }
+public CreateWorkspacesResult CreateWorkspaces(CreateWorkspacesRequest request) {request = BeforeClientExecution(request);return ExecuteCreateWorkspaces(request);}
+public NumberFormatIndexRecord clone() {return copy();}
+public DescribeRepositoriesResult DescribeRepositories(DescribeRepositoriesRequest request) {request = beforeClientExecution(request);return executeDescribeRepositories(request);}
+public SparseIntArray(int initialCapacity) { initialCapacity = ArrayUtils.idealIntArraySize(initialCapacity); mKeys = new int[initialCapacity]; mValues = new int[initialCapacity]; mSize = 0; }
+public HyphenatedWordsFilter Create(TokenStream input) { return new HyphenatedWordsFilter(input); }
+public CreateDistributionWithTagsResult CreateDistributionWithTags(CreateDistributionWithTagsRequest request) {request = BeforeClientExecution(request);return ExecuteCreateDistributionWithTags(request);}
+public RandomAccessFile(string fileName, string mode) : this(new File(fileName), mode) { }
+public DeleteWorkspaceImageResult DeleteWorkspaceImage(DeleteWorkspaceImageRequest request) { request = beforeClientExecution(request); return executeDeleteWorkspaceImage(request); }
+public static string ToHex(long value) {StringBuilder sb = new StringBuilder(16);WriteHex(sb, value, 16, "");return sb.ToString();}
+public UpdateDistributionResult UpdateDistribution(UpdateDistributionRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateDistribution(request);}
+public HSSFColor getColor(short index){if (index == HSSFColorPredefined.AUTOMATIC.getIndex()){return HSSFColorPredefined.AUTOMATIC.getColor();}byte[] b = _palette.getColor(index);return (b == null) ? null : new CustomColor(index, b);}
+public ValueEval Evaluate(ValueEval[] operands, int srcRow, int srcCol) { throw new NotImplementedException(_functionName); }
+public void Serialize(LittleEndianOutput out) {out.WriteShort((short)Field_1_Number_Crn_Records);out.WriteShort((short)Field_2_Sheet_Table_Index);}
+public DescribeDBEngineVersionsResult DescribeDBEngineVersions() { return DescribeDBEngineVersions(new DescribeDBEngineVersionsRequest()); }
+public FormatRun(short character, short fontIndex) { this._character = character; this._fontIndex = fontIndex; }
+public static byte[] ToBigEndianUtf16Bytes(char[] chars, int offset, int length) {byte[] result = new byte[length * 2];int end = offset + length;int resultIndex = 0;for (int i = offset; i < end; ++i) {char ch = chars[i];result[resultIndex++] = (byte) (ch >> 8);result[resultIndex++] = (byte) ch;}return result;}
+public UploadArchiveResult UploadArchive(UploadArchiveRequest request) {request = BeforeClientExecution(request);return ExecuteUploadArchive(request);}
+public List<Token> GetHiddenTokensToLeft(int tokenIndex) {return GetHiddenTokensToLeft(tokenIndex, -1);}
+public bool Equals(Object obj) {if (this == obj) return true;if (!base.Equals(obj)) return false;if (this.GetType() != obj.GetType()) return false;AutomatonQuery other = (AutomatonQuery)obj;if (!this.compiled.Equals(other.compiled)) return false;if (this.term == null) {if (other.term != null) return false;} else if (!this.term.Equals(other.term)) return false;return true;}
+public SpanQuery MakeSpanClause() {SpanQuery[] spanQueries = new SpanQuery[Size()];var sqi = WeightBySpanQuery.Keys.GetEnumerator();int i = 0;while (sqi.MoveNext()) {SpanQuery sq = sqi.Current;float boost = WeightBySpanQuery[sq];if (boost != 1f) {sq = new SpanBoostQuery(sq, boost);}spanQueries[i++] = sq;}if (spanQueries.Length == 1)return spanQueries[0];elsereturn new SpanOrQuery(spanQueries);}
+public StashCreateCommand StashCreate() {return new StashCreateCommand(repo);}
+public FieldInfo fieldInfo(string fieldName) { return byName.get(fieldName); }
+public DescribeEventSourceResult DescribeEventSource(DescribeEventSourceRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeEventSource(request); }
+public GetDocumentAnalysisResult GetDocumentAnalysis(GetDocumentAnalysisRequest request) {request = BeforeClientExecution(request);return ExecuteGetDocumentAnalysis(request);}
+public CancelUpdateStackResult CancelUpdateStack(CancelUpdateStackRequest request) {request = BeforeClientExecution(request);return ExecuteCancelUpdateStack(request);}
+public ModifyLoadBalancerAttributesResult modifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest request) {request = beforeClientExecution(request);return executeModifyLoadBalancerAttributes(request);}
+public SetInstanceProtectionResult SetInstanceProtection(SetInstanceProtectionRequest request) { request = BeforeClientExecution(request); return ExecuteSetInstanceProtection(request); }
+public ModifyDBProxyResult ModifyDBProxy(ModifyDBProxyRequest request) {request = beforeClientExecution(request);return executeModifyDBProxy(request);}
+public void add(char[] output, int offset, int len, int endOffset, int posLength){if (count == outputs.Length){outputs = ArrayUtil.grow(outputs, count + 1);}if (count == endOffsets.Length){int[] next = new int[ArrayUtil.oversize(1 + count, Integer.BYTES)];System.arraycopy(endOffsets, 0, next, 0, count);endOffsets = next;}if (count == posLengths.Length){int[] next = new int[ArrayUtil.oversize(1 + count, Integer.BYTES)];System.arraycopy(posLengths, 0, next, 0, count);posLengths = next;}if (outputs[count] == null){outputs[count] = new CharsRefBuilder();}outputs[count].copyChars(output, offset, len);endOffsets[count] = endOffset;posLengths[count] = posLength;count++;}
+public FetchLibrariesRequest() : base("CloudPhoto", "2017-07-11", "FetchLibraries", "cloudphoto") {Protocol = ProtocolType.HTTPS;}
+public bool exists() { return fs.Exists(objects); }
+public FilterOutputStream(OutputStream out) { this.out = out; }
+public ScaleClusterRequest() : base("CS", "2015-12-15", "ScaleCluster", "csk") {this.UriPattern = "/clusters/[ClusterId]";this.Method = MethodType.PUT;}
+public DataValidationConstraint CreateTimeConstraint(int operatorType, string formula1, string formula2) {return DVConstraint.CreateTimeConstraint(operatorType, formula1, formula2);}
+public ListObjectParentPathsResult ListObjectParentPaths(ListObjectParentPathsRequest request) {request = BeforeClientExecution(request);return ExecuteListObjectParentPaths(request);}
+public DescribeCacheSubnetGroupsResult DescribeCacheSubnetGroups(DescribeCacheSubnetGroupsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeCacheSubnetGroups(request);}
+public void setSharedFormula(bool flag) { field_5_options = sharedFormula.setShortBoolean(field_5_options, flag); }
+public bool isReuseObjects() { return reuseObjects; }
+public ErrorNode addErrorNode(Token badToken) { ErrorNodeImpl t = new ErrorNodeImpl(badToken); addAnyChild(t); t.setParent(this); return t; }
+public LatvianStemFilterFactory(Dictionary<string, string> args) : base(args){if (!args.Count.Equals(0)){throw new ArgumentException("Unknown parameters: " + args);}}
+public EventSubscription RemoveSourceIdentifierFromSubscription(RemoveSourceIdentifierFromSubscriptionRequest request) { request = BeforeClientExecution(request); return ExecuteRemoveSourceIdentifierFromSubscription(request); }
+public static TokenFilterFactory ForName(string name, Dictionary<string, string> args) { return loader.NewInstance(name, args); }
+public AddAlbumPhotosRequest() : base("CloudPhoto", "2017-07-11", "AddAlbumPhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}
+public GetThreatIntelSetResult getThreatIntelSet(GetThreatIntelSetRequest request) {request = beforeClientExecution(request);return executeGetThreatIntelSet(request);}
+public RevFilter Clone() { return new Binary((a as RevFilter).Clone(), (b as RevFilter).Clone()); }
+public bool equals( Object o ) { return o is ArmenianStemmer; }
+public final bool hasArray() { return ProtectedHasArray(); }
+public UpdateContributorInsightsResult UpdateContributorInsights(UpdateContributorInsightsRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateContributorInsights(request);}
+public void unwriteProtectWorkbook(){records.Remove(fileShare);records.Remove(writeProtect);fileShare = null;writeProtect = null;}
+public SolrSynonymParser(bool dedup, bool expand, Analyzer analyzer) : base(dedup, analyzer){this.expand = expand;}
+public RequestSpotInstancesResult RequestSpotInstances(RequestSpotInstancesRequest request) {request = BeforeClientExecution(request);return ExecuteRequestSpotInstances(request);}
+public byte[] getObjectData() { return findObjectRecord().getObjectData(); }
+public GetContactAttributesResult getContactAttributes(GetContactAttributesRequest request) { request = beforeClientExecution(request); return executeGetContactAttributes(request); }
+public string ToString() {return GetKey() + ": " + GetValue();}
+public ListTextTranslationJobsResult ListTextTranslationJobs(ListTextTranslationJobsRequest request) {request = BeforeClientExecution(request);return ExecuteListTextTranslationJobs(request);}
+public GetContactMethodsResult getContactMethods(GetContactMethodsRequest request) {request = beforeClientExecution(request);return executeGetContactMethods(request);}
+public static short LookupIndexByName(string name) {FunctionMetadata fd = GetInstance().GetFunctionByNameInternal(name);if (fd == null) {fd = GetInstanceCetab().GetFunctionByNameInternal(name);if (fd == null) {return -1;}}return (short)fd.GetIndex();}
+public DescribeAnomalyDetectorsResult DescribeAnomalyDetectors(DescribeAnomalyDetectorsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeAnomalyDetectors(request); }
+public static string InsertId(string message, ObjectId changeId) { return InsertId(message, changeId, false); }
+public long getObjectSize(AnyObjectId objectId, int typeHint){long sz = db.getObjectSize(this, objectId);if (sz < 0){if (typeHint == OBJ_ANY)throw new MissingObjectException(objectId.copy(), JGitText.get().unknownObjectType2);throw new MissingObjectException(objectId.copy(), typeHint);}return sz;}
+public ImportInstallationMediaResult ImportInstallationMedia(ImportInstallationMediaRequest request){request = BeforeClientExecution(request);return ExecuteImportInstallationMedia(request);}
+public PutLifecycleEventHookExecutionStatusResult PutLifecycleEventHookExecutionStatus(PutLifecycleEventHookExecutionStatusRequest request) {request = BeforeClientExecution(request);return ExecutePutLifecycleEventHookExecutionStatus(request);}
+public NumberPtg(LittleEndianInput in) : this(in.ReadDouble()) { }### Translation Validation:- The Java code constructs a `NumberPtg` object by reading a double from the input stream.- The C# code constructs a `NumberPtg` object by reading a double from the input stream using the `ReadDouble()` method.- Both codes achieve the same semantic outcome, ensuring the translation is accurate.
+public GetFieldLevelEncryptionConfigResult GetFieldLevelEncryptionConfig(GetFieldLevelEncryptionConfigRequest request) {request = BeforeClientExecution(request);return ExecuteGetFieldLevelEncryptionConfig(request);}
+public DescribeDetectorResult DescribeDetector(DescribeDetectorRequest request) {request = beforeClientExecution(request);return executeDescribeDetector(request);}
+public ReportInstanceStatusResult reportInstanceStatus(ReportInstanceStatusRequest request) {request = beforeClientExecution(request);return executeReportInstanceStatus(request);}
+public DeleteAlarmResult deleteAlarm(DeleteAlarmRequest request){request = beforeClientExecution(request);return executeDeleteAlarm(request);}
+public TokenStream Create(TokenStream input) { return new PortugueseStemFilter(input); }
+public FtCblsSubRecord() {Reserved = new byte[ENCODED_SIZE];}
+public bool Remove(object? @object){return c.Remove(@object);}
+public GetDedicatedIpResult GetDedicatedIp(GetDedicatedIpRequest request) {request = BeforeClientExecution(request);return ExecuteGetDedicatedIp(request);}
+public string ToString() { return precedence + " >= _p"; }
+public ListStreamProcessorsResult ListStreamProcessors(ListStreamProcessorsRequest request) { request = BeforeClientExecution(request); return ExecuteListStreamProcessors(request); }
+public DeleteLoadBalancerPolicyRequest(string loadBalancerName, string policyName) {SetLoadBalancerName(loadBalancerName);SetPolicyName(policyName);}
+public WindowProtectRecord(int options) { _options = options; }
+public UnbufferedCharStream(int bufferSize) {n = 0;data = new int[bufferSize];}
+public GetOperationsResult getOperations(GetOperationsRequest request) {request = beforeClientExecution(request);return executeGetOperations(request);}
+public void copyRawTo(byte[] b, int o) {NB.encodeInt32(b, o, w1);NB.encodeInt32(b, o + 4, w2);NB.encodeInt32(b, o + 8, w3);NB.encodeInt32(b, o + 12, w4);NB.encodeInt32(b, o + 16, w5);}
+public WindowOneRecord(RecordInputStream in) {field_1_h_hold            = in.ReadInt16();field_2_v_hold            = in.ReadInt16();field_3_width             = in.ReadInt16();field_4_height            = in.ReadInt16();field_5_options           = in.ReadInt16();field_6_active_sheet      = in.ReadInt16();field_7_first_visible_tab = in.ReadInt16();field_8_num_selected_tabs = in.ReadInt16();field_9_tab_width_ratio   = in.ReadInt16();}
+public StopWorkspacesResult stopWorkspaces(StopWorkspacesRequest request) {request = beforeClientExecution(request);return executeStopWorkspaces(request);}
+public void close() throws IOException {if (isOpen) {isOpen = false;try {dump();} finally {try {channel.truncate(fileLength);} finally {try {channel.close();} finally {fos.close();}}}}}
+public DescribeMatchmakingRuleSetsResult DescribeMatchmakingRuleSets(DescribeMatchmakingRuleSetsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeMatchmakingRuleSets(request);}
+public string GetPronunciation(int wordId, char[] surface, int off, int len) { return null; }
+public string GetPath() { return pathStr; }
+public static double Devsq(double[] v) {double r = double.NaN;if (v != null && v.Length >= 1) {double m = 0;double s = 0;int n = v.Length;for (int i = 0; i < n; i++) {s += v[i];}m = s / n;s = 0;for (int i = 0; i < n; i++) {s += (v[i] - m) * (v[i] - m);}r = (n == 1) ? 0 : s;}return r;}
+public DescribeResizeResult DescribeResize(DescribeResizeRequest request){request = BeforeClientExecution(request);return ExecuteDescribeResize(request);}
+public final bool hasPassedThroughNonGreedyDecision() { return passedThroughNonGreedyDecision; }
+public int end() { return end(0); }
+public void traverse(CellHandler handler) {int firstRow = range.getFirstRow();int lastRow = range.getLastRow();int firstColumn = range.getFirstColumn();int lastColumn = range.getLastColumn();final int width = lastColumn - firstColumn + 1;SimpleCellWalkContext ctx = new SimpleCellWalkContext();Row currentRow = null;Cell currentCell = null;for (ctx.rowNumber = firstRow; ctx.rowNumber <= lastRow; ++ctx.rowNumber) {currentRow = sheet.getRow(ctx.rowNumber);if (currentRow == null) {continue;}for (ctx.colNumber = firstColumn; ctx.colNumber <= lastColumn; ++ctx.colNumber) {currentCell = currentRow.getCell(ctx.colNumber);if (currentCell == null) {continue;}if (isEmpty(currentCell) && !traverseEmptyCells) {continue;}long rowSize = ArithmeticUtils.mulAndCheck((long)ArithmeticUtils.subAndCheck(ctx.rowNumber, firstRow), (long)width);ctx.ordinalNumber = ArithmeticUtils.addAndCheck(rowSize, (ctx.colNumber - firstColumn + 1));handler.onCell(currentCell, ctx);}}}
+public int GetReadIndex() { return pos; }
+if (this.boost == other.boost)return other.bytes.get().CompareTo(this.bytes.get());elsereturn this.boost.CompareTo(other.boost);
+public int Normalize(char s[], int len) {for (int i = 0; i < len; i++) {switch (s[i]) {case 'ف':case 'ی':s[i] = 'ی';break;case 'ک':s[i] = 'ك';break;case 'ہ':case 'ۀ':s[i] = 'ه';break;case 'ٔ':len = Delete(s, i, len);i--;break;default:break;}}return len;}
+public void Serialize(LittleEndianOutput out) { out.WriteShort(_options); }
+public DiagnosticErrorListener(bool exactOnly) { this.exactOnly = exactOnly; }
+public KeySchemaElement(string attributeName, KeyType keyType) { SetAttributeName(attributeName); SetKeyType(keyType.ToString()); }
+public GetAssignmentResult getAssignment(GetAssignmentRequest request) {request = beforeClientExecution(request);return executeGetAssignment(request);}
+public bool hasObject(AnyObjectId id) { return findOffset(id) != -1; }
+public GroupingSearch SetAllGroups(bool allGroups) {this.allGroups = allGroups;return this;}
+public void SetMultiValued(string dimName, bool v) {if (!fieldTypes.TryGetValue(dimName, out DimConfig ft)) {ft = new DimConfig();fieldTypes[dimName] = ft;}ft.MultiValued = v;}
+public int GetCellsVal() {var i = cells.Keys.GetEnumerator();int size = 0;while (i.MoveNext()) {char c = (char)i.Current;Cell e = at(c);if (e.cmd >= 0) {size++;}}return size;}
+public DeleteVoiceConnectorResult DeleteVoiceConnector(DeleteVoiceConnectorRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteVoiceConnector(request);}
+public DeleteLifecyclePolicyResult DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteLifecyclePolicy(request);}
+public void write(byte[] b) {int len = b.Length;checkPosition(len);System.Array.Copy(b, 0, _buf, _writeIndex, len);_writeIndex += len;}
+public RebaseResult GetRebaseResult() { return this.rebaseResult; }
+public static int GetNearestSetSize(int maxNumberOfValuesExpected, float desiredSaturation) {for (int i = 0; i < usableBitSetSizes.Length; i++) {int numSetBitsAtDesiredSaturation = (int) (usableBitSetSizes[i] * desiredSaturation);int estimatedNumUniqueValues = GetEstimatedNumberUniqueValuesAllowingForCollisions(usableBitSetSizes[i], numSetBitsAtDesiredSaturation);if (estimatedNumUniqueValues > maxNumberOfValuesExpected) {return usableBitSetSizes[i];}}return -1;}
+public DescribeDashboardResult DescribeDashboard(DescribeDashboardRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDashboard(request); }
+public CreateSegmentResult CreateSegment(CreateSegmentRequest request) { request = BeforeClientExecution(request); return ExecuteCreateSegment(request); }
+public string ToString() {StringBuilder buffer = new StringBuilder();buffer.AppendLine("[DBCELL]");buffer.Append("    .rowoffset = ").AppendLine(HexDump.intToHex(field_1_row_offset));for (int k = 0; k < field_2_cell_offsets.Length; k++) {buffer.Append("    .cell_").Append(k).Append(" = ").AppendLine(HexDump.shortToHex(field_2_cell_offsets[k]));}buffer.AppendLine("[/DBCELL]");return buffer.ToString();}
+public List<string> GetUndeletedList() { return undeletedList; }
+public string ToString() { return "[INTERFACEEND/]\n"; }
+public MergeScheduler Clone() { return this; }
+public PlainTextDictionary(TextReader reader) {in = new StreamReader(reader);}
+public StringBuilder Append(CharSequence csq) {if (csq == null) {AppendNull();} else {Append0(csq, 0, csq.Length);}return this;}
+public ListAssociatedStacksResult ListAssociatedStacks(ListAssociatedStacksRequest request) {request = BeforeClientExecution(request);return ExecuteListAssociatedStacks(request);}
+public static double Avedev(double[] v) {double r = 0;double m = 0;double s = 0;for (int i = 0, iSize = v.Length; i < iSize; i++) {s += v[i];}m = s / v.Length;s = 0;for (int i = 0, iSize = v.Length; i < iSize; i++) {s += Math.Abs(v[i] - m);}r = s / v.Length;return r;}
+public DescribeByoipCidrsResult describeByoipCidrs(DescribeByoipCidrsRequest request) { request = beforeClientExecution(request); return executeDescribeByoipCidrs(request); }
+public GetDiskResult GetDisk(GetDiskRequest request) { request = BeforeClientExecution(request); return ExecuteGetDisk(request); }
+public DBClusterParameterGroup CreateDBClusterParameterGroup(CreateDBClusterParameterGroupRequest request) {request = BeforeClientExecution(request);return ExecuteCreateDBClusterParameterGroup(request);}
+public static CharBuffer Wrap(char[] array, int start, int charCount){Array.ConstrainedCopy(array, start, array, 0, charCount);CharBuffer buf = new ReadWriteCharArrayBuffer(array.Length);buf.Position = 0;buf.Limit = charCount;return buf;}
+public SubmoduleStatusType GetType() {return type;}
+public DescribeGameServerGroupResult DescribeGameServerGroup(DescribeGameServerGroupRequest request) {request = beforeClientExecution(request);return executeDescribeGameServerGroup(request);}
+public Pattern pattern() { return pattern; }
+public V setValue(V object) { throw new NotImplementedException(); }
+public StringBuilder stem(string word) {string cmd = stemmer.getLastOnPath(word);if (cmd == null)return null;buffer.Length = 0;buffer.Append(word);Diff.apply(buffer, cmd);if (buffer.Length > 0)return buffer;elsereturn null;}
+public RenameFaceRequest() : base("CloudPhoto", "2017-07-11", "RenameFace", "cloudphoto") { Protocol = ProtocolType.HTTPS; }
+public char RequireChar(Dictionary<string, string> args, string name) { return Require(args, name)[0]; }
+public static string ToStringTree(Tree t) {return ToStringTree(t, (List<string>)null);}
+public string ToString() { return "<deleted/>"; }
+public GetRepoWebhookLogListRequest() : base("cr", "2016-06-07", "GetRepoWebhookLogList", "cr"){UriPattern = "/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]/logs";Method = MethodType.GET;}
+public GetJobUnlockCodeResult GetJobUnlockCode(GetJobUnlockCodeRequest request) {request = BeforeClientExecution(request);return ExecuteGetJobUnlockCode(request);}
+public RemoveTagsRequest(string resourceId) { this.ResourceId = resourceId; }
+public short GetGB2312Id(char ch) {try {byte[] buffer = Encoding.GetEncoding("GB2312").GetBytes(new char[] { ch });if (buffer.Length != 2) {return -1;}int b0 = (buffer[0] & 0xFF) - 161;int b1 = (buffer[1] & 0xFF) - 161;return (short)(b0 * 94 + b1);} catch (UnsupportedEncodingException e) {throw new RuntimeException(e);}}
+public BatchRefUpdate AddCommand(Collection<ReceiveCommand> cmd) {commands.AddRange(cmd);return this;}
+public short checkExternSheet(int sheetNumber){return (short)getOrCreateLinkTable().checkExternSheet(sheetNumber);}
+public override bool Equals(object obj) { return c.Equals(obj); }
+public BooleanQuery build(QueryNode queryNode){AnyQueryNode andNode = (AnyQueryNode)queryNode;BooleanQuery.Builder bQuery = new BooleanQuery.Builder();List<QueryNode> children = andNode.getChildren();if (children != null){foreach (QueryNode child in children){Object obj = child.getTag(QueryTreeBuilder.QUERY_TREE_BUILDER_TAGID);if (obj != null){Query query = (Query)obj;try{bQuery.Add(query, BooleanClause.Occur.SHOULD);}catch (TooManyClauses ex){throw new QueryNodeException(new MessageImpl(QueryParserMessages.EMPTY_MESSAGE), ex);}}}}bQuery.SetMinimumNumberShouldMatch(andNode.getMinimumMatchingElements());return bQuery.Build();}
+public DescribeStreamProcessorResult describeStreamProcessor(DescribeStreamProcessorRequest request){request = beforeClientExecution(request);return executeDescribeStreamProcessor(request);}
+public DescribeDashboardPermissionsResult DescribeDashboardPermissions(DescribeDashboardPermissionsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeDashboardPermissions(request); }
+public Ref peel(Ref ref) {try {return getRefDatabase().peel(ref);} catch (IOException e) {return ref;}}
+public long ramBytesUsed() { return RamUsageEstimator.alignObjectSize(RamUsageEstimator.NUM_BYTES_OBJECT_HEADER + 2 * Integer.BYTES + RamUsageEstimator.NUM_BYTES_OBJECT_REF) + RamUsageEstimator.sizeOf(blocks); }
+public GetDomainSuggestionsResult GetDomainSuggestions(GetDomainSuggestionsRequest request) {request = BeforeClientExecution(request);return ExecuteGetDomainSuggestions(request);}
+public DescribeStackEventsResult DescribeStackEvents(DescribeStackEventsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeStackEvents(request); }
+public void setRule(int idx, ConditionalFormattingRule cfRule){setRule(idx, (HSSFConditionalFormattingRule)cfRule);}
+public CreateResolverRuleResult CreateResolverRule(CreateResolverRuleRequest request) {request = BeforeClientExecution(request);return ExecuteCreateResolverRule(request);}
+public SeriesIndexRecord(RecordInputStream in) { this.Field_1_Index = in.ReadShort(); }
+public GetStylesRequest() : base("lubancloud", "2018-05-09", "GetStyles", "luban") { Method = MethodType.POST; }
+public void Serialize(LittleEndianOutput out) {out.WriteShort(Field_1_Gridset_Flag);}
+public bool Equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (GetType() != obj.GetType()) {return false;}Toffs other = (Toffs)obj;if (GetStartOffset() != other.GetStartOffset()) {return false;}if (GetEndOffset() != other.GetEndOffset()) {return false;}return true;}
+public CreateGatewayGroupResult CreateGatewayGroup(CreateGatewayGroupRequest request) {request = BeforeClientExecution(request);return ExecuteCreateGatewayGroup(request);}
+public CreateParticipantConnectionResult CreateParticipantConnection(CreateParticipantConnectionRequest request) { request = BeforeClientExecution(request); return ExecuteCreateParticipantConnection(request); }
+public static double irr(double[] income) {return irr(income, 0.1d);}
+public RegisterWorkspaceDirectoryResult registerWorkspaceDirectory(RegisterWorkspaceDirectoryRequest request) { request = beforeClientExecution(request); return executeRegisterWorkspaceDirectory(request); }
+public RevertCommand Include(AnyObjectId commit) { return Include(commit.Name, commit); }
+public ValueEval Evaluate(int srcRowIndex, int srcColumnIndex, ValueEval inumberVE) {ValueEval veText1;try {veText1 = OperandResolver.GetSingleValue(inumberVE, srcRowIndex, srcColumnIndex);} catch (EvaluationException e) {return e.GetErrorEval();}string iNumber = OperandResolver.CoerceValueToString(veText1);Match m = COMPLEX_NUMBER_PATTERN.Match(iNumber);bool result = m.Success;string imaginary = "";if (result) {string imaginaryGroup = m.Groups[5].Value;bool hasImaginaryPart = imaginaryGroup.Equals("i") || imaginaryGroup.Equals("j");if (imaginaryGroup.Length == 0) {return new StringEval("0");}if (hasImaginaryPart) {string sign = "";string imaginarySign = m.Groups[GROUP3_IMAGINARY_SIGN].Value;if (imaginarySign.Length != 0 && !(imaginarySign.Equals("+"))) {sign = imaginarySign;}string groupImaginaryNumber = m.Groups[GROUP4_IMAGINARY_INTEGER_OR_DOUBLE].Value;if (groupImaginaryNumber.Length != 0) {imaginary = sign + groupImaginaryNumber;} else {imaginary = sign + "1";}}} else {return ErrorEval.NUM_ERROR;}return new StringEval(imaginary);}
+public T? PollLast() {var entry = backingMap.PollLastEntry();return (entry == null) ? default(T) : entry.Key;}
+public int readUShort(){int ch1 = readUByte();int ch2 = readUByte();return (ch2 << 8) + (ch1 << 0);}
+public ModifySnapshotAttributeRequest(string snapshotId, SnapshotAttributeName attribute, OperationType operationType) {this.SetSnapshotId(snapshotId);this.SetAttribute(attribute.ToString());this.SetOperationType(operationType.ToString());}
+public ListBonusPaymentsResult ListBonusPayments(ListBonusPaymentsRequest request) {request = BeforeClientExecution(request);return ExecuteListBonusPayments(request);}
+public V get(CharSequence cs) {if (cs == null)throw new ArgumentNullException(nameof(cs));return default(V);}
+public TokenFilter create(TokenStream input) {CommonGramsFilter commonGrams = (CommonGramsFilter) base.create(input);return new CommonGramsQueryFilter(commonGrams);}
+public string GetPath() {return path;}
+public InitiateMultipartUploadResult InitiateMultipartUpload(InitiateMultipartUploadRequest request){request = BeforeClientExecution(request);return ExecuteInitiateMultipartUpload(request);}
+public StringBuilder Insert(int offset, int i) {Insert0(offset, i.ToString());return this;}
+public void decode(long[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long block = blocks[blocksOffset++];for (int shift = 62; shift >= 0; shift -= 2) {values[valuesOffset++] = (int)((block >> shift) & 3);}}}
+public TokenStream Create(TokenStream input) { return new ElisionFilter(input, articles); }
+public bool eat(Row in, int[] remap) {int sum = 0;foreach (var c in in.cells.Values) {sum += c.cnt;if (c.ref >= 0) {if (remap[c.ref] == 0) {c.ref = -1;}}}int frame = sum / 10;bool live = false;foreach (var c in in.cells.Values) {if (c.cnt < frame && c.cmd >= 0) {c.cnt = 0;c.cmd = -1;}if (c.cmd >= 0 || c.ref >= 0) {live |= true;}}return !live;}
+public Token getToken(int index) {Token t = jj_lookingAhead ? jj_scanpos : token;for (int i = 0; i < index; i++) {if (t.next != null) t = t.next;else t = t.next = token_source.getNextToken();}return t;}
+public string ToString() { StringBuilder sb = new StringBuilder(); sb.Append(GetClass().Name).Append(" [ARRAY]\n"); sb.Append(" range=").Append(GetRange()).Append("\n"); sb.Append(" options=").Append(HexDump.ShortToHex(_options)).Append("\n"); sb.Append(" notUsed=").Append(HexDump.IntToHex(_field3notUsed)).Append("\n"); sb.Append(" formula:").Append("\n"); Ptg[] ptgs = _formula.GetTokens(); for (int i = 0; i < ptgs.Length; i++) { Ptg ptg = ptgs[i]; sb.Append(ptg).Append(ptg.GetRVAType()).Append("\n"); } sb.Append("]"); return sb.ToString(); }
+public GetFolderResult GetFolder(GetFolderRequest request) {request = BeforeClientExecution(request);return ExecuteGetFolder(request);}
+public override void Add(int location, E object){throw new NotImplementedException();}
+public PositiveScoresOnlyCollector(Collector<T> in) : base(in) { }
+public CreateRepoBuildRuleRequest() : base("cr", "2016-06-07", "CreateRepoBuildRule", "cr") {UriPattern = "/repos/[RepoNamespace]/[RepoName]/rules";Method = MethodType.PUT;}
+public BaseRef(AreaEval ae) {_refEval = null;_areaEval = ae;_firstRowIndex = ae.getFirstRow();_firstColumnIndex = ae.getFirstColumn();_height = ae.getLastRow() - ae.getFirstRow() + 1;_width = ae.getLastColumn() - ae.getFirstColumn() + 1;}
+public DrawingManager2(EscherDggRecord dgg) { this.dgg = dgg; }
+public void Reset() { if (!First()) Reset(raw); }
+public final CharsetDecoder reset() {status = 0;implReset();return this;}
+public BufferedReader(Reader in, int size) : base(in) {if (size <= 0) {throw new ArgumentException("size <= 0");}this.in = in;buf = new char[size];}
+public DescribeCodeRepositoryResult DescribeCodeRepository(DescribeCodeRepositoryRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeCodeRepository(request);}
+public DBSubnetGroup CreateDBSubnetGroup(CreateDBSubnetGroupRequest request) { request = BeforeClientExecution(request); return ExecuteCreateDBSubnetGroup(request); }
+public RenameBranchCommand SetOldName(string oldName) { CheckCallable(); this.oldName = oldName; return this; }
+public DeleteBranchCommand SetForce(bool force) { CheckCallable(); this.force = force; return this; }
+public StopCompilationJobResult StopCompilationJob(StopCompilationJobRequest request) {request = BeforeClientExecution(request);return ExecuteStopCompilationJob(request);}
+public void IncrementSecondaryProgressBy(int diff) {SetSecondaryProgress(mSecondaryProgress + diff);}
+public int[] Clear() { return bytesStart = null; }
+public string GetRawPath() { return path; }
+public GetUserSourceAccountRequest() : base("cr", "2016-06-07", "GetUserSourceAccount", "cr") {UriPattern = "/users/sourceAccount"; Method = MethodType.GET;}
+public CreateExportJobResult CreateExportJob(CreateExportJobRequest request) {request = BeforeClientExecution(request);return ExecuteCreateExportJob(request);}
+public CreateDedicatedIpPoolResult CreateDedicatedIpPool(CreateDedicatedIpPoolRequest request) {request = beforeClientExecution(request);return executeCreateDedicatedIpPool(request);}
+public bool Equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (obj is HSSFCellStyle other) {if (_format == null) {if (other._format != null) {return false;}} else if (!_format.Equals(other._format)) {return false;}if (_index != other._index) {return false;}return true;}return false;}
+public ReleaseHostsResult ReleaseHosts(ReleaseHostsRequest request){request = BeforeClientExecution(request);return ExecuteReleaseHosts(request);}
+public bool Equals(object obj){if (this == obj){return true;}if (obj is ISet){ISet s = (ISet)obj;try{return Size == s.Size && ContainsAll(s);}catch (NullReferenceException){return false;}catch (InvalidCastException){return false;}}return false;}
+public void setRefLogMessage(string msg, bool appendStatus) {customRefLog = true;if (msg == null && !appendStatus) {disableRefLog();} else if (msg == null && appendStatus) {refLogMessage = "";refLogIncludeResult = true;} else {refLogMessage = msg;refLogIncludeResult = appendStatus;}}
+public StreamIDRecord(RecordInputStream in) {idstm = in.ReadShort();}
+public RecognizeCarRequest() : base("visionai-poc", "2020-04-08", "RecognizeCar") {SetMethod(MethodType.POST);}
+public final ByteOrder order() { return ByteOrder.NativeOrder(); }
+public int getAheadCount() { return aheadCount; }
+public bool isNewFragment() { return false; }
+public GetCloudFrontOriginAccessIdentityConfigResult GetCloudFrontOriginAccessIdentityConfig(GetCloudFrontOriginAccessIdentityConfigRequest request) { request = BeforeClientExecution(request); return ExecuteGetCloudFrontOriginAccessIdentityConfig(request); }
+public bool Matches(int symbol, int minVocabSymbol, int maxVocabSymbol) {return label == symbol;}
+public DeleteTransitGatewayResult DeleteTransitGateway(DeleteTransitGatewayRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteTransitGateway(request);}
+public static class ArrayExtensions{public static byte[] Grow(byte[] array, int minSize){if (minSize < 0){throw new ArgumentException("size must be positive (got " + minSize + "): likely integer overflow?");}if (array.Length < minSize){return GrowExact(array, Oversize(minSize, 1));}return array;}private static int Oversize(int size, int elementSize){return (size + elementSize - 1) / elementSize * elementSize;}private static byte[] GrowExact(byte[] array, int newSize){byte[] newArray = new byte[newSize];Array.Copy(array, 0, newArray, 0, array.Length);return newArray;}}
+public CreateTransactionRequest() : base("CloudPhoto", "2017-07-11", "CreateTransaction", "cloudphoto") { Protocol = ProtocolType.HTTPS; }
+public BatchRefUpdate SetRefLogIdent(PersonIdent pi) { refLogIdent = pi; return this; }
+public GetLaunchTemplateDataResult getLaunchTemplateData(GetLaunchTemplateDataRequest request) {request = beforeClientExecution(request);return executeGetLaunchTemplateData(request);}
+public ParseInfo(ProfilingATNSimulator atnSimulator) { this.atnSimulator = atnSimulator; }
+public SimpleQQParser(string[] qqNames, string indexField) {this.qqNames = qqNames; this.indexField = indexField;}
+public DBCluster PromoteReadReplicaDBCluster(PromoteReadReplicaDBClusterRequest request) {request = BeforeClientExecution(request);return ExecutePromoteReadReplicaDBCluster(request);}
+public DescribeCapacityReservationsResult DescribeCapacityReservations(DescribeCapacityReservationsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeCapacityReservations(request);}
+public string ToString() { return $"IndexSearcher({reader}; executor={executor}; sliceExecutionControlPlane {sliceExecutor})"; }
+public final bool IncrementToken() { return false; }
+public void Serialize(LittleEndianOutput out) {out.WriteShort(main + 1);out.WriteShort(subFrom);out.WriteShort(subTo);}
+public void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {if (bitsPerValue > 32) {throw new System.NotSupportedException("Cannot decode " + bitsPerValue + "-bits values into an int[]");}for (int i = 0; i < iterations; ++i) {long block = readLong(blocks, blocksOffset);blocksOffset += 8;valuesOffset = decode(block, values, valuesOffset);}}
+public bool isExpectedToken(int symbol) {ATN atn = getInterpreter().atn;ParserRuleContext ctx = _ctx;ATNState s = atn.states[getState()];IntervalSet following = atn.nextTokens(s);if (following.contains(symbol)) {return true;}if (!following.contains(Token.EPSILON)) {return false;}while (ctx != null && ctx.invokingState >= 0 && following.contains(Token.EPSILON)) {ATNState invokingState = atn.states[ctx.invokingState];RuleTransition rt = (RuleTransition)invokingState.transition(0);following = atn.nextTokens(rt.followState);if (following.contains(symbol)) {return true;}ctx = (ParserRuleContext)ctx.parent;}if (following.contains(Token.EPSILON) && symbol == Token.EOF) {return true;}return false;}
+public UpdateStreamResult UpdateStream(UpdateStreamRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateStream(request);}
+public ValueEval Evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0) {try {OperandResolver.GetSingleValue(arg0, srcRowIndex, srcColumnIndex);return ErrorEval.NA;} catch (EvaluationException e) {int result = TranslateErrorCodeToErrorTypeValue(e.ErrorEval.ErrorCode);return new NumberEval(result);}}
+public string ToString() { return GetType().Name + " [" + _index + " " + _name + "]"; }
+public ListAssignmentsForHITResult ListAssignmentsForHIT(ListAssignmentsForHITRequest request) {request = BeforeClientExecution(request);return ExecuteListAssignmentsForHIT(request);}
+public DeleteAccessControlRuleResult DeleteAccessControlRule(DeleteAccessControlRuleRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteAccessControlRule(request); }
+public Arc<long> GetFirstArc(FST.Arc<long> arc) { return fst.GetFirstArc(arc); }
+public void decode(long[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long block = blocks[blocksOffset++];for (int shift = 48; shift >= 0; shift -= 16) {values[valuesOffset++] = (int) ((block >> shift) & 65535);}}}
+public long Skip(long charCount){if (charCount < 0){throw new ArgumentException("charCount < 0: " + charCount);}lock (lock){CheckNotClosed();if (charCount == 0){return 0;}long inSkipped;int availableFromBuffer = buf.Length - pos;if (availableFromBuffer > 0){long requiredFromIn = charCount - availableFromBuffer;if (requiredFromIn <= 0){pos += charCount;return charCount;}pos += availableFromBuffer;inSkipped = in.Skip(requiredFromIn);}else{inSkipped = in.Skip(charCount);}return inSkipped + availableFromBuffer;}}
+public Dictionary<string, Ref> GetRefsMap() { return advertisedRefs; }
+public UpdateApiKeyResult UpdateApiKey(UpdateApiKeyRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateApiKey(request);}
+public ObjectStream OpenStream() {PackInputStream packIn;using (DfsReader ctx = db.NewReader()) {try {packIn = new PackInputStream(pack, objectOffset + headerLength, ctx);ctx = null;} catch (IOException packGone) {ObjectId obj = pack.GetReverseIdx(ctx).FindObject(objectOffset);return ctx.Open(obj, type).OpenStream();} finally {if (ctx != null) {ctx.Close();}}}int bufsz = 8192;using (InputStream in = new BufferedInputStream(new InflaterInputStream(packIn, packIn.Ctx.Inflater(), bufsz), bufsz)) {return new ObjectStream.Filter(type, size, in);}}
+public ArrayList() {array = Array.Empty<Object>();}
+public UpdateDetectorVersionResult UpdateDetectorVersion(UpdateDetectorVersionRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateDetectorVersion(request);}
+public void Resize(){Resize(double.MaxValue);}
+public RevFlagSet(System.Collections.Generic.IEnumerable<RevFlag> s) {this();AddRange(s);}
+public int Size() { return size; }
+public long GetLong() {int newPosition = position + SizeOf.LONG;if (newPosition > limit) {throw new BufferUnderflowException();}long result = Memory.PeekLong(backingArray, offset + position, order);position = newPosition;return result;}
+public StringBuilder Insert(int offset, long l) {Insert0(offset, Long.ToString(l));return this;}
+public TurkishLowerCaseFilter(TokenStream @in) : base(@in) { }
+public ParseTreeMatch match(ParseTree tree, ParseTreePattern pattern) {MultiMap<string, ParseTree> labels = new MultiMap<string, ParseTree>();ParseTree mismatchedNode = matchImpl(tree, pattern.getPatternTree(), labels);return new ParseTreeMatch(tree, pattern, labels, mismatchedNode);}
+public void addIfNoOverlap(WeightedPhraseInfo wpi){foreach (WeightedPhraseInfo existWpi in getPhraseList()){if (existWpi.isOffsetOverlap(wpi)){existWpi.getTermsInfos().AddRange(wpi.getTermsInfos());return;}}getPhraseList().Add(wpi);}
+public ThreeWayMerger NewMerger(Repository db) { return new InCoreMerger(db); }
+public float docScore(int docId, string field, int numPayloadsSeen, float payloadScore) {return numPayloadsSeen > 0 ? (payloadScore / numPayloadsSeen) : 1;}
+public System.Collections.Generic.IEnumerable<ParseTree> evaluate(ParseTree t) {return Trees.findAllRuleNodes(t, ruleIndex);}
+public string ToString() {StringBuilder buffer = new StringBuilder();buffer.AppendLine("[CFRULE]");buffer.Append("    .condition_type   =").Append(GetConditionType()).AppendLine();buffer.Append("    OPTION FLAGS=0x").Append(GetOptions().ToString("X")).AppendLine();if (ContainsFontFormattingBlock()) {buffer.Append(_fontFormatting).AppendLine();}if (ContainsBorderFormattingBlock()) {buffer.Append(_borderFormatting).AppendLine();}if (ContainsPatternFormattingBlock()) {buffer.Append(_patternFormatting).AppendLine();}buffer.Append("    Formula 1 =").Append(string.Join(", ", GetFormula1().GetTokens())).AppendLine();buffer.Append("    Formula 2 =").Append(string.Join(", ", GetFormula2().GetTokens())).AppendLine();buffer.Append("[/CFRULE]");return buffer.ToString();}
+public DescribeServiceUpdatesResult DescribeServiceUpdates(DescribeServiceUpdatesRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeServiceUpdates(request);}
+public string GetNameName(int index){return GetNameAt(index).GetNameName();}
+public DescribeLocationsResult DescribeLocations() { return DescribeLocations(new DescribeLocationsRequest()); }
+public string ToString() { return "<phraseslop value='" + GetValueString() + "'>" + "\n" + GetChild().ToString() + "\n</phraseslop>"; }
+public DirCacheEntry GetDirCacheEntry() { return currentSubtree == null ? currentEntry : null; }
+public ArrayBuffer Put(int[] src, int srcOffset, int intCount) { System.Array.ConstrainedCopy(src, srcOffset, this, Position, intCount); if (intCount > Remaining()) { throw new BufferOverflowException(); } Position += intCount; return this; }
+public void trimToSize() {int s = size;if (s == array.Length) {return;}if (s == 0) {array = EmptyArray.Object;} else {Object[] newArray = new Object[s];System.Array.Copy(array, 0, newArray, 0, s);array = newArray;}modCount++;}
+public DescribeLocalGatewayVirtualInterfacesResult describeLocalGatewayVirtualInterfaces(DescribeLocalGatewayVirtualInterfacesRequest request) { request = beforeClientExecution(request); return executeDescribeLocalGatewayVirtualInterfaces(request); }
+public TokenStream Create(TokenStream input) {return new RussianLightStemFilter(input);}
+public class ExampleClass{private int[] _array;private int _limit;public int[] ToArray(int[] a){int[] rval;if (a.Length == _limit){Buffer.BlockCopy(_array, 0, a, 0, _limit * sizeof(int));rval = a;}else{rval = ToArray();}return rval;}private int[] ToArray(){// Implementation for ToArray() methodreturn new int[_limit];}}
+public BasicSessionCredentials(string accessKeyId, string accessKeySecret, string sessionToken, long roleSessionDurationSeconds){if (accessKeyId == null){throw new ArgumentException("Access key ID cannot be null.");}if (accessKeySecret == null){throw new ArgumentException("Access key secret cannot be null.");}this.accessKeyId = accessKeyId;this.accessKeySecret = accessKeySecret;this.sessionToken = sessionToken;this.roleSessionDurationSeconds = roleSessionDurationSeconds;this.sessionStartedTimeInMilliSeconds = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();}
+public readonly short[] Get(short[] dst, int dstOffset, int shortCount) {if (shortCount > Remaining()) {throw new BufferUnderflowException();}Array.Copy(backingArray, offset + position, dst, dstOffset, shortCount);position += shortCount;return this;}
+public ActivateEventSourceResult ActivateEventSource(ActivateEventSourceRequest request){request = BeforeClientExecution(request);return ExecuteActivateEventSource(request);}
+public DescribeReceiptRuleSetResult describeReceiptRuleSet(DescribeReceiptRuleSetRequest request) {request = beforeClientExecution(request);return executeDescribeReceiptRuleSet(request);}
+public Filter(string name) { this.setName(name); }
+public DoubleBuffer put(double c) { throw new ReadOnlyBufferException(); }
+public CreateTrafficPolicyInstanceResult CreateTrafficPolicyInstance(CreateTrafficPolicyInstanceRequest request) {request = BeforeClientExecution(request);return ExecuteCreateTrafficPolicyInstance(request);}
+public JapaneseIterationMarkCharFilter(TextReader input, bool normalizeKanji, bool normalizeKana) : base(input){this.normalizeKanji = normalizeKanji;this.normalizeKana = normalizeKana;buffer.reset(input);}
+public void writeLong(long v) { writeInt((int)(v >> 0)); writeInt((int)(v >> 32)); }
+public FileResolver() { exports = new ConcurrentDictionary<string, object>(); exportBase = new List<object>(); }
+public ValueEval getRef3DEval(Ref3DPxg rptg) {SheetRangeEvaluator sre = createExternSheetRefEvaluator(rptg.getSheetName(), rptg.getLastSheetName(), rptg.getExternalWorkbookNumber());return new LazyRefEval(rptg.getRow(), rptg.getColumn(), sre);}
+public DeleteDatasetResult DeleteDataset(DeleteDatasetRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteDataset(request);}
+public StartRelationalDatabaseResult startRelationalDatabase(StartRelationalDatabaseRequest request) {request = beforeClientExecution(request);return executeStartRelationalDatabase(request);}
+public DescribeReservedCacheNodesOfferingsResult DescribeReservedCacheNodesOfferings() { return DescribeReservedCacheNodesOfferings(new DescribeReservedCacheNodesOfferingsRequest()); }
+public double pmt(double r, int nper, double pv, double fv, int type) {return -r * (pv * Math.Pow(1 + r, nper) + fv) / ((1 + r * type) * (Math.Pow(1 + r, nper) - 1));}
+public DescribeDocumentVersionsResult DescribeDocumentVersions(DescribeDocumentVersionsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeDocumentVersions(request);}
+public ListPublishingDestinationsResult ListPublishingDestinations(ListPublishingDestinationsRequest request) {request = BeforeClientExecution(request);return ExecuteListPublishingDestinations(request);}
+public DeleteAccountAliasRequest(string accountAlias) { SetAccountAlias(accountAlias); }
+public static long[] Grow(long[] array, int newSize) {long[] newArray = new long[newSize];Array.Copy(array, 0, newArray, 0, array.Length);return newArray;}
+public string OutputToString(object output){if (!(output is List<T>)){return outputs.OutputToString((T)output);}else{List<T> outputList = (List<T>)output;StringBuilder b = new StringBuilder();b.Append('[');for (int i = 0; i < outputList.Count; i++){if (i > 0){b.Append(", ");}b.Append(outputs.OutputToString(outputList[i]));}b.Append(']');return b.ToString();}}
+public void notifyDeleteCell(Cell cell) {_bookEvaluator.notifyDeleteCell(new HSSFEvaluationCell((HSSFCell)cell));}
+public StringBuilder Replace(int start, int end, string str) { Replace0(start, end, str); return this; }
+public SetIdentityPoolConfigurationResult SetIdentityPoolConfiguration(SetIdentityPoolConfigurationRequest request) { request = BeforeClientExecution(request); return ExecuteSetIdentityPoolConfiguration(request); }
+public static double KthSmallest(double[] v, int k) {double r = double.NaN;int index = k - 1;if (v != null && v.Length > index && index >= 0) {Array.Sort(v);r = v[index];}return r;}
+public void set(int index, long value) {int o = index >> 5;int b = index & 31;int shift = b << 1;blocks[o] = (blocks[o] & ~(3L << shift)) | (value << shift);}
+public string ToString() {if (GetChildren() == null || GetChildren().Count == 0)return "<boolean operation='and'/>";StringBuilder sb = new StringBuilder();sb.Append("<boolean operation='and'>");foreach (QueryNode child in GetChildren()) {sb.Append("\n");sb.Append(child.ToString());}sb.Append("\n</boolean>");return sb.ToString();}
+public int SumTokenSizes(int fromIx, int toIx) {int result = 0;for (int i = fromIx; i < toIx; i++) {result += _ptgs[i].GetSize();}return result;}
+public void SetReadonly(bool readonly) {if (this.readonly && !readonly) throw new InvalidOperationException("can't alter readonly IntervalSet");this.readonly = readonly;}
+public void ClearConsumingCell(FormulaCellCacheEntry cce) {if (!_consumingCells.Remove(cce)) {throw new InvalidOperationException("Specified formula cell is not consumed by this cell");}}
+public List<E> SubList(int start, int end) {lock (mutex) {return new SynchronizedRandomAccessList<E>(list.SubList(start, end), mutex);}}
+public FileHeader getFileHeader() { return file; }
+public AttachLoadBalancersResult AttachLoadBalancers(AttachLoadBalancersRequest request) {request = BeforeClientExecution(request);return ExecuteAttachLoadBalancers(request);}
+public InitiateJobRequest(String accountId, String vaultName, JobParameters jobParameters) { SetAccountId(accountId); SetVaultName(vaultName); SetJobParameters(jobParameters); }
+public string ToString() { return "SPL"; }
+public ReplaceableAttribute(string name, string value, bool replace) { SetName(name); SetValue(value); SetReplace(replace); }
+public void Add(IndexableField field) { fields.Add(field); }
+public DeleteStackSetResult DeleteStackSet(DeleteStackSetRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteStackSet(request);}
+public GetRepoBuildRuleListRequest() : base("cr", "2016-06-07", "GetRepoBuildRuleList", "cr") {UriPattern = "/repos/[RepoNamespace]/[RepoName]/rules"; Method = MethodType.GET;}
+public SparseArray(int initialCapacity) {initialCapacity = ArrayUtils.idealIntArraySize(initialCapacity);mKeys = new int[initialCapacity];mValues = new Object[initialCapacity];mSize = 0;}
+public InvokeServiceRequest() : base("industry-brain", "2018-07-12", "InvokeService") { Method = MethodType.POST; }
+public ListAlbumPhotosRequest() : base("CloudPhoto", "2017-07-11", "ListAlbumPhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}
+public bool hasPrevious() { return link != list.voidLink; }
+public DeleteHsmConfigurationResult DeleteHsmConfiguration(DeleteHsmConfigurationRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteHsmConfiguration(request);}
+public CreateLoadBalancerRequest(string loadBalancerName) {SetLoadBalancerName(loadBalancerName);}
+public string GetUserInfo() {return Decode(userInfo);}
+public TagAttendeeResult TagAttendee(TagAttendeeRequest request) {request = BeforeClientExecution(request);return ExecuteTagAttendee(request);}
+public string GetRefName() { return name; }
+public SpanNearQuery Build() { return new SpanNearQuery(clauses.ToArray(clauses.Count), slop, ordered); }
+public bool isSubTotal(int rowIndex, int columnIndex) { return false; }
+public DescribeDBProxiesResult DescribeDBProxies(DescribeDBProxiesRequest request) {request = beforeClientExecution(request);return executeDescribeDBProxies(request);}
+public GetVoiceConnectorProxyResult GetVoiceConnectorProxy(GetVoiceConnectorProxyRequest request) {request = BeforeClientExecution(request);return ExecuteGetVoiceConnectorProxy(request);}
+public WindowCacheConfig fromConfig(Config rc) {setPackedGitUseStrongRefs(rc.getBoolean(CONFIG_CORE_SECTION, CONFIG_KEY_PACKED_GIT_USE_STRONGREFS, isPackedGitUseStrongRefs()));setPackedGitOpenFiles(rc.getInt(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_OPENFILES, getPackedGitOpenFiles()));setPackedGitLimit(rc.getLong(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_LIMIT, getPackedGitLimit()));setPackedGitWindowSize(rc.getInt(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_WINDOWSIZE, getPackedGitWindowSize()));setPackedGitMMAP(rc.getBoolean(CONFIG_CORE_SECTION, null, CONFIG_KEY_PACKED_GIT_MMAP, isPackedGitMMAP()));setDeltaBaseCacheLimit(rc.getInt(CONFIG_CORE_SECTION, null, CONFIG_KEY_DELTA_BASE_CACHE_LIMIT, getDeltaBaseCacheLimit()));long maxMem = (long)Runtime.getRuntime().maxMemory();long sft = rc.getLong(CONFIG_CORE_SECTION, null, CONFIG_KEY_STREAM_FILE_TRESHOLD, getStreamFileThreshold());sft = Math.Min(sft, maxMem / 4);sft = Math.Min(sft, int.MaxValue);setStreamFileThreshold((int)sft);return this;}
+public static Date getJavaDate(double date) {return getJavaDate(date, false, null, false);}
+public StartPersonTrackingResult StartPersonTracking(StartPersonTrackingRequest request) {request = BeforeClientExecution(request);return ExecuteStartPersonTracking(request);}
+public override int Size() { return totalSize; }
+public GetRouteResult GetRoute(GetRouteRequest request) { request = BeforeClientExecution(request); return ExecuteGetRoute(request); }
+public DeleteClusterResult DeleteCluster(DeleteClusterRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteCluster(request);}
+public string ToString(){StringBuilder buffer = new StringBuilder();buffer.AppendLine("[MMS]");buffer.Append("    .addMenu        = ").Append(GetAddMenuCount().ToString("X")).AppendLine();buffer.Append("    .delMenu        = ").Append(GetDelMenuCount().ToString("X")).AppendLine();buffer.AppendLine("[/MMS]");return buffer.ToString();}
+public FileBasedConfig(Config base, File cfgLocation, FS fs) : base(base){configFile = cfgLocation;this.fs = fs;this.snapshot = FileSnapshot.DIRTY;this.hash = ObjectId.zeroId();}
+public int following(int pos) {if (pos < text.getBeginIndex() || pos > text.getEndIndex()) {throw new ArgumentException("offset out of bounds");} else if (sentenceStarts.Length == 0) {text.setIndex(text.getBeginIndex());return DONE;} else if (pos >= sentenceStarts[sentenceStarts.Length - 1]) {text.setIndex(text.getEndIndex());currentSentence = sentenceStarts.Length - 1;return DONE;} else {currentSentence = (sentenceStarts.Length - 1) / 2;moveToSentenceAt(pos, 0, sentenceStarts.Length - 2);text.setIndex(sentenceStarts[++currentSentence]);return current();}}
+public UpdateParameterGroupResult UpdateParameterGroup(UpdateParameterGroupRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateParameterGroup(request);}
+public SeriesChartGroupIndexRecord Clone() { return Copy(); }
+public static double CalcDistanceFromErrPct(Shape shape, double distErrPct, SpatialContext ctx) {if (distErrPct < 0 || distErrPct > 0.5) {throw new ArgumentException("distErrPct " + distErrPct + " must be between [0 to 0.5]");}if (distErrPct == 0 || shape is Point) {return 0;}Rectangle bbox = shape.GetBoundingBox();Point ctr = bbox.GetCenter();double y = (ctr.Y >= 0 ? bbox.MaxY : bbox.MinY);double diagonalDist = ctx.GetDistCalc().Distance(ctr, bbox.MaxX, y);return diagonalDist * distErrPct;}
+public int codePointAt(int index) {if (index < 0 || index >= count) {throw indexAndLength(index);}return System.Char.ConvertToUtf32(new string(value), index);}
+public void setPasswordVerifier(int passwordVerifier) {this.passwordVerifier = passwordVerifier;}
+public ListVaultsRequest(string accountId) { SetAccountId(accountId); }
+public SquashMessageFormatter() { dateFormatter = new GitDateFormatter(Format.DEFAULT); }
+public GetVideoCoverRequest() : base("CloudPhoto", "2017-07-11", "GetVideoCover", "cloudphoto") {SetProtocol(ProtocolType.HTTPS);}
+public int LastIndexOf(object obj) {int pos = Size;Link<E> link = VoidLink.Previous;if (obj != null) {while (link != VoidLink) {pos--;if (obj.Equals(link.Data)) {return pos;}link = link.Previous;}} else {while (link != VoidLink) {pos--;if (link.Data == null) {return pos;}link = link.Previous;}}return -1;}
+public DescribeSpotFleetRequestsResult DescribeSpotFleetRequests(DescribeSpotFleetRequestsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeSpotFleetRequests(request);}
+public IndexFacesResult IndexFaces(IndexFacesRequest request) {request = BeforeClientExecution(request);return ExecuteIndexFaces(request);}
+public RuleBasedBreakIterator GetBreakIterator(int script) {switch(script) {case UScript.JAPANESE: return (RuleBasedBreakIterator)cjkBreakIterator.Clone();case UScript.MYANMAR:if (myanmarAsWords) {return (RuleBasedBreakIterator)defaultBreakIterator.Clone();} else {return (RuleBasedBreakIterator)myanmarSyllableIterator.Clone();}default: return (RuleBasedBreakIterator)defaultBreakIterator.Clone();}}
+public string ToString(){StringBuilder b = new StringBuilder();b.Append("[DCONREF]\n");b.Append("    .ref\n");b.Append("        .firstrow   = ").Append(firstRow).Append("\n");b.Append("        .lastrow    = ").Append(lastRow).Append("\n");b.Append("        .firstcol   = ").Append(firstCol).Append("\n");b.Append("        .lastcol    = ").Append(lastCol).Append("\n");b.Append("    .cch            = ").Append(charCount).Append("\n");b.Append("    .stFile\n");b.Append("        .h          = ").Append(charType).Append("\n");b.Append("        .rgb        = ").Append(getReadablePath()).Append("\n");b.Append("[/DCONREF]\n");return b.ToString();}
+public int GetPackedGitOpenFiles() {return packedGitOpenFiles;}
+public string ToString() {StringBuilder buffer = new StringBuilder();buffer.Append("[FEATURE HEADER]\n");buffer.Append("[/FEATURE HEADER]\n");return buffer.ToString();}
+public static byte[] GetToUnicodeLE(string string) {return System.Text.Encoding.Unicode.GetBytes(string);}
+public List<string> GetFooterLines(string keyName) { return GetFooterLines(new FooterKey(keyName)); }
+public void Refresh() {base.Refresh();ClearReferences();}
+public float Get(int index) {CheckIndex(index);return byteBuffer.GetFloat(index * SizeOf.Float);}
+public DeleteDetectorResult DeleteDetector(DeleteDetectorRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteDetector(request);}
+public int[] grow() {Debug.Assert(bytesStart != null);return bytesStart = ArrayUtil.grow(bytesStart, bytesStart.Length + 1);}
+public ListExclusionsResult ListExclusions(ListExclusionsRequest request){request = BeforeClientExecution(request);return ExecuteListExclusions(request);}
+public static SpatialStrategy GetSpatialStrategy(int roundNumber) {SpatialStrategy result = spatialStrategyCache.Get(roundNumber);if (result == null) {throw new InvalidOperationException("Strategy should have been init'ed by SpatialDocMaker by now");}return result;}
+public DBCluster RestoreDBClusterToPointInTime(RestoreDBClusterToPointInTimeRequest request){request = BeforeClientExecution(request);return ExecuteRestoreDBClusterToPointInTime(request);}
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_categoryDataType);out.writeShort(field_2_valuesDataType);out.writeShort(field_3_numCategories);out.writeShort(field_4_numValues);out.writeShort(field_5_bubbleSeriesType);out.writeShort(field_6_numBubbleValues);}
+public PostAgentProfileResult postAgentProfile(PostAgentProfileRequest request) {request = beforeClientExecution(request);return executePostAgentProfile(request);}
+public ParseTreePattern compileParseTreePattern(string pattern, int patternRuleIndex){if (getTokenStream() != null){TokenSource tokenSource = getTokenStream().getTokenSource();if (tokenSource is Lexer){Lexer lexer = (Lexer)tokenSource;return compileParseTreePattern(pattern, patternRuleIndex, lexer);}}throw new System.NotSupportedException("Parser can't discover a lexer to use");}
+public BacktrackDBClusterResult BacktrackDBCluster(BacktrackDBClusterRequest request) {request = BeforeClientExecution(request);return ExecuteBacktrackDBCluster(request);}
+public string GetName() { return strategyName; }
+public void copyTo(byte[] b, int o) {formatHexByte(b, o + 0, w1);formatHexByte(b, o + 8, w2);formatHexByte(b, o + 16, w3);formatHexByte(b, o + 24, w4);formatHexByte(b, o + 32, w5);}
+public static readonly IntList LineMap(byte[] buf, int ptr, int end) {IntList map = new IntList((end - ptr) / 36);map.FillTo(1, int.MinValue);for (; ptr < end; ptr = NextLF(buf, ptr)) {map.Add(ptr);}map.Add(end);return map;}
+public HashSet<ObjectId> GetAdditionalHaves() { return new HashSet<ObjectId>(); }
+public long ramBytesUsed() {long sizeInBytes = BASE_RAM_BYTES_USED + fields.size() * 2 * RamUsageEstimator.NUM_BYTES_OBJECT_REF;foreach (SimpleTextTerms simpleTextTerms in termsCache.Values) {sizeInBytes += (simpleTextTerms != null) ? simpleTextTerms.ramBytesUsed() : 0;}return sizeInBytes;}
+public string ToXml(string tab) {StringBuilder builder = new StringBuilder();builder.Append(tab).Append("<").Append(GetRecordName()).Append(">\n");foreach (EscherRecord escherRecord in GetEscherRecords()) {builder.Append(escherRecord.ToXml(tab + "\t"));}builder.Append(tab).Append("</").Append(GetRecordName()).Append(">\n");return builder.ToString();}
+public TokenStream Create(TokenStream input) { return new GalicianMinimalStemFilter(input); }
+public string ToString() {StringBuilder r = new StringBuilder();r.Append("Commit");r.Append("={\n");r.Append("tree ");r.Append(treeId != null ? treeId.Name() : "NOT_SET");r.Append("\n");foreach (ObjectId p in parentIds) {r.Append("parent ");r.Append(p.Name());r.Append("\n");}r.Append("author ");r.Append(author != null ? author.ToString() : "NOT_SET");r.Append("\n");r.Append("committer ");r.Append(committer != null ? committer.ToString() : "NOT_SET");r.Append("\n");r.Append("gpgSignature ");r.Append(gpgSignature != null ? gpgSignature.ToString() : "NOT_SET");r.Append("\n");if (encoding != null && !References.IsSameObject(encoding, UTF_8)) {r.Append("encoding ");r.Append(encoding.Name());r.Append("\n");}r.Append("\n");r.Append(message != null ? message : "");r.Append("}");return r.ToString();}
+public IndicNormalizationFilterFactory(Dictionary<string, string> args) : base(args){if (!args.IsEmpty){throw new ArgumentException("Unknown parameters: " + args);}}
+public OptionGroup CreateOptionGroup(CreateOptionGroupRequest request) {request = BeforeClientExecution(request);return ExecuteCreateOptionGroup(request);}
+public AssociateMemberAccountResult AssociateMemberAccount(AssociateMemberAccountRequest request) {request = BeforeClientExecution(request);return ExecuteAssociateMemberAccount(request);}
+public void run() { doRefreshProgress(mId, mProgress, mFromUser, true); mRefreshProgressRunnable = this; }
+public SetTerminationProtectionResult SetTerminationProtection(SetTerminationProtectionRequest request) { request = BeforeClientExecution(request); return ExecuteSetTerminationProtection(request); }
+public string GetErrorHeader(RecognitionException e) {int line = e.OffendingToken.Line;int charPositionInLine = e.OffendingToken.CharPositionInLine;return "line " + line + ":" + charPositionInLine;}
+public CharBuffer AsReadOnlyBuffer() {CharToByteBufferAdapter buf = new CharToByteBufferAdapter(byteBuffer.AsReadOnlyBuffer());buf.Limit = limit;buf.Position = position;buf.Mark = mark;buf.ByteBuffer.Order = byteBuffer.Order;return buf;}
+public StopSentimentDetectionJobResult StopSentimentDetectionJob(StopSentimentDetectionJobRequest request) {request = BeforeClientExecution(request);return ExecuteStopSentimentDetectionJob(request);}
+public ObjectIdSubclassMap<ObjectId> GetNewObjectIds() {if (newObjectIds != null)return newObjectIds;return new ObjectIdSubclassMap<ObjectId>();}
+public void Clear() { hash = Hash(new byte[0]); base.Clear(); }
+public void reset(){lock (lock){checkNotClosed();if (mark == -1){throw new IOException("Invalid mark");}pos = mark;}}
+public RefErrorPtg(LittleEndianInput in)  {field_1_reserved = in.ReadInt();}
+public SuspendGameServerGroupResult suspendGameServerGroup(SuspendGameServerGroupRequest request) { request = beforeClientExecution(request); return executeSuspendGameServerGroup(request); }
+if (args.Length != 3) {return ErrorEval.VALUE_INVALID;}return evaluate(srcRowIndex, srcColumnIndex, args[0], args[1], args[2]);
+public GetRepoRequest() : base("cr", "2016-06-07", "GetRepo", "cr") {SetUriPattern("/repos/[RepoNamespace]/[RepoName]");SetMethod(MethodType.GET);}
+public void setDate(DateTime date) {if (date != null) {setDate(DateTools.dateToString(date, DateTools.Resolution.SECOND));} else {this.date = null;}}
+public TokenStream Create(TokenStream input) { return new GermanMinimalStemFilter(input); }
+public object[] ToArray() { return a.Clone() as object[]; }
+public void write(char[] buffer, int offset, int len) {Arrays.checkOffsetAndCount(buffer.length, offset, len);lock (lock) {expand(len);System.arraycopy(buffer, offset, this.buf, this.count, len);this.count += len;}}
+public static readonly RevFilter after(DateTime ts) { return after(ts.Ticks); }
+public DeleteGroupPolicyRequest(string groupName, string policyName) { SetGroupName(groupName); SetPolicyName(policyName); }
+public DeregisterTransitGatewayMulticastGroupMembersResult DeregisterTransitGatewayMulticastGroupMembers(DeregisterTransitGatewayMulticastGroupMembersRequest request) {request = BeforeClientExecution(request);return ExecuteDeregisterTransitGatewayMulticastGroupMembers(request);}
+public BatchDeleteScheduledActionResult BatchDeleteScheduledAction(BatchDeleteScheduledActionRequest request) { request = BeforeClientExecution(request); return ExecuteBatchDeleteScheduledAction(request); }
+public CreateAlgorithmResult CreateAlgorithm(CreateAlgorithmRequest request) {request = BeforeClientExecution(request);return ExecuteCreateAlgorithm(request);}
+public int readUByte() { return readByte() & 0x00FF; }
+public void setLength(int sz) { NB.encodeInt32(info, infoOffset + P_SIZE, sz); }
+public DescribeScalingProcessTypesResult DescribeScalingProcessTypes() {return DescribeScalingProcessTypes(new DescribeScalingProcessTypesRequest());}
+public ListResourceRecordSetsResult ListResourceRecordSets(ListResourceRecordSetsRequest request) {request = BeforeClientExecution(request);return ExecuteListResourceRecordSets(request);}
+public void recoverInline(Parser recognizer){InputMismatchException e = new InputMismatchException(recognizer);for (ParserRuleContext context = recognizer.getContext(); context != null; context = context.getParent()) {context.exception = e;}throw new ParseCancellationException(e);}
+public SetTagsForResourceResult SetTagsForResource(SetTagsForResourceRequest request) {request = BeforeClientExecution(request);return ExecuteSetTagsForResource(request);}
+public ModifyStrategyRequest() : base("CloudCallCenter", "2017-07-05", "ModifyStrategy", "CloudCallCenter", "innerAPI") {}
+public DescribeVpcEndpointServicesResult DescribeVpcEndpointServices(DescribeVpcEndpointServicesRequest request){request = BeforeClientExecution(request);return ExecuteDescribeVpcEndpointServices(request);}
+public EnableLoggingResult EnableLogging(EnableLoggingRequest request) {request = BeforeClientExecution(request);return ExecuteEnableLogging(request);}
+public bool contains(Object o) { return ConcurrentHashMap.this.containsValue(o); }
+public SheetRangeIdentifier(string bookName, NameIdentifier firstSheetIdentifier, NameIdentifier lastSheetIdentifier) : base(bookName, firstSheetIdentifier){_lastSheetIdentifier = lastSheetIdentifier;}
+public DomainMetadataRequest(string domainName) {setDomainName(domainName);}
+public ParseException(Token currentTokenVal, int[][] expectedTokenSequencesVal, string[] tokenImageVal) : base(new MessageImpl(QueryParserMessages.INVALID_SYNTAX, initialise(currentTokenVal, expectedTokenSequencesVal, tokenImageVal))){this.currentToken = currentTokenVal;this.expectedTokenSequences = expectedTokenSequencesVal;this.tokenImage = tokenImageVal;}
+public FetchPhotosRequest() : base("CloudPhoto", "2017-07-11", "FetchPhotos", "cloudphoto") { Protocol = ProtocolType.HTTPS; }
+public PrintWriter writer() { return writer; }
+public NGramTokenizerFactory(System.Collections.Generic.Dictionary<string, string> args) : base(args){minGramSize = GetInt(args, "minGramSize", NGramTokenizer.DEFAULT_MIN_NGRAM_SIZE);maxGramSize = GetInt(args, "maxGramSize", NGramTokenizer.DEFAULT_MAX_NGRAM_SIZE);if (!args.IsEmpty){throw new System.ArgumentException("Unknown parameters: " + args);}}
+public bool isDirectoryFileConflict() { return dfConflict != null; }
+public IndonesianStemFilter(TokenStream input, bool stemDerivational) : base(input) { this.stemDerivational = stemDerivational; }
+public CreateTrafficPolicyResult CreateTrafficPolicy(CreateTrafficPolicyRequest request) { request = BeforeClientExecution(request); return ExecuteCreateTrafficPolicy(request); }
+public void Serialize(LittleEndianOutput out) {out.WriteInt(fSD);out.WriteInt(passwordVerifier);StringUtil.WriteUnicodeString(out, title);out.Write(securityDescriptor);}
+public static double Floor(double n, double s) {if (s == 0 && n != 0) {return double.NaN;} else {return (n == 0 || s == 0) ? 0 : Math.Floor(n / s) * s;}}
+public ByteArrayDataOutput(byte[] bytes, int offset, int len) { reset(bytes, offset, len); }
+public static List<Tree> GetChildren(Tree t) {List<Tree> kids = new List<Tree>();for (int i = 0; i < t.GetChildCount(); i++) {kids.Add(t.GetChild(i));}return kids;}
+public void clear() { Hashtable.this.Clear(); }
+public RefreshAllRecord(bool refreshAll) { this(0); SetRefreshAll(refreshAll); }
+public DeleteNamedQueryResult deleteNamedQuery(DeleteNamedQueryRequest request) {request = beforeClientExecution(request);return executeDeleteNamedQuery(request);}
+public GraphvizFormatter(ConnectionCosts costs) {this.costs = costs;this.bestPathMap = new Dictionary<string, string>();sb.Append(formatHeader());sb.Append("  init [style=invis]\n");sb.Append("  init -> 0.0 [label=\"" + BOS_LABEL + "\"]\n");}
+public CheckMultiagentRequest() : base("visionai-poc", "2020-04-08", "CheckMultiagent") { Method = MethodType.POST; }
+public ListUserProfilesResult ListUserProfiles(ListUserProfilesRequest request) {request = BeforeClientExecution(request);return ExecuteListUserProfiles(request);}
+public CreateRelationalDatabaseFromSnapshotResult CreateRelationalDatabaseFromSnapshot(CreateRelationalDatabaseFromSnapshotRequest request) {request = BeforeClientExecution(request);return ExecuteCreateRelationalDatabaseFromSnapshot(request);}
+public StartTaskResult StartTask(StartTaskRequest request) {request = BeforeClientExecution(request);return ExecuteStartTask(request);}
+public HashSet<string> GetIgnoredPaths() { return ignoredPaths; }
+public FeatSmartTag(RecordInputStream in) {data = in.ReadRemainder();}
+public Change(ChangeAction action, ResourceRecordSet resourceRecordSet) {setAction(action.ToString());setResourceRecordSet(resourceRecordSet);}
+public DeleteImageResult DeleteImage(DeleteImageRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteImage(request);}
+public CreateConfigurationSetResult CreateConfigurationSet(CreateConfigurationSetRequest request) {request = BeforeClientExecution(request);return ExecuteCreateConfigurationSet(request);}
+public Iterator<E> iterator() {Object[] snapshot = elements;return new CowIterator<E>(snapshot, 0, snapshot.Length);}
+public void visitContainedRecords(RecordVisitor rv) {if (_recs.Count == 0) {return;}rv.visitRecord(_bofRec);for (int i = 0; i < _recs.Count; i++) {RecordBase rb = _recs[i];if (rb is RecordAggregate) {((RecordAggregate)rb).visitContainedRecords(rv);} else {rv.visitRecord((org.apache.poi.hssf.record.Record)rb);}}rv.visitRecord(EOFRecord.instance);}
+public string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[FtCbls ]").Append("\n");buffer.Append("  size     = ").Append(getDataSize()).Append("\n");buffer.Append("  reserved = ").Append(HexDump.ToHex(reserved)).Append("\n");buffer.Append("[/FtCbls ]").Append("\n");return buffer.ToString();}
+public static BATBlock CreateEmptyBATBlock(final POIFSBigBlockSize bigBlockSize, bool isXBAT) {BATBlock block = new BATBlock(bigBlockSize);if (isXBAT) {final int _entries_per_xbat_block = bigBlockSize.GetXBATEntriesPerBlock();block._values[_entries_per_xbat_block] = POIFSConstants.END_OF_CHAIN;}return block;}
+public TagResourceResult TagResource(TagResourceRequest request) {request = BeforeClientExecution(request);return ExecuteTagResource(request);}
+public DeleteMailboxPermissionsResult DeleteMailboxPermissions(DeleteMailboxPermissionsRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteMailboxPermissions(request);}
+public ListDatasetGroupsResult ListDatasetGroups(ListDatasetGroupsRequest request) {request = BeforeClientExecution(request);return ExecuteListDatasetGroups(request);}
+public ResumeProcessesResult ResumeProcesses(ResumeProcessesRequest request) {request = BeforeClientExecution(request);return ExecuteResumeProcesses(request);}
+public GetPersonTrackingResult GetPersonTracking(GetPersonTrackingRequest request) { request = BeforeClientExecution(request); return ExecuteGetPersonTracking(request); }
+public string ToFormulaString(string[] operands) {if (space.IsSet(_options)) {return operands[0];} else if (optiIf.IsSet(_options)) {return ToFormulaString() + "(" + operands[0] + ")";} else if (optiSkip.IsSet(_options)) {return ToFormulaString() + operands[0];} else {return ToFormulaString() + "(" + operands[0] + ")";}}
+public T merge(T first, T second) { throw new NotImplementedException(); }
+public string ToString() { return this.message.getKey() + ": " + GetLocalizedMessage(); }
+public XPath(Parser parser, String path) {this.parser = parser;this.path = path;elements = split(path);}CSharp Equivalent:public XPath(Parser parser, string path) {this.parser = parser;this.path = path;elements = split(path);}
+public CreateAccountAliasRequest(string accountAlias) { SetAccountAlias(accountAlias); }
+public void decode(sbyte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int j = 0; j < iterations; ++j) {final sbyte block = blocks[blocksOffset++];values[valuesOffset++] = (block >> 7) & 1;values[valuesOffset++] = (block >> 6) & 1;values[valuesOffset++] = (block >> 5) & 1;values[valuesOffset++] = (block >> 4) & 1;values[valuesOffset++] = (block >> 3) & 1;values[valuesOffset++] = (block >> 2) & 1;values[valuesOffset++] = (block >> 1) & 1;values[valuesOffset++] = block & 1;}}
+public PushConnection OpenPush() throws TransportException {return new TcpPushConnection();}
+public static void strcpy(char[] dst, int di, char[] src, int si) {while (src[si] != '\0') {dst[di++] = src[si++];}dst[di] = '\0';}
+public K GetKey() { return mapEntry.Key; }
+public static int NumNonnull(object[] data) {int n = 0;if (data == null) return n;foreach (object o in data) {if (o != null) n++;}return n;}
+public void Add(int location, E object) {if (location >= 0 && location <= size) {Link<E> link = voidLink;if (location < (size / 2)) {for (int i = 0; i <= location; i++) {link = link.Next;}} else {for (int i = size; i > location; i--) {link = link.Previous;}}Link<E> previous = link.Previous;Link<E> newLink = new Link<E>(object, previous, link);previous.Next = newLink;link.Previous = newLink;size++;modCount++;} else {throw new IndexOutOfBoundsException();}}
+public DescribeDomainResult DescribeDomain(DescribeDomainRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeDomain(request);}
+public void flush() throws System.IO.IOException {base.Flush();}
+public PersianCharFilterFactory(System.Collections.Generic.IDictionary<string, string> args) : base(args){if (!args.IsEmpty){throw new System.Exception("Unknown parameters: " + args);}}
+public bool IncrementToken() {if (used) {return false;}ClearAttributes();termAttribute.Append(value);offsetAttribute.SetOffset(0, length);used = true;return true;}
+public static DirectBuffer allocate(int capacity) {if (capacity < 0) {throw new ArgumentException();}return new ReadWriteFloatArrayBuffer(capacity);}
+public final Edit After(Edit cut) {return new Edit(cut.EndA, endA, cut.EndB, endB);}
+public UpdateRuleVersionResult updateRuleVersion(UpdateRuleVersionRequest request) {request = beforeClientExecution(request);return executeUpdateRuleVersion(request);}
+public ListVoiceConnectorTerminationCredentialsResult listVoiceConnectorTerminationCredentials(ListVoiceConnectorTerminationCredentialsRequest request) {request = beforeClientExecution(request);return executeListVoiceConnectorTerminationCredentials(request);}
+public GetDeploymentTargetResult GetDeploymentTarget(GetDeploymentTargetRequest request) {request = BeforeClientExecution(request);return ExecuteGetDeploymentTarget(request);}
+public void setNoChildReport() { letChildReport = false; foreach (PerfTask task in tasks) { if (task is TaskSequence) { ((TaskSequence)task).setNoChildReport(); } } }
+public E Get(int location) {try {return a[location];} catch (IndexOutOfRangeException e) {throw new System.ArgumentOutOfRangeException($"Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')\nActual size is: {a.Length}", e);}
+public DescribeDataSetResult DescribeDataSet(DescribeDataSetRequest request){request = BeforeClientExecution(request);return ExecuteDescribeDataSet(request);}
+public SkipWorkTreeFilter(int treeIdx) { this.treeIdx = treeIdx; }
+public DescribeNetworkInterfacesResult DescribeNetworkInterfaces() { return DescribeNetworkInterfaces(new DescribeNetworkInterfacesRequest()); }
+public final bool Contains(int row, int col) {return _firstRow <= row && _lastRow >= row && _firstColumn <= col && _lastColumn >= col;}
+public string ToString() { return new string(this.chars); }
+public PatchType GetPatchType() { return patchType; }
+public Iterator<K> iterator() { return new KeyIterator(); }
+public CreateScriptResult CreateScript(CreateScriptRequest request) {request = BeforeClientExecution(request);return ExecuteCreateScript(request);}
+public BytesRef next() {termUpto++;if (termUpto >= info.terms.Count) {return null;} else {info.terms.Get(info.sortedTerms[termUpto], br);return br;}}
+public string OutputToString(string output) {return output;}
+public AssociateWebsiteAuthorizationProviderResult AssociateWebsiteAuthorizationProvider(AssociateWebsiteAuthorizationProviderRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateWebsiteAuthorizationProvider(request); }
+public void unpop(RevCommit c) {Block b = head;if (b == null) {b = free.newBlock();b.resetToMiddle();b.add(c);head = b;tail = b;return;} else if (b.canUnpop()) {b.unpop(c);return;}b = free.newBlock();b.resetToEnd();b.unpop(c);b.next = head;head = b;}
+public EdgeNGramTokenizerFactory(Dictionary<string, string> args) : base(args){minGramSize = GetInt(args, "minGramSize", EdgeNGramTokenizer.DEFAULT_MIN_GRAM_SIZE);maxGramSize = GetInt(args, "maxGramSize", EdgeNGramTokenizer.DEFAULT_MAX_GRAM_SIZE);if (args.Count > 0){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args.Keys));}}
+public ModifyDBParameterGroupRequest(string dBParameterGroupName, List<Parameter> parameters) { setDBParameterGroupName(dBParameterGroupName); setParameters(parameters); }
+public GetHostedZoneLimitResult GetHostedZoneLimit(GetHostedZoneLimitRequest request) {request = BeforeClientExecution(request);return ExecuteGetHostedZoneLimit(request);}
+public void set(int index, long value) {int o = index >>> 6;int b = index & 63;int shift = b << 0;blocks[o] = (blocks[o] & ~(1L << shift)) | (value << shift);}
+public RevFilter Clone() { return new PatternSearch(pattern()); }
+public string ToString() {return "spans(" + term.ToString() + ")@" + (doc == -1 ? "START" : (doc == NO_MORE_DOCS) ? "ENDDOC" : doc + " - " + (position == NO_MORE_POSITIONS ? "ENDPOS" : position));}
+public bool canAppendMatch() {foreach (Head head in heads) {if (head != LastHead.INSTANCE) {return true;}}return false;}
+public int LastIndexOf(string subString, int start) { return base.LastIndexOf(subString, start); }
+public DeleteNetworkAclEntryResult DeleteNetworkAclEntry(DeleteNetworkAclEntryRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteNetworkAclEntry(request); }
+public AssociateMemberToGroupResult AssociateMemberToGroup(AssociateMemberToGroupRequest request) { request = BeforeClientExecution(request); return ExecuteAssociateMemberToGroup(request); }
+public static int committer(byte[] b, int ptr) {int sz = b.Length;if (ptr == 0) ptr += 46;while (ptr < sz && b[ptr] == 'p') ptr += 48;if (ptr < sz && b[ptr] == 'a') ptr = nextLF(b, ptr);return match(b, ptr, committerName);}
+public int getLineNumber() { return row; }
+public SubmoduleUpdateCommand AddPath(string path) {paths.Add(path);return this;}
+public GetPushTemplateResult GetPushTemplate(GetPushTemplateRequest request) { request = BeforeClientExecution(request); return ExecuteGetPushTemplate(request); }
+public DescribeVaultResult DescribeVault(DescribeVaultRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeVault(request);}
+public DescribeVpcPeeringConnectionsResult DescribeVpcPeeringConnections() {return DescribeVpcPeeringConnections(new DescribeVpcPeeringConnectionsRequest());}
+public Memory<byte> PutLong(int index, long value) { throw new ReadOnlyMemoryException(); }
+public RegisterDeviceResult RegisterDevice(RegisterDeviceRequest request) {request = BeforeClientExecution(request);return ExecuteRegisterDevice(request);}
+public static Format ById(int id) {foreach (Format format in Enum.GetValues(typeof(Format))) {if (format.GetId() == id) {return format;}}throw new ArgumentException("Unknown format id: " + id);}
+public DeleteAppResult deleteApp(DeleteAppRequest request) { request = beforeClientExecution(request); return executeDeleteApp(request); }
+public GetBaiduChannelResult GetBaiduChannel(GetBaiduChannelRequest request) {request = BeforeClientExecution(request);return ExecuteGetBaiduChannel(request);}
+public FST.BytesReader GetBytesReader() { return fst.GetBytesReader(); }
+public static bool isValidSchemeChar(int index, char c) {if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {return true;}if (index > 0 && ((c >= '0' && c <= '9') || c == '+' || c == '-' || c == '.')) {return true;}return false;}
+public ListAppliedSchemaArnsResult ListAppliedSchemaArns(ListAppliedSchemaArnsRequest request) { request = BeforeClientExecution(request); return ExecuteListAppliedSchemaArns(request); }
+public string Name() { return this.Name; }
+public ValueEval Evaluate(ValueEval[] args, OperationEvaluationContext ec) {if (args.Length < 1) {return ErrorEval.VALUE_INVALID;}bool isA1style;string text;try {ValueEval ve = OperandResolver.GetSingleValue(args[0], ec.GetRowIndex(), ec.GetColumnIndex());text = OperandResolver.CoerceValueToString(ve);switch (args.Length) {case 1:isA1style = true;break;case 2:isA1style = EvaluateBooleanArg(args[1], ec);break;default:return ErrorEval.VALUE_INVALID;}} catch (EvaluationException e) {return e.GetErrorEval();}return EvaluateIndirect(ec, text, isA1style);}
+public final int CompareTo(int[] bs, int p) {int cmp;cmp = NB.CompareUInt32(w1, bs[p]);if (cmp != 0) return cmp;cmp = NB.CompareUInt32(w2, bs[p + 1]);if (cmp != 0) return cmp;cmp = NB.CompareUInt32(w3, bs[p + 2]);if (cmp != 0) return cmp;cmp = NB.CompareUInt32(w4, bs[p + 3]);if (cmp != 0) return cmp;return NB.CompareUInt32(w5, bs[p + 4]);}
+public void removeName(int index){names.RemoveAt(index);workbook.RemoveName(index);}
+public GetQueueAttributesRequest(string queueUrl, List<string> attributeNames) { SetQueueUrl(queueUrl); SetAttributeNames(attributeNames); }
+public static class ArrayHelper{public static bool[] CopyOf(bool[] original, int newLength){if (newLength < 0){throw new ArgumentException("Array length is negative");}return CopyOfRange(original, 0, newLength);}public static bool[] CopyOfRange(bool[] original, int from, int to){if (from > to){throw new ArgumentException("from cannot be greater than to");}if (from < 0 || to > original.Length){throw new ArgumentOutOfRangeException();}bool[] newArray = new bool[to - from];Array.Copy(original, from, newArray, 0, to - from);return newArray;}}
+public static void SetEnabled(bool enabled) {ENABLED = enabled;}
+public DeleteLogPatternResult deleteLogPattern(DeleteLogPatternRequest request) {request = beforeClientExecution(request);return executeDeleteLogPattern(request);}
+public bool Contains(char[] text, int off, int len) { return map.ContainsKey(text, off, len); }
+public int GetFirstSheetIndexFromExternSheetIndex(int externSheetNumber){return linkTable.GetFirstInternalSheetIndexForExtIndex(externSheetNumber);}
+public bool handles(string commandLine) {return command.Length + 1 < commandLine.Length && commandLine[command.Length] == ' ' && commandLine.StartsWith(command);}
+public static void register(MergeStrategy imp) {register(imp.getName(), imp);}
+public long ramBytesUsed() {return BASE_RAM_BYTES_USED + (index != null ? index.ramBytesUsed() : 0);}
+public HostedZone(string id, string name, string callerReference) { SetId(id); SetName(name); SetCallerReference(callerReference); }
+public GetFindingsResult GetFindings(GetFindingsRequest request) {request = BeforeClientExecution(request);return ExecuteGetFindings(request);}
+public DescribeTopicsDetectionJobResult DescribeTopicsDetectionJob(DescribeTopicsDetectionJobRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeTopicsDetectionJob(request);}
+public bool processMatch(ValueEval eval) {if (eval is NumericValueEval) {if (minimumValue == null) {minimumValue = eval;} else {double currentValue = ((NumericValueEval)eval).getNumberValue();double oldValue = ((NumericValueEval)minimumValue).getNumberValue();if (currentValue < oldValue) {minimumValue = eval;}}}return true;}
+public void write(LittleEndianOutput out) { out.writeByte(sid + getPtgClass()); out.writeShort(field_1_len_ref_subexpression); }
+public class Program{public static void Main(string[] args){bool printTree = false;string path = null;for (int i = 0; i < args.Length; i++){if (args[i].Equals("-printTree")){printTree = true;}else{path = args[i];}}if (args.Length != (printTree ? 2 : 1)){Console.WriteLine("\nUsage: java -classpath ... org.apache.lucene.facet.util.PrintTaxonomyStats [-printTree] /path/to/taxononmy/index\n");Environment.Exit(1);}var dir = FSDirectory.Open(new DirectoryInfo(path));var r = new DirectoryTaxonomyReader(dir);PrintStats(r, Console.Out, printTree);r.Close();dir.Close();}private static void PrintStats(TaxonomyReader r, TextWriter writer, bool printTree){// Implement the logic to print taxonomy stats here}}
+public void SetByteValue(byte value) {if (!(fieldsData is byte)) {throw new ArgumentException("cannot change value type from " + fieldsData.GetType().Name + " to Byte");}fieldsData = value;}
+public static int Initialize() {return Initialize(DEFAULT_SEED);}
+public CachingDoubleValueSource(DoubleValuesSource source) {this.source = source;cache = new Dictionary<object, double>();}
+public AttributeDefinition(string attributeName, ScalarAttributeType attributeType) {SetAttributeName(attributeName);SetAttributeType(attributeType.ToString());}
+public static string Join(System.Collections.Generic.IEnumerable<string> parts, string separator) {return String.Join(separator, parts);}
+public ListTaskDefinitionFamiliesResult listTaskDefinitionFamilies(ListTaskDefinitionFamiliesRequest request) {request = beforeClientExecution(request);return executeListTaskDefinitionFamilies(request);}### Output:csharppublic ListTaskDefinitionFamiliesResult ListTaskDefinitionFamilies(ListTaskDefinitionFamiliesRequest request) {request = BeforeClientExecution(request);return ExecuteListTaskDefinitionFamilies(request);}
+public ListComponentsResult ListComponents(ListComponentsRequest request) {request = BeforeClientExecution(request);return ExecuteListComponents(request);}
+public ActivatePhotosRequest() : base("CloudPhoto", "2017-07-11", "ActivatePhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}
+public CreateMatchmakingRuleSetResult CreateMatchmakingRuleSet(CreateMatchmakingRuleSetRequest request) {request = BeforeClientExecution(request);return ExecuteCreateMatchmakingRuleSet(request);}
+public ListAvailableManagementCidrRangesResult ListAvailableManagementCidrRanges(ListAvailableManagementCidrRangesRequest request) {request = BeforeClientExecution(request);return ExecuteListAvailableManagementCidrRanges(request);}
+public ObjectIdSubclassMap<ObjectId> GetBaseObjectIds() {if (baseObjectIds != null)return baseObjectIds;return new ObjectIdSubclassMap<ObjectId>();}
+public DeletePushTemplateResult DeletePushTemplate(DeletePushTemplateRequest request) {request = BeforeClientExecution(request);return ExecuteDeletePushTemplate(request);}
+public CreateDomainEntryResult CreateDomainEntry(CreateDomainEntryRequest request) {request = BeforeClientExecution(request);return ExecuteCreateDomainEntry(request);}
+public static int GetEncodedSize(object[] values) {int result = values.Length * 1;foreach (var value in values) {result += GetEncodedSize(value);}return result;}
+public OpenNLPTokenizerFactory(Dictionary<string, string> args) : base(args){sentenceModelFile = Require(args, SENTENCE_MODEL);tokenizerModelFile = Require(args, TOKENIZER_MODEL);if (!args.IsEmpty()){throw new ArgumentException("Unknown parameters: " + args);}}
+public final int GetInt(int index) { CheckIndex(index, SizeOf.INT); return Memory.PeekInt(backingArray, offset + index, order); }
+public List<Head> GetNextHeads(char c) {if (Matches(c)) {return newHeads;}return FileNameMatcher.EMPTY_HEAD_LIST;}
+public MemoryStream PutShort(short value) {throw new InvalidOperationException();}
+public void WriteUnshared(object obj) { WriteObject(obj, true); }
+public int offsetByCodePoints(int index, int codePointOffset) {return Characterex.offsetByCodePoints(value, 0, count, index, codePointOffset);}
+public static int GetUniqueAlt(System.Collections.Generic.IEnumerable<System.Collections.BitArray> altsets) {System.Collections.BitArray all = GetAlts(altsets);if (all.Count == 1) return all.NextSetBit(0);return ATN.INVALID_ALT_NUMBER;}
+public DateTime GetWhen() {return new DateTime(when);}
+public RuleTagToken(string ruleName, int bypassTokenType, string label) {if (ruleName == null || ruleName.Length == 0) {throw new ArgumentException("ruleName cannot be null or empty.");}this.ruleName = ruleName;this.bypassTokenType = bypassTokenType;this.label = label;}
+public DisableOrganizationAdminAccountResult disableOrganizationAdminAccount(DisableOrganizationAdminAccountRequest request) { request = beforeClientExecution(request); return executeDisableOrganizationAdminAccount(request); }
+public CreateRoomResult CreateRoom(CreateRoomRequest request) {request = BeforeClientExecution(request);return ExecuteCreateRoom(request);}
+public ReplicationGroup DeleteReplicationGroup(DeleteReplicationGroupRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteReplicationGroup(request);}
+public final CharBuffer Decode(ByteBuffer buffer) {try {return newDecoder().OnMalformedInput(CodingErrorAction.REPLACE).OnUnmappableCharacter(CodingErrorAction.REPLACE).Decode(buffer);} catch (CharacterCodingException ex) {throw new Exception(ex.Message, ex);}}
+public Distribution(string id, string status, string domainName) { SetId(id); SetStatus(status); SetDomainName(domainName); }
+public final double[] array() { return protectedArray(); }
+public DateWindow1904Record(RecordInputStream in) { field_1_window = in.ReadInt16(); }
+public DeleteDBSnapshotRequest(string dBSnapshotIdentifier) { SetDBSnapshotIdentifier(dBSnapshotIdentifier); }
+public final ParserExtension GetExtension(string key) { return this.extensions[key]; }
+public void inform(ResourceLoader loader) {try {if (chunkerModelFile != null) {OpenNLPOpsFactory.getChunkerModel(chunkerModelFile, loader);}} catch (IOException e) {throw new ArgumentException(e);}}
+public CompleteVaultLockResult CompleteVaultLock(CompleteVaultLockRequest request) {request = BeforeClientExecution(request);return ExecuteCompleteVaultLock(request);}
+public final int[] GetCharIntervals() { return points.Clone(); }
+public long ramBytesUsed() {return values.ramBytesUsed() + base.ramBytesUsed() + Long.BYTES + RamUsageEstimator.NUM_BYTES_OBJECT_REF;}
+public RegisterInstancesWithLoadBalancerResult RegisterInstancesWithLoadBalancer(RegisterInstancesWithLoadBalancerRequest request) {request = BeforeClientExecution(request);return ExecuteRegisterInstancesWithLoadBalancer(request);}
+public DescribeClusterUserKubeconfigRequest() : base("CS", "2015-12-15", "DescribeClusterUserKubeconfig", "csk") {UriPattern = "/k8s/[ClusterId]/user_config"; Method = MethodType.GET;}
+public PrecisionRecord(RecordInputStream in) {field_1_precision = in.ReadInt16();}
+public void serialize(LittleEndianOutput out) {out.writeShort(getLeftRowGutter());out.writeShort(getTopColGutter());out.writeShort(getRowLevelMax());out.writeShort(getColLevelMax());}
+public DeleteVirtualInterfaceResult deleteVirtualInterface(DeleteVirtualInterfaceRequest request) { request = beforeClientExecution(request); return executeDeleteVirtualInterface(request); }
+public Entry GetEntry(string name){if (excludes.Contains(name)){throw new FileNotFoundException(name);}Entry entry = directory.GetEntry(name);return WrapEntry(entry);}
+public string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[BACKUP]\n");buffer.Append("    .backup          = ").Append(Convert.ToString(GetBackup(), 16)).Append("\n");buffer.Append("[/BACKUP]\n");return buffer.ToString();}
+public DeleteVoiceConnectorOriginationResult DeleteVoiceConnectorOrigination(DeleteVoiceConnectorOriginationRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteVoiceConnectorOrigination(request);}
+public Appendable Append(char c) { Write(c); return this; }
+public static long GenerationFromSegmentsFileName(string fileName) {if (fileName == OLD_SEGMENTS_GEN) {throw new ArgumentException($"\"{OLD_SEGMENTS_GEN}\" is not a valid segment file name since 4.0");} else if (fileName == IndexFileNames.SEGMENTS) {return 0;} else if (fileName.StartsWith(IndexFileNames.SEGMENTS)) {return Convert.ToInt64(fileName.Substring(1 + IndexFileNames.SEGMENTS.Length), System.Globalization.NumberStyles.HexNumber);} else {throw new ArgumentException($"fileName \"{fileName}\" is not a segments file");}}
+public static TagOpt FromOption(string o) {if (o == null || o.Length == 0)return AUTO_FOLLOW;foreach (TagOpt tagopt in Enum.GetValues(typeof(TagOpt))) {if (tagopt.Option().Equals(o))return tagopt;}throw new ArgumentException(string.Format(JGitText.Get().invalidTagOption, o));}
+public StartContentModerationResult StartContentModeration(StartContentModerationRequest request) { request = BeforeClientExecution(request); return ExecuteStartContentModeration(request); }
+public static string QuoteReplacement(string s) {StringBuilder result = new StringBuilder(s.Length);for (int i = 0; i < s.Length; i++) {char c = s[i];if (c == '\\' || c == '$') {result.Append('\\');}result.Append(c);}return result.ToString();}
+public final void set(V newValue) { value = newValue; }
+public QueryParserTokenManager(CharStream stream){this.input_stream = stream;}
+public long ValueFor(double elapsed) {double val;if (modBy == 0)val = elapsed / factor;elseval = elapsed / factor % modBy;if (type == '0')return (long)Math.Round(val);elsereturn (long)val;}
+public ArrayBuffer<long> Get(long[] dst, int dstOffset, int longCount) {byteBuffer.Limit(limit * SizeOf.LONG);byteBuffer.Position(position * SizeOf.LONG);if (byteBuffer is DirectByteBuffer) {((DirectByteBuffer)byteBuffer).Get(dst, dstOffset, longCount);} else {((HeapByteBuffer)byteBuffer).Get(dst, dstOffset, longCount);}this.position += longCount;return this;}
+public void removeErrorListeners(){_listeners.Clear();}
+public CommonTokenStream(TokenSource tokenSource, int channel) : this(tokenSource) {this.channel = channel;}
+public ListObjectPoliciesResult ListObjectPolicies(ListObjectPoliciesRequest request) {request = BeforeClientExecution(request);return ExecuteListObjectPolicies(request);}
+public ObjectToPack(AnyObjectId src, int type) : base(src){flags = type << TYPE_SHIFT;}
+public int stem(char[] s, int len) {int numVowels = numVowels(s, len);for (int i = 0; i < affixes.Length; i++) {Affix affix = affixes[i];if (numVowels > affix.vc && len >= affix.affix.Length + 3 && endsWith(s, len, affix.affix)) {len -= affix.affix.Length;return affix.palatalizes ? unpalatalize(s, len) : len;}}return len;}
+public void Recover(Parser recognizer, RecognitionException e) {if (lastErrorIndex == recognizer.InputStream.Index && lastErrorStates != null && lastErrorStates.Contains(recognizer.State)) {recognizer.Consume();}lastErrorIndex = recognizer.InputStream.Index;if (lastErrorStates == null) lastErrorStates = new IntervalSet();lastErrorStates.Add(recognizer.State);IntervalSet followSet = GetErrorRecoverySet(recognizer);ConsumeUntil(recognizer, followSet);}
+public string toFormulaString() {string value = field_3_string;int len = value.Length;StringBuilder sb = new StringBuilder(len + 4);sb.Append(FORMULA_DELIMITER);for (int i = 0; i < len; i++) {char c = value[i];if (c == FORMULA_DELIMITER) {sb.Append(FORMULA_DELIMITER);}sb.Append(c);}sb.Append(FORMULA_DELIMITER);return sb.ToString();}
+public UnlinkFaceRequest() : base("LinkFace", "2018-07-20", "UnlinkFace") {Protocol = ProtocolType.HTTPS;Method = MethodType.POST;}
+public ConfigurationOptionSetting(string namespace, string optionName, string value) { setNamespace(namespace); setOptionName(optionName); setValue(value); }
+public CharSequence getFully(CharSequence key) {StringBuilder result = new StringBuilder(tries.size() * 2);for (int i = 0; i < tries.size(); i++) {CharSequence r = tries.get(i).getFully(key);if (r == null || (r.Length == 1 && r[0] == EOM)) {return result;}result.Append(r);}return result;}
+public DescribeMountTargetSecurityGroupsResult DescribeMountTargetSecurityGroups(DescribeMountTargetSecurityGroupsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeMountTargetSecurityGroups(request);}
+public GetApiMappingResult GetApiMapping(GetApiMappingRequest request) { request = BeforeClientExecution(request); return ExecuteGetApiMapping(request); }
+public HttpRequest(String strUrl) : base(strUrl) { }
+public MemFuncPtg(int subExprLen){field_1_len_ref_subexpression = subExprLen;}
+public static TermStats[] GetHighFreqTerms(IndexReader reader, int numTerms, string field, Comparator<TermStats> comparator) {TermStatsQueue tiq = null;if (field != null) {Terms terms = MultiTerms.GetTerms(reader, field);if (terms == null) {throw new Exception("field " + field + " not found");}TermsEnum termsEnum = terms.GetEnumerator();tiq = new TermStatsQueue(numTerms, comparator);tiq.Fill(field, termsEnum);} else {Collection<string> fields = FieldInfos.GetIndexedFields(reader);if (fields.Count == 0) {throw new Exception("no fields found for this index");}tiq = new TermStatsQueue(numTerms, comparator);foreach (string fieldName in fields) {Terms terms = MultiTerms.GetTerms(reader, fieldName);if (terms != null) {tiq.Fill(fieldName, terms.GetEnumerator());}}}TermStats[] result = new TermStats[tiq.Size()];int count = tiq.Size() - 1;while (tiq.Size() != 0) {result[count] = tiq.Pop();count--;}return result;}
+public DeleteApnsVoipChannelResult DeleteApnsVoipChannel(DeleteApnsVoipChannelRequest request) { request = beforeClientExecution(request); return executeDeleteApnsVoipChannel(request); }
+public ListFacesResult ListFaces(ListFacesRequest request) {request = BeforeClientExecution(request);return ExecuteListFaces(request);}
+public ShapeFieldCacheDistanceValueSource(SpatialContext ctx, ShapeFieldCacheProvider<Point> provider, Point from, double multiplier){this.ctx = ctx;this.from = from;this.provider = provider;this.multiplier = multiplier;}
+public char Get(int index) { CheckIndex(index); return sequence[index]; }
+public UpdateConfigurationProfileResult updateConfigurationProfile(UpdateConfigurationProfileRequest request) { request = beforeClientExecution(request); return executeUpdateConfigurationProfile(request); }
+public DescribeLifecycleHooksResult DescribeLifecycleHooks(DescribeLifecycleHooksRequest request){request = beforeClientExecution(request);return executeDescribeLifecycleHooks(request);}
+public DescribeHostReservationsResult DescribeHostReservations(DescribeHostReservationsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeHostReservations(request);}
+public static PredictionContext fromRuleContext(ATN atn, RuleContext outerContext) {if (outerContext == null) outerContext = RuleContext.EMPTY;if (outerContext.parent == null || outerContext == RuleContext.EMPTY) {return PredictionContext.EMPTY;}PredictionContext parent = EMPTY;parent = PredictionContext.fromRuleContext(atn, outerContext.parent);ATNState state = atn.states[outerContext.invokingState];RuleTransition transition = (RuleTransition)state.transition(0);return SingletonPredictionContext.create(parent, transition.followState.stateNumber);}
+public string ToString() { StringBuilder buffer = new StringBuilder(); buffer.AppendLine("[SXVDEX]"); buffer.Append("    .grbit1 =").Append(HexDump.IntToHex(_grbit1)).AppendLine(); buffer.Append("    .grbit2 =").Append(HexDump.ByteToHex(_grbit2)).AppendLine(); buffer.Append("    .citmShow =").Append(HexDump.ByteToHex(_citmShow)).AppendLine(); buffer.Append("    .isxdiSort =").Append(HexDump.ShortToHex(_isxdiSort)).AppendLine(); buffer.Append("    .isxdiShow =").Append(HexDump.ShortToHex(_isxdiShow)).AppendLine(); buffer.Append("    .subtotalName =").Append(_subtotalName).AppendLine(); buffer.AppendLine("[/SXVDEX]"); return buffer.ToString(); }
+public string ToString() { StringBuilder r = new StringBuilder(); r.Append("BlameResult: "); r.Append(GetResultPath()); return r.ToString(); }
+public ListChangeSetsResult ListChangeSets(ListChangeSetsRequest request) {request = BeforeClientExecution(request);return ExecuteListChangeSets(request);}
+public bool isAllowNonFastForwards() { return allowNonFastForwards; }
+public FeatRecord() { futureHeader = new FtrHeader(); futureHeader.setRecordType(sid); }
+public short[] put(short c) { throw new ReadOnlyBufferException(); }
+public void SetQuery(System.Collections.IEnumerable query) { this.query = query; this.message = new MessageImpl(QueryParserMessages.INVALID_SYNTAX_CANNOT_PARSE, query, ""); }
+public StashApplyCommand StashApply() { return new StashApplyCommand(repo); }
+public HashSet<string> nameSet() { return new HashSet<string>(dictionary.Values); }
+public static int GetEffectivePort(string scheme, int specifiedPort) {if (specifiedPort != -1) {return specifiedPort;}if (scheme.Equals("http", StringComparison.OrdinalIgnoreCase)) {return 80;} else if (scheme.Equals("https", StringComparison.OrdinalIgnoreCase)) {return 443;} else {return -1;}}
+public ListAssessmentTemplatesResult ListAssessmentTemplates(ListAssessmentTemplatesRequest request) { request = BeforeClientExecution(request); return ExecuteListAssessmentTemplates(request); }
+public Cluster RestoreFromClusterSnapshot(RestoreFromClusterSnapshotRequest request) {request = BeforeClientExecution(request);return ExecuteRestoreFromClusterSnapshot(request);}
+public void addShape(HSSFShape shape) {shape.setPatriarch(this.getPatriarch()); shape.setParent(this); shapes.Add(shape);}
+public bool Equals(Object o) {if (this == o) return true;if (o == null || GetType() != o.GetType()) return false;FacetEntry that = (FacetEntry)o;if (count != that.count) return false;if (!value.Equals(that.value)) return false;return true;}
+public static int Prev(byte[] b, int ptr, char chrA) {if (ptr == b.Length) --ptr;while (ptr >= 0) {if (b[ptr--] == chrA) return ptr;}return ptr;}
+public final bool IsDeltaRepresentation() { return deltaBase != null; }
+public Token emitEOF() {int cpos = getCharPositionInLine();int line = getLine();Token eof = _factory.create(_tokenFactorySourcePair, Token.EOF, null, Token.DEFAULT_CHANNEL, _input.index(), _input.index() - 1, line, cpos);emit(eof);return eof;}
+public UpdateUserRequest(string userName) { SetUserName(userName); }
+public RevFilter Negate() { return NotRevFilter.Create(this); }
+public void SetTagger(PersonIdent taggerIdent) {tagger = taggerIdent;}
+public static BufferSize automatic() {Runtime rt = Runtime.getRuntime();final long max = rt.maxMemory(); final long total = rt.totalMemory(); final long free = rt.freeMemory(); final long totalAvailableBytes = max - total + free;long sortBufferByteSize = free/2;final long minBufferSizeBytes = MIN_BUFFER_SIZE_MB*MB;if (sortBufferByteSize <  minBufferSizeBytes|| totalAvailableBytes > 10 * minBufferSizeBytes) { if (totalAvailableBytes/2 > minBufferSizeBytes) { sortBufferByteSize = totalAvailableBytes/2; } else {sortBufferByteSize = Math.Max(ABSOLUTE_MIN_SORT_BUFFER_SIZE, sortBufferByteSize);}}return new BufferSize(Math.Min((long)Int32.MaxValue, sortBufferByteSize));}
+public static int TrimTrailingWhitespace(byte[] raw, int start, int end) {int ptr = end - 1;while (start <= ptr && IsWhitespace(raw[ptr]))ptr--;return ptr + 1;}
+public TopMarginRecord(RecordInputStream in) {Field_1_margin = in.ReadDouble();}
+public RetrieveEnvironmentInfoRequest(EnvironmentInfoType infoType) { SetInfoType(infoType.ToString()); }
+public CreatePlayerSessionsResult CreatePlayerSessions(CreatePlayerSessionsRequest request) {request = BeforeClientExecution(request);return ExecuteCreatePlayerSessions(request);}
+public CreateProxySessionResult CreateProxySession(CreateProxySessionRequest request) {request = BeforeClientExecution(request);return ExecuteCreateProxySession(request);}
+public int GetObjectType() { return type; }
+public string GetScheme() { return scheme; }
+public void characters(char[] ch, int start, int length) {contents.Append(ch, start, length);}
+public FetchAlbumTagPhotosRequest() : base("CloudPhoto", "2017-07-11", "FetchAlbumTagPhotos", "cloudphoto"){SetProtocol(ProtocolType.HTTPS);}
+public DeleteMembersResult DeleteMembers(DeleteMembersRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteMembers(request);}
+public GetContactReachabilityStatusResult GetContactReachabilityStatus(GetContactReachabilityStatusRequest request) {request = BeforeClientExecution(request);return ExecuteGetContactReachabilityStatus(request);}
+public bool Remove(Object o) { return Impl.this.Remove(o) != null; }
+public E last() {return backingMap.LastKey();}
+public CreateStreamingDistributionResult CreateStreamingDistribution(CreateStreamingDistributionRequest request){request = BeforeClientExecution(request);return ExecuteCreateStreamingDistribution(request);}
+public bool isAbsolute() { return absolute; }
+public DisableAddOnResult DisableAddOn(DisableAddOnRequest request) {request = BeforeClientExecution(request);return ExecuteDisableAddOn(request);}
+public DescribeAliasResult DescribeAlias(DescribeAliasRequest request) {request = BeforeClientExecution(request); return ExecuteDescribeAlias(request);}
+public void Next(int delta) {while (--delta >= 0) {if (currentSubtree != null)ptr += currentSubtree.GetEntrySpan();elseptr++;if (Eof())break;ParseEntry();}}
+public RevFilter clone() { return new Binary((a as Binary).clone(), (b as Binary).clone()); }
+public Reader Create(Reader input) { return new PersianCharFilter(input); }
+public string Option() { return option; }
+public string ToString() {StringBuilder sb = new StringBuilder("[");foreach (var item in this) {if (sb.Length > 1) sb.Append(", ");if (item is char[]) {sb.Append((char[])item);} else {sb.Append(item);}}return sb.Append(']').ToString();}
+public DescribeSignalingChannelResult describeSignalingChannel(DescribeSignalingChannelRequest request) {request = beforeClientExecution(request);return executeDescribeSignalingChannel(request);}
+public AttachStaticIpResult AttachStaticIp(AttachStaticIpRequest request) {request = BeforeClientExecution(request);return ExecuteAttachStaticIp(request);}
+public string ToString() { StringBuilder sb = new StringBuilder(64); CellReference crA = new CellReference(_firstRowIndex, _firstColumnIndex, false, false); CellReference crB = new CellReference(_lastRowIndex, _lastColumnIndex, false, false); sb.Append(GetType().Name); sb.Append(" [").Append(crA.FormatAsString()).Append(':').Append(crB.FormatAsString()).Append("]"); return sb.ToString(); }
+public BloomFilteringPostingsFormat(PostingsFormat delegatePostingsFormat, BloomFilterFactory bloomFilterFactory) : base(BLOOM_CODEC_NAME){this.delegatePostingsFormat = delegatePostingsFormat;this.bloomFilterFactory = bloomFilterFactory;}
+public ListTemplatesResult ListTemplates(ListTemplatesRequest request) {request = BeforeClientExecution(request);return ExecuteListTemplates(request);}
+public TimerThread(long resolution, Counter counter) : base(THREAD_NAME) {this.resolution = resolution;this.counter = counter;this.set_Daemon(true);}
+public DrawingRecord() { recordData = EMPTY_BYTE_ARRAY; }
+public ListDirectoriesResult ListDirectories(ListDirectoriesRequest request) {request = BeforeClientExecution(request);return ExecuteListDirectories(request);}
+public void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int j = 0; j < iterations; ++j) {final byte block = blocks[blocksOffset++];values[valuesOffset++] = (block >> 7) & 1;values[valuesOffset++] = (block >> 6) & 1;values[valuesOffset++] = (block >> 5) & 1;values[valuesOffset++] = (block >> 4) & 1;values[valuesOffset++] = (block >> 3) & 1;values[valuesOffset++] = (block >> 2) & 1;values[valuesOffset++] = (block >> 1) & 1;values[valuesOffset++] = block & 1;}}
+public GroupingSearch DisableCaching() { this.maxCacheRAMMB = null; this.maxDocsToCache = null; return this; }
+public static int idealByteArraySize(int need) {for (int i = 4; i < 32; i++)if (need <= (1 << i) - 12)return (1 << i) - 12;return need;}
+public UpdateAssessmentTargetResult UpdateAssessmentTarget(UpdateAssessmentTargetRequest request){request = BeforeClientExecution(request);return ExecuteUpdateAssessmentTarget(request);}
+public ModifyVolumeResult ModifyVolume(ModifyVolumeRequest request){request = BeforeClientExecution(request);return ExecuteModifyVolume(request);}
+public Cell merge(Cell m, Cell e) {if (m.cmd == e.cmd && m.ref == e.ref && m.skip == e.skip) {Cell c = new Cell(m);c.cnt += e.cnt;return c;} else {return null;}}
+public ByteBuffer read(int length, long position){if (position >= size()){throw new IndexOutOfBoundsException("Position " + position + " past the end of the file");}ByteBuffer dst;if (writable){dst = channel.Map(FileChannel.MapMode.ReadWrite, position, length);buffersToClean.Add(dst);}else{channel.Position = position;dst = ByteBuffer.Allocate(length);int worked = IOUtils.ReadFully(channel, dst);if (worked == -1){throw new IndexOutOfBoundsException("Position " + position + " past the end of the file");}}dst.Position = 0;return dst;}
+public void RespondActivityTaskCompleted(RespondActivityTaskCompletedRequest request) {request = BeforeClientExecution(request);ExecuteRespondActivityTaskCompleted(request);}
+public void IncrementProgressBy(int diff) { SetProgress(mProgress + diff); }
+public MetadataDiff CompareMetadata(DirCacheEntry entry) {if (entry.IsAssumeValid())return MetadataDiff.EQUAL;if (entry.IsUpdateNeeded())return MetadataDiff.DIFFER_BY_METADATA;if (IsModeDifferent(entry.GetRawMode()))return MetadataDiff.DIFFER_BY_METADATA;int type = mode & FileMode.TYPE_MASK;if (type == FileMode.TYPE_TREE || type == FileMode.TYPE_GITLINK)return MetadataDiff.EQUAL;if (!entry.IsSmudged() && entry.GetLength() != (int) GetEntryLength())return MetadataDiff.DIFFER_BY_METADATA;Instant cacheLastModified = entry.GetLastModifiedInstant();Instant fileLastModified = GetEntryLastModifiedInstant();if (timestampComparator.Compare(cacheLastModified, fileLastModified, getOptions().GetCheckStat() == CheckStat.MINIMAL) != 0) {return MetadataDiff.DIFFER_BY_TIMESTAMP;}if (entry.IsSmudged()) {return MetadataDiff.SMUDGED;}return MetadataDiff.EQUAL;}
+public static NumberRecord ConvertToNumberRecord(RKRecord rk) {NumberRecord num = new NumberRecord();num.Column = rk.Column;num.Row = rk.Row;num.XFIndex = rk.XFIndex;num.Value = rk.RKNumber;return num;}
+public CharBuffer Put(char[] src, int srcOffset, int charCount) { byteBuffer.Limit(limit * SizeOf.CHAR); byteBuffer.Position(position * SizeOf.CHAR); if (byteBuffer is ReadWriteDirectByteBuffer) { ((ReadWriteDirectByteBuffer)byteBuffer).Put(src, srcOffset, charCount); } else { ((ReadWriteHeapByteBuffer)byteBuffer).Put(src, srcOffset, charCount); } this.position += charCount; return this; }
+public int getCells() {var i = cells.Keys.GetEnumerator();int size = 0;while (i.MoveNext()) {var c = (char)i.Current;var e = at(c);if (e.cmd >= 0 || e.ref >= 0) {size++;}}return size;}
+public BeiderMorseFilterFactory(Dictionary<string, string> args) : base(args){NameType nameType = NameType.Parse(get(args, "nameType", NameType.Generic.ToString()));RuleType ruleType = RuleType.Parse(get(args, "ruleType", RuleType.Approx.ToString()));bool concat = getBoolean(args, "concat", true);engine = new PhoneticEngine(nameType, ruleType, concat);var langs = getSet(args, "languageSet");languageSet = (null == langs || (1 == langs.Count && langs.Contains("auto"))) ? null : LanguageSet.From(langs);if (!args.Any()){throw new ArgumentException("Unknown parameters: " + args);}}
+public static double Varp(double[] v) {double r = double.NaN;if (v != null && v.Length > 1) {r = Devsq(v) / v.Length;}return r;}
+public PersianNormalizationFilterFactory(Dictionary<string, string> args) : base(args){if (!args.Any()){throw new ArgumentException("Unknown parameters: " + string.Join(", ", args.Keys));}}
+public static WeightedTerm[] getTerms(Query query, bool prohibited, string fieldName) {HashSet<WeightedTerm> terms = new HashSet<WeightedTerm>();Predicate<string> fieldSelector = fieldName == null ? f => true : fieldName.Equals;query.Visit(new BoostedTermExtractor(1, terms, prohibited, fieldSelector));return terms.ToArray(new WeightedTerm[0]);}
+public DeleteDocumentationPartResult deleteDocumentationPart(DeleteDocumentationPartRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationPart(request);}
+public string ToString() { StringBuilder sb = new StringBuilder(); sb.AppendLine("[CHART]"); sb.AppendLine("    .x     = " + GetX()); sb.AppendLine("    .y     = " + GetY()); sb.AppendLine("    .width = " + GetWidth()); sb.AppendLine("    .height= " + GetHeight()); sb.AppendLine("[/CHART]"); return sb.ToString(); }
+public final short Get(int index) { CheckIndex(index); return backingArray[offset + index]; }
+public string ToString(){ return image; }
+public ValueEval Evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval arg1) {try {AreaEval reA = EvaluateRef(arg0);AreaEval reB = EvaluateRef(arg1);AreaEval result = ResolveRange(reA, reB);if (result == null) {return ErrorEval.NULL_INTERSECTION;}return result;} catch (EvaluationException e) {return e.GetErrorEval();}}
+public void Clear() { weightBySpanQuery.Clear(); }
+public int FindEndOffset(StringBuilder buffer, int start) {if (start > buffer.Length || start < 0) return start;bi.Text = buffer.Substring(start);return bi.Next() + start;}
+public SrndQuery PrimaryQuery(){SrndQuery q;switch ((jj_ntk == -1) ? jj_ntk() : jj_ntk){case LPAREN:jj_consume_token(LPAREN);q = FieldsQuery();jj_consume_token(RPAREN);break;case OR:case AND:case W:case N:q = PrefixOperatorQuery();break;case TRUNCQUOTED:case QUOTED:case SUFFIXTERM:case TRUNCTERM:case TERM:q = SimpleTerm();break;default:jj_la1[5] = jj_gen;jj_consume_token(-1);throw new ParseException();}OptionalWeights(q);return q;}
+public DeleteApiKeyResult DeleteApiKey(DeleteApiKeyRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteApiKey(request);}
+public InsertTagsRequest() : base("Ots", "2016-06-20", "InsertTags", "ots") { Method = MethodType.POST; }
+public DeleteUserByPrincipalIdResult deleteUserByPrincipalId(DeleteUserByPrincipalIdRequest request) {request = beforeClientExecution(request);return executeDeleteUserByPrincipalId(request);}
+public DescribeNetworkInterfacesResult describeNetworkInterfaces(DescribeNetworkInterfacesRequest request){request = beforeClientExecution(request);return executeDescribeNetworkInterfaces(request);}
+public int serialize(int offset, byte[] data, EscherSerializationListener listener){listener.beforeRecordSerialize(offset, getRecordId(), this);LittleEndian.putShort(data, offset, getOptions());LittleEndian.putShort(data, offset + 2, getRecordId());LittleEndian.putInt(data, offset + 4, 8);LittleEndian.putInt(data, offset + 8, field_1_numShapes);LittleEndian.putInt(data, offset + 12, field_2_lastMSOSPID);listener.afterRecordSerialize(offset + 16, getRecordId(), getRecordSize(), this);return getRecordSize();}
+public CreateSecurityConfigurationResult CreateSecurityConfiguration(CreateSecurityConfigurationRequest request) {request = BeforeClientExecution(request);return ExecuteCreateSecurityConfiguration(request);}
+public DescribeClientVpnConnectionsResult DescribeClientVpnConnections(DescribeClientVpnConnectionsRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeClientVpnConnections(request);}
+public static void Fill(double[] array, double value) {for (int i = 0; i < array.Length; i++) {array[i] = value;}}
+public bool hasNext() { return nextId < cells.Length; }
+public PostingsEnum reset(int[] postings) {this.postings = postings;upto = -2;freq = 0;return this;}
+public final bool hasAll(RevFlagSet set) {return (flags & set.mask) == set.mask;}
+public ModifyAccountResult ModiftyAccount(ModifyAccountRequest request) { request = beforeClientExecution(request); return executeModifyAccount(request); }
+public Token LT(int k) { lazyInit(); if (k == 0) return null; if (k < 0) return LB(-k); int i = p + k - 1; sync(i); if (i >= tokens.Count) { return tokens[tokens.Count - 1]; } return tokens[i]; }
+public void removeSheet(int sheetIndex) {if (boundsheets.Count > sheetIndex) {records.RemoveAt(records.IndexOf(records.GetBspos() - (boundsheets.Count - 1) + sheetIndex));boundsheets.RemoveAt(sheetIndex);fixTabIdRecord();}int sheetNum1Based = sheetIndex + 1;for (int i = 0; i < getNumNames(); i++) {NameRecord nr = getNameRecord(i);if (nr.getSheetNumber() == sheetNum1Based) {nr.setSheetNumber(0);} else if (nr.getSheetNumber() > sheetNum1Based) {nr.setSheetNumber(nr.getSheetNumber() - 1);}}if (linkTable != null) {linkTable.removeSheet(sheetIndex);}}
+public void removeName(string name) {int index = getNameIndex(name);removeName(index);}
+public bool Equals(final Object o) {if (!(o is Property)) {return false;}final Property p = (Property) o;final Object pValue = p.GetValue();final long pId = p.GetID();if (id != pId || (id != 0 && !TypesAreEqual(type, p.GetType()))) {return false;}if (value == null && pValue == null) {return true;}if (value == null || pValue == null) {return false;}final Type valueClass = value.GetType(), pValueClass = pValue.GetType();if (!(valueClass.IsAssignableFrom(pValueClass)) &&!(pValueClass.IsAssignableFrom(valueClass))) {return false;}if (value is byte[]) {byte[] thisVal = (byte[]) value, otherVal = (byte[]) pValue;int len = UnpaddedLength(thisVal);if (len != UnpaddedLength(otherVal)) {return false;}for (int i=0; i<len; i++) {if (thisVal[i] != otherVal[i]) {return false;}}return true;}return value.Equals(pValue);}
+public GetRepoBuildListRequest() : base("cr", "2016-06-07", "GetRepoBuildList", "cr") {UriPattern = "/repos/[RepoNamespace]/[RepoName]/build"; Method = MethodType.GET;}
+public MessageWriter() { buf = new System.IO.MemoryStream(); enc = new System.IO.StreamWriter(GetRawStream(), System.Text.Encoding.UTF8); }
+public void Append(RecordBase r){_recs.Add(r);}
+public void close() throws IOException {if (read(skipBuffer) != -1 || actualSize != expectedSize) {throw new CorruptObjectException(string.Format(JGitText.get().packfileCorruptionDetected, JGitText.get().wrongDecompressedLength));}int used = bAvail - inf.getRemaining();if (0 < used) {onObjectData(src, buf, p, used);use(used);}inf.reset();}
+public DescribeModelPackageResult DescribeModelPackage(DescribeModelPackageRequest request) {request = beforeClientExecution(request);return executeDescribeModelPackage(request);}
+public void construct(CellValueRecordInterface rec, RecordStream rs, SharedValueManager sfh) {if (rec is FormulaRecord) {FormulaRecord formulaRec = (FormulaRecord)rec;StringRecord cachedText;Class nextClass = rs.peekNextClass();if (nextClass == typeof(StringRecord)) {cachedText = (StringRecord)rs.getNext();} else {cachedText = null;}insertCell(new FormulaRecordAggregate(formulaRec, cachedText, sfh));} else {insertCell(rec);}}
+public Decompressor Clone() { return new DeflateDecompressor(); }
+public UpdateS3ResourcesResult UpdateS3Resources(UpdateS3ResourcesRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateS3Resources(request);}
+public GroupQueryNode(QueryNode query) {if (query == null) {throw new QueryNodeError(new MessageImpl(QueryParserMessages.PARAMETER_VALUE_NOT_SUPPORTED, "query", "null"));}Allocate();SetLeaf(false);Add(query);}
+public System.CharSequencetoQueryString(EscapeQuerySyntax escaper) {StringBuilder path = new StringBuilder();path.Append("/").Append(getFirstPathElement());foreach (QueryText pathelement in getPathElements(1)) {System.CharSequencenvalue = escaper.escape(pathelement.value, System.Globalization.CultureInfo.DefaultThreadCurrentUICulture, Type.STRING);path.Append("/\"").Append(value).Append("\"");}return path.ToString();}
+public void removeCellComment() {HSSFComment comment = _sheet.findCellComment(_record.getRow(), _record.getColumn());_comment = null;if (comment == null){return;}_sheet.getDrawingPatriarch().removeShape(comment);}
+public void reset() {arriving = -1; leaving = -1;}
+public ActivateUserResult activateUser(ActivateUserRequest request) {request = beforeClientExecution(request);return executeActivateUser(request);}
+public bool isCharsetDetected() { throw new NotSupportedException(); }
+public Cluster ModifySnapshotCopyRetentionPeriod(ModifySnapshotCopyRetentionPeriodRequest request) {request = BeforeClientExecution(request);return ExecuteModifySnapshotCopyRetentionPeriod(request);}
+public DeleteClusterSubnetGroupResult deleteClusterSubnetGroup(DeleteClusterSubnetGroupRequest request) {request = beforeClientExecution(request);return executeDeleteClusterSubnetGroup(request);}
+public static String decode(byte[] buffer) {return decode(buffer, 0, buffer.length);}
+public int getDefaultPort() { return -1; }
+public StopTaskResult StopTask(StopTaskRequest request) {request = BeforeClientExecution(request);return ExecuteStopTask(request);}
+public void SeekExact(BytesRef target, TermState otherState) {if (otherState == null || !(otherState is BlockTermState)) {throw new ArgumentException("otherState must be an instance of BlockTermState");}if (!doOrd || ((BlockTermState)otherState).ord >= numTerms) {throw new ArgumentOutOfRangeException(nameof(otherState), "The ord value of otherState must be less than numTerms if doOrd is true");}state.CopyFrom(otherState);seekPending = true;indexIsCurrent = false;term.CopyBytes(target);}
+public SeriesToChartGroupRecord(RecordInputStream in) {field_1_chartGroupIndex = in.ReadInt16();}
+public static void writeUnicodeStringFlagAndData(LittleEndianOutput out, String value) {bool is16Bit = hasMultibyte(value);out.writeByte(is16Bit ? (byte)0x01 : (byte)0x00);if (is16Bit) {putUnicodeLE(value, out);} else {putCompressedUnicode(value, out);}}
+public AuthorizeSecurityGroupIngressResult AuthorizeSecurityGroupIngress(AuthorizeSecurityGroupIngressRequest request) {request = BeforeClientExecution(request);return ExecuteAuthorizeSecurityGroupIngress(request);}
+public void addFile(string file) { checkFileNames(new List<string> { file }); setFiles.Add(namedForThisSegment(file)); }
+public void SetSize(int width, int height) {mWidth = width;mHeight = height;}
+public final void setPrecedenceFilterSuppressed(bool value) {if (value) {this.reachesIntoOuterContext |= 0x40000000;} else {this.reachesIntoOuterContext &= ~SUPPRESS_PRECEDENCE_FILTER;}}
+public IntervalSet LOOK(ATNState s, RuleContext ctx) {return LOOK(s, null, ctx);}
+public void Serialize(LittleEndianOutput out) { out.WriteShort(GetOptionFlags()); out.WriteShort(GetRowHeight()); }
+public Builder(bool dedup) { this.dedup = dedup; }
+public Hashtable(int capacity, float loadFactor) { this(capacity); if (loadFactor <= 0 || float.IsNaN(loadFactor)) { throw new ArgumentException("Load factor: " + loadFactor); }}
+public object Get(System.CharSet key) {var bucket = normalCompletion.GetBucket(key);return bucket == -1 ? null : System.Int64.Parse(bucket.ToString());}
+public ListHyperParameterTuningJobsResult ListHyperParameterTuningJobs(ListHyperParameterTuningJobsRequest request) {request = BeforeClientExecution(request);return ExecuteListHyperParameterTuningJobs(request);}
+public DeleteTableResult DeleteTable(string tableName) {return DeleteTable(new DeleteTableRequest().WithTableName(tableName));}
+public final bool lessThan(TextFragment fragA, TextFragment fragB){if (fragA.getScore() == fragB.getScore())return fragA.fragNum > fragB.fragNum;elsereturn fragA.getScore() < fragB.getScore();}
+public void freeBefore(int pos) {Debug.Assert(pos >= 0);Debug.Assert(pos <= nextPos);int newCount = nextPos - pos;Debug.Assert(newCount <= count);Debug.Assert(newCount <= buffer.Length);count = newCount;}
+public UpdateHITTypeOfHITResult updateHITTypeOfHIT(UpdateHITTypeOfHITRequest request) {request = beforeClientExecution(request);return executeUpdateHITTypeOfHIT(request);}
+public UpdateRecommenderConfigurationResult UpdateRecommenderConfiguration(UpdateRecommenderConfigurationRequest request) {request = BeforeClientExecution(request);return ExecuteUpdateRecommenderConfiguration(request);}
+public int CompareTo(BytesRef other) { return Arrays.CompareUnsigned(this.bytes, this.offset, this.offset + this.length, other.bytes, other.offset, other.offset + other.length); }
+public int stem(char[] s, int len) {if (len > 4 && s[len - 1] == 's') len--;if (len > 5 && (endsWith(s, len, "ene") || (endsWith(s, len, "ane") && useNynorsk))) return len - 3;if (len > 4 && (endsWith(s, len, "er") || endsWith(s, len, "en") || endsWith(s, len, "et") || (endsWith(s, len, "ar") && useNynorsk))) return len - 2;if (len > 3) switch (s[len - 1]) {case 'a':case 'e':return len - 1;}return len;}
+public DescribeDBSnapshotsResult DescribeDBSnapshots(DescribeDBSnapshotsRequest request) {request = BeforeClientExecution(request); return ExecuteDescribeDBSnapshots(request);}
+public SortedSetDocValuesFacetField(string dim, string label) : base("dummy", TYPE){FacetField.VerifyLabel(label);FacetField.VerifyLabel(dim);this.dim = dim;this.label = label;}
+public CreateDocumentationPartResult CreateDocumentationPart(CreateDocumentationPartRequest request) {request = BeforeClientExecution(request);return ExecuteCreateDocumentationPart(request);}
+public string GetValue() { return value; }
+public ShortBuffer AsReadOnlyBuffer() { return Duplicate(); }
+public UpdateDataSourcePermissionsResult UpdateDataSourcePermissions(UpdateDataSourcePermissionsRequest request){request = BeforeClientExecution(request);return ExecuteUpdateDataSourcePermissions(request);}
+public static org.apache.poi.hssf.record.Record createSingleRecord(RecordInputStream in) {I_RecordCreator constructor = _recordCreatorsById.get(Integer.valueOf(in.getSid()));if (constructor == null) {return new UnknownRecord(in);}return constructor.create(in);}
+public int GetCount() {return mTabs.Count;}
+public DeleteApplicationReferenceDataSourceResult deleteApplicationReferenceDataSource(DeleteApplicationReferenceDataSourceRequest request) {request = beforeClientExecution(request);return executeDeleteApplicationReferenceDataSource(request);}
+public CreateProjectVersionResult CreateProjectVersion(CreateProjectVersionRequest request) {request = BeforeClientExecution(request);return ExecuteCreateProjectVersion(request);}
+public IntBuffer Slice() { return new ReadOnlyIntArrayBuffer(Remaining(), backingArray, offset + position); }
+public final byte Get() {if (position == limit) {throw new BufferUnderflowException();}return this.block.PeekByte(offset + position++);}
+public ArraySegment<long> Put(int index, long c) { CheckIndex(index); backingArray[offset + index] = c; return this; }
+public StoredField(string name, float value) : base(name, TYPE){fieldsData = value;}
+public IntervalSet GetExpectedTokensWithinCurrentRule() {ATN atn = GetInterpreter().Atn;ATNState s = atn.States[GetState()];return atn.NextTokens(s);}
+public string ToString() {StringBuilder buffer = new StringBuilder();buffer.Append("[FILESHARING]\n");buffer.Append("    .readonly       = ").Append(GetReadOnly() == 1 ? "true" : "false").Append("\n");buffer.Append("    .password       = ").Append(Convert.ToString(GetPassword(), 16)).Append("\n");buffer.Append("    .username       = ").Append(GetUsername()).Append("\n");buffer.Append("[/FILESHARING]\n");return buffer.ToString();}
+public SubmoduleInitCommand(Repository repo) : base(repo){paths = new List<string>();}
+public void include(String name, AnyObjectId id) {bool validRefName = Repository.isValidRefName(name) || Constants.HEAD.Equals(name);if (!validRefName)throw new ArgumentException(String.Format(JGitText.get().invalidRefName, name));if (include.ContainsKey(name))throw new InvalidOperationException(JGitText.get().duplicateRef + name);include.Add(name, id.toObjectId());}
+public Cluster EnableSnapshotCopy(EnableSnapshotCopyRequest request) {request = beforeClientExecution(request);return executeEnableSnapshotCopy(request);}
+public ValueFiller getValueFiller() {return new ValueFiller() {private readonly MutableValueFloat mval = new MutableValueFloat();public override};}
+public void serialize(LittleEndianOutput out) {out.writeByte(getPane());out.writeShort(getActiveCellRow());out.writeShort(getActiveCellCol());out.writeShort(getActiveCellRef());int nRefs = field_6_refs.Length;out.writeShort(nRefs);foreach (CellRangeAddress8Bit field_6_ref in field_6_refs) {field_6_ref.serialize(out);}}
+public static Counter NewCounter() { return newCounter(false); }
+public bool Get(string name, bool dflt) {bool[] vals = (bool[])valByRound[name];if (vals != null) {return vals[roundNumber % vals.Length];}string sval = props.GetProperty(name, dflt.ToString());if (sval.IndexOf(":") < 0) {return bool.Parse(sval);}int k = sval.IndexOf(":");string colName = sval.Substring(0, k);sval = sval.Substring(k + 1);colForValByRound[name] = colName;vals = PropToBooleanArray(sval);valByRound[name] = vals;return vals[roundNumber % vals.Length];}
+public void preSerialize(){if(records.getTabpos() > 0) {TabIdRecord tir = ( TabIdRecord ) records.get(records.getTabpos());if(tir._tabids.Length < boundsheets.Count()) {fixTabIdRecord();}}}
+public LimitTokenCountAnalyzer(Analyzer delegate, int maxTokenCount, bool consumeAllTokens) : base(delegate.getReuseStrategy()) {this.delegate = delegate;this.maxTokenCount = maxTokenCount;this.consumeAllTokens = consumeAllTokens;}
+public ExternalBookBlock(int numberOfSheets) {_externalBookRecord = SupBookRecord.CreateInternalReferences((short)numberOfSheets);_externalNameRecords = new ExternalNameRecord[0];_crnBlocks = new CRNBlock[0];}
+public string ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[SCENARIOPROTECT]\n");buffer.Append("    .protect         = ").Append(GetProtect()).Append("\n");buffer.Append("[/SCENARIOPROTECT]\n");return buffer.ToString();}
+public PushCommand SetThin(bool thin) { CheckCallable(); this.thin = thin; return this; }
+public int CompareTo(SearcherTracker other) { return Double.Compare(other.RecordTimeSec, RecordTimeSec); }
+public ReverseStringFilter Create(TokenStream in) { return new ReverseStringFilter(in); }
+public BlockList() {directory = BlockList<T>.NewDirectory(256);directory[0] = BlockList<T>.NewBlock();tailBlock = directory[0];}
+public QueryScorer(WeightedSpanTerm[] weightedTerms) {this.fieldWeightedSpanTerms = new Dictionary<string, WeightedSpanTerm>(weightedTerms.Length);foreach (var weightedTerm in weightedTerms) {WeightedSpanTerm existingTerm;if (!fieldWeightedSpanTerms.TryGetValue(weightedTerm.term, out existingTerm) || existingTerm.weight < weightedTerm.weight) {fieldWeightedSpanTerms[weightedTerm.term] = weightedTerm;maxTermWeight = Math.Max(maxTermWeight, weightedTerm.getWeight());}}skipInitExtractor = true;}
+public bool Equals(object _other) {Debug.Assert(neverEquals(_other));if (_other is MergedGroup other) {if (groupValue == null) {return other == null;} else {return groupValue.Equals(other);}} else {return false;}}
+public final Encoding Encoding() { return cs; }
+public DescribeExperimentResult DescribeExperiment(DescribeExperimentRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeExperiment(request);}
+public EscherGraphics(HSSFShapeGroup escherGroup, HSSFWorkbook workbook, Color forecolor, float verticalPointsPerPixel){this.escherGroup = escherGroup;this.workbook = workbook;this.verticalPointsPerPixel = verticalPointsPerPixel;this.verticalPixelsPerPoint = 1 / verticalPointsPerPixel;this.font = new Font("Arial", 0, 10);this.foreground = forecolor;}
+public string Pattern() { return patternText; }
+public DeleteRouteTableResult DeleteRouteTable(DeleteRouteTableRequest request) { request = BeforeClientExecution(request); return ExecuteDeleteRouteTable(request); }
+public AssociateVPCWithHostedZoneResult AssociateVPCWithHostedZone(AssociateVPCWithHostedZoneRequest request) {request = BeforeClientExecution(request);return ExecuteAssociateVPCWithHostedZone(request);}
+public PutIntegrationResult putIntegration(PutIntegrationRequest request){request = beforeClientExecution(request);return executePutIntegration(request);}
+public SimpleEntry(K theKey, V theValue) { key = theKey; value = theValue; }
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long byte0 = blocks[blocksOffset++] & 0xFF;long byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = (byte0 << 4) | (byte1 >> 4);long byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 0xF) << 8) | byte2;}}
+public DisassociateConnectionFromLagResult DisassociateConnectionFromLag(DisassociateConnectionFromLagRequest request) {request = BeforeClientExecution(request);return ExecuteDisassociateConnectionFromLag(request);}
+public FileMode GetOldMode() { return oldMode; }
+@Override public string ToString() { return m.ToString(); }
+public StopKeyPhrasesDetectionJobResult StopKeyPhrasesDetectionJob(StopKeyPhrasesDetectionJobRequest request) {request = BeforeClientExecution(request);return ExecuteStopKeyPhrasesDetectionJob(request);}
+public string ToString() {return "[Array Formula or Shared Formula]\n" + "row = " + GetRow() + "\n" + "col = " + GetColumn() + "\n";}
+public ListDominantLanguageDetectionJobsResult ListDominantLanguageDetectionJobs(ListDominantLanguageDetectionJobsRequest request){request = BeforeClientExecution(request);return ExecuteListDominantLanguageDetectionJobs(request);}
+public string ToString() { return "slice start=" + start + " length=" + length + " readerIndex=" + readerIndex; }
+public static readonly int ParseHexInt4(readonly byte digit) {readonly byte r = digits16[digit];if (r < 0)throw new IndexOutOfRangeException();return r;}
+public Attribute(string name, string value) { SetName(name); SetValue(value); }
+public T DescribeStackSetOperationResult describeStackSetOperation<T>(T request) where T : DescribeStackSetOperationRequest {request = beforeClientExecution(request);return executeDescribeStackSetOperation(request);}
+public HSSFCell getCell(int cellnum) {return getCell(cellnum, book.getMissingCellPolicy());}
+public void write(byte[] b) { writeContinueIfRequired(b.Length); _ulrOutput.Write(b); }
+public ResetImageAttributeRequest(string imageId, ResetImageAttributeName attribute) {setImageId(imageId);setAttribute(attribute.ToString());}
+public void DiscardResultContents() { resultContents = null; }
+public ObjectId getPeeledObjectId() { return getLeaf().getPeeledObjectId(); }
+public void undeprecateDomain(UndeprecateDomainRequest request) {request = beforeClientExecution(request); executeUndeprecateDomain(request);}
+public void Write(LittleEndianOutput out) {out.WriteByte((byte)(sid + GetPtgClass()));out.WriteByte((byte)field_3_string.Length);out.WriteByte(_is16bitUnicode ? (byte)0x01 : (byte)0x00);if (_is16bitUnicode) {StringUtil.PutUnicodeLE(field_3_string, out);} else {StringUtil.PutCompressedUnicode(field_3_string, out);}}
+public DeleteQueueResult deleteQueue(string queueUrl) {return deleteQueue(new DeleteQueueRequest().WithQueueUrl(queueUrl));}
+public void SetCheckEofAfterPackFooter(bool b) {checkEofAfterPackFooter = b;}
+public void swap() {int sBegin = beginA;int sEnd = endA;beginA = beginB;endA = endB;beginB = sBegin;endB = sEnd;}
+public int GetPackedGitWindowSize() { return packedGitWindowSize; }
+public PutMetricDataResult PutMetricData(PutMetricDataRequest request) {request = BeforeClientExecution(request);return ExecutePutMetricData(request);}
+public GetCelebrityRecognitionResult getCelebrityRecognition(GetCelebrityRecognitionRequest request) {request = beforeClientExecution(request);return executeGetCelebrityRecognition(request);}
+public CreateQueueRequest(string queueName) {SetQueueName(queueName);}
+public Area3DPxg(int externalWorkbookNumber, SheetIdentifier sheetName, AreaReference arearef) : base(arearef) {this.externalWorkbookNumber = externalWorkbookNumber;this.firstSheetName = sheetName.GetSheetIdentifier().Name;if (sheetName is SheetRangeIdentifier) {this.lastSheetName = ((SheetRangeIdentifier)sheetName).GetLastSheetIdentifier().Name;} else {this.lastSheetName = null;}}
+public void SetBaseline(long clockTime) {t0 = clockTime;timeout = t0 + ticksAllowed;}
+public MoveAddressToVpcResult MoveAddressToVpc(MoveAddressToVpcRequest request) {request = BeforeClientExecution(request);return ExecuteMoveAddressToVpc(request);}
+public string ToString() {string coll = collectionModel.Name;if (coll != null) {return string.Format(System.Globalization.CultureInfo.InvariantCulture, "LM {0} - {1}", Name, coll);} else {return string.Format(System.Globalization.CultureInfo.InvariantCulture, "LM {0}", Name);}}
+public DescribeLagsResult DescribeLags(DescribeLagsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeLags(request); }
+public AreaEval Offset(int relFirstRowIx, int relLastRowIx, int relFirstColIx, int relLastColIx) {if (_refEval == null) {return _areaEval.Offset(relFirstRowIx, relLastRowIx, relFirstColIx, relLastColIx);}return _refEval.Offset(relFirstRowIx, relLastRowIx, relFirstColIx, relLastColIx);}
+public ShortBuffer Put(short[] src, int srcOffset, int shortCount) {byteBuffer.Limit(limit * SizeOf.SHORT);byteBuffer.Position(position * SizeOf.SHORT);if (byteBuffer is ReadWriteDirectByteBuffer) {((ReadWriteDirectByteBuffer)byteBuffer).Put(src, srcOffset, shortCount);} else {((ReadWriteHeapByteBuffer)byteBuffer).Put(src, srcOffset, shortCount);}this.position += shortCount;return this;}
+public void Initialize(string cat) { this._cat = cat; }
+public void write(int oneByte) throws IOException {out.Write(oneByte); written++;}
+public DescribeImportImageTasksResult DescribeImportImageTasks(DescribeImportImageTasksRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeImportImageTasks(request); }
+public ColumnInfoRecord(RecordInputStream in) { _firstCol = in.readUShort(); _lastCol = in.readUShort(); _colWidth = in.readUShort(); _xfIndex = in.readUShort(); _options = in.readUShort(); switch (in.remaining()) { case 2: field_6_reserved = in.readUShort(); break; case 1: field_6_reserved = in.readByte(); break; case 0: field_6_reserved = 0; break; default: throw new RuntimeException("Unusual record size remaining=(" + in.remaining() + ")"); } }
+public Status(IndexDiff diff) : base() {this.diff = diff;hasUncommittedChanges = !diff.getAdded().IsEmpty() || !diff.getChanged().IsEmpty() || !diff.getRemoved().IsEmpty() || !diff.getMissing().IsEmpty() || !diff.getModified().IsEmpty() || !diff.getConflicting().IsEmpty();clean = !hasUncommittedChanges && diff.getUntracked().IsEmpty();}
+public CreateExperimentResult CreateExperiment(CreateExperimentRequest request) {request = BeforeClientExecution(request);return ExecuteCreateExperiment(request);}
+public UnknownRecord clone() { return copy(); }
+public FloatBuffer Slice() {byteBuffer.Limit(limit * SizeOf.FLOAT);byteBuffer.Position(position * SizeOf.FLOAT);ByteBuffer bb = byteBuffer.Slice().Order(byteBuffer.Order());FloatBuffer result = new FloatToByteBufferAdapter(bb);byteBuffer.Clear();return result;}
+public DescribeSnapshotSchedulesResult DescribeSnapshotSchedules(DescribeSnapshotSchedulesRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeSnapshotSchedules(request); }
+public ListImagesResult ListImages(ListImagesRequest request) { request = BeforeClientExecution(request); return ExecuteListImages(request); }
+public Diff(int ins, int del, int rep, int noop) { INSERT = ins; DELETE = del; REPLACE = rep; NOOP = noop; }
+public string toFormulaString(string[] operands){StringBuilder buffer = new StringBuilder();buffer.Append(operands[0]);buffer.Append(",");buffer.Append(operands[1]);return buffer.ToString();}
+public static void setupEnvironment(string[] workbookNames, ForkedEvaluator[] evaluators) {WorkbookEvaluator[] wbEvals = new WorkbookEvaluator[evaluators.Length];for (int i = 0; i < wbEvals.Length; i++) {wbEvals[i] = evaluators[i]._evaluator;}CollaboratingWorkbooksEnvironment.setup(workbookNames, wbEvals);}
+public ListPhotoTagsRequest() : base("CloudPhoto", "2017-07-11", "ListPhotoTags", "cloudphoto"){Protocol = ProtocolType.HTTPS;}
+public RandomSamplingFacetsCollector(int sampleSize, long seed) : base(false){this.sampleSize = sampleSize;this.random = new XORShift64Random(seed);this.sampledDocs = null;}
+public AllocateStaticIpResult AllocateStaticIp(AllocateStaticIpRequest request) {request = BeforeClientExecution(request);return ExecuteAllocateStaticIp(request);}
+public FeatRecord(RecordInputStream in) {futureHeader = new FtrHeader(in);isf_sharedFeatureType = in.ReadShort();reserved1 = in.ReadByte();reserved2 = in.ReadInt();int cref = in.ReadUShort();cbFeatData = in.ReadInt();reserved3 = in.ReadShort();cellRefs = new CellRangeAddress[cref];for (int i = 0; i < cellRefs.Length; i++) {cellRefs[i] = new CellRangeAddress(in);}switch (isf_sharedFeatureType) {case FeatHdrRecord.SHAREDFEATURES_ISFPROTECTION:sharedFeature = new FeatProtection(in);break;case FeatHdrRecord.SHAREDFEATURES_ISFFEC2:sharedFeature = new FeatFormulaErr2(in);break;case FeatHdrRecord.SHAREDFEATURES_ISFFACTOID:sharedFeature = new FeatSmartTag(in);break;default:logger.Log(POILogger.ERROR, "Unknown Shared Feature " + isf_sharedFeatureType + " found!");break;}}
+public RevCommit tryFastForward(RevCommit newCommit){Ref head = getHead();ObjectId headId = head.ObjectId;if (headId == null)throw new RefNotFoundException(MessageFormat.Format(JGitText.get().refNotResolved, Constants.HEAD));RevCommit headCommit = walk.LookupCommit(headId);if (walk.IsMergedInto(newCommit, headCommit))return newCommit;String headName = getHeadName(head);return tryFastForward(headName, headCommit, newCommit);}
+public CreateSnapshotScheduleResult CreateSnapshotSchedule(CreateSnapshotScheduleRequest request) {request = BeforeClientExecution(request);return ExecuteCreateSnapshotSchedule(request);}
+public Record getNext() {if(!hasNext()) {throw new InvalidOperationException("Attempt to read past end of record stream");}_countRead++;return _list.get(_nextIndex++);}
+public string ToString() { return RawParseUtils.Decode(buf.ToByteArray()); }
+public ListTablesRequest(string exclusiveStartTableName) { setExclusiveStartTableName(exclusiveStartTableName); }
+public EnableAlarmActionsResult enableAlarmActions(EnableAlarmActionsRequest request) {request = beforeClientExecution(request);return executeEnableAlarmActions(request);}
+public Builder() { this(true); }
+public bool equals(object obj) {final State other = (State)obj;return this.is_final == other.is_final &&this.labels.SequenceEqual(other.labels) &&ReferenceEquals(this.states, other.states);}
+public TokenStream Create(TokenStream input) { return new EnglishPossessiveFilter(input); }
+public void ClearFormatting() {_string = CloneStringIfRequired();_string.ClearFormatting();AddToSSTIfRequired();}
+public int Get(int index, long[] arr, int off, int len) {if (len <= 0) throw new ArgumentException("len must be > 0 (got " + len + ")");if (index < 0 || index >= valueCount) throw new ArgumentOutOfRangeException(nameof(index), "index must be >= 0 and < valueCount");len = Math.Min(len, valueCount - index);Array.Fill(arr, 0, off, off + len);return len;}
+public DeleteRouteResponseResult deleteRouteResponse(DeleteRouteResponseRequest request) { request = beforeClientExecution(request); return executeDeleteRouteResponse(request); }
+public string ToPrivateString() { return Format(true, false); }
+public CreatePresignedDomainUrlResult CreatePresignedDomainUrl(CreatePresignedDomainUrlRequest request) {request = BeforeClientExecution(request);return ExecuteCreatePresignedDomainUrl(request);}
+public void write(int oneChar) {doWrite(new char[] { (char) oneChar }, 0, 1);}
+public SSTRecord GetSSTRecord() { return sstRecord; }
+public override string ToString() { return "term=" + term + ",field=" + field + ",value=" + ValueToString() + ",docIDUpto=" + docIDUpto; }
+public bool isSaturated(FuzzySet bloomFilter, FieldInfo fieldInfo) {return bloomFilter.getSaturation() > 0.9f;}
+public Builder(bool ignoreCase) { this.ignoreCase = ignoreCase; }
+public override string ToString() { return GetType().Name + "(maxBasicQueries: " + maxBasicQueries + ", queriesMade: " + queriesMade + ")"; }
+public DeleteDataSourceResult DeleteDataSource(DeleteDataSourceRequest request) {request = BeforeClientExecution(request);return ExecuteDeleteDataSource(request);}
+public RebootNodeResult RebootNode(RebootNodeRequest request) { request = BeforeClientExecution(request); return ExecuteRebootNode(request); }
+### Checklist for Translation Process:1. Identify the method name and parameters in the source code.2. Map the method call `convertRawBytesToEscherRecords()` to its C# equivalent.3. Ensure the method call is correctly formatted in C#.4. Validate the output to ensure it maintains the original functionality and semantics.
+public CreateOrUpdateTagsResult CreateOrUpdateTags(CreateOrUpdateTagsRequest request) { request = BeforeClientExecution(request); return ExecuteCreateOrUpdateTags(request); }
+public FileSnapshot GetSnapshot() { return snapShot; }
+public class ResourceOpener{private Type clazz;private IServiceProvider loader;public Stream OpenResource(string resource){var stream = (clazz != null) ? clazz.GetResourceStream(resource) : loader.GetResourceStream(resource);if (stream == null)throw new IOException("Resource not found: " + resource);return stream;}}
+public string ToString() {StringBuilder sb = new StringBuilder(64);sb.Append(GetType().Name).Append(" [");sb.Append("sid=").Append(HexDump.ShortToHex(_sid));sb.Append(" size=").Append(_data.Length);sb.Append(" : ").Append(HexDump.ToHex(_data));sb.Append("]\n");return sb.ToString();}
+public int NextIndex() { return index; }
+public System.CharSequence toQueryString(EscapeQuerySyntax escaper) {if (isDefaultField(this.field)) {return "\"" + getTermEscapeQuoted(escaper) + "\"";} else {return this.field + ":" + "\"" + getTermEscapeQuoted(escaper) + "\"";}}
+public CalcModeRecord Clone() { return Copy(); }
+public bool isOutput() { return output; }
+public CreateNetworkInterfaceResult CreateNetworkInterface(CreateNetworkInterfaceRequest request) {request = BeforeClientExecution(request);return ExecuteCreateNetworkInterface(request);}
+public void Serialize(LittleEndianOutput out) { out.WriteShort(Field_1_Password); }
+public StopDominantLanguageDetectionJobResult StopDominantLanguageDetectionJob(StopDominantLanguageDetectionJobRequest request) {request = BeforeClientExecution(request);return ExecuteStopDominantLanguageDetectionJob(request);}
+public ECSMetadataServiceCredentialsFetcher WithConnectionTimeout(int milliseconds) {this.connectionTimeoutInMilliseconds = milliseconds;return this;}
+public GetGatewayGroupResult GetGatewayGroup(GetGatewayGroupRequest request) {request = BeforeClientExecution(request);return ExecuteGetGatewayGroup(request);}
+public FloatBuffer Slice() { return new ReadOnlyFloatArrayBuffer(Remaining(), backingArray, offset + position); }
+public static String Join(Collection<String> parts, String separator, String lastSeparator) {StringBuilder sb = new StringBuilder();int i = 0;int lastIndex = parts.Count - 1;foreach (String part in parts) {sb.Append(part);if (i == lastIndex - 1) {sb.Append(lastSeparator);} else if (i != lastIndex) {sb.Append(separator);}i++;}return sb.ToString();}
+public string ToString() { return "(" + a.ToString() + " AND " + b.ToString() + ")"; }
+public ListSubscriptionsByTopicRequest(string topicArn, string nextToken) { SetTopicArn(topicArn); SetNextToken(nextToken); }
+public byte ReadByte() { return bytes[pos--]; }
+public TerminateClientVpnConnectionsResult TerminateClientVpnConnections(TerminateClientVpnConnectionsRequest request) { request = BeforeClientExecution(request); return ExecuteTerminateClientVpnConnections(request); }
+public ReceiveMessageRequest(string queueUrl) { SetQueueUrl(queueUrl); }
+public void Serialize(LittleEndianOutput out) {out.WriteShort(field_1_barSpace);out.WriteShort(field_2_categorySpace);out.WriteShort(field_3_formatFlags);}
+public Object common(Object output1, Object output2) { return outputs.common((T)output1, (T)output2); }
+public CreateVariableResult CreateVariable(CreateVariableRequest request) {request = BeforeClientExecution(request);return ExecuteCreateVariable(request);}
+public static readonly int Match(byte[] b, int ptr, byte[] src) {if (ptr + src.Length > b.Length) return -1;for (int i = 0; i < src.Length; i++, ptr++)if (b[ptr] != src[i]) return -1;return ptr;}
+public int FillFields(byte[] data, int offset, EscherRecordFactory recordFactory) {int bytesRemaining = ReadHeader(data, offset);int pos = offset + 8;int size = 0;field_1_rectX1 = BitConverter.ToInt32(data, pos + size);size += 4;field_2_rectY1 = BitConverter.ToInt32(data, pos + size);size += 4;field_3_rectX2 = BitConverter.ToInt32(data, pos + size);size += 4;field_4_rectY2 = BitConverter.ToInt32(data, pos + size);size += 4;bytesRemaining -= size;if (bytesRemaining != 0) {throw new RecordFormatException("Expected no remaining bytes but got " + bytesRemaining);}return 8 + size + bytesRemaining;}
+public CreateCloudFrontOriginAccessIdentityResult createCloudFrontOriginAccessIdentity(CreateCloudFrontOriginAccessIdentityRequest request) {request = beforeClientExecution(request);return executeCreateCloudFrontOriginAccessIdentity(request);}
+public bool isNamespaceAware() { return getFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES); }
+public void SetOverridable(bool on) { overridable = on; }
+public string GetClassName() { return className; }
+public DirectoryReader GetIndexReader() {if (indexReader != null) {indexReader.IncRef();}return indexReader;}
+public int IndexOfKey(int key) { return BinarySearch(mKeys, 0, mSize, key); }
+public BlankRecord(RecordInputStream in) { field_1_row = in.readUShort(); field_2_col = in.readShort(); field_3_xf = in.readShort(); }
+public long Length() { return length; }
+public PasswordRecord(RecordInputStream in) { this.field_1_password = in.ReadInt16(); }
+public Dictionary(int capacity, float loadFactor) : this(capacity){if (loadFactor <= 0 || float.IsNaN(loadFactor)){throw new ArgumentException("Load factor: " + loadFactor);}}
+public void run() {long lastReopenStartNS = System.nanoTime();while (!finish) {while (!finish) {reopenLock.lock();try {bool hasWaiting = waitingGen > searchingGen;final long nextReopenStartNS = lastReopenStartNS + (hasWaiting ? targetMinStaleNS : targetMaxStaleNS);final long sleepNS = nextReopenStartNS - System.nanoTime();if (sleepNS > 0) {reopenCond.awaitNanos(sleepNS);} else {break;}} catch (InterruptedException ie) {Thread.currentThread().interrupt();return;} finally {reopenLock.unlock();}}if (finish) {break;}lastReopenStartNS = System.nanoTime();refreshStartGen = writer.getMaxCompletedSequenceNumber();try {manager.maybeRefreshBlocking();} catch (IOException ioe) {throw new RuntimeException(ioe);}}}
+public DeleteLoginProfileRequest(string userName) { setUserName(userName); }
+public E PollFirst() {return (size == 0) ? null : RemoveFirstImpl();}
+public CreatePhotoRequest() : base("CloudPhoto", "2017-07-11", "CreatePhoto", "cloudphoto") {Protocol = ProtocolType.HTTPS;}
+public string GetName() { return "resolve"; }
+public int FindEndOffset(StringBuilder buffer, int start) {if (start > buffer.Length || start < 0) return start;int offset, count = maxScan;for (offset = start; offset < buffer.Length && count > 0; count--) {if (boundaryChars.Contains(buffer[offset])) return offset;offset++;}return start;}
+public void SetObjectChecker(ObjectChecker oc) { objCheck = oc; }
+public BaseRef(AreaEval ae) {_refEval = null;_areaEval = ae;_firstRowIndex = ae.getFirstRow();_firstColumnIndex = ae.getFirstColumn();_height = ae.getLastRow() - ae.getFirstRow() + 1;_width = ae.getLastColumn() - ae.getFirstColumn() + 1;}
+public CreateVpcEndpointResult CreateVpcEndpoint(CreateVpcEndpointRequest request) {request = BeforeClientExecution(request);return ExecuteCreateVpcEndpoint(request);}
+public DeregisterWorkspaceDirectoryResult DeregisterWorkspaceDirectory(DeregisterWorkspaceDirectoryRequest request) {request = BeforeClientExecution(request);return ExecuteDeregisterWorkspaceDirectory(request);}
+public ChartFRTInfoRecord(RecordInputStream in) {rt = in.ReadShort();grbitFrt = in.ReadShort();verOriginator = in.ReadByte();verWriter = in.ReadByte();int cCFRTID = in.ReadShort();rgCFRTID = new CFRTID[cCFRTID];for (int i = 0; i < cCFRTID; i++) {rgCFRTID[i] = new CFRTID(in);}}
+public Merger NewMerger(Repository db) { return new OneSide(db, treeIndex); }
+public CreateDataSourceFromRedshiftResult CreateDataSourceFromRedshift(CreateDataSourceFromRedshiftRequest request){request = BeforeClientExecution(request);return ExecuteCreateDataSourceFromRedshift(request);}
+public void clearDFA() {for (int d = 0; d < decisionToDFA.Length; d++) {decisionToDFA[d] = new DFA(atn.getDecisionState(d), d);}}
+public void removeName(string name) {int index = getNameIndex(name);removeName(index);}
+public string ToString(){StringBuilder buffer = new StringBuilder();buffer.AppendLine("[RightMargin]");buffer.Append("    .margin               = (" + getMargin() + ")\n");buffer.AppendLine("[/RightMargin]");return buffer.ToString();}
+public RefreshAllRecord Clone() { return Copy(); }
+public StandardQueryNodeProcessorPipeline(QueryConfigHandler queryConfig) : base(queryConfig){Add(new WildcardQueryNodeProcessor());Add(new MultiFieldQueryNodeProcessor());Add(new FuzzyQueryNodeProcessor());Add(new RegexpQueryNodeProcessor());Add(new MatchAllDocsQueryNodeProcessor());Add(new OpenRangeQueryNodeProcessor());Add(new PointQueryNodeProcessor());Add(new PointRangeQueryNodeProcessor());Add(new TermRangeQueryNodeProcessor());Add(new AllowLeadingWildcardProcessor());Add(new AnalyzerQueryNodeProcessor());Add(new PhraseSlopQueryNodeProcessor());Add(new BooleanQuery2ModifierNodeProcessor());Add(new NoChildOptimizationQueryNodeProcessor());Add(new RemoveDeletedQueryNodesProcessor());Add(new RemoveEmptyNonLeafQueryNodeProcessor());Add(new BooleanSingleChildOptimizationQueryNodeProcessor());Add(new DefaultPhraseSlopQueryNodeProcessor());Add(new BoostQueryNodeProcessor());Add(new MultiTermRewriteMethodProcessor());}
+public string formatAsString(string sheetName, bool useAbsoluteAddress) {StringBuilder sb = new StringBuilder();if (sheetName != null) {sb.Append(SheetNameFormatter.format(sheetName));sb.Append("!");}CellReference cellRefFrom = new CellReference(getFirstRow(), getFirstColumn(), useAbsoluteAddress, useAbsoluteAddress);CellReference cellRefTo = new CellReference(getLastRow(), getLastColumn(), useAbsoluteAddress, useAbsoluteAddress);sb.Append(cellRefFrom.formatAsString());if (!cellRefFrom.Equals(cellRefTo) || isFullColumnRange() || isFullRowRange()) {sb.Append(':');sb.Append(cellRefTo.formatAsString());}return sb.ToString();}
+public ByteBuffer Put(int index, byte value) {throw new ReadOnlyBufferException();}
+public void mode(int m) {_mode = m;}
+public ShortBuffer Slice() {return new ReadWriteShortArrayBuffer(Remaining(), backingArray, offset + Position);}
+public void set(int index, long n) {if (count < index)throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");else if (count == index)Add(n);elseentries[index] = n;}
+public ByteBuffer PutFloat(float value) { throw new InvalidOperationException("This buffer is read-only."); }
+public static double Max(double[] values) {double max = double.NegativeInfinity;foreach (double value in values) {max = Math.Max(max, value);}return max;}
+public UpdateRepoWebhookRequest() : base("cr", "2016-06-07", "UpdateRepoWebhook", "cr"){setUriPattern("/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]");setMethod(MethodType.POST);}
+public DeleteAttributesRequest(String domainName, String itemName, List<Attribute> attributes, UpdateCondition expected) {setDomainName(domainName);setItemName(itemName);setAttributes(attributes);setExpected(expected);}
+public string ToString() {StringBuilder sb = new StringBuilder();sb.Append("[SXPI]\n");for (int i = 0; i < _fieldInfos.Length; i++) {sb.Append("    item[").Append(i).Append("]=");_fieldInfos[i].AppendDebugInfo(sb);sb.Append('\n');}sb.Append("[/SXPI]\n");return sb.ToString();}
+public bool isSuccessful() {if (mergeResult != null)return mergeResult.getMergeStatus().isSuccessful();else if (rebaseResult != null)return rebaseResult.getStatus().isSuccessful();return true;}
+public void setBytesValue(byte[] value) {setBytesValue(new BytesRef(value));}
+public DescribeConnectionsResult DescribeConnections(DescribeConnectionsRequest request) { request = BeforeClientExecution(request); return ExecuteDescribeConnections(request); }
+public DeletePhotosRequest() : base("CloudPhoto", "2017-07-11", "DeletePhotos", "cloudphoto") { Protocol = ProtocolType.HTTPS; }
+public void Add(E object) {iterator.Add(object); subList.SizeChanged(true); end++;}
+public static ByteBuffer Allocate(int capacity) {if (capacity < 0) {throw new ArgumentException();}return new ReadWriteHeapByteBuffer(capacity);}
+public SrndQuery getSubQuery(int qn) { return queries.get(qn); }
+public float currentScore(int docId, string field, int start, int end, int numPayloadsSeen, float currentScore, float currentPayloadScore) {if (numPayloadsSeen == 0) {return currentPayloadScore;} else {return Math.Min(currentPayloadScore, currentScore);}}
+public string ToString() { StringBuilder sb = new StringBuilder(); sb.AppendLine("[BLANK]"); sb.AppendLine("    row= " + HexDump.ShortToHex(GetRow())); sb.AppendLine("    col= " + HexDump.ShortToHex(GetColumn())); sb.AppendLine("    xf = " + HexDump.ShortToHex(GetXFIndex())); sb.AppendLine("[/BLANK]"); return sb.ToString(); }
+public DescribeLogPatternResult DescribeLogPattern(DescribeLogPatternRequest request) {request = BeforeClientExecution(request);return ExecuteDescribeLogPattern(request);}
+public RegisterTransitGatewayMulticastGroupMembersResult RegisterTransitGatewayMulticastGroupMembers(RegisterTransitGatewayMulticastGroupMembersRequest request) {request = BeforeClientExecution(request);return ExecuteRegisterTransitGatewayMulticastGroupMembers(request);}
+public GetPhoneNumberSettingsResult getPhoneNumberSettings(GetPhoneNumberSettingsRequest request) {request = beforeClientExecution(request);return executeGetPhoneNumberSettings(request);}
+public ObjectId GetData() { return data; }
+public bool isDirect() { return false; }
+public DeleteServerCertificateRequest(string serverCertificateName) { this.ServerCertificateName = serverCertificateName; }
+public StringBuffer Append(double d) { RealToString.GetInstance().AppendDouble(this, d); return this; }
+public GetEvaluationResult GetEvaluation(GetEvaluationRequest request) {request = BeforeClientExecution(request);return ExecuteGetEvaluation(request);}
+public LinkedDataRecord GetDataName(){return DataName;}
+public bool find(int start) {findPos = start;if (findPos < regionStart) {findPos = regionStart;} else if (findPos >= regionEnd) {matchFound = false;return false;}matchFound = findImpl(address, input, findPos, matchOffsets);if (matchFound) {findPos = matchOffsets[1];}return matchFound;}
+public GetLifecyclePolicyPreviewResult getLifecyclePolicyPreview(GetLifecyclePolicyPreviewRequest request) { request = beforeClientExecution(request); return executeGetLifecyclePolicyPreview(request); }
+public SinglePositionTokenStream(string word) { termAtt = addAttribute(typeof(CharTermAttribute)); posIncrAtt = addAttribute(typeof(PositionIncrementAttribute)); this.word = word; returned = true; }
+public void Serialize(LittleEndianOutput out) { out.WriteShort(field_1_print_gridlines); }
+public string ToString() {StringBuilder s = new StringBuilder();s.Append(Constants.TypeString(GetType()));s.Append(' ');s.Append(Name());s.Append(' ');s.Append(commitTime);s.Append(' ');AppendCoreFlags(s);return s.ToString();}
+public LsRemoteCommand SetRemote(string remote) { CheckCallable(); this.remote = remote; return this; }
+public void collapseRow(int rowNumber) {int startRow = findStartOfRowOutlineGroup(rowNumber);RowRecord rowRecord = getRow(startRow);int nextRowIx = writeHidden(rowRecord, startRow);RowRecord row = getRow(nextRowIx);if (row == null) {row = createRow(nextRowIx);insertRow(row);}row.setColapsed(true);}
+public AssociateSkillGroupWithRoomResult AssociateSkillGroupWithRoom(AssociateSkillGroupWithRoomRequest request) {request = BeforeClientExecution(request);return ExecuteAssociateSkillGroupWithRoom(request);}
+public string ToString() { StringBuilder buffer = new StringBuilder(); buffer.Append("[SERIESLIST]\n"); buffer.Append("    .seriesNumbers= ").Append(" (").Append(String.Join(", ", getSeriesNumbers())).Append(" )"); buffer.Append("\n"); buffer.Append("[/SERIESLIST]\n"); return buffer.ToString(); }
+public QueryConfigHandler GetQueryConfigHandler() { return this.queryConfig; }
+public string GetClassArg() {if (originalArgs != null) {string className = originalArgs.Get(CLASS_NAME);if (className != null) {return className;}}return GetType().Name;}
