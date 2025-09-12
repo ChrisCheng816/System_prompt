@@ -50,7 +50,7 @@ if __name__ == "__main__":
     # evaluate_translation("codellama/CodeLlama-13b-Instruct-hf", "retrieval", example_num=1, max_length=2048, system_prompt = TRAN[2], order = 1)
     # evaluate_translation("codellama/CodeLlama-13b-Instruct-hf", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[2], order = 0)
     # evaluate_translation("codellama/CodeLlama-13b-Instruct-hf", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[2], order = 1)
-
+    
     models = [
         "Qwen/Qwen2.5-Coder-7B-Instruct",
         # "Qwen/Qwen2.5-Coder-32B-Instruct",
