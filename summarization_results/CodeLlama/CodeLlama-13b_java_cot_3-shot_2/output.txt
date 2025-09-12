@@ -1,0 +1,8 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java cot 3-shot counter=3 Time: 0:44:21:
+You are an expert writer that writes summary for methods. Your task is to generate clear, concise, and accurate natural language summaries for code snippets. 
+The summary should describe the purpose and behavior of the code function. Output only the summary in plain text, without additional markup or formatting.
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 12.445515524459864
+
+HFBleu: {'bleu': 0.017468701811611222, 'precisions': [0.10945677179282723, 0.028156832144854916, 0.009140670798343149, 0.003305506617207962], 'brevity_penalty': 1.0, 'length_ratio': 3.1292716504380995, 'translation_length': 436427, 'reference_length': 139466}

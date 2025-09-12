@@ -1,0 +1,7 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java cot 3-shot counter=3 Time: 0:39:27:
+You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence.
+
+Bleu: 10.083197945563374
+
+HFBleu: {'bleu': 0.016538311924117786, 'precisions': [0.11018470633248821, 0.027151891788371036, 0.008524217327873838, 0.0029335182119766133], 'brevity_penalty': 1.0, 'length_ratio': 3.410673569185321, 'translation_length': 475673, 'reference_length': 139466}

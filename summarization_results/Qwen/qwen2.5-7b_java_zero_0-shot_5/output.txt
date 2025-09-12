@@ -1,0 +1,7 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:java zero 0-shot counter=0 Time: 0:07:41:
+You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence.
+
+Bleu: 7.863113549980087
+
+HFBleu: {'bleu': 0.023956298205152445, 'precisions': [0.16165362494137395, 0.037041768194345535, 0.012144998709387058, 0.004529019719605952], 'brevity_penalty': 1.0, 'length_ratio': 2.3237706681198285, 'translation_length': 324087, 'reference_length': 139466}

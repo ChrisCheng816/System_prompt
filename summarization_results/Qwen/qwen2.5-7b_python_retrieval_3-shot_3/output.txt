@@ -1,0 +1,7 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python retrieval 3-shot counter=0 Time: 0:16:42:
+You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence.
+
+Bleu: 56.575965793111294
+
+HFBleu: {'bleu': 0.4627990170626323, 'precisions': [0.6099167122262118, 0.48949833344851235, 0.4214169827770368, 0.36461617189030054], 'brevity_penalty': 1.0, 'length_ratio': 1.1929327708379849, 'translation_length': 203030, 'reference_length': 170194}

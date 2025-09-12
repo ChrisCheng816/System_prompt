@@ -1,0 +1,7 @@
+codellama/CodeLlama-13b-Instruct-hf Language:python cot 3-shot counter=3 Time: 0:54:47:
+You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence.
+
+Bleu: 32.07753777457059
+
+HFBleu: {'bleu': 0.10073389590369716, 'precisions': [0.18326830517235548, 0.11480524537367018, 0.08192936161575155, 0.05973293536827675], 'brevity_penalty': 1.0, 'length_ratio': 3.648847785468348, 'translation_length': 621012, 'reference_length': 170194}

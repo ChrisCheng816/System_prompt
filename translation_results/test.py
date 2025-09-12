@@ -3,18 +3,18 @@ import re
 import csv
 from collections import defaultdict
 
-# 根目录
+# Root directory
 root_dir = "./"
 
 # 存放结果 {task_key: {"bleu": [], "em": [], "codebleu": []}}
 results = defaultdict(lambda: {"bleu": [], "em": [], "codebleu": []})
 
-# 简单正则匹配
+# Simple Regular Expression Matching
 bleu_pattern = re.compile(r"BLEU_Smooth:\s*{\s*'bleu': ([0-9.]+)")
 em_pattern = re.compile(r"EM:\s*{\s*'em_ratio': ([0-9.]+)")
 codebleu_pattern = re.compile(r"CodeBleu:\s*{\s*'codebleu': ([0-9.]+)")
 
-# 遍历每个子文件夹
+# Iterate through each subfolder
 for dirpath, dirnames, filenames in os.walk(root_dir):
     if "output.txt" not in filenames:
         continue
@@ -22,7 +22,7 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
     output_path = os.path.join(dirpath, "output.txt")
     parent_folder = os.path.basename(dirpath)
 
-    # 解析文件夹名，例如 qwen2.5-7b_Cs2Java_cot_1-shot_0
+    # Parsing folder names, such as qwen2.5-7b_Cs2Java_cot_1-shot_0
     parts = parent_folder.rsplit("_", 4)
     if len(parts) < 4:
         continue
@@ -37,12 +37,12 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
     with open(output_path, "r", encoding="utf-8") as f:
         text = f.read()
 
-        # BLEU → 只取最后一个
+        # BLEU → Take only the last one
         bleu_vals = bleu_pattern.findall(text)
         if bleu_vals:
             results[task_key]["bleu"].append(float(bleu_vals[-1]))
 
-        # EM → 只取最后一个
+        # EM → Take only the last one
         em_vals = em_pattern.findall(text)
         if em_vals:
             results[task_key]["em"].append(float(em_vals[-1]))
@@ -52,7 +52,7 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
         if codebleu_vals:
             results[task_key]["codebleu"].append(float(codebleu_vals[-1]))
 
-# 保存结果到 output.txt
+# Save the results to output.txt
 with open("output.txt", "w", encoding="utf-8") as fout:
     for task_key, metrics in results.items():
         fout.write(f"Task: {task_key}\n")
@@ -61,7 +61,7 @@ with open("output.txt", "w", encoding="utf-8") as fout:
                 fout.write(f"  {metric_name}: min={min(values):.4f}, max={max(values):.4f}\n")
         fout.write("\n")
 
-# 保存结果到 output.csv
+# Save the results to output.txt
 with open("output.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["model", "task", "method", "shot", "metric", "min", "max"])
@@ -72,5 +72,6 @@ with open("output.csv", "w", newline="", encoding="utf-8") as csvfile:
             if values:
                 writer.writerow([model, task, method, shot, metric_name,
                                  f"{min(values):.4f}", f"{max(values):.4f}"])
+        writer.writerow([])
 
 print("结果已保存到 output.txt 和 output.csv")

@@ -34,11 +34,8 @@ The summarization should be very concise, with an approximate limitation of arou
 
 sum_prompt_4 = """You are a helpful documentation assistant that writes summary for methods."""
 
-#这个号享有点拉
-sum_prompt_5 = """You are a professional documentation assistant. Your task is to read the given method and produce a concise and informative summary of what the method does."""
-
-sum_prompt_6 = """You are a helpful assistant that writes summary for methods. Your task is to read the given method and produce a very concise summary of what the method does in only one sentence."""
-
+sum_prompt_5 = """You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence."""
 
 # ---------- Exports -----------
 def prompt_to_code(prompt: str) -> str:

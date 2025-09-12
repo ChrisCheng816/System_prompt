@@ -1,0 +1,7 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java retrieval 1-shot counter=0 Time: 0:28:38:
+You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence.
+
+Bleu: 8.301315456779951
+
+HFBleu: {'bleu': 0.020189288067815506, 'precisions': [0.13745479893695814, 0.03243268898633345, 0.010236387234111879, 0.0036407800952031814], 'brevity_penalty': 1.0, 'length_ratio': 2.7978145211019174, 'translation_length': 390200, 'reference_length': 139466}

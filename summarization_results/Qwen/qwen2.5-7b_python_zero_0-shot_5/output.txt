@@ -1,0 +1,7 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python zero 0-shot counter=0 Time: 0:11:42:
+You are a professional documentation assistant.
+Your task is to read the given method and produce a summary of what the method does in only one sentence.
+
+Bleu: 14.68297681006076
+
+HFBleu: {'bleu': 0.08703405573493236, 'precisions': [0.22377534786010003, 0.10491877768942406, 0.06303058522521506, 0.03877395345663337], 'brevity_penalty': 1.0, 'length_ratio': 2.6738134129287756, 'translation_length': 455067, 'reference_length': 170194}

@@ -27,7 +27,6 @@ logging.getLogger("vllm").setLevel(logging.ERROR)
 def load_model(model_name, dataset):
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
-    # model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
     # model = torch.compile(model)
     llm = LLM(
         model=model_name,

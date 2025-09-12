@@ -1,0 +1,84 @@
+Task: qwen2.5-7b_python_naive_1-shot
+  bleu: min=32.0954, max=53.5150
+
+Task: qwen2.5-7b_python_naive_3-shot
+  bleu: min=55.8550, max=74.7109
+
+Task: qwen2.5-7b_java_naive_1-shot
+  bleu: min=12.6517, max=14.0291
+
+Task: qwen2.5-7b_java_naive_3-shot
+  bleu: min=14.4036, max=15.4300
+
+Task: qwen2.5-7b_python_cot_1-shot
+  bleu: min=25.5582, max=30.7296
+
+Task: qwen2.5-7b_java_cot_1-shot
+  bleu: min=11.9360, max=13.6737
+
+Task: qwen2.5-7b_python_retrieval_3-shot
+  bleu: min=48.9622, max=59.5364
+
+Task: qwen2.5-7b_java_retrieval_3-shot
+  bleu: min=12.6576, max=13.6463
+
+Task: qwen2.5-7b_java_cot_3-shot
+  bleu: min=13.2055, max=14.7615
+
+Task: qwen2.5-7b_java_zero_0-shot
+  bleu: min=2.3865, max=12.2117
+
+Task: qwen2.5-7b_python_cot_3-shot
+  bleu: min=37.4372, max=53.9951
+
+Task: qwen2.5-7b_java_retrieval_1-shot
+  bleu: min=11.2732, max=13.0957
+
+Task: qwen2.5-7b_python_zero_0-shot
+  bleu: min=3.3317, max=20.9999
+
+Task: qwen2.5-7b_python_retrieval_1-shot
+  bleu: min=30.8267, max=37.0942
+
+Task: CodeLlama-13b_java_cot_3-shot
+  bleu: min=10.0832, max=16.1716
+
+Task: CodeLlama-13b_python_zero_0-shot
+  bleu: min=8.1491, max=17.3468
+
+Task: CodeLlama-13b_python_naive_1-shot
+  bleu: min=5.7764, max=39.5359
+
+Task: CodeLlama-13b_java_retrieval_3-shot
+  bleu: min=7.8698, max=13.9639
+
+Task: CodeLlama-13b_java_zero_0-shot
+  bleu: min=4.1877, max=7.5813
+
+Task: CodeLlama-13b_python_naive_3-shot
+  bleu: min=32.9589, max=46.7912
+
+Task: CodeLlama-13b_java_naive_3-shot
+  bleu: min=4.4776, max=16.3873
+
+Task: CodeLlama-13b_java_cot_1-shot
+  bleu: min=7.6699, max=14.8196
+
+Task: CodeLlama-13b_java_retrieval_1-shot
+  bleu: min=8.3013, max=13.5712
+
+Task: CodeLlama-13b_python_retrieval_3-shot
+  bleu: min=32.0188, max=49.0520
+
+Task: CodeLlama-13b_java_naive_1-shot
+  bleu: min=4.1936, max=14.9370
+
+Task: CodeLlama-13b_python_retrieval_1-shot
+  bleu: min=23.2213, max=36.2738
+
+Task: CodeLlama-13b_python_cot_3-shot
+  bleu: min=32.0775, max=42.4068
+
+Task: CodeLlama-13b_python_cot_1-shot
+  bleu: min=22.7447, max=36.2148
+
