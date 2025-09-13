@@ -1,0 +1,12 @@
+codellama/CodeLlama-13b-Instruct-hf Direction:Cs2Java zero 0-shot counter=0 Time: 0:04:38:
+You are a professional code translator trained to translate source code between Java and C#.
+Requirements:
+1. Translate the given source code into the specified target language (Java or C#).
+2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.
+3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.
+4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.
+5. Output only the translated code, with no explanations, quotes, or extra text.
+
+BLEU_Smooth:{'bleu': 0.3508647441981647, 'precisions': [0.4470940059810168, 0.37460150177842183, 0.3210118809237752, 0.2818833716682452], 'brevity_penalty': 1.0, 'length_ratio': 1.8942170336436628, 'translation_length': 76909, 'reference_length': 40602}
+EM: {'em_ratio': 0.086, 'matches': 86, 'total': 1000}
+CodeBleu: {'codebleu': 58.270592456527, 'ngram_match_score': 0.3508647441981646, 'weighted_ngram_match_score': 0.680113389274851, 'syntax_match_score': 0.5736774575602053, 'dataflow_match_score': 0.7261681072278592}

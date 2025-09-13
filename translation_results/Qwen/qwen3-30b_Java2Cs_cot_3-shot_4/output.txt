@@ -1,0 +1,6 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Direction:Java2Cs cot 3-shot counter=0 Time: 0:02:13:
+You are a code translator trained to translate source code between Java and C#.
+
+BLEU_Smooth:{'bleu': 0.7857059157576601, 'precisions': [0.9023706347183278, 0.827307057904332, 0.7717854290531547, 0.7249523550231418], 'brevity_penalty': 0.9773398166842213, 'length_ratio': 0.9775927233459318, 'translation_length': 47075, 'reference_length': 48154}
+EM: {'em_ratio': 0.345, 'matches': 345, 'total': 1000}
+CodeBleu: {'codebleu': 79.18053688212709, 'ngram_match_score': 0.7857059157576601, 'weighted_ngram_match_score': 0.7849384264488162, 'syntax_match_score': 0.7587392952407693, 'dataflow_match_score': 0.8378378378378378}

@@ -1,0 +1,6 @@
+codellama/CodeLlama-13b-Instruct-hf Language:java retrieval 1-shot counter=0 Time: 0:55:02:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 8.045435054284466
+
+HFBleu: {'bleu': 0.011191508410917808, 'precisions': [0.07224944717214497, 0.01836179474797618, 0.005733979417778702, 0.002062285153252271], 'brevity_penalty': 1.0, 'length_ratio': 6.12185765706337, 'translation_length': 853791, 'reference_length': 139466}

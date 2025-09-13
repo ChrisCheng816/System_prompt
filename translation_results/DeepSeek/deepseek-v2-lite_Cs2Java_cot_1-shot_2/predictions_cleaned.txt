@@ -1,0 +1,1000 @@
+public void serialize(ILittleEndianOutput out1) {out1.writeShort(field_1_vcenter);}
+public void addAll(NGit.Util.BlockList<T> src) {if (src.size == 0) {return;}int srcDirIdx = 0;for (; srcDirIdx < src.tailDirIdx; srcDirIdx++) {addAll(src.directory[srcDirIdx], 0, BLOCK_SIZE);}if (src.tailBlkIdx != 0) {addAll(src.tailBlock, 0, src.tailBlkIdx);}}
+public void writeByte(byte b) {if (outerInstance.upto == outerInstance.blockSize) {if (outerInstance.currentBlock != null) {outerInstance.blocks.add(outerInstance.currentBlock);outerInstance.blockEnd.add(outerInstance.upto);}outerInstance.currentBlock = new byte[outerInstance.blockSize];outerInstance.upto = 0;}outerInstance.currentBlock[outerInstance.upto++] = b;}
+public ObjectId getObjectId() {return objectId;}
+public DeleteDomainEntryResponse deleteDomainEntry(DeleteDomainEntryRequest request) {request = beforeClientExecution(request);return executeDeleteDomainEntry(request);}
+public long ramBytesUsed() {return fst == null ? 0 : fst.GetSizeInBytes();}
+public String getFullMessage() {byte[] raw = buffer;int msgB = RawParseUtils.tagMessage(raw, 0);if (msgB < 0) {return "";}Encoding enc = RawParseUtils.parseEncoding(raw);return RawParseUtils.decode(enc, raw, msgB, raw.length);}
+public POIFSFileSystem() {HeaderBlock headerBlock = new HeaderBlock(bigBlockSize);_property_table = new PropertyTable(headerBlock);_documents = new ArrayList();_root = null;}
+public void init(int address) {slice = pool.buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];Debug.Assert(slice != null);upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;Debug.Assert(upto < slice.length);}
+public NGit.Api.SubmoduleAddCommand setPath(String path) {this.path = path;return this;}
+public ListIngestionsResponse listIngestions(ListIngestionsRequest request) {request = beforeClientExecution(request);return executeListIngestions(request);}
+public QueryParserTokenManager(ICharStream stream, int lexState) {this(stream);SwitchTo(lexState);}
+public GetShardIteratorResponse getShardIterator(GetShardIteratorRequest request) {request = beforeClientExecution(request);return executeGetShardIterator(request);}
+public ModifyStrategyRequest() {super("aegis", "2016-11-11", "ModifyStrategy", "vipaegis", "openAPI");Method = MethodType.POST;}
+public boolean ready() {synchronized (@lock) {if (@in == null) {throw new java.io.IOException("InputStreamReader is closed");}try {return bytes.hasRemaining() || @in.available() > 0;} catch (java.io.IOException e) {return false;}}}
+### Output:protected EscherOptRecord getOptRecord() {return _optRecord;}
+public int read(byte[] buffer, int offset, int length) {synchronized (this) {if (buffer == null) {throw new NullPointerException("buffer == null");}java.util.Arrays.checkOffsetAndCount(buffer.length, offset, length);if (length == 0) {return 0;}int copylen = count - pos < length ? count - pos : length;for (int i = 0; i < copylen; i++) {buffer[offset + i] = this.buffer[pos + i];}pos += copylen;return copylen;}}
+public OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp) {this.sentenceOp = sentenceOp;}
+public void print(String str) {write(str != null ? str : Sharpen.StringHelper.getValueOf((Object) null));}
+public NotImplementedFunctionException(String functionName, NotImplementedException cause) : base(functionName, cause) {this.functionName = functionName;}
+public T next()' in Java.# Step 5: Replace C#'s 'this.nextEntry().value' with Java's equivalent.# Step 6: The final summary: Translate C#'s 'this.nextEntry().value' to Java's equivalent and preserve method name and return type.Output:public T next() {return this.nextEntry().value;}
+public void readBytes(byte[] b, int offset, int len, boolean useBuffer) {int available = bufferLength - bufferPosition;if (len <= available) {if (len > 0) {System.arraycopy(m_buffer, bufferPosition, b, offset, len);}bufferPosition += len;} else {if (available > 0) {System.arraycopy(m_buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len < bufferSize) {refill();if (bufferLength < len) {System.arraycopy(m_buffer, 0, b, offset, bufferLength);throw new EndOfStreamException("read past EOF: " + this);} else {System.arraycopy(m_buffer, 0, b, offset, len);bufferPosition = len;}} else {long after = bufferStart + bufferPosition + len;if (after > Length) {throw new EndOfStreamException("read past EOF: " + this);}readInternal(b, offset, len);bufferStart = after;bufferPosition = 0;bufferLength = 0;}}}
+public TagQueueResponseResult tagQueue(TagQueueRequest request) {request = beforeClientExecution(request);return executeTagQueue(request);}
+public void remove() {throw new UnsupportedOperationException();}
+public ModifyCacheSubnetGroupResponse modifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request) {request = beforeClientExecution(request);return executeModifyCacheSubnetGroup(request);}
+public override void setParams(String @params) {super.setParams(@params);culture = "";String ignore;StringTokenizer st = new StringTokenizer(@params, ",");if (st.hasMoreTokens()) culture = st.nextToken();if (st.hasMoreTokens()) culture += "-" + st.nextToken();if (st.hasMoreTokens()) ignore = st.nextToken();}
+public DeleteDocumentationVersionResponse deleteDocumentationVersion(DeleteDocumentationVersionRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationVersion(request);}
+public boolean equals(Object obj) {if (!(obj instanceof FacetLabel)) {return false;}FacetLabel other = (FacetLabel) obj;if (Length != other.Length) {return false;}for (int i = Length - 1; i >= 0; i--) {if (!Components[i].equals(other.Components[i], StringComparison.Ordinal)) {return false;}}return true;}
+public GetInstanceAccessDetailsResponse getInstanceAccessDetails(GetInstanceAccessDetailsRequest request) {request = beforeClientExecution(request);return executeGetInstanceAccessDetails(request);}
+public HSSFPolygon createPolygon(HSSFChildAnchor anchor) {HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.setParent(this);shape.setAnchor(anchor);shapes.add(shape);onCreate(shape);return shape;}
+public String getSheetName(int sheetIndex) {return getBoundSheetRec(sheetIndex).getSheetname();}
+public GetDashboardResponse getDashboard(GetDashboardRequest request) {request = beforeClientExecution(request);return executeGetDashboard(request);}
+public AssociateSigninDelegateGroupsWithAccountResponse associateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request) {request = beforeClientExecution(request);return executeAssociateSigninDelegateGroupsWithAccount(request);}
+public void addMultipleBlanks(MulBlankRecord mbr) {for (int j = 0; j < mbr.getNumColumns(); j++) {BlankRecord br = new BlankRecord();br.setColumn(j + mbr.getFirstColumn());br.setRow(mbr.getRow());br.setXFIndex(mbr.getXFAt(j));insertCell(br);}}
+public static String quote(String str) {StringBuilder sb = new StringBuilder();sb.append("\\Q");int apos = 0;int k;while ((k = str.indexOf("\\E", apos)) >= 0) {sb.append(str.substring(apos, k + 2)).append("\\\\E\\Q");apos = k + 2;}return sb.append(str.substring(apos)).append("\\E").toString();}
+public java.nio.ByteBuffer putInt(int value) {throw new java.lang.UnsupportedOperationException();}
+public void arrayPtg(Object[][] values2d) {int nColumns = values2d[0].length;int nRows = values2d.length;_nColumns = (short) nColumns;_nRows = (short) nRows;Object[] vv = new Object[_nColumns * _nRows];for (int r = 0; r < nRows; r++) {Object[] rowData = values2d[r];for (int c = 0; c < nColumns; c++) {vv[getValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}
+public GetIceServerConfigResponse getIceServerConfig(GetIceServerConfigRequest request) {request = beforeClientExecution(request);return executeGetIceServerConfig(request);}
+public String toString() {StringBuilder sb = new StringBuilder(64);sb.append(getClass().getName()).append(" [");sb.append(getValueAsString());sb.append("]");return sb.toString();}
+public String toString(String field) {return "ToChildBlockJoinQuery (" + _parentQuery + ")";}
+public void incRef() {refCount.incrementAndGet();}
+public ListUpdateConfigurationSetSendingEnabledResult updateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request) {request = beforeClientExecution(request);return executeUpdateConfigurationSetSendingEnabled(request);}
+public int getNextXBATChainOffset() {return getXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE;}
+public void multiplyByPowerOfTen(int pow10) {TenPower tp = TenPower.getInstance(Math.abs(pow10));if (pow10 < 0) {mulShift(tp.getDivisor(), tp.getDivisorShift());} else {mulShift(tp.getMultiplicand(), tp.getMultiplierShift());}}
+public String toString() {StringBuilder builder = new StringBuilder();int length = this.length();builder.append(Path.of(System.getProperty("user.dir")).toString());builder.append(Path.DIRECTORY_SEPARATOR);for (int i = 0; i < length; i++) {builder.append(this.getComponent(i));if (i < (length - 1)) {builder.append(Path.DIRECTORY_SEPARATOR);}}return builder.toString();}
+public void withFetcher(ECSMetadataServiceCredentialsFetcher fetcher) {this.fetcher = fetcher;this.fetcher.setRoleName(roleName);}
+public void setProgressMonitor(ProgressMonitor pm) {this.progressMonitor = pm;}
+public void reset() {if (!isFirst()) {setPtr(0);if (!isEof()) {parseEntry();}}}
+public E previous() {if (iterator.previousIndex() >= start) {return iterator.previous();}throw new java.util.NoSuchElementException();}
+public String getNewPrefix() {return this.newPrefix;}
+public int indexOfValue(int value) {for (int i = 0; i < mSize; i++) {if (mValues[i] == value) {return i;}}return -1;}
+public List<CharsRef> uniqueStems(char[] word, int length) {List<CharsRef> stems = stem(word, length);if (stems.size() < 2) {return stems;}CharArraySet terms = new CharArraySet(LuceneVersion.LUCENE_CURRENT, 8, true);List<CharsRef> deduped = new ArrayList<>();for (CharsRef s : stems) {if (!terms.contains(s)) {deduped.add(s);terms.add(s);}}return deduped;}
+public GetGatewayResponsesResult getGatewayResponses(GetGatewayResponsesRequest request) {request = beforeClientExecution(request);return executeGetGatewayResponses(request);}
+public void setPosition(long position) {currentBlockIndex = (int)(position >> outerInstance.blockBits);currentBlock = outerInstance.blocks[currentBlockIndex];currentBlockUpto = (int)(position & outerInstance.blockMask);}
+public long skip(long n) {int s = (int) Math.min(available(), Math.max(0, n));ptr += s;return s;}
+public BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig) {_bootstrapActionConfig = bootstrapActionConfig;}
+public override void serialize(ILittleEndianOutput out1) {out1.writeShort(field_1_row);out1.writeShort(field_2_col);out1.writeShort(field_3_flags);out1.writeShort(field_4_shapeid);out1.writeShort(field_6_author.length());out1.writeByte(field_5_hasMultibyte ? 0x01 : 0x00);if (field_5_hasMultibyte) {StringUtil.putUnicodeLE(field_6_author, out1);} else {StringUtil.putCompressedUnicode(field_6_author, out1);}if (field_7_padding != null) {out1.writeByte(Convert.ToInt32(field_7_padding, CultureInfo.InvariantCulture));}}
+public int lastIndexOf(String str) {return lastIndexOf(str, count);}
+public boolean add(E @object) {return addLastImpl(@object);}
+public void unsetSection(String section, String subsection) {ConfigSnapshot src;ConfigSnapshot res;do {src = state.get();res = unsetSection(src, section, subsection);} while (!state.compareAndSet(src, res));}
+public String getTagName(){return tagName;}
+public void addSubRecord(int index, SubRecord element) {subrecords.add(index, element);}
+public boolean remove(Object object) {synchronized (mutex) {return c.remove(object);}}
+public TokenStream create(TokenStream input) {return new DoubleMetaphoneFilter(input, maxCodeLength, inject);}
+public long length() {return InCoreLength();}
+public void setValue(boolean newValue) {value = newValue;}
+public Pair(ContentSource oldSource, ContentSource newSource) {this.oldSource = oldSource;this.newSource = newSource;}
+public int get(int i) {if (count <= i) {throw Sharpen.Extensions.createIndexOutOfBoundsException(i);}return entries[i];}
+public CreateRepoRequest() {super("cr", "2016-06-07", "CreateRepo", "cr", "openAPI");UriPattern = "/repos";Method = MethodType.PUT;}
+public boolean isDeltaBaseAsOffset() {return deltaBaseAsOffset;}
+public void remove() {if (expectedModCount == list.modCount) {if (lastLink != null) {java.util.LinkedList.Link<ET> next_1 = lastLink.next;java.util.LinkedList.Link<ET> previous_1 = lastLink.previous;next_1.previous = previous_1;previous_1.next = next_1;if (lastLink == link) {pos--;}link = previous_1;lastLink = null;expectedModCount++;list._size--;list.modCount++;} else {throw new java.lang.UnsupportedOperationException();}} else {throw new java.util.ConcurrentModificationException();}}
+public MergeShardsResponse mergeShards(MergeShardsRequest request) {request = beforeClientExecution(request);return executeMergeShards(request);}
+public AllocateHostedConnectionResponse allocateHostedConnection(AllocateHostedConnectionRequest request) {request = beforeClientExecution(request);return executeAllocateHostedConnection(request);}
+public int getBeginIndex() {return start;}
+public static WeightedTerm[] getTerms(Query query) {return getTerms(query, false);}
+public ByteBuffer compact() {throw new ReadOnlyBufferException();}
+public void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {int byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = (int) ((uint) byte0 >> 2);int byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | ((int) ((uint) byte1 >> 4));int byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | ((int) ((uint) byte2 >> 6));values[valuesOffset++] = byte2 & 63;}}
+public String getHumanishName() {if (getPath().equals("") || getPath() == null) {throw new IllegalArgumentException();}String s = getPath();String[] elements;if ("file".equals(scheme) || LOCAL_FILE.matcher(s).matches()) {elements = s.split("[\\" + FilePath.separatorChar + "/]");} else {elements = s.split("/");}if (elements.length == 0) {throw new IllegalArgumentException();}String result = elements[elements.length - 1];if (Constants.DOT_GIT.equals(result)) {result = elements[elements.length - 2];} else {if (result.endsWith(Constants.DOT_GIT_EXT)) {result = Sharpen.Runtime.substring(result, 0, result.length() - Constants.DOT_GIT_EXT.length());}}return result;}
+public DescribeNotebookInstanceLifecycleConfigResponse describeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request) {request = beforeClientExecution(request);return executeDescribeNotebookInstanceLifecycleConfig(request);}
+public String getAccessKeySecret() {return AccessSecret;}
+public CreateVpnConnectionResponse createVpnConnection(CreateVpnConnectionRequest request) {request = beforeClientExecution(request);return executeCreateVpnConnection(request);}
+public DescribeVoicesResponse describeVoices(DescribeVoicesRequest request) {request = beforeClientExecution(request);return executeDescribeVoices(request);}
+public ListMonitoringExecutionsResult listMonitoringExecutions(ListMonitoringExecutionsRequest request) {request = beforeClientExecution(request);return executeListMonitoringExecutions(request);}
+public DescribeJobRequest(String vaultName, String jobId) {this._vaultName = vaultName;this._jobId = jobId;}
+public EscherRecord GetEscherRecord(int index){return escherRecords[index];}Thought steps:# Step 1: The method is named 'GetEscherRecord' and follows C# PascalCase naming.# Step 2: In Java, rename the method to 'getEscherRecord' to follow lowerCamelCase naming.# Step 3: Keep the parameter type 'int index' unchanged but follow Java parameter formatting.# Step 4: Since the return statement directly accesses a member of a collection (escherRecords[index]), this is a straightforward getter method in Java as well.# Step 5: Use Java modifiers, exception handling, and brace style for the method body.Output:public EscherRecord getEscherRecord(int index) {return escherRecords[index];}
+public GetApisResponse getApis(GetApisRequest request) {request = beforeClientExecution(request);return executeGetApis(request);}
+public DeleteSmsChannelResponse deleteSmsChannel(DeleteSmsChannelRequest request) {request = beforeClientExecution(request);return executeDeleteSmsChannel(request);}
+public TrackingRefUpdate getTrackingRefUpdate() {return trackingRefUpdate;}
+public void print(boolean b) {print(String.valueOf(b));}
+public IQueryNode getChild() {return getChildren().get(0);}
+public NotIgnoredFilter(int workdirTreeIndex) {this.index = workdirTreeIndex;}
+public AreaRecord(RecordInputStream in1) {field_1_formatFlags = in1.readShort();}
+public GetThumbnailRequest() {super("CloudPhoto", "2017-07-11", "GetThumbnail", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public DescribeTransitGatewayVpcAttachmentsResponse describeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request) {request = beforeClientExecution(request);return executeDescribeTransitGatewayVpcAttachments(request);}
+public PutVoiceConnectorStreamingConfigurationResponse putVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request) {request = beforeClientExecution(request);return executePutVoiceConnectorStreamingConfiguration(request);}
+public OrdRange getOrdRange(String dim) {OrdRange result;prefixToOrdRange.tryGetValue(dim, result);return result;}
+public String toString() {String symbol = "";if (startIndex >= 0 && startIndex < ((Antlr4.Runtime.ICharStream) InputStream).size()) {symbol = ((Antlr4.Runtime.ICharStream) InputStream).getText(new Antlr4.Runtime.Interval(startIndex, startIndex));symbol = Utils.escapeWhitespace(symbol, false);}return String.format(CultureInfo.currentCulture, "%s('%s')", Antlr4.Runtime.LexerNoViableAltException.class.getName(), symbol);}
+public E peek() {return peekFirstImpl();}
+public CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest request) {request = beforeClientExecution(request);return executeCreateWorkspaces(request);}
+public Object clone() {NumberFormatIndexRecord rec = new NumberFormatIndexRecord();rec.field_1_formatIndex = field_1_formatIndex;return rec;}
+public DescribeRepositoriesResult describeRepositories(DescribeRepositoriesRequest request) {request = beforeClientExecution(request);return executeDescribeRepositories(request);}
+public SparseIntArray(int initialCapacity) {initialCapacity = android.util.internal.ArrayUtils.idealIntArraySize(initialCapacity);mKeys = new int[initialCapacity];mValues = new int[initialCapacity];mSize = 0;}
+public TokenStream create(TokenStream input) {return new HyphenatedWordsFilter(input);}
+public CreateDistributionWithTagsResponse createDistributionWithTags(CreateDistributionWithTagsRequest request) {request = beforeClientExecution(request);return executeCreateDistributionWithTags(request);}
+public RandomAccessFile(String fileName, String mode) {this(new java.io.File(fileName), mode);throw new java.lang.UnsupportedOperationException();}
+public DeleteWorkspaceImageResponse deleteWorkspaceImage(DeleteWorkspaceImageRequest request) {request = beforeClientExecution(request);return executeDeleteWorkspaceImage(request);}
+public static String toHex(int value) {return toHex((long) value, 8);}
+public UpdateDistributionResult updateDistribution(UpdateDistributionRequest request) {request = beforeClientExecution(request);return executeUpdateDistribution(request);}
+public Color getColor(short index) {if (index == HSSFColor.AUTOMATIC.getIndex()) {return HSSFColor.AUTOMATIC.getInstance();} else {byte[] b = palette.getColor(index);if (b != null) {return new CustomColor(index, b);}}return null;}
+public ValueEval evaluate(ValueEval[] operands, int srcRow, int srcCol) {throw new NotImplementedFunctionException(_functionName);}
+public void serialize(ILittleEndianOutput out1) {out1.writeShort((short)field_1_number_crn_records);out1.writeShort((short)field_2_sheet_table_index);}
+public DescribeDBEngineVersionsResponse describeDBEngineVersions() {return describeDBEngineVersions(new DescribeDBEngineVersionsRequest());}
+public FormatRun(short character, short fontIndex) {this._character = character;this._fontIndex = fontIndex;}
+public static byte[] toBigEndianUtf16Bytes(char[] chars, int offset, int length) {byte[] result = new byte[length * 2];int end = offset + length;int resultIndex = 0;for (int i = offset; i < end; ++i) {char ch = chars[i];result[resultIndex++] = unchecked((byte)(ch >> 8));result[resultIndex++] = unchecked((byte)ch);}return result;}
+public UploadArchiveResponse uploadArchive(UploadArchiveRequest request) {request = beforeClientExecution(request);return executeUploadArchive(request);}
+public List<IToken> getHiddenTokensToLeft(int tokenIndex) {return getHiddenTokensToLeft(tokenIndex, -1);}
+public boolean equals(Object obj) {if (this == obj) {return true;}if (!super.equals(obj)) {return false;}if (this.getClass() != obj.getClass()) {return false;}AutomatonQuery other = (AutomatonQuery) obj;if (!m_compiled.equals(other.m_compiled)) {return false;}if (m_term == null) {if (other.m_term != null) {return false;}} else if (!m_term.equals(other.m_term)) {return false;}return true;}
+public SpanQuery makeSpanClause() {List<SpanQuery> spanQueries = new ArrayList<>();for (var wsq : weightBySpanQuery.entrySet()) {wsq.getKey().boost = wsq.getValue();spanQueries.add(wsq.getKey());}if (spanQueries.size() == 1) return spanQueries.get(0);else return new SpanOrQuery(spanQueries.toArray(new SpanQuery[0]));}
+public StashCreateCommand stashCreate() {return new StashCreateCommand(repo);}
+public FieldInfo fieldInfo(String fieldName) {FieldInfo ret;byName.containsKey(fieldName);ret = byName.get(fieldName);return ret;}
+public DescribeEventSourceResponse describeEventSource(DescribeEventSourceRequest request) {request = beforeClientExecution(request);return executeDescribeEventSource(request);}
+public GetDocumentAnalysisResponse getDocumentAnalysis(GetDocumentAnalysisRequest request) {request = beforeClientExecution(request);return executeGetDocumentAnalysis(request);}
+public CancelUpdateStackResponse cancelUpdateStack(CancelUpdateStackRequest request) {request = beforeClientExecution(request);return executeCancelUpdateStack(request);}
+public ModifyLoadBalancerAttributesResponse modifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest request) {request = beforeClientExecution(request);return executeModifyLoadBalancerAttributes(request);}
+public SetInstanceProtectionResponse setInstanceProtection(SetInstanceProtectionRequest request) {request = beforeClientExecution(request);return executeSetInstanceProtection(request);}
+public ModifyDBProxyResponse modifyDBProxy(ModifyDBProxyRequest request) {request = beforeClientExecution(request);return executeModifyDBProxy(request);}
+public void add(char[] output, int offset, int len, int endOffset, int posLength) {if (count == outputs.length) {CharsRef[] next = new CharsRef[ArrayUtil.oversize(1 + count, RamUsageEstimator.NUM_BYTES_OBJECT_REF)];System.arraycopy(outputs, 0, next, 0, count);outputs = next;}if (count == endOffsets.length) {int[] next = new int[ArrayUtil.oversize(1 + count, RamUsageEstimator.NUM_BYTES_INT32)];System.arraycopy(endOffsets, 0, next, 0, count);endOffsets = next;}if (count == posLengths.length) {int[] next = new int[ArrayUtil.oversize(1 + count, RamUsageEstimator.NUM_BYTES_INT32)];System.arraycopy(posLengths, 0, next, 0, count);posLengths = next;}if (outputs[count] == null) {outputs[count] = new CharsRef();}outputs[count].copyChars(output, offset, len);endOffsets[count] = endOffset;posLengths[count] = posLength;count++;}
+public FetchLibrariesRequest() {super("CloudPhoto", "2017-07-11", "FetchLibraries", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public boolean exists() {return objects.exists();}
+public FilterOutputStream(java.io.OutputStream out) {this.out = out;}
+public ScaleClusterRequest() {super("CS", "2015-12-15", "ScaleCluster", "cs", "openAPI");UriPattern = "/clusters/[ClusterId]";Method = MethodType.PUT;}
+public IDataValidationConstraint createTimeConstraint(int operatorType, String formula1, String formula2) {return DVConstraint.createTimeConstraint(operatorType, formula1, formula2);}
+public ListObjectParentPathsResponse listObjectParentPaths(ListObjectParentPathsRequest request) {request = beforeClientExecution(request);return executeListObjectParentPaths(request);}
+public DescribeCacheSubnetGroupsResponse describeCacheSubnetGroups(DescribeCacheSubnetGroupsRequest request) {request = beforeClientExecution(request);return executeDescribeCacheSubnetGroups(request);}
+public void setSharedFormula(boolean flag) {field_5_options = sharedFormula.setShortBoolean(field_5_options, flag);}
+public boolean isReuseObjects() {return reuseObjects;}
+public ErrorNodeImpl addErrorNode(IToken badToken) {ErrorNodeImpl t = new ErrorNodeImpl(badToken);addChild(t);t.setParent(this);return t;}
+public LatvianStemFilterFactory(Map<String, String> args): base(args) {if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public RemoveSourceIdentifierFromSubscriptionResponse removeSourceIdentifierFromSubscription(RemoveSourceIdentifierFromSubscriptionRequest request) {request = beforeClientExecution(request);return executeRemoveSourceIdentifierFromSubscription(request);}
+public static TokenFilterFactory forName(String name, Map<String, String> args) {return loader.newInstance(name, args);}
+public AddAlbumPhotosRequest() {super("CloudPhoto", "2017-07-11", "AddAlbumPhotos", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public GetThreatIntelSetResponse getThreatIntelSet(GetThreatIntelSetRequest request) {request = beforeClientExecution(request);return executeGetThreatIntelSet(request);}
+public AndTreeFilter.Binary clone() {return new AndTreeFilter.Binary(a.clone(), b.clone());}
+public boolean equals(Object o) {return o instanceof ArmenianStemmer;}
+public boolean hasArray() {return protectedHasArray();}
+public UpdateContributorInsightsResponse updateContributorInsights(UpdateContributorInsightsRequest request) {request = beforeClientExecution(request);return executeUpdateContributorInsights(request);}
+public void unwriteProtectWorkbook() {records.remove(fileShare);records.remove(WriteProtect);fileShare = null;writeProtect = null;}
+public SolrSynonymParser(boolean dedup, boolean expand, Analyzer analyzer) {super(dedup, analyzer);this.expand = expand;}
+public RequestSpotInstancesResponse requestSpotInstances(RequestSpotInstancesRequest request) {request = beforeClientExecution(request);return executeRequestSpotInstances(request);}
+public byte[] getObjectData() {return FindObjectRecord().getObjectData();}
+public List<GetContactAttributesResult> getContactAttributes(GetContactAttributesRequest request) {request = beforeClientExecution(request);return executeGetContactAttributes(request);}
+public String toString() {return getKey() + ": " + getValue();}
+public ListTextTranslationJobsResult listTextTranslationJobs(ListTextTranslationJobsRequest request) {request = beforeClientExecution(request);return executeListTextTranslationJobs(request);}
+public ListContactMethodsResult getContactMethods(GetContactMethodsRequest request) {request = beforeClientExecution(request);return executeGetContactMethods(request);}
+public static short lookupIndexByName(String name) {FunctionMetadata fd = GetInstance().getFunctionByNameInternal(name);if (fd == null) {return -1;}return (short)fd.getIndex();}
+public DescribeAnomalyDetectorsResult describeAnomalyDetectors(DescribeAnomalyDetectorsRequest request) {request = beforeClientExecution(request);return executeDescribeAnomalyDetectors(request);}
+public static String insertId(String message, ObjectId changeId) {return insertId(message, changeId, false);}
+public long getObjectSize(AnyObjectId objectId, int typeHint) {long sz = db.getObjectSize(this, objectId);if (sz < 0) {if (typeHint == OBJ_ANY) {throw new MissingObjectException(objectId.copy(), "unknown");}throw new MissingObjectException(objectId.copy(), typeHint);}return sz;}
+public ImportInstallationMediaResponse importInstallationMedia(ImportInstallationMediaRequest request) {request = beforeClientExecution(request);return executeImportInstallationMedia(request);}
+public PutLifecycleEventHookExecutionStatusResponse putLifecycleEventHookExecutionStatus(PutLifecycleEventHookExecutionStatusRequest request) {request = beforeClientExecution(request);return executePutLifecycleEventHookExecutionStatus(request);}
+public NumberPtg(ILittleEndianInput in1) {field_1_value = in1.ReadDouble();}
+public GetFieldLevelEncryptionConfigResponse getFieldLevelEncryptionConfig(GetFieldLevelEncryptionConfigRequest request) {request = beforeClientExecution(request);return executeGetFieldLevelEncryptionConfig(request);}
+public DescribeDetectorResponse describeDetector(DescribeDetectorRequest request) {request = beforeClientExecution(request);return executeDescribeDetector(request);}
+public ReportInstanceStatusResponse reportInstanceStatus(ReportInstanceStatusRequest request) {request = beforeClientExecution(request);return executeReportInstanceStatus(request);}
+public DeleteAlarmResponse deleteAlarm(DeleteAlarmRequest request) {request = beforeClientExecution(request);return executeDeleteAlarm(request);}
+public TokenStream create(TokenStream input) {return new PortugueseStemFilter(input);}
+public FtCblsSubRecord() {reserved = new byte[ENCODED_SIZE];}
+public boolean remove(Object object) {synchronized (mutex) {return c.remove(object);}}
+public GetDedicatedIpResponse getDedicatedIp(GetDedicatedIpRequest request) {request = beforeClientExecution(request);return executeGetDedicatedIp(request);}
+public String toString() {return precedence + " >= _p";}
+public ListStreamProcessorsResponse listStreamProcessors(ListStreamProcessorsRequest request) {request = beforeClientExecution(request);return executeListStreamProcessors(request);}
+public DeleteLoadBalancerPolicyRequest(String loadBalancerName, String policyName) {_loadBalancerName = loadBalancerName;_policyName = policyName;}
+public WindowProtectRecord(int options) {_options = options;}
+public UnbufferedCharStream(int bufferSize) {n = 0;data = new int[bufferSize];}
+public GetOperationsResponse getOperations(GetOperationsRequest request) {request = beforeClientExecution(request);return executeGetOperations(request);}
+public void copyRawTo(byte[] b, int o) {NB.encodeInt32(b, o, w1);NB.encodeInt32(b, o + 4, w2);NB.encodeInt32(b, o + 8, w3);NB.encodeInt32(b, o + 12, w4);NB.encodeInt32(b, o + 16, w5);}
+public WindowOneRecord(RecordInputStream in1) {field_1_h_hold = in1.ReadShort();field_2_v_hold = in1.ReadShort();field_3_width = in1.ReadShort();field_4_height = in1.ReadShort();field_5_options = in1.ReadShort();field_6_active_sheet = in1.ReadShort();field_7_first_visible_tab = in1.ReadShort();field_8_num_selected_tabs = in1.ReadShort();field_9_tab_width_ratio = in1.ReadShort();}
+public StopWorkspacesResponse stopWorkspaces(StopWorkspacesRequest request) {request = beforeClientExecution(request);return executeStopWorkspaces(request);}
+public void close() throws IOException {if (isOpen) {isOpen = false;try {dump();} finally {try {channel.truncate(fileLength);} finally {try {channel.close();} finally {fos.close();}}}}}
+public DescribeMatchmakingRuleSetsResponse describeMatchmakingRuleSets(DescribeMatchmakingRuleSetsRequest request) {request = beforeClientExecution(request);return executeDescribeMatchmakingRuleSets(request);}
+public String getPronunciation(int wordId, char[] surface, int off, int len) {return null;}
+# Step 1: The method is named 'GetPath' and follows C# PascalCase naming.# Step 2: In Java, rename the method to 'getPath' to follow lowerCamelCase naming.# Step 3: Map the C# return type 'string' to the Java type 'String'.# Step 4: The method is virtual and does not change in Java, as Java does not have a direct equivalent to C#'s virtual keyword.# Step 5: Keep the method body and return statement unchanged.# Step 6: The final summary: Translate C# method to Java method with similar naming, return type, and body structure.
+public static double devsq(double[] v) {double r = Double.NaN;if (v != null && v.length >= 1) {double m = 0;double s = 0;int n = v.length;for (int i = 0; i < n; i++) {s += v[i];}m = s / n;s = 0;for (int i = 0; i < n; i++) {s += (v[i] - m) * (v[i] - m);}r = (n == 1) ? 0 : s;}return r;}
+public DescribeResizeResponse describeResize(DescribeResizeRequest request) {request = beforeClientExecution(request);return executeDescribeResize(request);}
+public boolean hasPassedThroughNonGreedyDecision() {return passedThroughNonGreedyDecision;}
+public int end() {return end(0);}
+public void traverse(ICellHandler handler) {int firstRow = range.getFirstRow();int lastRow = range.getLastRow();int firstColumn = range.getFirstColumn();int lastColumn = range.getLastColumn();int width = lastColumn - firstColumn + 1;SimpleCellWalkContext ctx = new SimpleCellWalkContext();IRow currentRow = null;ICell currentCell = null;for (ctx.setRowNumber(firstRow); ctx.getRowNumber() <= lastRow; ctx.incrementRowNumber()) {currentRow = sheet.getRow(ctx.getRowNumber());if (currentRow == null) {continue;}for (ctx.setColNumber(firstColumn); ctx.getColNumber() <= lastColumn; ctx.incrementColNumber()) {currentCell = currentRow.getCell(ctx.getColNumber());if (currentCell == null) {continue;}if (isEmpty(currentCell) && !traverseEmptyCells) {continue;}ctx.setOrdinalNumber((ctx.getRowNumber() - firstRow) * width + (ctx.getColNumber() - firstColumn + 1));handler.onCell(currentCell, ctx);}}}
+public int getReadIndex() {return _ReadIndex;}
+public int compareTo(ScoreTerm other) {if (Term.bytesEquals(other.Term)) {return 0;}if (this.Boost.equals(other.Boost)) {return other.Term.compareTo(this.Term);} else {return this.Boost.compareTo(other.Boost);}}
+public int normalize(char[] s, int len) {for (int i = 0; i < len; i++) {switch (s[i]) {case 'ف': case 'ی':s[i] = 'ي';break;case 'ک':s[i] = 'ک';break;case 'ۀ': case 'ہ':s[i] = 'ه';break;case 'ٔ':len = StemmerUtil.delete(s, i, len);i--;break;default:break;}}return len;}
+public void serialize(ILittleEndianOutput out1) {out1.writeShort(_options);}
+public DiagnosticErrorListener(boolean exactOnly) {this.exactOnly = exactOnly;}
+public KeySchemaElement(String attributeName, KeyType keyType) {_attributeName = attributeName;_keyType = keyType;}
+public GetAssignmentResponse getAssignment(GetAssignmentRequest request) {request = beforeClientExecution(request);return executeGetAssignment(request);}
+public boolean hasObject(AnyObjectId id) {return findOffset(id) != -1;}
+public GroupingSearch setAllGroups(boolean allGroups) {this.allGroups = allGroups;return this;}
+public void setMultiValued(String dimName, boolean v) {synchronized (this) {DimConfig fieldType;if (!fieldTypes.tryGetValue(dimName, out fieldType)) {fieldType = new DimConfig();fieldType.setIsMultiValued(v);fieldTypes.put(dimName, fieldType);} else {fieldType.setIsMultiValued(v);}}}
+public int getCellsVal() {int size = 0;for (char c : cells.keySet()) {Cell e = at(c);if (e.cmd >= 0) {size++;}}return size;}
+public DeleteVoiceConnectorResponse deleteVoiceConnector(DeleteVoiceConnectorRequest request) {request = beforeClientExecution(request);return executeDeleteVoiceConnector(request);}
+public DeleteLifecyclePolicyResponse deleteLifecyclePolicy(DeleteLifecyclePolicyRequest request) {request = beforeClientExecution(request);return executeDeleteLifecyclePolicy(request);}
+public void write(byte[] b) {int len = b.length;CheckPosition(len);System.arraycopy(b, 0, _buf, _writeIndex, len);_writeIndex += len;}
+public RebaseResult getRebaseResult() {return this.rebaseResult;}
+public static int getNearestSetSize(int maxNumberOfValuesExpected, float desiredSaturation) {for (int t : _usableBitSetSizes.stream().filter(size -> {int numSetBitsAtDesiredSaturation = (int) (size * desiredSaturation);int estimatedNumUniqueValues = GetEstimatedNumberUniqueValuesAllowingForCollisions(size, numSetBitsAtDesiredSaturation);return estimatedNumUniqueValues > maxNumberOfValuesExpected;}).collect(Collectors.toList())) {return t;}return -1;}
+public DescribeDashboardResponse describeDashboard(DescribeDashboardRequest request) {request = beforeClientExecution(request);return executeDescribeDashboard(request);}
+public CreateSegmentResponse createSegment(CreateSegmentRequest request) {request = beforeClientExecution(request);return executeCreateSegment(request);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[DBCELL]\n");buffer.append("    .rowoffset       = ").append(StringUtil.ToHexString(RowOffset)).append("\n");for (int k = 0; k < field_2_cell_offsets.length; k++) {buffer.append("    .cell_").append(k).append(" = ").append(HexDump.ShortToHex(field_2_cell_offsets[k])).append("\n");}buffer.append("[/DBCELL]\n");return buffer.toString();}
+public List<String> getUndeletedList() {return undeletedList;}
+public String toString() {return "[INTERFACEEND/]\n";}
+public Object clone() {return this;}
+public PlainTextDictionary(Reader reader) {this.reader = reader;}
+public java.lang.StringBuilder append(java.lang.CharSequence csq) {if (csq == null) {appendNull();} else {append0(csq, 0, csq.length());}return this;}
+public ListAssociatedStacksResult listAssociatedStacks(ListAssociatedStacksRequest request) {request = beforeClientExecution(request);return executeListAssociatedStacks(request);}
+public static double avedev(double[] v) {double r = 0;double m = 0;double s = 0;for (int i = 0, iSize = v.length; i < iSize; i++) {s += v[i];}m = s / v.length;s = 0;for (int i = 0, iSize = v.length; i < iSize; i++) {s += Math.abs(v[i] - m);}r = s / v.length;return r;}
+public DescribeByoipCidrsResult describeByoipCidrs(DescribeByoipCidrsRequest request) {request = beforeClientExecution(request);return executeDescribeByoipCidrs(request);}
+public GetDiskResponse getDisk(GetDiskRequest request) {request = beforeClientExecution(request);return executeGetDisk(request);}
+public CreateDBClusterParameterGroupResult createDBClusterParameterGroup(CreateDBClusterParameterGroupRequest request) {request = beforeClientExecution(request);return executeCreateDBClusterParameterGroup(request);}
+public static java.nio.CharBuffer wrap(char[] array_1, int start, int charCount) {java.util.Arrays.checkOffsetAndCount(array_1.length, start, charCount);java.nio.CharBuffer buf = new java.nio.ReadWriteCharArrayBuffer(array_1);buf._position = start;buf._limit = start + charCount;return buf;}
+public SubmoduleStatusType getType(){return type;}
+public DescribeGameServerGroupResponse describeGameServerGroup(DescribeGameServerGroupRequest request) {request = beforeClientExecution(request);return executeDescribeGameServerGroup(request);}
+public java.util.regex.Pattern pattern(){return _pattern;}
+public V setValue(V @object) {throw new UnsupportedOperationException();}
+public StringBuilder stem(String word) {String cmd = stemmer.getLastOnPath(word);if (cmd == null) return null;buffer.length(0);buffer.append(word);Diff.apply(buffer, cmd);if (buffer.length() > 0) return buffer;else return null;}
+public RenameFaceRequest() {super("CloudPhoto", "2017-07-11", "RenameFace", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public char requireChar(Map<String, String> args, String name) {return require(args, name).get(0);}
+public static String toStringTree(ITree t) {return toStringTree(t, (List<String>) null);}
+public String toString() {return "<deleted/>";}
+public GetRepoWebhookLogListRequest() {super("cr", "2016-06-07", "GetRepoWebhookLogList", "cr", "openAPI");UriPattern = "/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]/logs";Method = MethodType.GET;}
+public ListGetJobUnlockCodeResult getJobUnlockCode(GetJobUnlockCodeRequest request) {request = beforeClientExecution(request);return executeGetJobUnlockCode(request);}
+public RemoveTagsRequest(String resourceId) {_resourceId = resourceId;}
+public short getGb2312Id(char ch) {try {byte[] buffer = java.nio.charset.StandardCharsets.UTF_16BE.encode(java.lang.String.valueOf(ch)).array();if (buffer.length != 2) {return -1;}int b0 = (buffer[0] & 0xFF) - 161;int b1 = (buffer[1] & 0xFF) - 161;return (short) (b0 * 94 + b1);} catch (java.nio.charset.UnsupportedCharsetException e) {throw new RuntimeException(e.toString(), e);}}
+public NGit.BatchRefUpdate addCommand(Collection<ReceiveCommand> cmd) {commands.addAll(cmd);return this;}
+public int checkExternSheet(int sheetNumber) {return OrCreateLinkTable.checkExternSheet(sheetNumber);}
+public boolean equals(Object obj) {return c.equals(obj);}
+public List<Query> build(IQueryNode queryNode) {AnyQueryNode andNode = (AnyQueryNode) queryNode;BooleanQuery bQuery = new BooleanQuery();IList<IQueryNode> children = andNode.getChildren();if (children != null) {foreach (IQueryNode child in children) {Object obj = child.getTag(QueryTreeBuilder.QUERY_TREE_BUILDER_TAGID);if (obj != null) {Query query = (Query) obj;try {bQuery.add(query, Occur.SHOULD);} catch (BooleanQuery.TooManyClausesException ex) {throw new QueryNodeException(new Message(QueryParserMessages.EMPTY_MESSAGE), ex);}}}}bQuery.setMinimumNumberShouldMatch(andNode.getMinimumMatchingElements());return bQuery.getQueries();}
+public DescribeStreamProcessorResponse describeStreamProcessor(DescribeStreamProcessorRequest request) {request = beforeClientExecution(request);return executeDescribeStreamProcessor(request);}
+public ListDashboardPermissionsResult describeDashboardPermissions(DescribeDashboardPermissionsRequest request) {request = beforeClientExecution(request);return executeDescribeDashboardPermissions(request);}
+public Ref peel(Ref @ref) {try {return RefDatabase.peel(@ref);} catch (IOException e) {return @ref;}}
+public long ramBytesUsed() {return RamUsageEstimator.AlignObjectSize(RamUsageEstimator.NUM_BYTES_OBJECT_HEADER + 2 * RamUsageEstimator.NUM_BYTES_INT32 + RamUsageEstimator.NUM_BYTES_OBJECT_REF) + RamUsageEstimator.SizeOf(blocks);}
+public ListDomainSuggestionsResult getDomainSuggestions(GetDomainSuggestionsRequest request) {request = beforeClientExecution(request);return executeGetDomainSuggestions(request);}
+public DescribeStackEventsResult describeStackEvents(DescribeStackEventsRequest request) {request = beforeClientExecution(request);return executeDescribeStackEvents(request);}
+public void setRule(int idx, IConditionalFormattingRule cfRule) {setRule(idx, (HSSFConditionalFormattingRule) cfRule);}
+public CreateResolverRuleResponse createResolverRule(CreateResolverRuleRequest request) {request = beforeClientExecution(request);return executeCreateResolverRule(request);}
+public SeriesIndexRecord(RecordInputStream in1) {field_1_index = in1.ReadShort();}
+public GetStylesRequest() : base("lubancloud", "2018-05-09", "GetStyles", "luban", "openAPI") {Method = MethodType.POST;}
+public override void serialize(ILittleEndianOutput out1) {out1.writeShort(field_1_gridset_flag);}
+public boolean equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (getClass() != obj.getClass()) {return false;}Toffs other = (Toffs) obj;if (StartOffset != other.StartOffset) {return false;}if (EndOffset != other.EndOffset) {return false;}return true;}
+public CreateGatewayGroupResponse createGatewayGroup(CreateGatewayGroupRequest request) {request = beforeClientExecution(request);return executeCreateGatewayGroup(request);}
+public CreateParticipantConnectionResponse createParticipantConnection(CreateParticipantConnectionRequest request) {request = beforeClientExecution(request);return executeCreateParticipantConnection(request);}
+public static double irr(double[] income) {return irr(income, 0.1d);}
+public RegisterWorkspaceDirectoryResponse registerWorkspaceDirectory(RegisterWorkspaceDirectoryRequest request) {request = beforeClientExecution(request);return executeRegisterWorkspaceDirectory(request);}
+public NGit.Api.RevertCommand include(Ref commit) {checkCallable();commits.addItem(commit);return this;}
+public ValueEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval inumberVE) {ValueEval veText1;try {veText1 = OperandResolver.getSingleValue(inumberVE, srcRowIndex, srcColumnIndex);} catch (EvaluationException e) {return e.getErrorEval();}String iNumber = OperandResolver.coerceValueToString(veText1);java.util.regex.MatchResult m = COMPLEX_NUMBER_PATTERN.matcher(iNumber);boolean result = m.find() && m.group(0).length() > 0;String imaginary = "";if (result) {String imaginaryGroup = m.group(5);boolean hasImaginaryPart = imaginaryGroup.equals("i") || imaginaryGroup.equals("j");if (imaginaryGroup.isEmpty()) {return new StringEval(String.valueOf(0));}if (hasImaginaryPart) {String sign = "";String imaginarySign = m.group(GROUP3_IMAGINARY_SIGN);if (imaginarySign != null && !imaginarySign.equals("+")) {sign = imaginarySign;}String groupImaginaryNumber = m.group(GROUP4_IMAGINARY_INTEGER_OR_DOUBLE);if (groupImaginaryNumber != null && !groupImaginaryNumber.isEmpty()) {imaginary = sign + groupImaginaryNumber;} else {imaginary = sign + "1";}}} else {return ErrorEval.NUM_ERROR;}return new StringEval(imaginary);}
+public E pollLast() {java.util.Map.Entry<E, Object> entry = backingMap.pollLastEntry();return (entry == null) ? default(E) : entry.getKey();}
+public int readUShort() {int ch1 = readUByte();int ch2 = readUByte();return (ch2 << 8) + (ch1 << 0);}
+public ModifySnapshotAttributeRequest(String snapshotId, SnapshotAttributeName attribute, OperationType operationType) {_snapshotId = snapshotId;_attribute = attribute;_operationType = operationType;}
+public ListBonusPaymentsResponse listBonusPayments(ListBonusPaymentsRequest request) {request = beforeClientExecution(request);return executeListBonusPayments(request);}
+public V get(char[] text) {if (text == null) {throw new NullPointerException("text");}return null;}
+public TokenStream create(TokenStream input) {CommonGramsFilter commonGrams = (CommonGramsFilter) super.create(input);return new CommonGramsQueryFilter(commonGrams);}
+public String getPath() {return path;}
+public InitiateMultipartUploadResult initiateMultipartUpload(InitiateMultipartUploadRequest request) {request = beforeClientExecution(request);return executeInitiateMultipartUpload(request);}
+public StringBuilder insert(int offset, int i) {insert0(offset, String.valueOf(i));return this;}
+public override void decode(long[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long block = blocks[blocksOffset++];for (int shift = 62; shift >= 0; shift -= 2) {values[valuesOffset++] = (int)(((long)((ulong)block >> shift)) & 3);}}}
+public TokenStream create(TokenStream input) {return new ElisionFilter(input, articles);}
+public boolean eat(Row @in, int[] remap) {int sum = 0;for (Cell c : @in.cells.values()) {sum += c.cnt;if (c.@ref >= 0) {if (remap[c.@ref] == 0) {c.@ref = -1;}}}int frame = sum / 10;boolean live = false;for (Cell c : @in.cells.values()) {if (c.cnt < frame && c.cmd >= 0) {c.cnt = 0;c.cmd = -1;}if (c.cmd >= 0 || c.@ref >= 0) {live |= true;}}return !live;}
+public Token getToken(int index) {Token t = Token;for (int i = 0; i < index; i++) {if (t.getNext() != null) t = t.getNext();else t = t.setNext(TokenSource.getNextToken());}return t;}
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getName()).append(" [ARRAY]\n");sb.append(" range=").append(range.toString()).append("\n");sb.append(" options=").append(HexDump.shortToHex(_options)).append("\n");sb.append(" notUsed=").append(HexDump.intToHex(_field3notUsed)).append("\n");sb.append(" formula:").append("\n");Ptg[] ptgs = _formula.tokens;for (int i = 0; i < ptgs.length; i++) {Ptg ptg = ptgs[i];sb.append(ptg.toString()).append(ptg.RVAType).append("\n");}sb.append("]");return sb.toString();}
+public GetFolderResponse getFolder(GetFolderRequest request) {request = beforeClientExecution(request);return executeGetFolder(request);}
+public void add(int location, E @object) {throw new UnsupportedOperationException();}
+public PositiveScoresOnlyCollector(ICollector c) {this.c = c;}
+public CreateRepoBuildRuleRequest() {super("cr", "2016-06-07", "CreateRepoBuildRule", "cr", "openAPI");UriPattern = "/repos/[RepoNamespace]/[RepoName]/rules";Method = MethodType.PUT;}
+public BaseRef(RefEval re) {_refEval = re;_areaEval = null;_firstRowIndex = re.Row;_firstColumnIndex = re.Column;_height = 1;_width = 1;}
+public DrawingManager2(EscherDggRecord dgg) {this.dgg = dgg;}
+public void reset() {if (!this.first) {reset(raw);}}
+public java.nio.charset.CharsetDecoder reset() {status = INIT;implReset();return this;}
+public BufferedReader(java.io.Reader @in, int size) : base(@in) {if (size <= 0) {throw new System.ArgumentException("size <= 0");}this.@in = @in;buf = new char[size];}
+public DescribeCodeRepositoryResponse describeCodeRepository(DescribeCodeRepositoryRequest request) {request = beforeClientExecution(request);return executeDescribeCodeRepository(request);}
+public CreateDBSubnetGroupResponse createDBSubnetGroup(CreateDBSubnetGroupRequest request) {request = beforeClientExecution(request);return executeCreateDBSubnetGroup(request);}
+public NGit.Api.RenameBranchCommand setOldName(String oldName) {checkCallable();this.oldName = oldName;return this;}
+public NGit.Api.DeleteBranchCommand setForce(boolean force) {checkCallable();this.force = force;return this;}
+public StopCompilationJobResponse stopCompilationJob(StopCompilationJobRequest request) {request = beforeClientExecution(request);return executeStopCompilationJob(request);}
+public void incrementSecondaryProgressBy(int diff) {synchronized (this) {setSecondaryProgress(mSecondaryProgress + diff);}}
+public int[] clear() {bytesStart = null;return bytesStart;}
+public String getRawPath() {return path;}
+public GetUserSourceAccountRequest() {super("cr", "2016-06-07", "GetUserSourceAccount", "cr", "openAPI");UriPattern = "/users/sourceAccount";Method = MethodType.GET;}
+public CreateExportJobResponse createExportJob(CreateExportJobRequest request) {request = beforeClientExecution(request);return executeCreateExportJob(request);}
+public CreateDedicatedIpPoolResponse createDedicatedIpPool(CreateDedicatedIpPoolRequest request) {request = beforeClientExecution(request);return executeCreateDedicatedIpPool(request);}
+public boolean equals(Object obj) {if (this == obj) return true;if (obj == null) return false;if (obj instanceof HSSFCellStyle) {HSSFCellStyle other = (HSSFCellStyle) obj;if (_format == null) {if (other._format != null) return false;} else if (!_format.equals(other._format)) return false;if (index != other.index) return false;return true;}return false;}
+public ReleaseHostsResponse releaseHosts(ReleaseHostsRequest request) {request = beforeClientExecution(request);return executeReleaseHosts(request);}
+public boolean equals(Object obj) {if (this == obj) {return true;}if (obj instanceof java.util.Set) {java.util.Set<?> s = (java.util.Set<?>) obj;try {return size() == s.size() && containsAll((java.util.Collection<?>) s);} catch (NullPointerException | ClassCastException e) {return false;}}return false;}
+public void setRefLogMessage(String msg, boolean appendStatus) {if (msg == null && !appendStatus) {disableRefLog();} else {if (msg == null && appendStatus) {refLogMessage = "";refLogIncludeResult = true;} else {refLogMessage = msg;refLogIncludeResult = appendStatus;}}}
+public StreamIDRecord(RecordInputStream in1) {idstm = in1.ReadShort();}
+public RecognizeCarRequest() {super("visionai-poc", "2020-04-08", "RecognizeCar");Method = MethodType.POST;}
+public java.nio.ByteOrder order() {return java.nio.ByteOrder.nativeOrder();}
+public int getAheadCount() {return aheadCount;}
+public boolean isNewFragment() {return false;}
+public GetCloudFrontOriginAccessIdentityConfigResult getCloudFrontOriginAccessIdentityConfig(GetCloudFrontOriginAccessIdentityConfigRequest request) {request = beforeClientExecution(request);return executeGetCloudFrontOriginAccessIdentityConfig(request);}
+public boolean matches(int symbol, int minVocabSymbol, int maxVocabSymbol) {return symbol == symbol;}
+public DeleteTransitGatewayResult deleteTransitGateway(DeleteTransitGatewayRequest request) {request = beforeClientExecution(request);return executeDeleteTransitGateway(request);}
+public static double[] grow(double[] array, int minSize) {assert minSize >= 0 : "size must be positive (got " + minSize + "): likely integer overflow?";if (array.length < minSize) {double[] newArray = new double[oversize(minSize, RamUsageEstimator.NUM_BYTES_DOUBLE)];System.arraycopy(array, 0, newArray, 0, array.length);return newArray;} else {return array;}}
+public CreateTransactionRequest() {super("CloudPhoto", "2017-07-11", "CreateTransaction", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public NGit.BatchRefUpdate setRefLogIdent(PersonIdent pi) {refLogIdent = pi;return this;}
+public GetLaunchTemplateDataResponse getLaunchTemplateData(GetLaunchTemplateDataRequest request) {request = beforeClientExecution(request);return executeGetLaunchTemplateData(request);}
+public ParseInfo(ProfilingATNSimulator atnSimulator) {this.atnSimulator = atnSimulator;}
+public SimpleQQParser(String[] qqNames, String indexField) {this.qqNames = qqNames;this.indexField = indexField;}
+public PromoteReadReplicaDBClusterResponse promoteReadReplicaDBCluster(PromoteReadReplicaDBClusterRequest request) {request = beforeClientExecution(request);return executePromoteReadReplicaDBCluster(request);}
+public DescribeCapacityReservationsResult describeCapacityReservations(DescribeCapacityReservationsRequest request) {request = beforeClientExecution(request);return executeDescribeCapacityReservations(request);}
+public String toString() {return "IndexSearcher(" + reader + "; executor=" + executor + ")";}
+public boolean incrementToken() { return false; }
+public void serialize(DataOutput out) {out.writeShort(main + 1);out.writeShort(subFrom);out.writeShort(subTo);}
+public void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {if (bitsPerValue > 32) {throw new java.lang.UnsupportedOperationException("Cannot decode " + bitsPerValue + "-bits values into an int[]");}for (int i = 0; i < iterations; ++i) {long block = ReadInt64(blocks, blocksOffset);blocksOffset += 8;valuesOffset = decode(block, values, valuesOffset);}}
+public boolean isExpectedToken(int symbol) {ATN atn = Interpreter.atn;ParserRuleContext ctx = _ctx;ATNState s = atn.states[State];IntervalSet following = atn.NextTokens(s);if (following.contains(symbol)) {return true;}if (!following.contains(TokenConstants.EPSILON)) {return false;}while (ctx != null && ctx.invokingState >= 0 && following.contains(TokenConstants.EPSILON)) {ATNState invokingState = atn.states[ctx.invokingState];RuleTransition rt = (RuleTransition) invokingState.Transition(0);following = atn.NextTokens(rt.followState);if (following.contains(symbol)) {return true;}ctx = (ParserRuleContext) ctx.Parent;}if (following.contains(TokenConstants.EPSILON) && symbol == TokenConstants.EOF) {return true;}return false;}
+public UpdateStreamResponse updateStream(UpdateStreamRequest request) {request = beforeClientExecution(request);return executeUpdateStream(request);}
+public NumberEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0) {try {OperandResolver.GetSingleValue(arg0, srcRowIndex, srcColumnIndex);return ErrorEval.NA;} catch (EvaluationException e) {int result = TranslateErrorCodeToErrorTypeValue(e.getErrorEval().getErrorCode());return new NumberEval(result);}}
+public String toString() {StringBuilder sb = new StringBuilder(64);sb.append(getClass().getName()).append(" [");sb.append(_index).append(" ").append(_name);sb.append("]");return sb.toString();}
+public ListAssignmentsForHITResult listAssignmentsForHIT(ListAssignmentsForHITRequest request) {request = beforeClientExecution(request);return executeListAssignmentsForHIT(request);}
+public DeleteAccessControlRuleResponse deleteAccessControlRule(DeleteAccessControlRuleRequest request) {request = beforeClientExecution(request);return executeDeleteAccessControlRule(request);}
+public FST.Arc<Long> getFirstArc(FST.Arc<Long> arc) {return fst.getFirstArc(arc);}
+public void decode(long[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {long block = blocks[blocksOffset++];for (int shift = 48; shift >= 0; shift -= 16) {values[valuesOffset++] = (int)(((long)((ulong)block >> shift)) & 65535);}}}
+public long skip(long charCount) {if (charCount < 0) {throw new IllegalArgumentException("charCount < 0: " + charCount);}synchronized (@lock) {checkNotClosed();if (charCount == 0) {return 0;}long inSkipped;int availableFromBuffer = buf.length - pos;if (availableFromBuffer > 0) {long requiredFromIn = charCount - availableFromBuffer;if (requiredFromIn <= 0) {pos += (int) charCount;return charCount;}pos += availableFromBuffer;inSkipped = @in.skip(requiredFromIn);} else {inSkipped = @in.skip(charCount);}return inSkipped + availableFromBuffer;}}
+public Map<String, Ref> getRefsMap() {return advertisedRefs;}
+public UpdateApiKeyResponse updateApiKey(UpdateApiKeyRequest request) {request = beforeClientExecution(request);return executeUpdateApiKey(request);}
+public ObjectStream openStream() {WindowCursor wc = new WindowCursor(db);InputStream in;try {in = new PackInputStream(pack, objectOffset + headerLength, wc);} catch (IOException e) {return wc.open(GetObjectId(), type).openStream();}in = new BufferedInputStream(new InflaterInputStream(in, wc.inflater(), 8192), 8192);return new ObjectStream.Filter(type, size, in);}
+public ArrayList() {array = libcore.util.EmptyArray.OBJECT;}
+public UpdateDetectorVersionResponse updateDetectorVersion(UpdateDetectorVersionRequest request) {request = beforeClientExecution(request);return executeUpdateDetectorVersion(request);}
+public void resize() {resize(Double.MAX_VALUE);}
+public RevFlagSet(Collection<RevFlag> s) {this();Collections.addAll(this, s);}
+public int size() {return this._enclosing.size();}
+public sealed override long getLong() {int newPosition = _position + libcore.io.SizeOf.LONG;if (newPosition > _limit) {throw new java.nio.BufferUnderflowException();}long result = libcore.io.Memory.peekLong(backingArray, offset + _position, _order);_position = newPosition;return result;}
+public StringBuilder insert(int offset, long l) {insert0(offset, String.valueOf(l));return this;}
+public TurkishLowerCaseFilter(TokenStream @in) {super(@in);termAtt = addAttribute(ICharTermAttribute.class);}
+public ParseTreeMatch match(IParseTree tree, ParseTreePattern pattern) {MultiMap<String, IParseTree> labels = new MultiMap<>();IParseTree mismatchedNode = MatchImpl(tree, pattern.getPatternTree(), labels);return new ParseTreeMatch(tree, pattern, labels, mismatchedNode);}
+public void addIfNoOverlap(WeightedPhraseInfo wpi) {for (WeightedPhraseInfo existWpi : phraseList) {if (existWpi.isOffsetOverlap(wpi)) {existWpi.getTermsInfos().addAll(wpi.getTermsInfos());return;}}phraseList.add(wpi);}
+public StrategySimpleTwoWayInCore.InCoreMerger newMerger(Repository db) {return new StrategySimpleTwoWayInCore.InCoreMerger(db);}
+public float docScore(int docId, String field, int numPayloadsSeen, float payloadScore) {return numPayloadsSeen > 0 ? (payloadScore / numPayloadsSeen) : 1;}
+public Collection<IParseTree> evaluate(IParseTree t) {return Trees.findAllRuleNodes(t, ruleIndex);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[CFRULE]\n");buffer.append("    .condition_type   =").append(field_1_condition_type).append("\n");buffer.append("    OPTION FLAGS=0x").append(String.format("%0X", Options)).append("\n");if (ContainsFontFormattingBlock) {buffer.append(_fontFormatting.toString()).append("\n");}if (ContainsBorderFormattingBlock) {buffer.append(_borderFormatting.toString()).append("\n");}if (ContainsPatternFormattingBlock) {buffer.append(_patternFormatting.toString()).append("\n");}buffer.append("    Formula 1 =").append(Arrays.toString(field_17_formula1.Tokens)).append("\n");buffer.append("    Formula 2 =").append(Arrays.toString(field_18_formula2.Tokens)).append("\n");buffer.append("[/CFRULE]\n");return buffer.toString();}
+public DescribeServiceUpdatesResponse describeServiceUpdates(DescribeServiceUpdatesRequest request) {request = beforeClientExecution(request);return executeDescribeServiceUpdates(request);}
+public String getNameName(int index) {String result = getNameAt(index).nameName;return result;}
+public DescribeLocationsResponse describeLocations() {return describeLocations(new DescribeLocationsRequest());}
+public String toString() {return "<phraseslop value='" + getValueString() + "'>" + "\n" + getChild().toString() + "\n</phraseslop>";}
+public DirCacheEntry getDirCacheEntry() {return currentSubtree == null ? currentEntry : null;}
+public IntBuffer put(int[] src, int srcOffset, int intCount) {java.util.Arrays.checkOffsetAndCount(src.length, srcOffset, intCount);if (intCount > remaining()) {throw new java.nio.BufferOverflowException();}for (int i = srcOffset; i < srcOffset + intCount; ++i) {put(src[i]);}return this;}
+public void trimToSize() {int s = _size;if (s == array.length) {return;}if (s == 0) {array = libcore.util.EmptyArray.OBJECT;} else {Object[] newArray = new Object[s];System.arraycopy(array, 0, newArray, 0, s);array = newArray;}modCount++;}
+public DescribeLocalGatewayVirtualInterfacesResponse describeLocalGatewayVirtualInterfaces(DescribeLocalGatewayVirtualInterfacesRequest request) {request = beforeClientExecution(request);return executeDescribeLocalGatewayVirtualInterfaces(request);}
+public TokenStream create(TokenStream input) {return new RussianLightStemFilter(input);}
+public int[] toArray(int[] a) {int[] rval;if (a.length == _limit) {System.arraycopy(_array, 0, a, 0, _limit);rval = a;} else {rval = toArray();}return rval;}
+public BasicSessionCredentials(String accessKeyId, String accessKeySecret, String sessionToken, long roleSessionDurationSeconds) {if (accessKeyId == null) {throw new IllegalArgumentException("Access key ID cannot be null.");}if (accessKeySecret == null) {throw new IllegalArgumentException("Access key secret cannot be null.");}this.accessKeyId = accessKeyId;this.accessKeySecret = accessKeySecret;this.sessionToken = sessionToken;this.roleSessionDurationSeconds = roleSessionDurationSeconds;sessionStartedTimeInMilliSeconds = System.currentTimeMillis();}
+public sealed override java.nio.ShortBuffer get(short[] dst, int dstOffset, int shortCount) {if (shortCount > remaining()) {throw new java.nio.BufferUnderflowException();}System.arraycopy(backingArray, offset + _position, dst, dstOffset, shortCount);_position += shortCount;return this;}
+public ActivateEventSourceResponse activateEventSource(ActivateEventSourceRequest request) {request = beforeClientExecution(request);return executeActivateEventSource(request);}
+public DescribeReceiptRuleSetResponse describeReceiptRuleSet(DescribeReceiptRuleSetRequest request) {request = beforeClientExecution(request);return executeDescribeReceiptRuleSet(request);}
+public Filter(String name) {_name = name;}
+# Step 1: The method is named 'put' and follows C# PascalCase naming.# Step 2: In Java, rename the method to 'put' to follow lowerCamelCase naming.# Step 3: Map the C# return type 'java.nio.DoubleBuffer' to the Java return type 'DoubleBuffer'.# Step 4: Map the C# parameter type 'double' to the Java parameter type 'double'.# Step 5: Keep the method body as-is, as it throws an exception which is idiomatic in Java.# Step 6: Use Java modifiers, exception handling, and brace style for the method body.# Step 7: The final summary: Translate C# method to Java method with the same name and return type, throwing an exception as required.
+public CreateTrafficPolicyInstanceResponse createTrafficPolicyInstance(CreateTrafficPolicyInstanceRequest request) {request = beforeClientExecution(request);return executeCreateTrafficPolicyInstance(request);}
+public JapaneseIterationMarkCharFilter(Reader input, boolean normalizeKanji, boolean normalizeKana) {super(input);this.normalizeKanji = normalizeKanji;this.normalizeKana = normalizeKana;buffer.Reset(input);}
+public void writeLong(long v) {writeInt((int)(v >> 0));writeInt((int)(v >> 32));}
+public FileResolver() {exports = new ConcurrentHashMap<>();exportBase = new CopyOnWriteArrayList<>();}
+public RefEval getRef3DEval(Ref3DPtg rptg) {SheetRangeEvaluator sre = createExternSheetRefEvaluator(rptg.externSheetIndex);return new LazyRefEval(rptg.row, rptg.column, sre);}
+public DeleteDatasetResult deleteDataset(DeleteDatasetRequest request) {request = beforeClientExecution(request);return executeDeleteDataset(request);}
+public StartRelationalDatabaseResponse startRelationalDatabase(StartRelationalDatabaseRequest request) {request = beforeClientExecution(request);return executeStartRelationalDatabase(request);}
+public DescribeReservedCacheNodesOfferingsResult describeReservedCacheNodesOfferings() {return describeReservedCacheNodesOfferings(new DescribeReservedCacheNodesOfferingsRequest());}
+public double pmt(double r, int nper, double pv, double fv, int type) {double pmt = -r * (pv * Math.pow(1 + r, nper) + fv) / ((1 + r * type) * (Math.pow(1 + r, nper) - 1));return pmt;}
+public DescribeDocumentVersionsResponse describeDocumentVersions(DescribeDocumentVersionsRequest request) {request = beforeClientExecution(request);return executeDescribeDocumentVersions(request);}
+public ListPublishingDestinationsResult listPublishingDestinations(ListPublishingDestinationsRequest request) {request = beforeClientExecution(request);return executeListPublishingDestinations(request);}
+public DeleteAccountAliasRequest(String accountAlias) {_accountAlias = accountAlias;}
+public static float[] grow(float[] array) {return grow(array, 1 + array.length);}
+public String outputToString(Object output) {if (!(output instanceof List)) {return outputs.outputToString((T) output);} else {List outputList = (List) output;StringBuilder b = new StringBuilder();b.append('[');for (int i = 0; i < outputList.size(); i++) {if (i > 0) {b.append(", ");}b.append(outputs.outputToString((T) outputList.get(i)));}b.append(']');return b.toString();}}
+public void notifyDeleteCell(ICell cell) {_bookEvaluator.notifyDeleteCell(new HSSFEvaluationCell(cell));}
+public StringBuilder replace(int start, int end, CharSequence str) {this.replace(start, end, str);return this;}
+public SetIdentityPoolConfigurationResponse setIdentityPoolConfiguration(SetIdentityPoolConfigurationRequest request) {request = beforeClientExecution(request);return executeSetIdentityPoolConfiguration(request);}
+public static double kthSmallest(double[] v, int k) {double r = Double.NaN;k--;if (v != null && v.length > k && k >= 0) {Arrays.sort(v);r = v[k];}return r;}
+public override void set(int index, long value) {int o = (int) ((uint) index >> 5);int b = index & 31;int shift = b << 1;blocks[o] = (blocks[o] & ~(3L << shift)) | (value << shift);}
+public String toString() {List<IQueryNode> children = getChildren();if (children == null || children.size() == 0)return "<boolean operation='and'/>";StringBuilder sb = new StringBuilder();sb.append("<boolean operation='and'>");for (IQueryNode child : children) {sb.append("\n");sb.append(child.toString());}sb.append("\n</boolean>");return sb.toString();}
+public int sumTokenSizes(int fromIx, int toIx) {int result = 0;for (int i = fromIx; i < toIx; i++) {result += _ptgs[i].size();}return result;}
+public void setReadonly(boolean readonly) {if (this.readonly && !readonly) {throw new InvalidOperationException("can't alter readonly IntervalSet");}this.readonly = readonly;}
+public void clearConsumingCell(FormulaCellCacheEntry cce) {if (!_consumingCells.remove(cce)) {throw new InvalidOperationException("Specified formula cell is not consumed by this cell");}}
+public List<E> subList(int start, int end) {synchronized (mutex) {return new java.util.Collections.SynchronizedRandomAccessList<E>(list.subList(start, end), mutex);}}
+public FileHeader getFileHeader() {return file;}
+public AttachLoadBalancersResponse attachLoadBalancers(AttachLoadBalancersRequest request) {request = beforeClientExecution(request);return executeAttachLoadBalancers(request);}
+public InitiateJobRequest(String accountId, String vaultName, JobParameters jobParameters) {this._accountId = accountId;this._vaultName = vaultName;this._jobParameters = jobParameters;}
+public String toString() {return "SPL";}
+public ReplaceableAttribute(String name, String value, boolean replace) {_name = name;_value = value;_replace = replace;}
+public void method.# Step 2: Follow Java naming conventions by renaming the method to 'add'.# Step 3: The parameter type 'IIndexableField field' should be preserved in Java.# Step 4: Use Java's collection add method instead of C#'s Add method.# Step 5: The fields collection is implied to be a part of the class, so ensure it is accessible and properly initialized within the class.# Step 6: Use Java modifiers, exception handling, and brace style for the method body.Output:public void add(IIndexableField field) {fields.add(field);}
+public DeleteStackSetResponse deleteStackSet(DeleteStackSetRequest request) {request = beforeClientExecution(request);return executeDeleteStackSet(request);}
+public GetRepoBuildRuleListRequest() {super("cr", "2016-06-07", "GetRepoBuildRuleList", "cr", "openAPI");UriPattern = "/repos/[RepoNamespace]/[RepoName]/rules";Method = MethodType.GET;}
+public SparseArray(int initialCapacity) {initialCapacity = android.util.internal.ArrayUtils.idealIntArraySize(initialCapacity);mKeys = new int[initialCapacity];mValues = new Object[initialCapacity];mSize = 0;}
+public InvokeServiceRequest() {super("industry-brain", "2018-07-12", "InvokeService");Method = MethodType.POST;}
+public ListAlbumPhotosRequest() {super("CloudPhoto", "2017-07-11", "ListAlbumPhotos", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public boolean hasPrevious() {return link != list.voidLink;}
+public DeleteHsmConfigurationResponse deleteHsmConfiguration(DeleteHsmConfigurationRequest request) {request = beforeClientExecution(request);return executeDeleteHsmConfiguration(request);}
+public CreateLoadBalancerRequest(String loadBalancerName) {this._loadBalancerName = loadBalancerName;}
+public String getUserInfo() {return decode(userInfo);}
+public TagAttendeeResponse tagAttendee(TagAttendeeRequest request) {request = beforeClientExecution(request);return executeTagAttendee(request);}
+public String getRefName(){return name;}
+public WAH8DocIdSet build() {if (this.wordNum != -1) {addWord(wordNum, (byte) word);}return base.build();}
+public boolean isSubTotal(int rowIndex, int columnIndex) {return false;}
+public DescribeDBProxiesResponse describeDBProxies(DescribeDBProxiesRequest request) {request = beforeClientExecution(request);return executeDescribeDBProxies(request);}
+public GetVoiceConnectorProxyResponse getVoiceConnectorProxy(GetVoiceConnectorProxyRequest request) {request = beforeClientExecution(request);return executeGetVoiceConnectorProxy(request);}
+public void fromConfig(Config rc) {setPackedGitOpenFiles(rc.getInt("core", null, "packedgitopenfiles", getPackedGitOpenFiles()));setPackedGitLimit(rc.getLong("core", null, "packedgitlimit", getPackedGitLimit()));setPackedGitWindowSize(rc.getInt("core", null, "packedgitwindowsize", getPackedGitWindowSize()));setPackedGitMMAP(rc.getBoolean("core", null, "packedgitmmap", isPackedGitMMAP()));setDeltaBaseCacheLimit(rc.getInt("core", null, "deltabasecachelimit", getDeltaBaseCacheLimit()));long maxMem = Runtime.getRuntime().maxMemory();long sft = rc.getLong("core", null, "streamfilethreshold", getStreamFileThreshold());sft = Math.min(sft, maxMem / 4);sft = Math.min(sft, Integer.MAX_VALUE);setStreamFileThreshold((int) sft);}
+public static Date getJavaDate(double date) {return getJavaDate(date, false);}
+public StartPersonTrackingResult startPersonTracking(StartPersonTrackingRequest request) {request = beforeClientExecution(request);return executeStartPersonTracking(request);}
+public int size() {return this._enclosing.size();}
+public GetRouteResponse getRoute(GetRouteRequest request) {request = beforeClientExecution(request);return executeGetRoute(request);}
+public DeleteClusterResponse deleteCluster(DeleteClusterRequest request) {request = beforeClientExecution(request);return executeDeleteCluster(request);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[MMS]\n");buffer.append("    .addMenu        = ").append(StringUtil.ToHexString(AddMenuCount)).append("\n");buffer.append("    .delMenu        = ").append(StringUtil.ToHexString(DelMenuCount)).append("\n");buffer.append("[/MMS]\n");return buffer.toString();}
+public FileBasedConfig(Config @base, FilePath cfgLocation, FS fs) {super(@base);configFile = cfgLocation;this.fs = fs;this.snapshot = FileSnapshot.DIRTY;this.hash = ObjectId.ZeroId;}
+public int following(int pos) {if (pos < text.beginIndex || pos > text.endIndex) {throw new IllegalArgumentException("offset out of bounds");} else if (sentenceStarts.length == 0) {text.setIndex(text.beginIndex);return Done;} else if (pos >= sentenceStarts[sentenceStarts.length - 1]) {text.setIndex(text.endIndex);currentSentence = sentenceStarts.length - 1;return Done;} else {currentSentence = (sentenceStarts.length - 1) / 2;moveToSentenceAt(pos, 0, sentenceStarts.length - 2);text.setIndex(sentenceStarts[++currentSentence]);return Current;}}
+public UpdateParameterGroupResult updateParameterGroup(UpdateParameterGroupRequest request) {request = beforeClientExecution(request);return executeUpdateParameterGroup(request);}
+public Object clone() {SeriesChartGroupIndexRecord rec = new SeriesChartGroupIndexRecord();rec.field_1_chartGroupIndex = field_1_chartGroupIndex;return rec;}
+public static double calcDistanceFromErrPct(IShape shape, double distErrPct, SpatialContext ctx) {if (distErrPct < 0 || distErrPct > 0.5) {throw new IllegalArgumentException("distErrPct " + distErrPct + " must be between [0 to 0.5]", new Throwable("distErrPct"));}if (distErrPct == 0 || shape instanceof IPoint) {return 0;}IRectangle bbox = shape.boundingBox;IPoint ctr = bbox.center;double y = (ctr.getY() >= 0 ? bbox.getMaxY() : bbox.getMinY());double diagonalDist = ctx.distCalc.distance(ctr, bbox.getMaxX(), y);return diagonalDist * distErrPct;}
+public int codePointAt(int index) {if (index < 0 || index >= count) {throw new IndexOutOfBoundsException("index: " + index);}return Sharpen.CharHelper.CodePointAt(value, index, count);}
+public void setPasswordVerifier(int passwordVerifier) {this.passwordVerifier = passwordVerifier;}
+public ListVaultsRequest(String accountId) {_accountId = accountId;}
+public SquashMessageFormatter() {dateFormatter = new GitDateFormatter(GitDateFormatter.Format.DEFAULT);}
+public GetVideoCoverRequest() {super("CloudPhoto", "2017-07-11", "GetVideoCover", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public int lastIndexOf(Object @object) {int pos = _size;LinkedList.Link<E> link = voidLink.previous;if (@object != null) {while (link != voidLink) {pos--;if (@object.equals(link.data)) {return pos;}link = link.previous;}} else {while (link != voidLink) {pos--;if (link.data == null) {return pos;}link = link.previous;}}return -1;}
+public DescribeSpotFleetRequestsResult describeSpotFleetRequests(DescribeSpotFleetRequestsRequest request) {request = beforeClientExecution(request);return executeDescribeSpotFleetRequests(request);}
+public IndexFacesResponse indexFaces(IndexFacesRequest request) {request = beforeClientExecution(request);return executeIndexFaces(request);}
+public BreakIterator getBreakIterator(int script) {switch (script) {case UScript.Japanese:return (BreakIterator) cjkBreakIterator.clone();case UScript.Myanmar:if (myanmarAsWords) {return (BreakIterator) defaultBreakIterator.clone();} else {return (BreakIterator) myanmarSyllableIterator.clone();}default:return (BreakIterator) defaultBreakIterator.clone();}}
+public String toString() {StringBuilder b = new StringBuilder();b.append("[DCONREF]\n");b.append("    .ref\n");b.append("        .firstrow   = ").append(firstRow).append("\n");b.append("        .lastrow    = ").append(lastRow).append("\n");b.append("        .firstcol   = ").append(firstCol).append("\n");b.append("        .lastcol    = ").append(lastCol).append("\n");b.append("    .cch            = ").append(charCount).append("\n");b.append("    .stFile\n");b.append("        .h          = ").append(charType).append("\n");b.append("        .rgb        = ").append(ReadablePath).append("\n");b.append("[/DCONREF]\n");return b.toString();}
+public int getPackedGitOpenFiles() {return packedGitOpenFiles;}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[FEATURE HEADER]\n");buffer.append("[/FEATURE HEADER]\n");return buffer.toString();}
+public static byte[] getToUnicodeLE(String string1) {return UTF16LE.getBytes(string1);}
+public List<String> getFooterLines(String keyName) {return getFooterLines(new FooterKey(keyName));}
+public void refresh() {super.refresh();rescan();}
+public float get(int index) {checkIndex(index);return byteBuffer.getFloat(index * java.nio.ByteOrder.nativeOrder().size());}
+public DeleteDetectorResponse deleteDetector(DeleteDetectorRequest request) {request = beforeClientExecution(request);return executeDeleteDetector(request);}
+public int[] grow() {Debug.Assert(bytesStart != null);return bytesStart = ArrayUtil.grow(bytesStart, bytesStart.length + 1);}
+public ListExclusionsResult listExclusions(ListExclusionsRequest request) {request = beforeClientExecution(request);return executeListExclusions(request);}
+public static SpatialStrategy getSpatialStrategy(int roundNumber) {SpatialStrategy result;if (!spatialStrategyCache.tryGetValue(roundNumber, out result) || result == null) {throw new InvalidOperationException("Strategy should have been init'ed by SpatialDocMaker by now");}return result;}
+public RestoreDBClusterToPointInTimeResponse restoreDBClusterToPointInTime(RestoreDBClusterToPointInTimeRequest request) {request = beforeClientExecution(request);return executeRestoreDBClusterToPointInTime(request);}
+public void serialize(ILittleEndianOutput out1) {out1.writeShort(field1CategoryDataType);out1.writeShort(field2ValuesDataType);out1.writeShort(field3NumCategories);out1.writeShort(field4NumValues);out1.writeShort(field5BubbleSeriesType);out1.writeShort(field6NumBubbleValues);}
+public PostAgentProfileResponse postAgentProfile(PostAgentProfileRequest request) {request = beforeClientExecution(request);return executePostAgentProfile(request);}
+public List<ParseTreePattern> compileParseTreePattern(String pattern, int patternRuleIndex) {if (((ITokenStream) inputStream) != null) {ITokenSource tokenSource = ((ITokenStream) inputStream).tokenSource;if (tokenSource instanceof Lexer) {Lexer lexer = (Lexer) tokenSource;return compileParseTreePattern(pattern, patternRuleIndex, lexer);}}throw new NotSupportedException("Parser can't discover a lexer to use");}
+public BacktrackDBClusterResponse backtrackDBCluster(BacktrackDBClusterRequest request) {request = beforeClientExecution(request);return executeBacktrackDBCluster(request);}
+public String getName() {return strategyName;}
+public void copyTo(byte[] b, int o) {FormatHexByte(b, o + 0, w1);FormatHexByte(b, o + 8, w2);FormatHexByte(b, o + 16, w3);FormatHexByte(b, o + 24, w4);FormatHexByte(b, o + 32, w5);}
+public static IntList lineMap(byte[] buf, int ptr, int end) {IntList map = new IntList((end - ptr) / 36);map.fillTo(1, Integer.MIN_VALUE);for (; ptr < end; ptr = nextLF(buf, ptr)) {map.add(ptr);}map.add(end);return map;}
+# Step 1: The method is named 'GetAdditionalHaves' and follows C# PascalCase naming.# Step 2: In Java, rename the method to 'getAdditionalHaves' to follow lowerCamelCase naming.# Step 3: Map the C# return type 'ICollection<ObjectId>' to the Java convention 'Set<ObjectId>'.# Step 4: Since Java does not have a direct equivalent to C#'s 'virtual' or 'public' access modifiers, we will use 'public' as the default visibility.# Step 5: Replace the empty collection return with Java's equivalent using 'Collections.emptySet()'.# Step 6: The final summary: Translate C# method signature and return type to Java while maintaining method name, and use Java's equivalent for empty collections.
+public long ramBytesUsed() {return _termsCache.values().stream().filter(Objects::nonNull).mapToLong(SimpleTextTerms::ramBytesUsed).sum();}
+public String toXml(String tab) {StringBuilder builder = new StringBuilder();builder.append(tab).append("<").append(recordName).append(">\n");for (Iterator iterator = escherRecords.iterator(); iterator.hasNext(); ) {EscherRecord escherRecord = (EscherRecord) iterator.next();builder.append(escherRecord.toXml(tab + "\t"));}builder.append(tab).append("</").append(recordName).append(">\n");return builder.toString();}
+public TokenStream create(TokenStream input) {return new GalicianMinimalStemFilter(input);}
+public String toString() {StringBuilder r = new StringBuilder();r.append("Commit");r.append("={\n");r.append("tree ");r.append(treeId != null ? treeId.getName() : "NOT_SET");r.append("\n");for (ObjectId p : parentIds) {r.append("parent ");r.append(p.getName());r.append("\n");}r.append("author ");r.append(author != null ? author.toString() : "NOT_SET");r.append("\n");r.append("committer ");r.append(committer != null ? committer.toString() : "NOT_SET");r.append("\n");if (encoding != null && !encoding.equals(Constants.CHARSET)) {r.append("encoding ");r.append(encoding.getName());r.append("\n");}r.append("\n");r.append(message != null ? message : "");r.append("}");return r.toString();}
+public IndicNormalizationFilterFactory(java.util.Map<String, String> args) {super(args);if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public CreateOptionGroupResponse createOptionGroup(CreateOptionGroupRequest request) {request = beforeClientExecution(request);return executeCreateOptionGroup(request);}
+public AssociateMemberAccountResult associateMemberAccount(AssociateMemberAccountRequest request) {request = beforeClientExecution(request);return executeAssociateMemberAccount(request);}
+public void run() {this._enclosing.doRefreshProgress(this.mId, this.mProgress, this.mFromUser, true);this._enclosing.mRefreshProgressRunnable = this;}
+public SetTerminationProtectionResponse setTerminationProtection(SetTerminationProtectionRequest request) {request = beforeClientExecution(request);return executeSetTerminationProtection(request);}
+public String getErrorHeader(RecognitionException e) {int line = e.getOffendingToken().getLine();int charPositionInLine = e.getOffendingToken().getColumn();return "line " + line + ":" + charPositionInLine;}
+public java.nio.CharBuffer asReadOnlyBuffer() {java.nio.CharToByteBufferAdapter buf = new java.nio.CharToByteBufferAdapter(byteBuffer.asReadOnlyBuffer());buf._limit = _limit;buf._position = _position;buf._mark = _mark;buf.byteBuffer._order = byteBuffer._order;return buf;}
+public StopSentimentDetectionJobResponse stopSentimentDetectionJob(StopSentimentDetectionJobRequest request) {request = beforeClientExecution(request);return executeStopSentimentDetectionJob(request);}
+public ObjectIdSubclassMap<ObjectId> getNewObjectIds() {if (newObjectIds != null) {return newObjectIds;}return new ObjectIdSubclassMap<ObjectId>();}
+# Step 1: The method is named 'Clear' and follows C# PascalCase naming.# Step 2: In Java, rename the method to 'clear' to follow lowerCamelCase naming.# Step 3: The method is marked as 'protected internal', which is equivalent to 'protected' in Java.# Step 4: The method overrides a base class method, so we need to use 'super.clear()' in Java.# Step 5: Replace the base class call with 'base.Clear()' to maintain the original functionality.# Step 6: The method needs to clear any internal state and reset it, which should be done by setting a hash to a new value.# Step 7: Use Java modifiers, exception handling, and brace style for the method body.Output:protected void clear() {hash = Hash(new byte[0]);super.clear();}
+public void reset() {synchronized (@lock) {checkNotClosed();if (_mark == -1) {throw new java.io.IOException("Invalid mark");}pos = _mark;}}
+public RefErrorPtg(ILittleEndianInput in1) {field_1_reserved = in1.readInt();}
+public SuspendGameServerGroupResponse suspendGameServerGroup(SuspendGameServerGroupRequest request) {request = beforeClientExecution(request);return executeSuspendGameServerGroup(request);}
+public ValueEval evaluate(ValueEval[] args, int srcRowIndex, int srcColumnIndex) {if (args.length != 3) {return ErrorEval.VALUE_INVALID;}return evaluate(srcRowIndex, srcColumnIndex, args[0], args[1], args[2]);}
+public GetRepoRequest() {super("cr", "2016-06-07", "GetRepo", "cr", "openAPI");UriPattern = "/repos/[RepoNamespace]/[RepoName]";Method = MethodType.GET;}
+public void setDate(java.util.Date date) {if (date != null) {setDate(DateTools.dateToString(date, DateTools.Resolution.SECOND));} else {this.date = null;}}
+public TokenStream create(TokenStream input) {return new GermanMinimalStemFilter(input);}
+public Object[] toArray() {return (Object[]) a.clone();}
+public void write(char[] buffer, int offset, int len) {java.util.Arrays.checkOffsetAndCount(buffer.length, offset, len);synchronized (@lock) {expand(len);System.arraycopy(buffer, offset, this.buf, this.count, len);this.count += len;}}
+public static RevFilter after(long ts) {return new CommitTimeRevFilterAfter(ts);}
+public DeleteGroupPolicyRequest(String groupName, String policyName) {this._groupName = groupName;this._policyName = policyName;}
+public DeregisterTransitGatewayMulticastGroupMembersResponse deregisterTransitGatewayMulticastGroupMembers(DeregisterTransitGatewayMulticastGroupMembersRequest request) {request = beforeClientExecution(request);return executeDeregisterTransitGatewayMulticastGroupMembers(request);}
+public BatchDeleteScheduledActionResponse batchDeleteScheduledAction(BatchDeleteScheduledActionRequest request) {request = beforeClientExecution(request);return executeBatchDeleteScheduledAction(request);}
+public CreateAlgorithmResponse createAlgorithm(CreateAlgorithmRequest request) {request = beforeClientExecution(request);return executeCreateAlgorithm(request);}
+public int readUByte() {CheckPosition(1);return _buf[_ReadIndex++] & 0xFF;}
+public void setLength(int sz) {NB.EncodeInt32(info, infoOffset + P_SIZE, sz);}
+public DescribeScalingProcessTypesResponse describeScalingProcessTypes() {return describeScalingProcessTypes(new DescribeScalingProcessTypesRequest());}
+public ListResourceRecordSetsResponse listResourceRecordSets(ListResourceRecordSetsRequest request) {request = beforeClientExecution(request);return executeListResourceRecordSets(request);}
+public Token recoverInline(Parser recognizer) {InputMismatchException e = new InputMismatchException(recognizer);for (ParserRuleContext context = recognizer.getContext(); context != null; context = (ParserRuleContext)context.getParent()) {context.setException(e);}throw new ParseCanceledException(e);}
+public SetTagsForResourceResponse setTagsForResource(SetTagsForResourceRequest request) {request = beforeClientExecution(request);return executeSetTagsForResource(request);}
+public ModifyStrategyRequest() {super("aegis", "2016-11-11", "ModifyStrategy", "vipaegis", "openAPI");Method = MethodType.POST;}
+public DescribeVpcEndpointServicesResponse describeVpcEndpointServices(DescribeVpcEndpointServicesRequest request) {request = beforeClientExecution(request);return executeDescribeVpcEndpointServices(request);}
+public EnableLoggingResponse enableLogging(EnableLoggingRequest request) {request = beforeClientExecution(request);return executeEnableLogging(request);}
+public boolean contains(Object o) {return this._enclosing.containsValue(o);}
+public SheetRangeIdentifier(String bookName, NameIdentifier firstSheetIdentifier, NameIdentifier lastSheetIdentifier) : base(bookName, firstSheetIdentifier) {this._lastSheetIdentifier = lastSheetIdentifier;}
+public DomainMetadataRequest(String domainName) {_domainName = domainName;}
+public ParseException(Token currentToken, int[][] expectedTokenSequences, String[] tokenImage) {super(Initialize(currentToken, expectedTokenSequences, tokenImage));this.CurrentToken = currentToken;this.ExpectedTokenSequences = expectedTokenSequences;this.TokenImage = tokenImage;}
+public FetchPhotosRequest() {super("CloudPhoto", "2017-07-11", "FetchPhotos", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public java.io.PrintWriter writer() {return _writer;}
+public NGramTokenizerFactory(Map<String, String> args) {super(args);minGramSize = getInt("minGramSize", NGramTokenizer.DEFAULT_MIN_NGRAM_SIZE);maxGramSize = getInt("maxGramSize", NGramTokenizer.DEFAULT_MAX_NGRAM_SIZE);if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public boolean isDirectoryFileConflict() {return dfConflict != null;}
+public IndonesianStemFilter(TokenStream input, boolean stemDerivational) {super(input);this.stemDerivational = stemDerivational;termAtt = addAttribute(ICharTermAttribute.class);keywordAtt = addAttribute(IKeywordAttribute.class);}
+public CreateTrafficPolicyResponse createTrafficPolicy(CreateTrafficPolicyRequest request) {request = beforeClientExecution(request);return executeCreateTrafficPolicy(request);}
+public void serialize(ILittleEndianOutput out1) {out1.writeInt(fSD);out1.writeInt(passwordVerifier);StringUtil.writeUnicodeString(out1, title);out1.write(securityDescriptor);}
+public static double floor(double n, double s) {double f;if ((n < 0 && s > 0) || (n > 0 && s < 0) || (s == 0 && n != 0)) {f = Double.NaN;} else {f = (n == 0 || s == 0) ? 0 : Math.floor(n / s) * s;}return f;}
+public ByteArrayDataOutput(byte[] bytes, int offset, int len) {reset(bytes, offset, len);}
+public static List<ITree> getChildren(ITree t) {List<ITree> kids = new ArrayList<>();for (int i = 0; i < t.getChildCount(); i++) {kids.add(t.getChild(i));}return kids;}
+public void clear() {this._enclosing.clear();}
+public RefreshAllRecord(boolean refreshAll) : this(0) {this.RefreshAll = refreshAll;}
+public DeleteNamedQueryResponse deleteNamedQuery(DeleteNamedQueryRequest request) {request = beforeClientExecution(request);return executeDeleteNamedQuery(request);}
+public GraphvizFormatter(ConnectionCosts costs) {this.costs = costs;this.bestPathMap = new HashMap<>();sb.append(FormatHeader());sb.append("  init [style=invis]\n");sb.append("  init -> 0.0 [label=\"" + BOS_LABEL + "\"]\n");}
+public CheckMultiagentRequest() : base("visionai-poc", "2020-04-08", "CheckMultiagent") {Method = MethodType.POST;}
+public ListUserProfilesResult listUserProfiles(ListUserProfilesRequest request) {request = beforeClientExecution(request);return executeListUserProfiles(request);}
+public CreateRelationalDatabaseFromSnapshotResult createRelationalDatabaseFromSnapshot(CreateRelationalDatabaseFromSnapshotRequest request) {request = beforeClientExecution(request);return executeCreateRelationalDatabaseFromSnapshot(request);}
+public StartTaskResponse startTask(StartTaskRequest request) {request = beforeClientExecution(request);return executeStartTask(request);}
+public Collection<String> getIgnoredPaths() {return ignoredPaths;}
+public FeatSmartTag(RecordInputStream in1) {data = in1.ReadRemainder();}
+public Change(ChangeAction action, ResourceRecordSet resourceRecordSet) {_action = action;_resourceRecordSet = resourceRecordSet;}
+public DeleteImageResponse deleteImage(DeleteImageRequest request) {request = beforeClientExecution(request);return executeDeleteImage(request);}
+public CreateConfigurationSetResponse createConfigurationSet(CreateConfigurationSetRequest request) {request = beforeClientExecution(request);return executeCreateConfigurationSet(request);}
+public java.util.Iterator<E> iterator() {E[] snapshot = elements;return new java.util.concurrent.CopyOnWriteArrayList.CowIterator<E>(snapshot, 0, snapshot.length);}
+public void visitContainedRecords(RecordVisitor rv) {if (_recs.size() == 0) {return;}rv.visitRecord(_bofRec);for (int i = 0; i < _recs.size(); i++) {RecordBase rb = _recs.get(i);if (rb instanceof RecordAggregate) {((RecordAggregate) rb).visitContainedRecords(rv);} else {rv.visitRecord((Record) rb);}}rv.visitRecord(EOFRecord.instance);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[FtCbls ]").append("\n");buffer.append("  size     = ").append(DataSize).append("\n");buffer.append("  reserved = ").append(HexDump.ToHex(reserved)).append("\n");buffer.append("[/FtCbls ]").append("\n");return buffer.toString();}
+public static BATBlock createEmptyBATBlock(POIFSBigBlockSize bigBlockSize, boolean isXBAT) {BATBlock block = new BATBlock(bigBlockSize);if (isXBAT) {block.setXBATChain(bigBlockSize, POIFSConstants.END_OF_CHAIN);}return block;}
+public TagResourceResponse tagResource(TagResourceRequest request) {request = beforeClientExecution(request);return executeTagResource(request);}
+public DeleteMailboxPermissionsResult deleteMailboxPermissions(DeleteMailboxPermissionsRequest request) {request = beforeClientExecution(request);return executeDeleteMailboxPermissions(request);}
+public ListDatasetGroupsResponse listDatasetGroups(ListDatasetGroupsRequest request) {request = beforeClientExecution(request);return executeListDatasetGroups(request);}
+public ResumeProcessesResponse resumeProcesses(ResumeProcessesRequest request) {request = beforeClientExecution(request);return executeResumeProcesses(request);}
+public GetPersonTrackingResponse getPersonTracking(GetPersonTrackingRequest request) {request = beforeClientExecution(request);return executeGetPersonTracking(request);}
+public String toFormulaString(String[] operands) {if (space.IsSet(field_1_options)) {return operands[0];} else if (optiIf.IsSet(field_1_options)) {return toFormulaString() + "(" + operands[0] + ")";} else if (optiSkip.IsSet(field_1_options)) {return toFormulaString() + operands[0];} else {return toFormulaString() + "(" + operands[0] + ")";}}
+public T merge(T first, T second) {throw new UnsupportedOperationException("Not supported");}
+public String toString() {return this.m_message.getKey() + ": " + GetLocalizedMessage();}
+public XPath(Parser parser, String path) {this.parser = parser;this.path = path;elements = Split(path);}
+public CreateAccountAliasRequest(String accountAlias) {this._accountAlias = accountAlias;}
+public override void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int j = 0; j < iterations; ++j) {var block = blocks[blocksOffset++];values[valuesOffset++] = ((int) ((uint) block >> 7)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 6)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 5)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 4)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 3)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 2)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 1)) & 1;values[valuesOffset++] = block & 1;}}
+public PushConnection openPush() {throw new NGit.Errors.NotSupportedException(JGitText.get().pushIsNotSupportedForBundleTransport);}
+public static void strCpy(char[] dst, int di, char[] src, int si) {while (src[si] != '\u0000') {dst[di++] = src[si++];}dst[di] = '\u0000';}
+public K getKey() {return mapEntry.getKey();}
+public static int numNonnull(Object[] data) {int n = 0;if (data == null) {return n;}for (Object o : data) {if (o != null) {n++;}}return n;}
+public override void add(int location, E @object) {if (location >= 0 && location <= _size) {java.util.LinkedList.Link<E> link = voidLink;if (location < (_size / 2)) {for (int i = 0; i <= location; i++) {link = link.next;}} else {for (int i = _size; i > location; i--) {link = link.previous;}}java.util.LinkedList.Link<E> previous = link.previous;java.util.LinkedList.Link<E> newLink = new java.util.LinkedList.Link<E>(@object, previous, link);previous.next = newLink;link.previous = newLink;_size++;modCount++;} else {throw new System.IndexOutOfRangeException();}}
+public DescribeDomainResponse describeDomain(DescribeDomainRequest request) {request = beforeClientExecution(request);return executeDescribeDomain(request);}
+public override void flush() {throw new UnsupportedOperationException();}
+public PersianCharFilterFactory(Map<String, String> args) {super(args);if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public boolean incrementToken() {if (used) {return false;}clearAttributes();termAttribute.append(value);offsetAttribute.setOffset(0, value.length());used = true;return true;}
+public static java.nio.FloatBuffer allocate(int capacity_1) {if (capacity_1 < 0) {throw new IllegalArgumentException();}return new java.nio.ReadWriteFloatArrayBuffer(capacity_1);}
+public NGit.Diff.Edit after(NGit.Diff.Edit cut) {return new NGit.Diff.Edit(cut.endA, endA, cut.endB, endB);}
+public UpdateRuleVersionResponse updateRuleVersion(UpdateRuleVersionRequest request) {request = beforeClientExecution(request);return executeUpdateRuleVersion(request);}
+public ListVoiceConnectorTerminationCredentialsResult listVoiceConnectorTerminationCredentials(ListVoiceConnectorTerminationCredentialsRequest request) {request = beforeClientExecution(request);return executeListVoiceConnectorTerminationCredentials(request);}
+public GetDeploymentTargetResponse getDeploymentTarget(GetDeploymentTargetRequest request) {request = beforeClientExecution(request);return executeGetDeploymentTarget(request);}
+public void setNoChildReport() {childReport = false;for (PerfTask task : tasks) {if (task instanceof TaskSequence) {((TaskSequence) task).setNoChildReport();}}}
+public T get(int location) {try {return a[location];} catch (System.IndexOutOfRangeException) {throw new java.util.ArrayList<T>.IndexOutOfBoundsException("Index: " + location + ", Size: " + a.length);}}
+public DescribeDataSetResult describeDataSet(DescribeDataSetRequest request) {request = beforeClientExecution(request);return executeDescribeDataSet(request);}
+public SkipWorkTreeFilter(int treeIdx) {this.treeIdx = treeIdx;}
+public DescribeNetworkInterfacesResponse describeNetworkInterfaces() {return describeNetworkInterfaces(new DescribeNetworkInterfacesRequest());}
+public boolean contains(int row, int col) {return _firstRow <= row && _lastRow >= row && _firstColumn <= col && _lastColumn >= col;}
+public String toString() {return new String(this.chars);}
+public PatchType getPatchType() {return patchType;}
+public Iterator<K> iterator() {return new java.util.Hashtable<K, V>.KeyIterator(this._enclosing);}
+public CreateScriptResponse createScript(CreateScriptRequest request) {request = beforeClientExecution(request);return executeCreateScript(request);}
+public BytesRef next() {termUpto++;if (termUpto >= info.terms.size()) {return null;} else {info.terms.get(info.sortedTerms.get(termUpto), br);return br;}}
+public String outputToString(CharsRef output) {return output.toString();}
+public AssociateWebsiteAuthorizationProviderResponse associateWebsiteAuthorizationProvider(AssociateWebsiteAuthorizationProviderRequest request) {request = beforeClientExecution(request);return executeAssociateWebsiteAuthorizationProvider(request);}
+public void unpop(RevCommit c) {BlockRevQueue.Block b = head;if (b == null) {b = free.newBlock();b.resetToMiddle();b.add(c);head = b;tail = b;return;} else {if (b.canUnpop()) {b.unpop(c);return;}}b = free.newBlock();b.resetToEnd();b.unpop(c);b.next = head;head = b;}
+public EdgeNGramTokenizerFactory(Map<String, String> args) {super(args);minGramSize = Integer.parseInt(args.get("minGramSize"), EdgeNGramTokenizer.DEFAULT_MIN_GRAM_SIZE);maxGramSize = Integer.parseInt(args.get("maxGramSize"), EdgeNGramTokenizer.DEFAULT_MAX_GRAM_SIZE);side = args.get("side") != null ? EdgeNGramTokenFilter.Side.valueOf(args.get("side")) : EdgeNGramTokenFilter.Side.FRONT;if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public ModifyDBParameterGroupRequest(String dbParameterGroupName, List<Parameter> parameters) {this._dbParameterGroupName = dbParameterGroupName;this._parameters = parameters;}
+public GetHostedZoneLimitResponse getHostedZoneLimit(GetHostedZoneLimitRequest request) {request = beforeClientExecution(request);return executeGetHostedZoneLimit(request);}
+public void set(int index, long value) {int o = (int) ((uint) index >> 6);int b = index & 63;int shift = b << 0;blocks[o] = (blocks[o] & ~(1L << shift)) | (value << shift);}
+public RevFilter clone() {return new CommitterRevFilter.PatternSearch(Pattern());}
+public String toString() {return "spans(" + m_term.toString() + ")@" + (m_doc == -1 ? "START" : (m_doc == Integer.MAX_VALUE) ? "END" : m_doc + "-" + m_position);}
+public boolean canAppendMatch() {for (int i = 0; i < heads.size(); i++) {if (heads.get(i) != LastHead.INSTANCE) {return true;}}return false;}
+public int lastIndexOf(String subString, int start) {synchronized (this) {return super.lastIndexOf(subString, start);}}
+public DeleteNetworkAclEntryResponse deleteNetworkAclEntry(DeleteNetworkAclEntryRequest request) {request = beforeClientExecution(request);return executeDeleteNetworkAclEntry(request);}
+public AssociateMemberToGroupResponse associateMemberToGroup(AssociateMemberToGroupRequest request) {request = beforeClientExecution(request);return executeAssociateMemberToGroup(request);}
+public static int committer(byte[] b, int ptr) {int sz = b.length;if (ptr == 0) {ptr += 46;}while (ptr < sz && b[ptr] == 'p') {ptr += 48;}if (ptr < sz && b[ptr] == 'a') {ptr = NextLF(b, ptr);}return Match(b, ptr, ObjectChecker.committer);}
+public int getLineNumber() {return row;}
+public NGit.Api.SubmoduleUpdateCommand addPath(String path) {paths.addItem(path);return this;}
+public GetPushTemplateResponse getPushTemplate(GetPushTemplateRequest request) {request = beforeClientExecution(request);return executeGetPushTemplate(request);}
+public DescribeVaultResponse describeVault(DescribeVaultRequest request) {request = beforeClientExecution(request);return executeDescribeVault(request);}
+public DescribeVpcPeeringConnectionsResponse describeVpcPeeringConnections() {return describeVpcPeeringConnections(new DescribeVpcPeeringConnectionsRequest());}
+public ByteBuffer putLong(int index, long value) {throw new NotImplementedException();}
+public RegisterDeviceResponse registerDevice(RegisterDeviceRequest request) {request = beforeClientExecution(request);return executeRegisterDevice(request);}
+public static Format byId(int id) {for (Format format : Values) {if (format.getId() == id) {return format;}}throw new IllegalArgumentException("Unknown format id: " + id);}
+public DeleteAppResponse deleteApp(DeleteAppRequest request) {request = beforeClientExecution(request);return executeDeleteApp(request);}
+public GetBaiduChannelResponse getBaiduChannel(GetBaiduChannelRequest request) {request = beforeClientExecution(request);return executeGetBaiduChannel(request);}
+public FST.BytesReader getBytesReader() {return fst.getBytesReader();}
+public static boolean isValidSchemeChar(int index, char c) {if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {return true;}if (index > 0 && ((c >= '0' && c <= '9') || c == '+' || c == '-' || c == '.')) {return true;}return false;}
+public ListAppliedSchemaArnsResult listAppliedSchemaArns(ListAppliedSchemaArnsRequest request) {request = beforeClientExecution(request);return executeListAppliedSchemaArns(request);}
+public URI baseUri;public URI getBaseUri() {return baseUri;}public void setBaseUri(URI baseUri) {this.baseUri = baseUri;}
+public ValueEval evaluate(ValueEval[] args, OperationEvaluationContext ec) {if (args.length < 1) {return ErrorEval.VALUE_INVALID;}boolean isA1style;String text;try {ValueEval ve = OperandResolver.GetSingleValue(args[0], ec.RowIndex, ec.ColumnIndex);text = OperandResolver.CoerceValueToString(ve);switch (args.length) {case 1:isA1style = true;break;case 2:isA1style = evaluateBooleanArg(args[1], ec);break;default:return ErrorEval.VALUE_INVALID;}} catch (EvaluationException e) {return e.getErrorEval();}return evaluateIndirect(ec, text, isA1style);}
+public int compareTo(int[] bs, int p) {int cmp;cmp = NB.compareUInt32(w1, bs[p]);if (cmp != 0) {return cmp;}cmp = NB.compareUInt32(w2, bs[p + 1]);if (cmp != 0) {return cmp;}cmp = NB.compareUInt32(w3, bs[p + 2]);if (cmp != 0) {return cmp;}cmp = NB.compareUInt32(w4, bs[p + 3]);if (cmp != 0) {return cmp;}return NB.compareUInt32(w5, bs[p + 4]);}
+public void removeName(int index) {names.remove(index);workbook.removeName(index);}
+public GetQueueAttributesRequest(String queueUrl, List<String> attributeNames) {this.queueUrl = queueUrl;this.attributeNames = attributeNames;}
+public static boolean[] copyOf(boolean[] original, int newLength) {if (newLength < 0) {throw new java.lang.NegativeArraySizeException();}return copyOfRange(original, 0, newLength);}
+public static void setEnabled(boolean enabled) {ENABLED = enabled;}
+public DeleteLogPatternResponse deleteLogPattern(DeleteLogPatternRequest request) {request = beforeClientExecution(request);return executeDeleteLogPattern(request);}
+public boolean contains(char[] text, int offset, int length) {return map.containsKey(text, offset, length);}
+public int getFirstSheetIndexFromExternSheetIndex(int externSheetNumber) {return linkTable.getFirstInternalSheetIndexForExtIndex(externSheetNumber);}
+public boolean handles(String commandLine) {return commandLine.length() + 1 < commandLine.length() && commandLine.charAt(commandLine.length() - 1) == ' ' && commandLine.startsWith(command);}
+public static void register(MergeStrategy imp) {register(imp.getName(), imp);}
+public long ramBytesUsed() {return (index != null) ? index.getSizeInBytes() : 0;}
+public HostedZone(String id, String name, String callerReference) {_id = id;_name = name;_callerReference = callerReference;}
+public GetFindingsResponse getFindings(GetFindingsRequest request) {request = beforeClientExecution(request);return executeGetFindings(request);}
+public DescribeTopicsDetectionJobResponse describeTopicsDetectionJob(DescribeTopicsDetectionJobRequest request) {request = beforeClientExecution(request);return executeDescribeTopicsDetectionJob(request);}
+public boolean processMatch(ValueEval eval) {if (eval instanceof NumericValueEval) {if (minimumValue == null) {minimumValue = eval;} else {double currentValue = ((NumericValueEval) eval).getNumberValue();double oldValue = ((NumericValueEval) minimumValue).getNumberValue();if (currentValue < oldValue) {minimumValue = eval;}}}return true;}
+public void write(ILittleEndianOutput out1) {out1.writeByte(sid + PtgClass);out1.writeShort(field_1_len_ref_subexpression);}
+public static int main(String[] args) {boolean printTree = false;String path = null;for (int i = 0; i < args.length; i++) {if (args[i].equals("-printTree", StringComparison.Ordinal)) {printTree = true;} else {path = args[i];}}if (args.length != (printTree ? 2 : 1)) {throw new IllegalArgumentException();}try (Store.Directory dir = FSDirectory.open(new File(path).toPath())) {try (var r = new DirectoryTaxonomyReader(dir)) {PrintStats(r, System.out, printTree);}}return 0;}
+public void setByteValue(byte value) {if (!(FieldsData instanceof Byte)) {throw new IllegalArgumentException("Cannot change value type from " + FieldsData.getClass().getName() + " to Byte");}FieldsData = new Byte(value);}
+public static int initialize() {return initialize(DefaultSeed);}
+public CachingDoubleValueSource(ValueSource source) {this.m_source = source;m_cache = new JCG.Dictionary<Integer, Double>();}
+public AttributeDefinition(String attributeName, ScalarAttributeType attributeType) {_attributeName = attributeName;_attributeType = attributeType;}
+public static String join(Collection<String> parts, String separator) {return NGit.Util.StringUtils.join(parts, separator, separator);}
+public ListTaskDefinitionFamiliesResult listTaskDefinitionFamilies(ListTaskDefinitionFamiliesRequest request) {request = beforeClientExecution(request);return executeListTaskDefinitionFamilies(request);}
+public ListComponentsResponse listComponents(ListComponentsRequest request) {request = beforeClientExecution(request);return executeListComponents(request);}
+public ActivatePhotosRequest() {super("CloudPhoto", "2017-07-11", "ActivatePhotos", "cloudphoto", "openAPI");setProtocol(ProtocolType.HTTPS);}
+public CreateMatchmakingRuleSetResponse createMatchmakingRuleSet(CreateMatchmakingRuleSetRequest request) {request = beforeClientExecution(request);return executeCreateMatchmakingRuleSet(request);}
+public ListAvailableManagementCidrRangesResult listAvailableManagementCidrRanges(ListAvailableManagementCidrRangesRequest request) {request = beforeClientExecution(request);return executeListAvailableManagementCidrRanges(request);}
+public ObjectIdSubclassMap<ObjectId> getBaseObjectIds() {if (baseObjectIds != null) {return baseObjectIds;}return new ObjectIdSubclassMap<ObjectId>();}
+public DeletePushTemplateResult deletePushTemplate(DeletePushTemplateRequest request) {request = beforeClientExecution(request);return executeDeletePushTemplate(request);}
+public CreateDomainEntryResponse createDomainEntry(CreateDomainEntryRequest request) {request = beforeClientExecution(request);return executeCreateDomainEntry(request);}
+public static int getEncodedSize(Object[] values) {int result = values.length * 1;for (int i = 0; i < values.length; i++) {result += getEncodedSize((Object) values[i]);}return result;}
+public OpenNLPTokenizerFactory(Map<String, String> args) {super(args);sentenceModelFile = Require(args, SENTENCE_MODEL);tokenizerModelFile = Require(args, TOKENIZER_MODEL);if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public final int getInt(int index) {checkIndex(index, libcore.io.SizeOf.INT);return libcore.io.Memory.peekInt(backingArray, offset + index, _order);}
+public List<Head> getNextHeads(char c) {if (matches(c)) {return newHeads;} else {return FileNameMatcher.EMPTY_HEAD_LIST;}}
+public java.nio.ByteBuffer putShort(short value) {throw new java.lang.UnsupportedOperationException();}
+public void writeUnshared(Object object) {throw new UnsupportedOperationException();}
+public int offsetByCodePoints(int index, int codePointOffset) {return value.offsetByCodePoints(0, count, index, codePointOffset);}
+public static int getUniqueAlt(Iterable<BitSet> altsets) {BitSet all = GetAlts(altsets);if (all.cardinality() == 1) {return all.nextSetBit(0);}return ATN.INVALID_ALT_NUMBER;}
+public DateTime getWhen() {return Sharpen.Extensions.createDate(when);}
+public RuleTagToken(String ruleName, int bypassTokenType, String label) {if (ruleName == null || ruleName.isEmpty()) {throw new IllegalArgumentException("ruleName cannot be null or empty.");}this.ruleName = ruleName;this.bypassTokenType = bypassTokenType;this.label = label;}
+public DisableOrganizationAdminAccountResponse disableOrganizationAdminAccount(DisableOrganizationAdminAccountRequest request) {request = beforeClientExecution(request);return executeDisableOrganizationAdminAccount(request);}
+public CreateRoomResponse createRoom(CreateRoomRequest request) {request = beforeClientExecution(request);return executeCreateRoom(request);}
+public DeleteReplicationGroupResult deleteReplicationGroup(DeleteReplicationGroupRequest request) {request = beforeClientExecution(request);return executeDeleteReplicationGroup(request);}
+public CharBuffer decode(ByteBuffer buffer) {try {return newDecoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE).decode(buffer);} catch (CharacterCodingException ex) {throw new Exception(ex.getMessage(), ex);}}
+public Distribution(String id, String status, String domainName) {_id = id;_status = status;_domainName = domainName;}
+public Object array() {return protectedArray();}
+public DateWindow1904Record(RecordInputStream in1) {field_1_window = in1.readShort();}
+public DeleteDBSnapshotRequest(String dbSnapshotIdentifier) {this._dbSnapshotIdentifier = dbSnapshotIdentifier;}
+public ParserExtension getExtension(String key) {if (key == null || !this.extensions.TryGetValue(key, out ParserExtension value)) return null;return value;}
+public void inform(IResourceLoader loader) {try {if (chunkerModelFile != null) {OpenNLPOpsFactory.getChunkerModel(chunkerModelFile, loader);}} catch (IOException e) {throw new IllegalArgumentException(e.toString(), e);}}
+public CompleteVaultLockResponse completeVaultLock(CompleteVaultLockRequest request) {request = beforeClientExecution(request);return executeCompleteVaultLock(request);}
+public int[] getCharIntervals() {return (int[])(_points.clone());}
+public long ramBytesUsed() {return RamUsageEstimator.AlignObjectSize(3 * RamUsageEstimator.NUM_BYTES_OBJECT_REF + 2 * RamUsageEstimator.NUM_BYTES_INT32)+ RamUsageEstimator.SizeOf(data)+ positions.ramBytesUsed()+ wordNums.ramBytesUsed();}
+public RegisterInstancesWithLoadBalancerResult registerInstancesWithLoadBalancer(RegisterInstancesWithLoadBalancerRequest request) {request = beforeClientExecution(request);return executeRegisterInstancesWithLoadBalancer(request);}
+public DescribeClusterUserKubeconfigRequest() : base("CS", "2015-12-15", "DescribeClusterUserKubeconfig", "cs", "openAPI") {UriPattern = "/k8s/[ClusterId]/user_config";Method = MethodType.GET;}
+public PrecisionRecord(RecordInputStream in1) {this.field_1_precision = in1.ReadShort();}
+public void serialize(ILittleEndianOutput out1) {out1.writeShort(LeftRowGutter);out1.writeShort(TopColGutter);out1.writeShort(RowLevelMax);out1.writeShort(ColLevelMax);}
+public DeleteVirtualInterfaceResponse deleteVirtualInterface(DeleteVirtualInterfaceRequest request) {request = beforeClientExecution(request);return executeDeleteVirtualInterface(request);}
+public Entry getEntry(String name) {if (excludes.contains(name)) {throw new FileNotFoundException(name);}Entry entry = directory.getEntry(name);return wrapEntry(entry);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKUP]\n");buffer.append("    .backup          = ").append(StringUtil.toHexString(Backup)).append("\n");buffer.append("[/BACKUP]\n");return buffer.toString();}
+public DeleteVoiceConnectorOriginationResult deleteVoiceConnectorOrigination(DeleteVoiceConnectorOriginationRequest request) {request = beforeClientExecution(request);return executeDeleteVoiceConnectorOrigination(request);}
+public OpenStringBuilder append(char c) {write(c);return this;}
+public static long generationFromSegmentsFileName(String fileName) {if (fileName.equals(IndexFileNames.SEGMENTS)) {return 0;} else if (fileName.startsWith(IndexFileNames.SEGMENTS)) {return Number.parse(fileName.substring(1 + IndexFileNames.SEGMENTS.length()), Character.MAXRADIX);} else {throw new System.ArgumentException("fileName \"" + fileName + "\" is not a segments file");}}
+public static NGit.Transport.TagOpt fromOption(String o) {if (o == null || o.length() == 0) {return NGit.Transport.TagOpt.AUTO_FOLLOW;}for (NGit.Transport.TagOpt tagopt : NGit.Transport.TagOpt.values()) {if (tagopt.option().equals(o)) {return tagopt;}}throw new IllegalArgumentException(String.format(JGitText.get().invalidTagOption, o));}
+public StartContentModerationResult startContentModeration(StartContentModerationRequest request) {request = beforeClientExecution(request);return executeStartContentModeration(request);}
+public static String quoteReplacement(String s) {StringBuilder result = new StringBuilder(s.length());for (int i = 0; i < s.length(); i++) {char c = s.charAt(i);if (c == '\\' || c == '$') {result.append('\\');}result.append(c);}return result.toString();}
+public void set(V newValue) {value = newValue;}
+public QueryParserTokenManager(ICharStream stream) {InitBlock();m_input_stream = stream;}
+public long valueFor(double elapsed) {double val;if (modBy == 0)val = elapsed / factor;elseval = elapsed / factor % modBy;if (type == '0')return (long) Math.round(val);elsereturn (long) val;}
+public java.nio.LongBuffer get(long[] dst, int dstOffset, int longCount) {byteBuffer.limit(_limit * libcore.io.SizeOf.LONG);byteBuffer.position(_position * libcore.io.SizeOf.LONG);if (byteBuffer instanceof java.nio.DirectByteBuffer) {((java.nio.DirectByteBuffer) byteBuffer).get(dst, dstOffset, longCount);} else {((java.nio.HeapByteBuffer) byteBuffer).get(dst, dstOffset, longCount);}this._position += longCount;return this;}
+public default void removeErrorListeners() {_listeners = new IAntlrErrorListener<Symbol>[0];}
+public CommonTokenStream(ITokenSource tokenSource, int channel) {this(tokenSource);this.channel = channel;}
+public ListObjectPoliciesResponse listObjectPolicies(ListObjectPoliciesRequest request) {request = beforeClientExecution(request);return executeListObjectPolicies(request);}
+public ObjectToPack(AnyObjectId src, int type) {super(src);flags = type << TYPE_SHIFT;}
+public int stem(char[] s, int len) {int numVowels_Renamed = numVowels(s, len);for (int i = 0; i < affixes.length; i++) {Affix affix = affixes[i];if (numVowels_Renamed > affix.vc && len >= affix.affix.length + 3 && stemmerUtil.endsWith(s, len, affix.affix)) {len -= affix.affix.length;return affix.palatalizes ? unpalatalize(s, len) : len;}}return len;}
+public void recover(Parser recognizer, RecognitionException e) {if (lastErrorIndex == ((ITokenStream)recognizer.getInputStream()).getIndex() && lastErrorStates != null && lastErrorStates.contains(recognizer.getState())) {recognizer.consume();}lastErrorIndex = ((ITokenStream)recognizer.getInputStream()).getIndex();if (lastErrorStates == null) {lastErrorStates = new IntervalSet();}lastErrorStates.add(recognizer.getState());IntervalSet followSet = getErrorRecoverySet(recognizer);consumeUntil(recognizer, followSet);}
+public String toFormulaString() {String value = field_3_string;int len = value.length();StringBuilder sb = new StringBuilder(len + 4);sb.append(FORMULA_DELIMITER);for (int i = 0; i < len; i++) {char c = value.charAt(i);if (c == FORMULA_DELIMITER) {sb.append(FORMULA_DELIMITER);}sb.append(c);}sb.append(FORMULA_DELIMITER);return sb.toString();}
+public UnlinkFaceRequest() {super("LinkFace", "2018-07-20", "UnlinkFace");setProtocol(ProtocolType.HTTPS);setMethod(MethodType.POST);}
+public ConfigurationOptionSetting(String awsNamespace, String optionName, String value) {this._awsNamespace = awsNamespace;this._optionName = optionName;this._value = value;}
+public String getFully(String key) {StringBuilder result = new StringBuilder(m_tries.size() * 2);for (int i = 0; i < m_tries.size(); i++) {String r = m_tries.get(i).getFully(key);if (r == null || (r.length() == 1 && r.charAt(0) == EOM)) {return result.toString();}result.append(r);}return result.toString();}
+public DescribeMountTargetSecurityGroupsResponse describeMountTargetSecurityGroups(DescribeMountTargetSecurityGroupsRequest request) {request = beforeClientExecution(request);return executeDescribeMountTargetSecurityGroups(request);}
+public GetApiMappingResponse getApiMapping(GetApiMappingRequest request) {request = beforeClientExecution(request);return executeGetApiMapping(request);}
+public HttpRequest(String strUrl) {Url = strUrl;Headers = new HashMap<String, String>();}
+public MemFuncPtg(int subExprLen) {this.field1LenRefSubexpression = subExprLen;}
+public static TermStats[] GetHighFreqTerms(IndexReader reader, int numTerms, String field, IComparer<TermStats> comparer) {TermStatsQueue tiq = null;if (field != null) {Fields fields = MultiFields.GetFields(reader);if (fields == null) {throw new Exception("field " + field + " not found");}Terms terms = fields.GetTerms(field);if (terms != null) {TermsEnum termsEnum = terms.GetIterator(null);tiq = new TermStatsQueue(numTerms, comparer);tiq.Fill(field, termsEnum);}} else {Fields fields = MultiFields.GetFields(reader);if (fields == null) {throw new Exception("no fields found for this index");}tiq = new TermStatsQueue(numTerms, comparer);for (String fieldName : fields) {Terms terms = fields.GetTerms(fieldName);if (terms != null) {tiq.Fill(fieldName, terms.GetIterator(null));}}}TermStats[] result = new TermStats[tiq.Count];int count = tiq.Count - 1;while (tiq.Count != 0) {result[count] = tiq.Pop();count--;}return result;}
+public ListDeleteApnsVoipChannelResult deleteApnsVoipChannel(DeleteApnsVoipChannelRequest request) {request = beforeClientExecution(request);return executeDeleteApnsVoipChannel(request);}
+public ListFacesResponse listFaces(ListFacesRequest request) {request = beforeClientExecution(request);return executeListFaces(request);}
+public ShapeFieldCacheDistanceValueSource(SpatialContext ctx, ShapeFieldCacheProvider<IPoint> provider, IPoint from, double multiplier) {this.ctx = ctx;this.from = from;this.provider = provider;this.multiplier = multiplier;}
+public char get(int index) {checkIndex(index);return sequence[index];}
+public UpdateConfigurationProfileResult updateConfigurationProfile(UpdateConfigurationProfileRequest request) {request = beforeClientExecution(request);return executeUpdateConfigurationProfile(request);}
+public DescribeLifecycleHooksResult describeLifecycleHooks(DescribeLifecycleHooksRequest request) {request = beforeClientExecution(request);return executeDescribeLifecycleHooks(request);}
+public DescribeHostReservationsResponse describeHostReservations(DescribeHostReservationsRequest request) {request = beforeClientExecution(request);return executeDescribeHostReservations(request);}
+public static PredictionContext fromRuleContext(ATN atn, RuleContext outerContext) {if (outerContext == null) outerContext = ParserRuleContext.EMPTY;if (outerContext.getParent() == null || outerContext == ParserRuleContext.EMPTY) return PredictionContext.EMPTY;PredictionContext parent = PredictionContext.fromRuleContext(atn, outerContext.getParent());ATNState state = atn.states[outerContext.getInvokingState()];RuleTransition transition = (RuleTransition) state.getTransition(0);return parent.getChild(transition.getFollowState().getStateNumber());}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[SXVDEX]\n");buffer.append("    .grbit1 =").append(HexDump.intToHex(grbit1)).append("\n");buffer.append("    .grbit2 =").append(HexDump.byteToHex(grbit2)).append("\n");buffer.append("    .citmShow =").append(HexDump.byteToHex(citmShow)).append("\n");buffer.append("    .isxdiSort =").append(HexDump.shortToHex(isxdiSort)).append("\n");buffer.append("    .isxdiShow =").append(HexDump.shortToHex(isxdiShow)).append("\n");buffer.append("    .subName =").append(subName).append("\n");buffer.append("[/SXVDEX]\n");return buffer.toString();}
+public override String toString() {StringBuilder r = new StringBuilder();r.append("BlameResult: ");r.append(GetResultPath());return r.toString();}
+public ListChangeSetsResult listChangeSets(ListChangeSetsRequest request) {request = beforeClientExecution(request);return executeListChangeSets(request);}
+public boolean isAllowNonFastForwards() {return allowNonFastForwards;}
+public FeatRecord() {futureHeader = new FtrHeader();futureHeader.recordType = sid;}
+public java.nio.ShortBuffer put(short c) {throw new java.nio.ReadOnlyBufferException();}
+public void setQuery(String query) {this.query = query;this.m_message = new Message(QueryParserMessages.INVALID_SYNTAX_CANNOT_PARSE, query, "");}
+public StashApplyCommand stashApply() {return new StashApplyCommand(repo);}
+public Collection<String> nameSet() {return dictionaryNameToID.keySet();}
+public static int getEffectivePort(String scheme, int specifiedPort) {if (specifiedPort != -1) {return specifiedPort;}if (Sharpen.StringHelper.equalsIgnoreCase("http", scheme)) {return 80;} else {if (Sharpen.StringHelper.equalsIgnoreCase("https", scheme)) {return 443;} else {return -1;}}}
+public ListAssessmentTemplatesResult listAssessmentTemplates(ListAssessmentTemplatesRequest request) {request = beforeClientExecution(request);return executeListAssessmentTemplates(request);}
+public RestoreFromClusterSnapshotResponse restoreFromClusterSnapshot(RestoreFromClusterSnapshotRequest request) {request = beforeClientExecution(request);return executeRestoreFromClusterSnapshot(request);}
+public void addShape(HSSFShape shape) {shape.setPatriarch(this.getPatriarch());shape.setParent(this);shapes.add(shape);}
+public boolean equals(Object o) {if (this == o) return true;if (o == null || getClass() != o.getClass()) return false;FacetEntry that = (FacetEntry) o;if (count != that.count) return false;return value.equals(that.value);}
+public static int prev(byte[] b, int ptr, char chrA) {if (ptr == b.length) {--ptr;}while (ptr >= 0) {if (b[ptr--] == chrA) {return ptr;}}return ptr;}
+public boolean isDeltaRepresentation() {return deltaBase != null;}
+public ListEmitEOFResult emitEOF() {int cpos = getColumn();int line = getLine();IToken eof = _factory.create(_tokenFactorySourcePair, TokenConstants.EOF, null, TokenConstants.DefaultChannel, _input.index, _input.index - 1, line, cpos);emit(eof);return eof;}
+public UpdateUserRequest(String userName) {_userName = userName;}
+public RevFilter negate() {return NotRevFilter.Create(this);}
+public void setTagger(PersonIdent taggerIdent) {this.tagger = taggerIdent;}
+public static BufferSize automatic() {long max, total, free;try (var proc = Process.get_CurrentProcess()) {max = proc.get_PeakVirtualMemorySize64();total = proc.get_VirtualMemorySize64();free = proc.get_PrivateMemorySize64();}long totalAvailableBytes = max - total + free;long sortBufferByteSize = free / 2;long minBufferSizeBytes = MIN_BUFFER_SIZE_MB * MB;if (sortBufferByteSize < minBufferSizeBytes || totalAvailableBytes > 10 * minBufferSizeBytes) {if (totalAvailableBytes / 2 > minBufferSizeBytes) {sortBufferByteSize = totalAvailableBytes / 2;} else {sortBufferByteSize = Math.max(ABSOLUTE_MIN_SORT_BUFFER_SIZE, sortBufferByteSize);}}return new BufferSize(Math.min((long)Integer.MAX_VALUE, sortBufferByteSize));}
+public static int trimTrailingWhitespace(byte[] raw, int start, int end) {int ptr = end - 1;while (start <= ptr && isWhitespace(raw[ptr])) {ptr--;}return ptr + 1;}
+public TopMarginRecord(RecordInputStream in1) {this.field_1_margin = in1.ReadDouble();}
+public RetrieveEnvironmentInfoRequest(EnvironmentInfoType infoType) {this._infoType = infoType;}
+public CreatePlayerSessionsResponse createPlayerSessions(CreatePlayerSessionsRequest request) {request = beforeClientExecution(request);return executeCreatePlayerSessions(request);}
+public CreateProxySessionResponse createProxySession(CreateProxySessionRequest request) {request = beforeClientExecution(request);return executeCreateProxySession(request);}
+public int getObjectType() {return type;}
+public String getScheme() {return scheme;}
+public void characters(char[] ch, int start, int length) {contents.append(ch, start, length);}
+public FetchAlbumTagPhotosRequest() : base("CloudPhoto", "2017-07-11", "FetchAlbumTagPhotos", "cloudphoto", "openAPI") {Protocol = ProtocolType.HTTPS;}
+public DeleteMembersResponse deleteMembers(DeleteMembersRequest request) {request = beforeClientExecution(request);return executeDeleteMembers(request);}
+public GetContactReachabilityStatusResponse getContactReachabilityStatus(GetContactReachabilityStatusRequest request) {request = beforeClientExecution(request);return executeGetContactReachabilityStatus(request);}
+public boolean remove(Object o) {synchronized (this) {int oldSize = this._enclosing._size;this._enclosing.remove(o);return this._enclosing._size != oldSize;}}
+public E last() {return backingMap.lastKey();}
+public CreateStreamingDistributionResult createStreamingDistribution(CreateStreamingDistributionRequest request) {request = beforeClientExecution(request);return executeCreateStreamingDistribution(request);}
+public boolean isAbsolute() {return absolute;}
+public DisableAddOnResponse disableAddOn(DisableAddOnRequest request) {request = beforeClientExecution(request);return executeDisableAddOn(request);}
+public DescribeAliasResult describeAlias(DescribeAliasRequest request) {request = beforeClientExecution(request);return executeDescribeAlias(request);}
+public void next(int delta) {while (--delta >= 0) {if (currentSubtree != null) {ptr += currentSubtree.getEntrySpan();} else {ptr++;}if (Eof) {break;}parseEntry();}}
+public RevFilter clone() {return new AndRevFilter.Binary(a.clone(), b.clone());}
+public PersianCharFilterCreate(TextReader input) {return new PersianCharFilter(input);}
+public String option() {return option;}
+public String toString() {StringBuilder sb = new StringBuilder("[");for (var item : this) {if (sb.length() > 1) {sb.append(", ");}sb.append(item);}return sb.append(']').toString();}
+public DescribeSignalingChannelResponse describeSignalingChannel(DescribeSignalingChannelRequest request) {request = beforeClientExecution(request);return executeDescribeSignalingChannel(request);}
+public AttachStaticIpResponse attachStaticIp(AttachStaticIpRequest request) {request = beforeClientExecution(request);return executeAttachStaticIp(request);}
+public String toString() {StringBuilder sb = new StringBuilder(64);CellReference crA = new CellReference(_firstRowIndex, _firstColumnIndex, false, false);CellReference crB = new CellReference(_lastRowIndex, _lastColumnIndex, false, false);sb.append(getClass().getName());sb.append(" [").append(crA.formatAsString()).append(':').append(crB.formatAsString()).append("]");return sb.toString();}
+public BloomFilteringPostingsFormat(PostingsFormat delegatePostingsFormat, BloomFilterFactory bloomFilterFactory) {super();_delegatePostingsFormat = delegatePostingsFormat;_bloomFilterFactory = bloomFilterFactory;}
+public ListTemplatesResponse listTemplates(ListTemplatesRequest request) {request = beforeClientExecution(request);return executeListTemplates(request);}
+public TimerThread(long resolution, Counter counter) : base(THREAD_NAME) {this.resolution = resolution;this.counter = counter;this.IsBackground = true;}
+public DrawingRecord() {recordData = new byte[0];}
+public ListDirectoriesResult listDirectories(ListDirectoriesRequest request) {request = beforeClientExecution(request);return executeListDirectories(request);}
+public void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int j = 0; j < iterations; ++j) {byte block = blocks[blocksOffset++];values[valuesOffset++] = ((int) ((uint) block >> 7)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 6)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 5)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 4)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 3)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 2)) & 1;values[valuesOffset++] = ((int) ((uint) block >> 1)) & 1;values[valuesOffset++] = block & 1;}}
+public GroupingSearch disableCaching() {this.maxCacheRAMMB = null;this.maxDocsToCache = null;return this;}
+public static int idealByteArraySize(int need) {for (int i = 4; i < 32; i++) {if (need <= (1 << i) - 12) {return (1 << i) - 12;}}return need;}
+public UpdateAssessmentTargetResponse updateAssessmentTarget(UpdateAssessmentTargetRequest request) {request = beforeClientExecution(request);return executeUpdateAssessmentTarget(request);}
+public ModifyVolumeResponse modifyVolume(ModifyVolumeRequest request) {request = beforeClientExecution(request);return executeModifyVolume(request);}
+public Cell merge(Cell m, Cell e) {if (m.cmd == e.cmd && m.ref.equals(e.ref) && m.skip == e.skip) {Cell c = new Cell(m);c.cnt += e.cnt;return c;} else {return null;}}
+public ByteBuffer read(int length, long position) {if (position >= Size) throw new IllegalArgumentException("Position " + position + " past the end of the file");ByteBuffer dst;int worked = -1;if (writable) {dst = ByteBuffer.CreateBuffer(length);worked = 0;} else {fileStream.Position = position;dst = ByteBuffer.CreateBuffer(length);worked = IOUtils.ReadFully(fileStream, dst.Buffer);}if (worked == -1) throw new IllegalArgumentException("Position " + position + " past the end of the file");dst.Position = 0;return dst;}
+public RespondActivityTaskCompletedResult respondActivityTaskCompleted(RespondActivityTaskCompletedRequest request) {request = beforeClientExecution(request);return executeRespondActivityTaskCompleted(request);}
+public void incrementProgressBy(int diff) {synchronized (this) {setProgress(mProgress + diff);}}
+public MetadataDiff compareMetadata(DirCacheEntry entry) {if (entry.isAssumeValid()) {return MetadataDiff.EQUAL;}if (entry.isUpdateNeeded()) {return MetadataDiff.DIFFER_BY_METADATA;}if (!entry.isSmudged() && entry.getLength() != (int)getEntryLength()) {return MetadataDiff.DIFFER_BY_METADATA;}if (isModeDifferent(entry.getRawMode())) {return MetadataDiff.DIFFER_BY_METADATA;}long cacheLastModified = entry.getLastModified();long fileLastModified = getEntryLastModified();if (cacheLastModified % 1000 == 0 || fileLastModified % 1000 == 0) {cacheLastModified = cacheLastModified - cacheLastModified % 1000;fileLastModified = fileLastModified - fileLastModified % 1000;}if (fileLastModified != cacheLastModified) {return MetadataDiff.DIFFER_BY_TIMESTAMP;} else {if (!entry.isSmudged()) {return MetadataDiff.EQUAL;} else {return MetadataDiff.SMUDGED;}}}
+public static NumberRecord convertToNumberRecord(RKRecord rk) {NumberRecord num = new NumberRecord();num.setColumn(rk.getColumn());num.setRow(rk.getRow());num.setXFIndex(rk.getXFIndex());num.setValue(rk.getRKNumber());return num;}
+public ByteBuffer put(char[] src, int srcOffset, int charCount) {byteBuffer.limit(_limit * libcore.io.SizeOf.CHAR);byteBuffer.position(_position * libcore.io.SizeOf.CHAR);if (byteBuffer instanceof java.nio.ReadWriteDirectByteBuffer) {((java.nio.ReadWriteDirectByteBuffer) byteBuffer).put(src, srcOffset, charCount);} else {((java.nio.ReadWriteHeapByteBuffer) byteBuffer).put(src, srcOffset, charCount);}this._position += charCount;return this;}
+public int getCells() {int size = 0;for (char c : cells.keySet()) {Cell e = at(c);if (e.cmd >= 0 || e.@ref >= 0) {size++;}}return size;}
+public BeiderMorseFilterFactory(Map<String, String> args) {super(args);NameType nameType = NameType.valueOf(getOrDefault(args, "nameType", NameType.GENERIC.name()).toUpperCase());RuleType ruleType = RuleType.valueOf(getOrDefault(args, "ruleType", RuleType.APPROX.name()).toUpperCase());boolean concat = getBoolean(args, "concat", true);engine = new PhoneticEngine(nameType, ruleType, concat);ISet<String> langs = getSet(args, "languageSet");languageSet = (null == langs || (1 == langs.size() && langs.contains("auto"))) ? null : LanguageSet.from(langs);if (!(args.isEmpty())) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public static double varp(double[] v) {double r = Double.NaN;if (v != null && v.length > 1) {r = devsq(v) / v.length;}return r;}
+public PersianNormalizationFilterFactory(Map<String, String> args) {super(args);if (args.size() > 0) {throw new IllegalArgumentException("Unknown parameters: " + args);}}
+public static WeightedTerm[] getTerms(Query query, boolean prohibited, String fieldName) {Set<WeightedTerm> terms = new HashSet<>();if (fieldName != null) {fieldName = fieldName.intern();}GetTerms(query, terms, prohibited, fieldName);return terms.toArray(new WeightedTerm[0]);}
+public DeleteDocumentationPartResponse deleteDocumentationPart(DeleteDocumentationPartRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationPart(request);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[CHART]\n");buffer.append("    .x                    = ").append("0x").append(HexDump.toHex(x)).append(" (").append(x).append(" )\n");buffer.append("    .y                    = ").append("0x").append(HexDump.toHex(y)).append(" (").append(y).append(" )\n");buffer.append("    .width                = ").append("0x").append(HexDump.toHex(width)).append(" (").append(width).append(" )\n");buffer.append("    .height               = ").append("0x").append(HexDump.toHex(height)).append(" (").append(height).append(" )\n");buffer.append("[/CHART]\n");return buffer.toString();}
+public short get(int index) {checkIndex(index);return backingArray[offset + index];}
+public String toString() {return Image;}
+public ValueEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval arg1) {try {AreaEval reA = evaluateRef(arg0);AreaEval reB = evaluateRef(arg1);AreaEval result = resolveRange(reA, reB);if (result == null) {return ErrorEval.NULL_INTERSECTION;}return result;} catch (EvaluationException e) {return e.getErrorEval();}}
+public void clear() { weightBySpanQuery.clear(); }
+public int findEndOffset(StringBuilder buffer, int start) {if (start > buffer.length() || start < 0) return start;bi.setText(buffer.toString(start, buffer.length() - start));return bi.next() + start;}
+public SrndQuery primaryQuery() {SrndQuery q;switch ((jj_ntk == -1) ? Jj_ntk() : jj_ntk) {case RegexpToken.LPAREN:Jj_consume_token(RegexpToken.LPAREN);q = fieldsQuery();Jj_consume_token(RegexpToken.RPAREN);break;case RegexpToken.OR:case RegexpToken.AND:case RegexpToken.W:case RegexpToken.N:q = prefixOperatorQuery();break;case RegexpToken.TRUNCQUOTED:case RegexpToken.QUOTED:case RegexpToken.SUFFIXTERM:case RegexpToken.TRUNCTERM:case RegexpToken.TERM:q = simpleTerm();break;default:jj_la1[5] = jj_gen;Jj_consume_token(-1);throw new ParseException();}optionalWeights(q);if (true) return q;throw new Exception("Missing return statement in function");}
+public DeleteApiKeyResponse deleteApiKey(DeleteApiKeyRequest request) {request = beforeClientExecution(request);return executeDeleteApiKey(request);}
+public InsertTagsRequest() {super("Ots", "2016-06-20", "InsertTags", "ots", "openAPI");Method = MethodType.POST;}
+public DeleteUserByPrincipalIdResponse deleteUserByPrincipalId(DeleteUserByPrincipalIdRequest request) {request = beforeClientExecution(request);return executeDeleteUserByPrincipalId(request);}
+public DescribeNetworkInterfacesResponse describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {request = beforeClientExecution(request);return executeDescribeNetworkInterfaces(request);}
+public int serialize(int offset, byte[] data, EscherSerializationListener listener) {listener.beforeRecordSerialize(offset, RecordId, this);LittleEndian.putShort(data, offset, Options);LittleEndian.putShort(data, offset + 2, RecordId);LittleEndian.putInt(data, offset + 4, 8);LittleEndian.putInt(data, offset + 8, field_1_numShapes);LittleEndian.putInt(data, offset + 12, field_2_lastMSOSPID);listener.afterRecordSerialize(offset + 16, RecordId, RecordSize, this);return RecordSize;}
+public CreateSecurityConfigurationResponse createSecurityConfiguration(CreateSecurityConfigurationRequest request) {request = beforeClientExecution(request);return executeCreateSecurityConfiguration(request);}
+public DescribeClientVpnConnectionsResponse describeClientVpnConnections(DescribeClientVpnConnectionsRequest request) {request = beforeClientExecution(request);return executeDescribeClientVpnConnections(request);}
+public static void fill(double[] array, double value) {for (int i = 0; i < array.length; i++) {array[i] = value;}}
+public boolean hasNext() {return pos < maxColumn;}
+public DocsEnum reset(int[] postings) {this.postings = postings;upto = -2;freq_Renamed = 0;return this;}
+public boolean hasAll(RevFlagSet set) {return (flags & set.mask) == set.mask;}
+public ModifyAccountResponse modifyAccount(ModifyAccountRequest request) {request = beforeClientExecution(request);return executeModifyAccount(request);}
+public List<Token> lt(int k) {lazyInit();if (k == 0) {return null;}if (k < 0) {return lb(-k);}int i = p + k - 1;sync(i);if (i >= tokens.size()) {return tokens.get(tokens.size() - 1);}return tokens.get(i);}
+public void removeSheet(int sheetIndex) {if (boundsheets.size() > sheetIndex) {records.remove(records.bspos - (boundsheets.size() - 1) + sheetIndex);boundsheets.remove(sheetIndex);fixTabIdRecord();}int sheetNum1Based = sheetIndex + 1;for (int i = 0; i < NumNames; i++) {NameRecord nr = getNameRecord(i);if (nr.sheetNumber == sheetNum1Based) {nr.sheetNumber = 0;} else if (nr.sheetNumber > sheetNum1Based) {nr.sheetNumber = nr.sheetNumber - 1;}}if (linkTable != null) {for (int i = sheetIndex + 1; i < NumSheets + 1; i++) {linkTable.removeSheet(i);}}}
+public void removeName(int index) {names.remove(index);workbook.removeName(index);}
+public boolean equals(Object o) {if (!(o instanceof Property)) return false;Property p = (Property) o;Object pValue = p.getValue();long pId = p.getID();if (id != pId || (id != 0 && !TypesAreEqual(type, p.getType()))) return false;if (value == null && pValue == null) return true;if (value == null || pValue == null) return false;Type valueClass = value.getClass();Type pValueClass = pValue.getClass();if (!(valueClass.isAssignableFrom(pValueClass)) && !(pValueClass.isAssignableFrom(valueClass))) return false;if (value instanceof byte[]) return Arrays.equals((byte[]) value, (byte[]) pValue);return value.equals(pValue);}
+public GetRepoBuildListRequest() {super("cr", "2016-06-07", "GetRepoBuildList", "cr", "openAPI");UriPattern = "/repos/[RepoNamespace]/[RepoName]/build";Method = MethodType.GET;}
+public MessageWriter() {buf = new ByteArrayOutputStream();enc = new OutputStreamWriter(GetRawStream(), Constants.CHARSET);}
+public void append(RecordBase r) {_recs.add(r);}
+public void close() {if (this.read(this.skipBuffer) != -1 || this.actualSize != this.expectedSize) {throw new CorruptObjectException(String.format(JGitText.get().packfileCorruptionDetected, JGitText.get().wrongDecompressedLength));}int used = this._enclosing.bAvail - this.inf.remainingInput;if (0 < used) {this._enclosing.onObjectData(this.src, this._enclosing.buf, this.p, used);this._enclosing.use(used);}this.inf.reset();}
+public DescribeModelPackageResponse describeModelPackage(DescribeModelPackageRequest request) {request = beforeClientExecution(request);return executeDescribeModelPackage(request);}
+public void construct(CellValueRecordInterface rec, RecordStream rs, SharedValueManager sfh) {if (rec instanceof FormulaRecord) {FormulaRecord formulaRec = (FormulaRecord) rec;StringRecord cachedText = null;Class<?> nextClass = rs.peekNextClass();if (nextClass == StringRecord.class) {cachedText = (StringRecord) rs.getNext();} else {cachedText = null;}insertCell(new FormulaRecordAggregate(formulaRec, cachedText, sfh));} else {insertCell(rec);}}
+public Object clone() {return new DeflateDecompressor();}
+public UpdateS3ResourcesResponse updateS3Resources(UpdateS3ResourcesRequest request) {request = beforeClientExecution(request);return executeUpdateS3Resources(request);}
+public GroupQueryNode(IQueryNode query) {if (query == null) {throw new QueryNodeError(new Message(QueryParserMessages.PARAMETER_VALUE_NOT_SUPPORTED, "query", "null"));}Allocate();IsLeaf = false;Add(query);}
+public String toQueryString(IEscapeQuerySyntax escaper) {StringBuilder path = new StringBuilder();path.append("/").append(getFirstPathElement());for (QueryText pathelement : getPathElements(1)) {String value = escaper.escape(new StringCharSequence(pathelement.getValue()), CultureInfo.InvariantCulture, EscapeQuerySyntaxType.STRING).toString();path.append("/\"").append(value).append("\"");}return path.toString();}
+public void removeCellComment() {HSSFComment comment2 = _sheet.findCellComment(_record.row, _record.column);comment = null;if (null == comment2) {return;}(_sheet.drawingPatriarch as HSSFPatriarch).removeShape(comment2);}
+public void reset() {count = 0;Debug.Assert(forwardCount == 0, "pos=" + pos + " forwardCount=" + forwardCount);}
+public ActivateUserResponse activateUser(ActivateUserRequest request) {request = beforeClientExecution(request);return executeActivateUser(request);}
+public boolean isCharsetDetected() {throw new UnsupportedOperationException();}
+public ModifySnapshotCopyRetentionPeriodResponse modifySnapshotCopyRetentionPeriod(ModifySnapshotCopyRetentionPeriodRequest request) {request = beforeClientExecution(request);return executeModifySnapshotCopyRetentionPeriod(request);}
+public DeleteClusterSubnetGroupResponse deleteClusterSubnetGroup(DeleteClusterSubnetGroupRequest request) {request = beforeClientExecution(request);return executeDeleteClusterSubnetGroup(request);}
+public static String decode(byte[] buffer) {return decode(buffer, 0, buffer.length);}
+public int getDefaultPort() {return -1;}
+public StopTaskResponse stopTask(StopTaskRequest request) {request = beforeClientExecution(request);return executeStopTask(request);}
+public void seekExact(BytesRef target, TermState otherState) {if (!target.equals(term_Renamed)) {state.copyFrom(otherState);term_Renamed = BytesRef.deepCopyOf(target);seekPending = true;}}
+public SeriesToChartGroupRecord(RecordInputStream in1) {field_1_chartGroupIndex = in1.ReadShort();}
+public static void writeUnicodeStringFlagAndData(ILittleEndianOutput out1, String value) {boolean is16Bit = HasMultibyte(value);out1.writeByte(is16Bit ? 0x01 : 0x00);if (is16Bit) {PutUnicodeLE(value, out1);} else {PutCompressedUnicode(value, out1);}}
+public AuthorizeSecurityGroupIngressResponse authorizeSecurityGroupIngress(AuthorizeSecurityGroupIngressRequest request) {request = beforeClientExecution(request);return executeAuthorizeSecurityGroupIngress(request);}
+public void addFile(String file) {CheckFileNames(new String[]{file});setFiles.add(file);}
+public void setSize(int width, int height) {this.mWidth = width;this.mHeight = height;}
+public void setPrecedenceFilterSuppressed(boolean value) {if (value) {this.reachesIntoOuterContext |= SUPPRESS_PRECEDENCE_FILTER;} else {this.reachesIntoOuterContext &= ~SUPPRESS_PRECEDENCE_FILTER;}}
+public IntervalSet look(ATNState s, RuleContext ctx) {return look(s, null, ctx);}
+public override void serialize(LittleEndianOutput out1) {out1.writeShort(optionFlags);out1.writeShort(rowHeight);}
+public Builder(boolean dedup) {this.dedup = dedup;}
+public Hashtable(int capacity, float loadFactor) : this(capacity) {if (loadFactor <= 0 || Float.isNaN(loadFactor)) {throw new System.ArgumentException("Load factor: " + loadFactor);}}
+public Object get(String key) {int bucket = normalCompletion.getBucket(key);return bucket == -1 ? null : (Long)bucket;}
+public ListHyperParameterTuningJobsResult listHyperParameterTuningJobs(ListHyperParameterTuningJobsRequest request) {request = beforeClientExecution(request);return executeListHyperParameterTuningJobs(request);}
+public DeleteTableResponse deleteTable(String tableName) {DeleteTableRequest request = new DeleteTableRequest();request.setTableName(tableName);return deleteTable(request);}
+protected boolean lessThan(TextFragment fragA, TextFragment fragB) {if (fragA.getScore() == fragB.getScore())return fragA.getFragNum() > fragB.getFragNum();elsereturn fragA.getScore() < fragB.getScore();}
+public void freeBefore(int pos) {assert pos >= 0;assert pos <= nextPos;int newCount = nextPos - pos;assert newCount <= count;assert newCount <= buffer.length;count = newCount;}
+public UpdateHITTypeOfHITResponse updateHITTypeOfHIT(UpdateHITTypeOfHITRequest request) {request = beforeClientExecution(request);return executeUpdateHITTypeOfHIT(request);}
+public UpdateRecommenderConfigurationResponse updateRecommenderConfiguration(UpdateRecommenderConfigurationRequest request) {request = beforeClientExecution(request);return executeUpdateRecommenderConfiguration(request);}
+public int compareTo(Object other) {BytesRef br = (BytesRef) other;Debug.Assert(br != null);return utf8SortedAsUnicodeSortOrder.compare(this, br);}
+public int stem(char[] s, int len) {if (len > 4 && s[len - 1] == 's') {len--;}if (len > 5 && (StemmerUtil.endsWith(s, len, "ene") || (StemmerUtil.endsWith(s, len, "ane") && useNynorsk))) {return len - 3;}if (len > 4 && (StemmerUtil.endsWith(s, len, "er") || StemmerUtil.endsWith(s, len, "en") || StemmerUtil.endsWith(s, len, "et") || (StemmerUtil.endsWith(s, len, "ar") && useNynorsk))) {return len - 2;}if (len > 3) {switch (s[len - 1]) {case 'a':case 'e':return len - 1;}}return len;}
+public DescribeDBSnapshotsResponse describeDBSnapshots(DescribeDBSnapshotsRequest request) {request = beforeClientExecution(request);return executeDescribeDBSnapshots(request);}
+public SortedSetDocValuesFacetField(String dim, String label) {super("dummy", TYPE);FacetField.verifyLabel(label);FacetField.verifyLabel(dim);this.dim = dim;this.label = label;}
+public CreateDocumentationPartResponse createDocumentationPart(CreateDocumentationPartRequest request) {request = beforeClientExecution(request);return executeCreateDocumentationPart(request);}
+public String getValue() {return value;}
+public override java.nio.ShortBuffer asReadOnlyBuffer() {return duplicate();}
+public UpdateDataSourcePermissionsResult updateDataSourcePermissions(UpdateDataSourcePermissionsRequest request) {request = beforeClientExecution(request);return executeUpdateDataSourcePermissions(request);}
+public static Record createSingleRecord(RecordInputStream in1) {if (_recordCreatorsById.containsKey(in1.getSid())) {I_RecordCreator constructor = _recordCreatorsById.get(in1.getSid());return constructor.create(in1);} else {return new UnknownRecord(in1);}}
+# Step 1: The method is named 'getCount' and follows C# PascalCase naming.# Step 2: In Java, rename the method to 'getCount' to follow lowerCamelCase naming.# Step 3: Keep the return type 'int' unchanged but follow Java method return type formatting.# Step 4: Access the enclosing instance's 'mTabLayout' and call its 'getChildCount' method to return the count.# Step 5: The final summary: Translate C# method call to Java method call, preserving the return type and method naming.
+public DeleteApplicationReferenceDataSourceResponse deleteApplicationReferenceDataSource(DeleteApplicationReferenceDataSourceRequest request) {request = beforeClientExecution(request);return executeDeleteApplicationReferenceDataSource(request);}
+public CreateProjectVersionResponse createProjectVersion(CreateProjectVersionRequest request) {request = beforeClientExecution(request);return executeCreateProjectVersion(request);}
+public java.nio.IntBuffer slice() {return new java.nio.ReadOnlyIntArrayBuffer(remaining(), backingArray, offset + _position);}
+public final byte get() {throw new UnsupportedOperationException();}
+public override java.nio.LongBuffer put(int index, long c) {checkIndex(index);backingArray[offset + index] = c;return this;}
+public StoredField(String name, float value) : base(name, TYPE) {FieldsData = new Single(value);}
+public List<Integer> getExpectedTokensWithinCurrentRule() {ATN atn = Interpreter.atn;ATNState s = atn.states[State];return atn.NextTokens(s);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[FILESHARING]\n");buffer.append("    .Readonly       = ").append(ReadOnly == 1 ? "true" : "false").append("\n");buffer.append("    .password       = ").append(StringUtil.toHexString(Password)).append("\n");buffer.append("    .username       = ").append(Username).append("\n");buffer.append("[/FILESHARING]\n");return buffer.toString();}
+protected SubmoduleInitCommand(Repository repo) {super(repo);paths = new AList<String>();}
+public void include(String name, AnyObjectId id) {if (!Repository.isValidRefName(name)) {throw new IllegalArgumentException(String.format(JGitText.get().invalidRefName, name));}if (include.containsKey(name)) {throw new InvalidOperationException(JGitText.get().duplicateRef + name);}include.put(name, id.toObjectId());}
+public EnableSnapshotCopyResponse enableSnapshotCopy(EnableSnapshotCopyRequest request) {request = beforeClientExecution(request);return executeEnableSnapshotCopy(request);}
+public ValueFiller getValueFiller() {return new ValueFillerAnonymousInnerClassHelper(this);}
+public void serialize(ILittleEndianOutput out1) {out1.WriteByte(Pane);out1.WriteShort(ActiveCellRow);out1.WriteShort(ActiveCellCol);out1.WriteShort(ActiveCellRef);int nRefs = field_6_refs.length;out1.WriteShort(nRefs);for (int i = 0; i < field_6_refs.length; i++) {field_6_refs[i].serialize(out1);}}
+public static Counter newCounter() {return new Counter();}
+public int Get(String name, int dflt) {int[] vals;Object temp;if (valByRound.TryGetValue(name, out temp) && temp != null) {vals = (int[]) temp;return vals[roundNumber % vals.Length];}String sval;if (!props.TryGetValue(name, out sval)) {sval = Integer.toString(dflt, CultureInfo.InvariantCulture);}if (sval.indexOf(':') < 0) {return Integer.parseInt(sval, CultureInfo.InvariantCulture);}int k = sval.indexOf(':');String colName = sval.substring(0, k);sval = sval.substring(k + 1);colForValByRound.put(name, colName);vals = PropToInt32Array(sval);valByRound.put(name, vals);return vals[roundNumber % vals.length];}
+public void preSerialize() {if (records.tabpos > 0) {TabIdRecord tir = (TabIdRecord) records.get(records.tabpos);if (tir.getTabids().length < boundsheets.size()) {fixTabIdRecord();}}}
+public LimitTokenCountAnalyzer(Analyzer delegate, int maxTokenCount, boolean consumeAllTokens) {super(delegate.getStrategy());this.delegate = delegate;this.maxTokenCount = maxTokenCount;this.consumeAllTokens = consumeAllTokens;}
+public ExternalBookBlock(int numberOfSheets) {_externalBookRecord = SupBookRecord.CreateInternalReferences((short)numberOfSheets);_externalNameRecords = new ExternalNameRecord[0];_crnBlocks = new CRNBlock[0];}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[SCENARIOPROTECT]\n");buffer.append("    .protect         = ").append(protect).append("\n");buffer.append("[/SCENARIOPROTECT]\n");return buffer.toString();}
+public NGit.Api.PushCommand setThin(boolean thin) {checkCallable();this.thin = thin;return this;}
+public int compareTo(SearcherTracker other) {return other.recordTimeSec.compareTo(recordTimeSec);}
+public ReverseStringFilter create(TokenStream input) {return new ReverseStringFilter(m_luceneMatchVersion, input);}
+public BlockList() {directory = NGit.Util.BlockList<T>.NewDirectory(256);directory[0] = NGit.Util.BlockList<T>.NewBlock();tailBlock = directory[0];}
+public QueryScorer(WeightedSpanTerm[] weightedTerms) {this.fieldWeightedSpanTerms = new JCG.Dictionary<String, WeightedSpanTerm>(weightedTerms.length);for (WeightedSpanTerm t : weightedTerms) {if (!fieldWeightedSpanTerms.tryGetValue(t.term, out WeightedSpanTerm existingTerm) || (existingTerm == null) || (existingTerm.weight < t.weight)) {fieldWeightedSpanTerms.put(t.term, t);maxTermWeight = Math.max(maxTermWeight, t.weight);}}skipInitExtractor = true;}
+public boolean equals(Object other) {assertNeverEquals(other);if (other instanceof MergedGroup<T> otherMergedGroup) {if (groupValue == null) {return otherMergedGroup == null;} else {return groupValueIsValueType ? JCG.EqualityComparer<T>.Default.equals(groupValue, otherMergedGroup.groupValue) : J2N.Collections.StructuralEqualityComparer.Default.equals(groupValue, otherMergedGroup.groupValue);}} else {return false;}}
+public java.nio.charset.Charset charset() {return cs;}
+public DescribeExperimentResponse describeExperiment(DescribeExperimentRequest request) {request = beforeClientExecution(request);return executeDescribeExperiment(request);}
+public EscherGraphics(HSSFShapeGroup escherGroup, HSSFWorkbook workbook, Color forecolor, float verticalPointsPerPixel) {this.escherGroup = escherGroup;this.workbook = workbook;this.verticalPointsPerPixel = verticalPointsPerPixel;this.verticalPixelsPerPoint = 1 / verticalPointsPerPixel;this.font = new Font("Arial", 10);this.foreground = forecolor;}
+public String pattern() {return patternText;}
+public DeleteRouteTableResponse deleteRouteTable(DeleteRouteTableRequest request) {request = beforeClientExecution(request);return executeDeleteRouteTable(request);}
+public AssociateVPCWithHostedZoneResponse associateVPCWithHostedZone(AssociateVPCWithHostedZoneRequest request) {request = beforeClientExecution(request);return executeAssociateVPCWithHostedZone(request);}
+public PutIntegrationResponse putIntegration(PutIntegrationRequest request) {request = beforeClientExecution(request);return executePutIntegration(request);}
+public SimpleEntry(K theKey, V theValue) {key = theKey;value = theValue;}
+public void decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {int byte0 = blocks[blocksOffset++] & 0xFF;int byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = (byte0 << 4) | ((int)((uint)byte1 >> 4));int byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 8) | byte2;}}
+public DisassociateConnectionFromLagResponse disassociateConnectionFromLag(DisassociateConnectionFromLagRequest request) {request = beforeClientExecution(request);return executeDisassociateConnectionFromLag(request);}
+public FileMode getOldMode(){return oldMode;}
+public String toString() {return mapEntry.toString();}
+public StopKeyPhrasesDetectionJobResult stopKeyPhrasesDetectionJob(StopKeyPhrasesDetectionJobRequest request) {request = beforeClientExecution(request);return executeStopKeyPhrasesDetectionJob(request);}
+public String toString() {StringBuilder buffer = new StringBuilder("[Array Formula or Shared Formula]\n");buffer.append("row = ").append(row).append("\n");buffer.append("col = ").append(column).append("\n");return buffer.toString();}
+public ListDominantLanguageDetectionJobsResult listDominantLanguageDetectionJobs(ListDominantLanguageDetectionJobsRequest request) {request = beforeClientExecution(request);return executeListDominantLanguageDetectionJobs(request);}
+public String toString() {return "slice start=" + start + " length=" + length + " readerIndex=" + readerIndex;}
+public static int parseHexInt4(byte digit) {sbyte r = digits16[digit];if (r < 0) {throw new IndexOutOfRangeException();}return r;}
+public Attribute(String name, String value) {_name = name;_value = value;}
+public DescribeStackSetOperationResponse describeStackSetOperation(DescribeStackSetOperationRequest request) {request = beforeClientExecution(request);return executeDescribeStackSetOperation(request);}
+public ICell getCell(short cellnum) {int ushortCellNum = cellnum & 0x0000FFFF;return getCell(ushortCellNum);}
+public void write(byte[] b) {writeContinueIfRequired(b.length);_ulrOutput.write(b);}
+public ResetImageAttributeRequest(String imageId, ResetImageAttributeName attribute) {this._imageId = imageId;this._attribute = attribute;}
+public void discardResultContents() {resultContents = null;}
+public ObjectId getPeeledObjectId() {return getLeaf().getPeeledObjectId();}
+public ListUndeprecateDomainResult undeprecateDomain(ListUndeprecateDomainRequest request) {request = beforeClientExecution(request);return executeUndeprecateDomain(request);}
+public void write(ILittleEndianOutput out1) {out1.writeByte(sid + PtgClass);out1.writeByte(field_3_string.length());out1.writeByte(_is16bitUnicode ? 0x01 : 0x00);if (_is16bitUnicode) {StringUtil.putUnicodeLE(field_3_string, out1);} else {StringUtil.putCompressedUnicode(field_3_string, out1);}}
+public DeleteQueueResponse deleteQueue(String queueUrl) {DeleteQueueRequest request = new DeleteQueueRequest();request.setQueueUrl(queueUrl);return deleteQueue(request);}
+public void setCheckEofAfterPackFooter(boolean b) {this.checkEofAfterPackFooter = b;}
+public void swap() {int tempBegin = beginA;int tempEnd = endA;beginA = beginB;endA = endB;beginB = tempBegin;endB = tempEnd;}
+public int getPackedGitWindowSize() {return packedGitWindowSize;}
+public PutMetricDataResponse putMetricData(PutMetricDataRequest request) {request = beforeClientExecution(request);return executePutMetricData(request);}
+public GetCelebrityRecognitionResponse getCelebrityRecognition(GetCelebrityRecognitionRequest request) {request = beforeClientExecution(request);return executeGetCelebrityRecognition(request);}
+public CreateQueueRequest(String queueName) {this._queueName = queueName;}
+public Area3DPxg(int externalWorkbookNumber, SheetIdentifier sheetName, AreaReference arearef) : base(arearef) {this.externalWorkbookNumber = externalWorkbookNumber;this.firstSheetName = sheetName.getSheetId().getName();if (sheetName instanceof SheetRangeIdentifier) {this.lastSheetName = ((SheetRangeIdentifier) sheetName).getLastSheetIdentifier().getName();} else {this.lastSheetName = null;}}
+public void setBaseline(long clockTime) {t0 = clockTime;timeout = t0 + ticksAllowed;}
+public ListMoveAddressToVpcResult moveAddressToVpc(MoveAddressToVpcRequest request) {request = beforeClientExecution(request);return executeMoveAddressToVpc(request);}
+public String toString() {String coll = m_collectionModel.getName();if (coll != null) {return String.format("LM %s - %s", getName(), coll);} else {return String.format("LM %s", getName());}}
+public DescribeLagsResponse describeLags(DescribeLagsRequest request) {request = beforeClientExecution(request);return executeDescribeLags(request);}
+public AreaEval offset(int relFirstRowIx, int relLastRowIx, int relFirstColIx, int relLastColIx) {if (_refEval == null) {return _areaEval.offset(relFirstRowIx, relLastRowIx, relFirstColIx, relLastColIx);}return _refEval.offset(relFirstRowIx, relLastRowIx, relFirstColIx, relLastColIx);}
+public override java.nio.ShortBuffer put(short[] src, int srcOffset, int shortCount) {byteBuffer.limit(_limit * libcore.io.SizeOf.SHORT);byteBuffer.position(_position * libcore.io.SizeOf.SHORT);if (byteBuffer instanceof java.nio.ReadWriteDirectByteBuffer) {((java.nio.ReadWriteDirectByteBuffer) byteBuffer).put(src, srcOffset, shortCount);} else {((java.nio.ReadWriteHeapByteBuffer) byteBuffer).put(src, srcOffset, shortCount);}this._position += shortCount;return this;}
+public override void initialize(String cat) {this._cat = cat;}
+public void write(int oneByte) {throw new UnsupportedOperationException("Not implemented");}
+public DescribeImportImageTasksResponse describeImportImageTasks(DescribeImportImageTasksRequest request) {request = beforeClientExecution(request);return executeDescribeImportImageTasks(request);}
+public ColumnInfoRecord(RecordInputStream in1) {_first_col = in1.ReadUShort();_last_col = in1.ReadUShort();_col_width = in1.ReadUShort();_xf_index = in1.ReadUShort();_options = in1.ReadUShort();switch (in1.Remaining) {case 2:field_6_reserved = in1.ReadUShort();break;case 1:field_6_reserved = in1.ReadByte();break;case 0:field_6_reserved = 0;break;default:throw new Exception("Unusual record size remaining=(" + in1.Remaining + ")");}}
+public Status(IndexDiff diff) : base() {this.diff = diff;clean = diff.GetAdded().IsEmpty() && diff.GetChanged().IsEmpty() && diff.GetRemoved().IsEmpty() && diff.GetMissing().IsEmpty() && diff.GetModified().IsEmpty() && diff.GetUntracked().IsEmpty() && diff.GetConflicting().IsEmpty();}
+public CreateExperimentResponse createExperiment(CreateExperimentRequest request) {request = beforeClientExecution(request);return executeCreateExperiment(request);}
+public Object clone() {return this;}
+public FloatBuffer slice() {byteBuffer.limit(_limit * libcore.io.SizeOf.FLOAT);byteBuffer.position(_position * libcore.io.SizeOf.FLOAT);java.nio.ByteBuffer bb = byteBuffer.slice().order(byteBuffer.order());java.nio.FloatBuffer result = new java.nio.FloatToByteBufferAdapter(bb);byteBuffer.clear();return result;}
+public ListDescribeSnapshotSchedulesResult describeSnapshotSchedules(DescribeSnapshotSchedulesRequest request) {request = beforeClientExecution(request);return executeDescribeSnapshotSchedules(request);}
+public ListImagesResult listImages(ListImagesRequest request) {request = beforeClientExecution(request);return executeListImages(request);}
+public Diff(int insertions, int deletions, int replacements, int noop) {INSERT = insertions;DELETE = deletions;REPLACE = replacements;NOOP = noop;}
+public String toFormulaString(String[] operands) {StringBuffer buffer = new StringBuffer();buffer.append(operands[0]);buffer.append(",");buffer.append(operands[1]);return buffer.toString();}
+public static void setupEnvironment(String[] workbookNames, ForkedEvaluator[] evaluators) {WorkbookEvaluator[] wbEvals = new WorkbookEvaluator[evaluators.length];for (int i = 0; i < wbEvals.length; i++) {wbEvals[i] = evaluators[i]._evaluator;}CollaboratingWorkbooksEnvironment.setup(workbookNames, wbEvals);}
+public ListPhotoTagsRequest() : base("CloudPhoto", "2017-07-11", "ListPhotoTags", "cloudphoto", "openAPI") {Protocol = ProtocolType.HTTPS;}
+public RandomSamplingFacetsCollector(int sampleSize, long seed) {super(false);this.sampleSize = sampleSize;this.random = new XORShift64Random(seed);this.sampledDocs = null;}
+public AllocateStaticIpResponse allocateStaticIp(AllocateStaticIpRequest request) {request = beforeClientExecution(request);return executeAllocateStaticIp(request);}
+public FeatRecord(RecordInputStream in1) {futureHeader = new FtrHeader(in1);isf_sharedFeatureType = in1.ReadShort();reserved1 = (byte) in1.ReadByte();reserved2 = in1.ReadInt();int cref = in1.ReadUShort();cbFeatData = in1.ReadInt();reserved3 = in1.ReadShort();cellRefs = new CellRangeAddress[cref];for (int i = 0; i < cellRefs.Length; i++) {cellRefs[i] = new CellRangeAddress(in1);}switch (isf_sharedFeatureType) {case FeatHdrRecord.SHAREDFEATURES_ISFPROTECTION:sharedFeature = new FeatProtection(in1);break;case FeatHdrRecord.SHAREDFEATURES_ISFFEC2:sharedFeature = new FeatFormulaErr2(in1);break;case FeatHdrRecord.SHAREDFEATURES_ISFFACTOID:sharedFeature = new FeatSmartTag(in1);break;default:logger.Log(POILogger.ERROR, "Unknown Shared Feature " + isf_sharedFeatureType + " found!");break;}}
+public List<RevCommit> tryFastForward(RevCommit newCommit) {Ref head = repo.getRef(Constants.HEAD);if (head == null || head.getObjectId() == null) {throw new RefNotFoundException(MessageFormat.format(JGitText.get().refNotResolved, Constants.HEAD));}ObjectId headId = head.getObjectId();if (headId == null) {throw new RefNotFoundException(MessageFormat.format(JGitText.get().refNotResolved, Constants.HEAD));}RevCommit headCommit = walk.lookupCommit(headId);if (walk.isMergedInto(newCommit, headCommit)) {return newCommit;}String headName;if (head.isSymbolic()) {headName = head.getTarget().getName();} else {headName = "detached HEAD";}return tryFastForward(headName, headCommit, newCommit);}
+public CreateSnapshotScheduleResponse createSnapshotSchedule(CreateSnapshotScheduleRequest request) {request = beforeClientExecution(request);return executeCreateSnapshotSchedule(request);}
+public Record getNext() {if (_nextIndex >= _list.size()) {throw new Exception("Attempt to Read past end of record stream");}_countRead++;return (Record)_list.get(_nextIndex++);}
+public override String toString() {return RawParseUtils.Decode(buf.ToByteArray());}
+public ListTablesRequest(String exclusiveStartTableName) {_exclusiveStartTableName = exclusiveStartTableName;}
+public EnableAlarmActionsResponse enableAlarmActions(EnableAlarmActionsRequest request) {request = beforeClientExecution(request);return executeEnableAlarmActions(request);}
+public Builder(): base() {lastDocID = -1;wordNum = -1;word = 0;}
+public boolean equals(Object obj) {if (this == obj) return true;if (obj == null || getClass() != obj.getClass()) return false;State other = (State) obj;return is_final == other.is_final && Arrays.equals(this.labels, other.labels) && this.states == other.states;}
+public EnglishPossessiveFilter create(TokenStream input) {return new EnglishPossessiveFilter(m_luceneMatchVersion, input);}
+public void clearFormatting() {_string = cloneStringIfRequired();_string.clearFormatting();addToSSTIfRequired();}
+public int Get(int index, long[] arr, int off, int len) {assert len > 0 : "len must be > 0 (got " + len + ")";assert index >= 0 && index < valueCount;len = Math.min(len, valueCount - index);Arrays.fill(arr, off, off + len, 0);return len;}
+public DeleteRouteResponseResponse deleteRouteResponse(DeleteRouteResponseRequest request) {request = beforeClientExecution(request);return executeDeleteRouteResponse(request);}
+public String toPrivateString() {return format(true, false);}
+public CreatePresignedDomainUrlResult createPresignedDomainUrl(CreatePresignedDomainUrlRequest request) {request = beforeClientExecution(request);return executeCreatePresignedDomainUrl(request);}
+public void write(int oneChar) {doWrite(new char[] { (char) oneChar }, 0, 1);}
+public SSTRecord getSSTRecord() {return sstRecord;}
+public String toString() {return "term=" + term + ",field=" + field + ",value=" + value;}
+public boolean isSaturated(FuzzySet bloomFilter, FieldInfo fieldInfo) {return bloomFilter.getSaturation() > 0.9f;}
+public Builder(boolean ignoreCase) {this.ignoreCase = ignoreCase;}
+public String toString() {return getClass().getSimpleName() + "(maxBasicQueries: " + maxBasicQueries + ", queriesMade: " + queriesMade + ")";}
+public DeleteDataSourceResponse deleteDataSource(DeleteDataSourceRequest request) {request = beforeClientExecution(request);return executeDeleteDataSource(request);}
+public RebootNodeResponse rebootNode(RebootNodeRequest request) {request = beforeClientExecution(request);return executeRebootNode(request);}
+public void processChildRecords() {convertRawBytesToEscherRecords();}
+public CreateOrUpdateTagsResult createOrUpdateTags(CreateOrUpdateTagsRequest request) {request = beforeClientExecution(request);return executeCreateOrUpdateTags(request);}
+public FileSnapshot getSnapShot() {return snapShot;}
+public InputStream openResource(String resource) {InputStream stream = this.clazz.getClassInfo().getAssembly().findAndGetManifestResourceStream(clazz, resource);if (stream == null) {throw new IOException("Resource not found: " + resource);}return stream;}
+public String toString() {StringBuilder sb = new StringBuilder(64);sb.append(getClass().getName()).append(" [");sb.append("sid=").append(HexDump.ShortToHex(_sid));sb.append(" size=").append(_data.length);sb.append(" : ").append(HexDump.ToHex(_data));sb.append("]\n");return sb.toString();}
+public int nextIndex() {return index;}
+public String toQueryString(IEscapeQuerySyntax escaper) {if (isDefaultField(this.m_field)) {return "\"" + getTermEscapeQuoted(escaper) + "\"";} else {return this.m_field + ":" + "\"" + getTermEscapeQuoted(escaper) + "\"";}}
+public Object clone() {CalcModeRecord rec = new CalcModeRecord();rec.field_1_calcmode = field_1_calcmode;return rec;}
+public boolean isOutput() {return output;}
+public CreateNetworkInterfaceResponse createNetworkInterface(CreateNetworkInterfaceRequest request) {request = beforeClientExecution(request);return executeCreateNetworkInterface(request);}
+public void serialize(ILittleEndianOutput out1) {out1.writeShort(field_1_password);}
+public StopDominantLanguageDetectionJobResponse stopDominantLanguageDetectionJob(StopDominantLanguageDetectionJobRequest request) {request = beforeClientExecution(request);return executeStopDominantLanguageDetectionJob(request);}
+public void withConnectionTimeout(int milliseconds) {connectionTimeoutInMilliseconds = milliseconds;}
+public GetGatewayGroupResponse getGatewayGroup(GetGatewayGroupRequest request) {request = beforeClientExecution(request);return executeGetGatewayGroup(request);}
+public java.nio.FloatBuffer slice() {return new java.nio.ReadOnlyFloatArrayBuffer(remaining(), backingArray, offset + _position);}
+public static String join(Collection<String> parts, String separator, String lastSeparator) {StringBuilder sb = new StringBuilder();int i = 0;int lastIndex = parts.size() - 1;for (String part : parts) {sb.append(part);if (i == lastIndex - 1) {sb.append(lastSeparator);} else {if (i != lastIndex) {sb.append(separator);}}i++;}return sb.toString();}
+public String toString() {return "(" + a.toString() + " AND " + b.toString() + ")";}
+public ListSubscriptionsByTopicRequest(String topicArn, String nextToken) {this._topicArn = topicArn;this._nextToken = nextToken;}
+public byte readByte() {return bytes[pos--];}
+public ListTerminateClientVpnConnectionsResult terminateClientVpnConnections(TerminateClientVpnConnectionsRequest request) {request = beforeClientExecution(request);return executeTerminateClientVpnConnections(request);}
+public ReceiveMessageRequest(String queueUrl) {_queueUrl = queueUrl;}
+public void serialize(ILittleEndianOutput out1) {out1.writeShort(field_1_barSpace);out1.writeShort(field_2_categorySpace);out1.writeShort(field_3_formatFlags);}
+public T common(T output1, T output2) {return outputs.Common((T)output1, (T)output2);}
+public CreateVariableResponse createVariable(CreateVariableRequest request) {request = beforeClientExecution(request);return executeCreateVariable(request);}
+public static int match(byte[] b, int ptr, byte[] src) {if (ptr + src.length > b.length) {return -1;}for (int i = 0; i < src.length; i++, ptr++) {if (b[ptr] != src[i]) {return -1;}}return ptr;}
+public int fillFields(byte[] data, int offset, IEscherRecordFactory recordFactory) {int bytesRemaining = readHeader(data, offset);int pos = offset + 8;int size = 0;field_1_rectX1 = LittleEndian.getInt(data, pos + size);size += 4;field_2_rectY1 = LittleEndian.getInt(data, pos + size);size += 4;field_3_rectX2 = LittleEndian.getInt(data, pos + size);size += 4;field_4_rectY2 = LittleEndian.getInt(data, pos + size);size += 4;bytesRemaining -= size;if (bytesRemaining != 0) throw new RecordFormatException("Expected no remaining bytes but got " + bytesRemaining);return 8 + size + bytesRemaining;}
+public CreateCloudFrontOriginAccessIdentityResult createCloudFrontOriginAccessIdentity(CreateCloudFrontOriginAccessIdentityRequest request) {request = beforeClientExecution(request);return executeCreateCloudFrontOriginAccessIdentity(request);}
+public boolean isNamespaceAware() {return getFeature(org.xmlpull.v1.XmlPullParserClass.FEATURE_PROCESS_NAMESPACES);}
+public void setOverridable(boolean on) {overridable = on;}
+public String getClassName(){return className;}
+public DirectoryReader getIndexReader() {synchronized (this) {if (indexReader != null) {indexReader.incRef();}return indexReader;}}
+public int indexOfKey(int key) {return binarySearch(mKeys, 0, mSize, key);}
+public BlankRecord(RecordInputStream in1) {field_1_row = in1.ReadUShort();field_2_col = in1.ReadShort();field_3_xf = in1.ReadShort();}
+public long length() {return length_Renamed;}
+public PasswordRecord(RecordInputStream in1) {field_1_password = in1.ReadShort();}
+public HashMap(int capacity, float loadFactor) {this(capacity);if (loadFactor <= 0 || Float.isNaN(loadFactor)) {throw new IllegalArgumentException("Load factor: " + loadFactor);}}
+public override void run() {long lastReopenStartNS = System.DateTime.UtcNow.Ticks * 100;while (!finish) {boolean hasWaiting;synchronized (this) {hasWaiting = waitingGen > searchingGen;}long nextReopenStartNS = lastReopenStartNS + (hasWaiting ? targetMinStaleNS : targetMaxStaleNS);long sleepNS = nextReopenStartNS - Time.nanoTime();if (sleepNS > 0) {try {reopenCond.wait(java.time.Duration.ofMillis(sleepNS / Time.MILLISECONDS_PER_NANOSECOND));} catch (InterruptedException ie) {Thread.currentThread().interrupt();return;}}if (finish) {break;}lastReopenStartNS = Time.nanoTime();refreshStartGen = writer.getAndIncrementGeneration();try {manager.maybeRefreshBlocking();} catch (java.io.IOException ioe) {throw new Exception(ioe.toString(), ioe);}}refreshDone();}
+public DeleteLoginProfileRequest(String userName) {this.userName = userName;}
+public E pollFirst() {return (_size == 0) ? null : removeFirstImpl();}
+public CreatePhotoRequest() : base("CloudPhoto", "2017-07-11", "CreatePhoto", "cloudphoto", "openAPI") {Protocol = ProtocolType.HTTPS;}
+public String getName() {return "resolve";}
+public int findEndOffset(StringBuilder buffer, int start) {if (start > buffer.length() || start < 0) return start;int offset, count = m_maxScan;for (offset = start; offset < buffer.length() && count > 0; count--) {if (m_boundaryChars.contains(buffer.charAt(offset))) return offset;offset++;}return start;}
+public void setObjectChecker(ObjectChecker oc) {this.objCheck = oc;}
+public BaseRef(AreaEval ae) {_refEval = null;_areaEval = ae;_firstRowIndex = ae.getFirstRow();_firstColumnIndex = ae.getFirstColumn();_height = ae.getLastRow() - ae.getFirstRow() + 1;_width = ae.getLastColumn() - ae.getFirstColumn() + 1;}
+public CreateVpcEndpointResponse createVpcEndpoint(CreateVpcEndpointRequest request) {request = beforeClientExecution(request);return executeCreateVpcEndpoint(request);}
+public DeregisterWorkspaceDirectoryResult deregisterWorkspaceDirectory(DeregisterWorkspaceDirectoryRequest request) {request = beforeClientExecution(request);return executeDeregisterWorkspaceDirectory(request);}
+public ChartFRTInfoRecord(RecordInputStream in1) {rt = in1.readShort();grbitFrt = in1.readShort();verOriginator = (byte) in1.readByte();verWriter = (byte) in1.readByte();int cCFRTID = in1.readShort();rgCFRTID = new CFRTID[cCFRTID];for (int i = 0; i < cCFRTID; i++) {rgCFRTID[i] = new CFRTID(in1);}}
+public StrategyOneSided.OneSide newMerger(Repository db) {return new StrategyOneSided.OneSide(db, treeIndex);}
+public CreateDataSourceFromRedshiftResponse createDataSourceFromRedshift(CreateDataSourceFromRedshiftRequest request) {request = beforeClientExecution(request);return executeCreateDataSourceFromRedshift(request);}
+public void clearDFA() {for (int d = 0; d < decisionToDFA.length; d++) {decisionToDFA[d] = new DFA(atn.getDecisionState(d), d);}}
+public void removeName(String name) {int index = getNameIndex(name);removeName(index);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[RightMargin]\n");buffer.append("    .margin               = ").append(" (").append(Margin).append(" )\n");buffer.append("[/RightMargin]\n");return buffer.toString();}
+public Object clone() {return new RefreshAllRecord(_options);}
+public StandardQueryNodeProcessorPipeline(QueryConfigHandler queryConfig) : base(queryConfig) {add(new WildcardQueryNodeProcessor());add(new MultiFieldQueryNodeProcessor());add(new FuzzyQueryNodeProcessor());add(new MatchAllDocsQueryNodeProcessor());add(new OpenRangeQueryNodeProcessor());add(new NumericQueryNodeProcessor());add(new NumericRangeQueryNodeProcessor());add(new LowercaseExpandedTermsQueryNodeProcessor());add(new TermRangeQueryNodeProcessor());add(new AllowLeadingWildcardProcessor());add(new AnalyzerQueryNodeProcessor());add(new PhraseSlopQueryNodeProcessor());add(new BooleanQuery2ModifierNodeProcessor());add(new NoChildOptimizationQueryNodeProcessor());add(new RemoveDeletedQueryNodesProcessor());add(new RemoveEmptyNonLeafQueryNodeProcessor());add(new BooleanSingleChildOptimizationQueryNodeProcessor());add(new DefaultPhraseSlopQueryNodeProcessor());add(new BoostQueryNodeProcessor());add(new MultiTermRewriteMethodProcessor());}
+public String formatAsString(String sheetName, boolean useAbsoluteAddress) {StringBuilder sb = new StringBuilder();if (sheetName != null) {sb.append(SheetNameFormatter.format(sheetName));sb.append("!");}CellReference cellRefFrom = new CellReference(FirstRow, FirstColumn, useAbsoluteAddress, useAbsoluteAddress);CellReference cellRefTo = new CellReference(LastRow, LastColumn, useAbsoluteAddress, useAbsoluteAddress);sb.append(cellRefFrom.formatAsString());if (!cellRefFrom.equals(cellRefTo) || IsFullColumnRange || IsFullRowRange) {sb.append(':');sb.append(cellRefTo.formatAsString());}return sb.toString();}
+public ByteBuffer put(int index, byte value) {throw new NotImplementedException();}
+public void mode(int m) {_mode = m;}
+public ShortBuffer slice() {return new java.nio.ReadWriteShortArrayBuffer(remaining(), backingArray, offset + position);}
+public void set(int index, long n) {if (count < index) {throw createIndexOutOfRangeException(index);} else {if (count == index) {add(n);} else {entries[index] = n;}}}
+public ByteBuffer putFloat(float value) {throw new ReadOnlyBufferException();}
+public static double max(double[] values) {double max = Double.NEGATIVE_INFINITY;for (int i = 0, iSize = values.length; i < iSize; i++) {max = Math.max(max, values[i]);}return max;}
+public UpdateRepoWebhookRequest() {super("cr", "2016-06-07", "UpdateRepoWebhook", "cr", "openAPI");UriPattern = "/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]";Method = MethodType.POST;}
+public DeleteAttributesRequest(String domainName, String itemName, List<Attribute> attributes, UpdateCondition expected) {this._domainName = domainName;this._itemName = itemName;this._attributes = attributes;this._expected = expected;}
+public String toString() {StringBuilder sb = new StringBuilder();sb.append("[SXPI]\n");for (int i = 0; i < _fieldInfos.length; i++) {sb.append("    item[").append(i).append("]=");_fieldInfos[i].appendDebugInfo(sb);sb.append('\n');}sb.append("[/SXPI]\n");return sb.toString();}
+public boolean isSuccessful() {if (mergeResult != null) {return mergeResult.getMergeStatus().isSuccessful();} else {if (rebaseResult != null) {return rebaseResult.getStatus().isSuccessful();}}return true;}
+public void setBytesValue(byte[] value) {SetBytesValue(new BytesRef(value));}
+public DescribeConnectionsResponse describeConnections(DescribeConnectionsRequest request) {request = beforeClientExecution(request);return executeDescribeConnections(request);}
+public DeletePhotosRequest() {super("CloudPhoto", "2017-07-11", "DeletePhotos", "cloudphoto", "openAPI");Protocol = ProtocolType.HTTPS;}
+public void add(E @object) {iterator.add(@object);subList.sizeChanged(true);end++;}
+public static java.nio.ByteBuffer allocate(int capacity_1) {if (capacity_1 < 0) {throw new IllegalArgumentException();}return new java.nio.ReadWriteHeapByteBuffer(capacity_1);}
+public SrndQuery getSubQuery(int qn) { return m_queries[qn]; }
+public float currentScore(int docId, String field, int start, int end, int numPayloadsSeen, float currentScore, float currentPayloadScore) {if (numPayloadsSeen == 0) {return currentPayloadScore;} else {return Math.min(currentPayloadScore, currentScore);}}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("row       = ").append(HexDump.shortToHex(row)).append("\n");buffer.append("col       = ").append(HexDump.shortToHex(col)).append("\n");buffer.append("xf        = ").append(HexDump.shortToHex(xf)).append("\n");return buffer.toString();}
+public DescribeLogPatternResponse describeLogPattern(DescribeLogPatternRequest request) {request = beforeClientExecution(request);return executeDescribeLogPattern(request);}
+public RegisterTransitGatewayMulticastGroupMembersResponse registerTransitGatewayMulticastGroupMembers(RegisterTransitGatewayMulticastGroupMembersRequest request) {request = beforeClientExecution(request);return executeRegisterTransitGatewayMulticastGroupMembers(request);}
+public GetPhoneNumberSettingsResponse getPhoneNumberSettings(GetPhoneNumberSettingsRequest request) {request = beforeClientExecution(request);return executeGetPhoneNumberSettings(request);}
+public Object getData() {return data;}
+public boolean isDirect() {return false;}
+public DeleteServerCertificateRequest(String serverCertificateName) {this._serverCertificateName = serverCertificateName;}
+public java.lang.StringBuffer append(boolean b) {return append(b ? "true" : "false");}
+public GetEvaluationResponse getEvaluation(GetEvaluationRequest request) {request = beforeClientExecution(request);return executeGetEvaluation(request);}
+public String getDataName() {return dataName;}
+public boolean find(int start_1) {findPos = start_1;if (findPos < _regionStart) {findPos = _regionStart;} else {if (findPos >= _regionEnd) {matchFound = false;return false;}}matchFound = findImpl(address, input, findPos, matchOffsets);if (matchFound) {findPos = matchOffsets[1];}return matchFound;}
+public GetLifecyclePolicyPreviewResponse getLifecyclePolicyPreview(GetLifecyclePolicyPreviewRequest request) {request = beforeClientExecution(request);return executeGetLifecyclePolicyPreview(request);}
+public SinglePositionTokenStream(String word) {termAtt = addAttribute(ICharTermAttribute.class);posIncrAtt = addAttribute(IPositionIncrementAttribute.class);this.word = word;returned = true;}
+public void serialize(ILittleEndianOutput out) {out.writeInt(field_1_print_gridlines);}
+public String toString() {StringBuilder s = new StringBuilder();s.append(Constants.TypeString(getType()));s.append(' ');s.append(getName());s.append(' ');s.append(commitTime);s.append(' ');AppendCoreFlags(s);return s.toString();}
+public NGit.Api.LsRemoteCommand setRemote(String remote) {checkCallable();this.remote = remote;return this;}
+public void collapseRow(int rowNumber) {int startRow = findStartOfRowOutlineGroup(rowNumber);RowRecord rowRecord = getRow(startRow);int lastRow = writeHidden(rowRecord, startRow, true);if (getRow(lastRow + 1) != null) {getRow(lastRow + 1).setColapsed(true);} else {RowRecord row = createRow(lastRow + 1);row.setColapsed(true);insertRow(row);}}
+public ListSkillGroupWithRoomResult associateSkillGroupWithRoom(AssociateSkillGroupWithRoomRequest request) {request = beforeClientExecution(request);return executeAssociateSkillGroupWithRoom(request);}
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[SERIESLIST]\n");buffer.append("    .seriesNumbers        = ").append(" (" + SeriesNumbers + " )");buffer.append(System.lineSeparator());buffer.append("[/SERIESLIST]\n");return buffer.toString();}
+public QueryConfigHandler getQueryConfigHandler() {return this.queryConfig;}
+public String GetClassArg() {if (originalArgs != null) {String className = originalArgs[CLASS_NAME];if (className != null) {return className;}}return this.getClass().getSimpleName();}

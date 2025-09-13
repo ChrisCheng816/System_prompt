@@ -8,3 +8,8 @@ Output only the translated code, do not include any code fencing, extra text, or
 BLEU_Smooth:{'bleu': 0.32001465556033215, 'precisions': [0.37548946978516246, 0.3315745453251237, 0.30235752504758145, 0.2785991230930898], 'brevity_penalty': 1.0, 'length_ratio': 2.354674585704199, 'translation_length': 113387, 'reference_length': 48154}
 EM: {'em_ratio': 0.164, 'matches': 164, 'total': 1000}
 CodeBleu: {'codebleu': 66.47859952435705, 'ngram_match_score': 0.32001465556033215, 'weighted_ngram_match_score': 0.7668836482791807, 'syntax_match_score': 0.7353292152183069, 'dataflow_match_score': 0.836916461916462}
+
+BLEU_Smooth: {'bleu': 0.6057124995848212, 'precisions': [0.696155758077879, 0.626352148272957, 0.5762125107112254, 0.5357454228421971], 'brevity_penalty': 1.0, 'length_ratio': 1.2532499896166467, 'translation_length': 60349, 'reference_length': 48154}
+EM: {'em_ratio': 0.324, 'matches': 324, 'total': 1000}
+CodeBleu: {'codebleu': 73.81329599202098, 'ngram_match_score': 0.6057124995848212, 'weighted_ngram_match_score': 0.7643867869348393, 'syntax_match_score': 0.7482802190088446, 'dataflow_match_score': 0.8341523341523341}
+

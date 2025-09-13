@@ -1,0 +1,8 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Direction:Cs2Java naive 3-shot counter=0 Time: 0:01:57:
+Your role is to serve as a professional code translator, converting source code to the designated target code.
+Ensure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.
+Your output should only contain your translated code.
+
+BLEU_Smooth:{'bleu': 0.8230901822931027, 'precisions': [0.9013790622376784, 0.8449686693697014, 0.7975059831212999, 0.7556273420338545], 'brevity_penalty': 1.0, 'length_ratio': 1.0268952268361164, 'translation_length': 41694, 'reference_length': 40602}
+EM: {'em_ratio': 0.489, 'matches': 489, 'total': 1000}
+CodeBleu: {'codebleu': 83.24696413283405, 'ngram_match_score': 0.8230901822931027, 'weighted_ngram_match_score': 0.8471686442929925, 'syntax_match_score': 0.7949072246348203, 'dataflow_match_score': 0.8647125140924464}

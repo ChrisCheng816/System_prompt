@@ -1,0 +1,8 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Language:ruby naive 1-shot counter=1 Time: 0:24:01:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 8.923855537257953
+
+HFBleu: {'bleu': 0.015410250599638872, 'precisions': [0.16908931106754108, 0.029785661492978566, 0.007743092346564512, 0.002543604651162791], 'brevity_penalty': 0.8683360624003511, 'length_ratio': 0.8762886597938144, 'translation_length': 14790, 'reference_length': 16878}

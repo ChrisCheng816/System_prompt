@@ -1,0 +1,6 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Language:java zero 0-shot counter=0 Time: 0:13:28:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 8.312237962794821
+
+HFBleu: {'bleu': 0.02783795977916122, 'precisions': [0.16182775095873114, 0.042929350359900385, 0.014758999909039961, 0.00585713679385425], 'brevity_penalty': 1.0, 'length_ratio': 2.6007629099565484, 'translation_length': 362718, 'reference_length': 139466}

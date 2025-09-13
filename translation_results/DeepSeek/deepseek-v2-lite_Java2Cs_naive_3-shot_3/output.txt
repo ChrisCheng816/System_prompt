@@ -10,3 +10,8 @@ Requirements:
 BLEU_Smooth:{'bleu': 0.7761877654681782, 'precisions': [0.8958320089843833, 0.8164440499642803, 0.7583475316973868, 0.7099993211594596], 'brevity_penalty': 0.9798215546542236, 'length_ratio': 0.9800224280433609, 'translation_length': 47192, 'reference_length': 48154}
 EM: {'em_ratio': 0.352, 'matches': 352, 'total': 1000}
 CodeBleu: {'codebleu': 78.4900473708855, 'ngram_match_score': 0.7761877654681782, 'weighted_ngram_match_score': 0.7759712038820586, 'syntax_match_score': 0.750526463568721, 'dataflow_match_score': 0.836916461916462}
+
+BLEU_Smooth: {'bleu': 0.7761402127790484, 'precisions': [0.8982953579323244, 0.8189932244614315, 0.7607662937311312, 0.7123365419542318], 'brevity_penalty': 0.9767450021973576, 'length_ratio': 0.977011255555094, 'translation_length': 47047, 'reference_length': 48154}
+EM: {'em_ratio': 0.352, 'matches': 352, 'total': 1000}
+CodeBleu: {'codebleu': 78.4144628670251, 'ngram_match_score': 0.7761402127790484, 'weighted_ngram_match_score': 0.7758326169347655, 'syntax_match_score': 0.7503509757124807, 'dataflow_match_score': 0.8342547092547092}
+

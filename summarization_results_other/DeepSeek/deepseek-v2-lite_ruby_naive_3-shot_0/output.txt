@@ -1,0 +1,8 @@
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Language:ruby naive 3-shot counter=3 Time: 0:09:56:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 10.35375670404181
+
+HFBleu: {'bleu': 0.027744478943394425, 'precisions': [0.21653318077803205, 0.051795960072309986, 0.017623451404641423, 0.0068620723458484465], 'brevity_penalty': 0.812989474104881, 'length_ratio': 0.8284749377888375, 'translation_length': 13983, 'reference_length': 16878}

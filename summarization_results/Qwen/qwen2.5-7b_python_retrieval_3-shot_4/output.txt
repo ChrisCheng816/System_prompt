@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-Coder-7B-Instruct Language:python retrieval 3-shot counter=0 Time: 0:18:52:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 66.12240074484977
+
+HFBleu: {'bleu': 0.48082192591387457, 'precisions': [0.5986502271252433, 0.5081255318361759, 0.44703901290495635, 0.39304969180672605], 'brevity_penalty': 1.0, 'length_ratio': 1.3581501110497431, 'translation_length': 231149, 'reference_length': 170194}

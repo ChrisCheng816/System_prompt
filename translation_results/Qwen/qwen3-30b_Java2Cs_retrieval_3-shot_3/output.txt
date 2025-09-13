@@ -1,0 +1,20 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Direction:Java2Cs retrieval 3-shot counter=0 Time: 0:02:15:
+Role: Code Translator (Java ⇄ C#)
+Objective:
+- Accurately translate source code between Java and C# while preserving semantics and behavior.
+Instructions:
+- Begin with a concise checklist (3–7 bullets) outlining conceptual sub-tasks for the translation process.
+- Translate code precisely, ensuring that method names, variable names, identifiers, parameters, and return values remain unchanged unless language-specific requirements necessitate adjustments.
+- Map standard library calls and language-specific constructs to their closest equivalents in the target language, clearly identifying any required adaptations.
+- For language features without direct equivalents, select the nearest functional substitute while maintaining original logic and intent.
+- After translation, validate the output by reviewing it for semantic and behavioral equivalence with the source code. If discrepancies are found, self-correct before finalizing.
+- Output only the fully translated code without explanations, comments, or additional text.
+
+BLEU_Smooth:{'bleu': 0.8864694985273291, 'precisions': [0.9404064331130781, 0.9002037092051097, 0.8687724927372849, 0.8416655586579799], 'brevity_penalty': 0.9993975841227534, 'length_ratio': 0.9993977655023466, 'translation_length': 48125, 'reference_length': 48154}
+EM: {'em_ratio': 0.621, 'matches': 621, 'total': 1000}
+CodeBleu: {'codebleu': 88.82195479849256, 'ngram_match_score': 0.8864694985273291, 'weighted_ngram_match_score': 0.8867835406473912, 'syntax_match_score': 0.8646988628386916, 'dataflow_match_score': 0.9149262899262899}
+
+BLEU_Smooth: {'bleu': 0.8864486043308324, 'precisions': [0.9404051948051948, 0.9002015915119363, 0.8687696476964769, 0.8416620498614958], 'brevity_penalty': 0.9993768046899859, 'length_ratio': 0.999376998795531, 'translation_length': 48124, 'reference_length': 48154}
+EM: {'em_ratio': 0.62, 'matches': 620, 'total': 1000}
+CodeBleu: {'codebleu': 88.80518276923546, 'ngram_match_score': 0.8864486043308324, 'weighted_ngram_match_score': 0.8867507218992239, 'syntax_match_score': 0.8645935701249473, 'dataflow_match_score': 0.9144144144144144}
+

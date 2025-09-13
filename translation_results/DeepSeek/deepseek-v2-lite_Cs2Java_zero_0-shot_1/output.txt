@@ -6,3 +6,8 @@ Your output should only contain your translated code.
 BLEU_Smooth:{'bleu': 0.5918239134014648, 'precisions': [0.7231946592851909, 0.6248649547078866, 0.5503691759314266, 0.4932584756784878], 'brevity_penalty': 1.0, 'length_ratio': 1.2100635436677996, 'translation_length': 49131, 'reference_length': 40602}
 EM: {'em_ratio': 0.199, 'matches': 199, 'total': 1000}
 CodeBleu: {'codebleu': 68.3781579781079, 'ngram_match_score': 0.5918239134014648, 'weighted_ngram_match_score': 0.7246497964152415, 'syntax_match_score': 0.6321061981839716, 'dataflow_match_score': 0.7865464111236378}
+
+BLEU_Smooth: {'bleu': 0.5932276389031322, 'precisions': [0.7248342682304947, 0.6263196251952108, 0.551685273790537, 0.494492123845736], 'brevity_penalty': 1.0, 'length_ratio': 1.207428205507118, 'translation_length': 49024, 'reference_length': 40602}
+EM: {'em_ratio': 0.201, 'matches': 201, 'total': 1000}
+CodeBleu: {'codebleu': 68.50764331190032, 'ngram_match_score': 0.5932276389031322, 'weighted_ngram_match_score': 0.7247737745202391, 'syntax_match_score': 0.63250098697197, 'dataflow_match_score': 0.7898033320806714}
+

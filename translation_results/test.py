@@ -29,7 +29,7 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
 
     model, task, method, shot = parts[0], parts[1], parts[2], parts[3]
 
-    if model in ("qwen3-30b", "qwen2.5-32b"):
+    if model in ("qwen2.5-32b"):
         continue
 
     task_key = f"{model}_{task}_{method}_{shot}"
@@ -64,14 +64,23 @@ with open("output.txt", "w", encoding="utf-8") as fout:
 # Save the results to output.txt
 with open("output.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["model", "task", "method", "shot", "metric", "min", "max"])
 
-    for task_key, metrics in results.items():
+    # 先对 task_key 排序
+    sorted_keys = sorted(results.keys(), key=lambda x: x.split("_"))
+
+    for task_key in sorted_keys:
+        metrics = results[task_key]
         model, task, method, shot = task_key.split("_")
-        for metric_name, values in metrics.items():
+        row = [model, task, method, shot]
+
+        # 按顺序添加三个指标及其 min/max
+        for metric_name in ["bleu", "em", "codebleu"]:
+            values = metrics.get(metric_name, [])
             if values:
-                writer.writerow([model, task, method, shot, metric_name,
-                                 f"{min(values):.4f}", f"{max(values):.4f}"])
-        writer.writerow([])
+                row.extend([metric_name, f"{min(values):.4f}", f"{max(values):.4f}"])
+            else:
+                row.extend([metric_name, "", ""])  # 如果没有该指标，留空
+
+        writer.writerow(row)
 
 print("结果已保存到 output.txt 和 output.csv")

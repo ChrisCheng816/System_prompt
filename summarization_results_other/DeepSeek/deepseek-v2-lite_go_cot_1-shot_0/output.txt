@@ -1,0 +1,8 @@
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Language:go cot 1-shot counter=1 Time: 0:45:11:
+You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
+Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
+The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
+
+Bleu: 9.710883536869506
+
+HFBleu: {'bleu': 0.026585656680042542, 'precisions': [0.21953254881507317, 0.04321816291829303, 0.013139761267600499, 0.004007161735868361], 'brevity_penalty': 1.0, 'length_ratio': 1.2137594859580125, 'translation_length': 153384, 'reference_length': 126371}

@@ -1,0 +1,10 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Direction:Java2Cs retrieval 1-shot counter=0 Time: 0:03:09:
+Your role is to translate source code to target code with high accuracy and consistency.
+Ensure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. 
+Begin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. 
+Set reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. 
+Output only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.
+
+BLEU_Smooth:{'bleu': 0.39686039570649434, 'precisions': [0.4345419940461666, 0.40615051007835984, 0.38436115673684734, 0.36567291739982904], 'brevity_penalty': 1.0, 'length_ratio': 2.1276321800888813, 'translation_length': 102454, 'reference_length': 48154}
+EM: {'em_ratio': 0.036, 'matches': 36, 'total': 1000}
+CodeBleu: {'codebleu': 61.81690153537722, 'ngram_match_score': 0.39686039570649434, 'weighted_ngram_match_score': 0.8527482799815149, 'syntax_match_score': 0.6967569844166783, 'dataflow_match_score': 0.5263104013104013}

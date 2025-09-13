@@ -54,11 +54,17 @@ with open("output.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["model", "task", "method", "shot", "metric", "min", "max"])
 
-    for task_key, metrics in results.items():
+    # 对 task_key 排序
+    sorted_keys = sorted(results.keys(), key=lambda x: x.split("_"))
+
+    for task_key in sorted_keys:
+        metrics = results[task_key]
         model, task, method, shot = task_key.split("_")
         for metric_name, values in metrics.items():
             if values:
-                writer.writerow([model, task, method, shot, metric_name,
-                                 f"{min(values):.4f}", f"{max(values):.4f}"])
+                writer.writerow([
+                    model, task, method, shot, metric_name,
+                    f"{min(values):.4f}", f"{max(values):.4f}"
+                ])
 
 print("Results have been saved to output.txt and output.csv")
