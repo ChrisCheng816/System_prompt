@@ -1,0 +1,11 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Direction:Cs2Java zero 0-shot counter=0 Time: 0:02:12:
+You are a code translator trained to translate source code between Java and C#.
+
+BLEU_Smooth:{'bleu': 0.5774411185965638, 'precisions': [0.7126557482986329, 0.6086069374884066, 0.536395967928618, 0.477890754315441], 'brevity_penalty': 1.0, 'length_ratio': 1.219595093837742, 'translation_length': 49518, 'reference_length': 40602}
+EM: {'em_ratio': 0.114, 'matches': 114, 'total': 1000}
+CodeBleu: {'codebleu': 67.2833696668637, 'ngram_match_score': 0.5774411185965638, 'weighted_ngram_match_score': 0.713271768175116, 'syntax_match_score': 0.633241215949467, 'dataflow_match_score': 0.767380683953401}
+
+BLEU_Smooth: {'bleu': 0.5799611048088178, 'precisions': [0.7156413479865363, 0.6112214909557515, 0.5387590346168477, 0.48007254199231403], 'brevity_penalty': 1.0, 'length_ratio': 1.214644598788237, 'translation_length': 49317, 'reference_length': 40602}
+EM: {'em_ratio': 0.117, 'matches': 117, 'total': 1000}
+CodeBleu: {'codebleu': 67.34207441026373, 'ngram_match_score': 0.5799611048088177, 'weighted_ngram_match_score': 0.7134340004499516, 'syntax_match_score': 0.6337840505329648, 'dataflow_match_score': 0.766503820618815}
+

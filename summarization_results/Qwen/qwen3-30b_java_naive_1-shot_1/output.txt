@@ -1,0 +1,6 @@
+Qwen/Qwen3-Coder-30B-A3B-Instruct Language:java naive 1-shot counter=1 Time: 0:06:32:
+You are a helpful documentation assistant that writes summary for methods.
+
+Bleu: 12.782930538889243
+
+HFBleu: {'bleu': 0.05340325308076186, 'precisions': [0.2813538868550675, 0.07996505749405233, 0.02971692156354476, 0.01216504896127543], 'brevity_penalty': 1.0, 'length_ratio': 1.235871108370499, 'translation_length': 172362, 'reference_length': 139466}

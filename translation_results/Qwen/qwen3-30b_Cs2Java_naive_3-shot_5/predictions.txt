@@ -1,0 +1,1 @@
+public void serialize(LittleEndianOutput out1) { out1.writeShort(field_1_vcenter); }

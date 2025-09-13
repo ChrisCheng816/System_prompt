@@ -50,3 +50,4 @@ for k, v in items:
 trans_prompts = [v for _, v in sorted(pairs)]
 # codes = [prompt_to_code(p) for p in trans_prompts]
 # print(f"Unique code for translation prompts: {codes}")
+trans_prompts_code = {p: i for i, p in enumerate(trans_prompts)}

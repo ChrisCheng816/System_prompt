@@ -134,12 +134,11 @@ def evaluate_metric_tran(predictions, references, path, lang):
     with open(f"{filepath}/references.txt", "w", encoding="utf-8") as f:
         for i, item in enumerate(references):
             f.write(f"{item}\n")
-
     try:
         # cmd = f"python3 evaluator_cc/evaluator.py -ref {filepath}/references.txt -pre {filepath}/predictions.txt"
         # result1 = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        cmd = f"python3 calc_code_bleu.py --refs {filepath}/references.txt --hyp {filepath}/predictions.txt --lang {lang} --params 0.25,0.25,0.25,0.25"
-        codebleu = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        cmd = f"python3 calc_code_bleu.py --refs ../{filepath}/references.txt --hyp ../{filepath}/predictions.txt --lang {lang} --params 0.25,0.25,0.25,0.25 "
+        codebleu = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd="./Tools")
     except Exception as e:
         print(f"Error occurred while running evaluation: {e}")
 

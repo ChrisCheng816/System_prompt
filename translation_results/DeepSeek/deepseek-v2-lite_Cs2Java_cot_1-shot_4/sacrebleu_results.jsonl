@@ -1,0 +1,1 @@
+[{"directory": "./DeepSeek/deepseek-v2-lite_Java2Cs_retrieval_3-shot_3", "prediction_file": "predictions_cleaned.txt", "reference_file": "references.txt", "bleu_score": 87.17636773768054}, {"directory": "./DeepSeek/deepseek-v2-lite_Cs2Java_cot_1-shot_4", "prediction_file": "predictions_cleaned.txt", "reference_file": "references.txt", "bleu_score": 77.61022718235357}]

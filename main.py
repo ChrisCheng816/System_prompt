@@ -24,15 +24,15 @@ if __name__ == "__main__":
     # evaluate_summarization("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=3, max_length=4096, system_prompt = SUM[0], dataset_summarization=dataset_summarization_go)
 
     
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=3, max_length=4096, system_prompt = TRAN[4], order = 1)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[3], order = 1)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=1, max_length=2048, system_prompt = TRAN[4], order = 1)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "cot", example_num=3, max_length=4096, system_prompt = TRAN[4], order = 0)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=1, max_length=4096, system_prompt = TRAN[4], order = 0)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=3, max_length=2048, system_prompt = TRAN[4], order = 0)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=1, max_length=2048, system_prompt = TRAN[3], order = 0)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[3], order = 0)
-    evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "zero", example_num=0, max_length=1024, system_prompt = TRAN[4], order = 0)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=3,  test_num=1, max_length=4096, system_prompt = TRAN[4], order = 1)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[3], order = 1)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=1, max_length=2048, system_prompt = TRAN[4], order = 1)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "cot", example_num=3, max_length=4096, system_prompt = TRAN[4], order = 0)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=1, max_length=4096, system_prompt = TRAN[4], order = 0)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "naive", example_num=3, max_length=2048, system_prompt = TRAN[4], order = 0)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=1, max_length=2048, system_prompt = TRAN[3], order = 0)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "retrieval", example_num=3, max_length=4096, system_prompt = TRAN[3], order = 0)
+    # evaluate_translation("Qwen/Qwen3-Coder-30B-A3B-Instruct", "zero", example_num=0, max_length=1024, system_prompt = TRAN[4], order = 0)
     
     models = [
         # "Qwen/Qwen2.5-Coder-7B-Instruct",
@@ -45,11 +45,11 @@ if __name__ == "__main__":
         "Qwen/Qwen3-Coder-30B-A3B-Instruct",
     ]
 
-    methods = ["zero","naive","cot","retrieval"]
+    methods = ["naive","cot","retrieval"]
     example_nums = [0, 1, 3]
     max_lengths = {0: 1024, 1: 2048, 3: 4096}
     orders = [0, 1]
-    indexs = [0,1,2]
+    indexs = [0,1,2,3,4]
 
     for model in models:
         for method in methods:
@@ -63,29 +63,74 @@ if __name__ == "__main__":
                 if method == "cot" and example_num == 0:
                     continue  # cot 只有 example_num=1 和 3 的情况
                 for index in indexs:
-                    for order in orders:
-                        evaluate_translation(
-                            model,
-                            method,
-                            example_num=example_num,
-                            max_length=max_lengths[example_num],
-                            system_prompt=TRAN[index],
-                            order=order
-                        )
+                    # for order in orders:
+                    #     evaluate_translation(
+                    #         model,
+                    #         method,
+                    #         example_num=example_num,
+                    #         max_length=max_lengths[example_num],
+                    #         system_prompt=TRAN[index],
+                    #         order=order
+                    #     )
 
-                    # evaluate_summarization(
-                    #     model,
-                    #     method,
-                    #     example_num=example_num,
-                    #     max_length=max_lengths[example_num],
-                    #     system_prompt=SUM[index],
-                    #     dataset_summarization=dataset_summarization_java
-                    # )
-                    # evaluate_summarization(
-                    #     model,
-                    #     method,
-                    #     example_num=example_num,
-                    #     max_length=max_lengths[example_num],
-                    #     system_prompt=SUM[index],
-                    #     dataset_summarization=dataset_summarization_python
-                    # )
+                    evaluate_summarization(
+                        model,
+                        method,
+                        example_num=example_num,
+                        max_length=max_lengths[example_num],
+                        system_prompt=SUM[index],
+                        dataset_summarization=dataset_summarization_java
+                    )
+                    evaluate_summarization(
+                        model,
+                        method,
+                        example_num=example_num,
+                        max_length=max_lengths[example_num],
+                        system_prompt=SUM[index],
+                        dataset_summarization=dataset_summarization_python
+                    )
+
+    methods = ["zero"]
+    example_nums = [0, 1, 3]
+    max_lengths = {0: 1024, 1: 2048, 3: 4096}
+    orders = [0, 1]
+    indexs = [1,2,3,4]
+
+    for model in models:
+        for method in methods:
+            for example_num in example_nums:
+                if method == "zero" and example_num != 0:
+                    continue  # zero 只有 example_num=0 的情况
+                if method == "retrieval" and example_num == 0:
+                    continue  # retrieval 只有 example_num=1 和 3 的情况
+                if method == "naive" and example_num == 0:
+                    continue  # naive 只有 example_num=1 和 3 的情况
+                if method == "cot" and example_num == 0:
+                    continue  # cot 只有 example_num=1 和 3 的情况
+                for index in indexs:
+                    # for order in orders:
+                    #     evaluate_translation(
+                    #         model,
+                    #         method,
+                    #         example_num=example_num,
+                    #         max_length=max_lengths[example_num],
+                    #         system_prompt=TRAN[index],
+                    #         order=order
+                    #     )
+
+                    evaluate_summarization(
+                        model,
+                        method,
+                        example_num=example_num,
+                        max_length=max_lengths[example_num],
+                        system_prompt=SUM[index],
+                        dataset_summarization=dataset_summarization_java
+                    )
+                    evaluate_summarization(
+                        model,
+                        method,
+                        example_num=example_num,
+                        max_length=max_lengths[example_num],
+                        system_prompt=SUM[index],
+                        dataset_summarization=dataset_summarization_python
+                    )

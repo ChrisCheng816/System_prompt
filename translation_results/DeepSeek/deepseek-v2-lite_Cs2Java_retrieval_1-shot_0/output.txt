@@ -9,5 +9,5 @@ CodeBleu: {'codebleu': 76.92657077549657, 'ngram_match_score': 0.712434269535336
 
 BLEU_Smooth: {'bleu': 0.7128547690496735, 'precisions': [0.8094997251236944, 0.7354468802698145, 0.6812880966072455, 0.636656856974691], 'brevity_penalty': 1.0, 'length_ratio': 1.1199940889611348, 'translation_length': 45474, 'reference_length': 40602}
 EM: {'em_ratio': 0.298, 'matches': 298, 'total': 1000}
-CodeBleu: {'codebleu': 76.9493435700314, 'ngram_match_score': 0.7128547690496735, 'weighted_ngram_match_score': 0.8043474017686996, 'syntax_match_score': 0.7288787998420845, 'dataflow_match_score': 0.8318927721407992}
+CodeBleu: {'codebleu': 76.98692342722795, 'ngram_match_score': 0.7128547690496735, 'weighted_ngram_match_score': 0.8043474017686996, 'syntax_match_score': 0.7288787998420845, 'dataflow_match_score': 0.8333959664286609}
 
