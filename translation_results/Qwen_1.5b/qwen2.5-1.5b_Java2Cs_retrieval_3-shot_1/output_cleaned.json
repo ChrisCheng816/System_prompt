@@ -1,0 +1,27 @@
+{
+    "BLEU_Smooth": {
+        "bleu": 0.8342370243602504,
+        "precisions": [
+            0.924656952291941,
+            0.8711098571986632,
+            0.8287856604108434,
+            0.7950678342937519
+        ],
+        "brevity_penalty": 0.9773822902071675,
+        "length_ratio": 0.9776342567595631,
+        "translation_length": 47077,
+        "reference_length": 48154
+    },
+    "EM": {
+        "em_ratio": 0.522,
+        "matches": 522,
+        "total": 1000
+    },
+    "CodeBleu": {
+        "codebleu": 83.59182674614446,
+        "ngram_match_score": 0.8342370243602504,
+        "weighted_ngram_match_score": 0.8355198188176518,
+        "syntax_match_score": 0.8133511161027657,
+        "dataflow_match_score": 0.8605651105651105
+    }
+}

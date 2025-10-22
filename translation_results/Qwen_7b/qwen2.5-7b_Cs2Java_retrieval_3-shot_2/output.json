@@ -1,0 +1,34 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "direction": "Cs2Java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:01:31",
+  "system_prompt": "Your role is to translate source code to target code with high accuracy and consistency.\nEnsure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. \nBegin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. \nSet reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. \nOutput only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.",
+  "BLEU_Smooth": {
+    "bleu": 0.874506569755609,
+    "precisions": [
+      0.9299636523308857,
+      0.8900307553821919,
+      0.855768984176647,
+      0.8257047350827784
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.0096054381557558,
+    "translation_length": 40992,
+    "reference_length": 40602
+  },
+  "EM": {
+    "em_ratio": 0.642,
+    "matches": 642,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 87.2986516644891,
+    "ngram_match_score": 0.874506569755609,
+    "weighted_ngram_match_score": 0.8842035365651361,
+    "syntax_match_score": 0.8497335175681011,
+    "dataflow_match_score": 0.8835024426907178
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "language": "python",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:10:31",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.\nYour task is to read the given method and produce a summary of what the method does in one line.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "15.01520631394045\n",
+  "Bleu_HF": {
+    "bleu": 0.06497897920078488,
+    "precisions": [
+      0.30275138231301524,
+      0.08788935658448586,
+      0.037032143848013635,
+      0.01809215347187619
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.0647672655910314,
+    "translation_length": 181217,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.6239378311749852,
+    "CodeT5_plus_cosine_median": 0.6343252062797546,
+    "BERTScore_F1_mean": 0.31483209133148193,
+    "BERTScore_F1_median": 0.2987762689590454,
+    "METEOR_mean": 0.3001850505194349,
+    "METEOR_median": 0.24811218985976266
+  }
+}

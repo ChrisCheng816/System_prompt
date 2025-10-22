@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "language": "java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:13:52",
+  "system_prompt": "You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. \nCompose the summarization by naturalizing the identifier of variables and function names in the code as keywords. \nThe summarization should be very concise, with an approximate limitation of around 15 tokens in length.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "17.154717288281056\n",
+  "Bleu_HF": {
+    "bleu": 0.08360063282698671,
+    "precisions": [
+      0.3745273043353585,
+      0.13107244706326573,
+      0.06590919227509924,
+      0.0410014098997828
+    ],
+    "brevity_penalty": 0.7789770212287749,
+    "length_ratio": 0.8001448381684425,
+    "translation_length": 111593,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.6076113904939836,
+    "CodeT5_plus_cosine_median": 0.6156988143920898,
+    "BERTScore_F1_mean": 0.34041622281074524,
+    "BERTScore_F1_median": 0.31682088971138,
+    "METEOR_mean": 0.31525614278630404,
+    "METEOR_median": 0.25
+  }
+}

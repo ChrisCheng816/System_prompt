@@ -1,0 +1,34 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "direction": "Java2Cs",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:02:59",
+  "system_prompt": "Role: Code Translator (Java ⇄ C#)\nObjective:\n- Accurately translate source code between Java and C# while preserving semantics and behavior.\nInstructions:\n- Begin with a concise checklist (3–7 bullets) outlining conceptual sub-tasks for the translation process.\n- Translate code precisely, ensuring that method names, variable names, identifiers, parameters, and return values remain unchanged unless language-specific requirements necessitate adjustments.\n- Map standard library calls and language-specific constructs to their closest equivalents in the target language, clearly identifying any required adaptations.\n- For language features without direct equivalents, select the nearest functional substitute while maintaining original logic and intent.\n- After translation, validate the output by reviewing it for semantic and behavioral equivalence with the source code. If discrepancies are found, self-correct before finalizing.\n- Output only the fully translated code without explanations, comments, or additional text.",
+  "BLEU_Smooth": {
+    "bleu": 0.8812283416483733,
+    "precisions": [
+      0.9452599259757739,
+      0.9053101907544252,
+      0.8741657885493502,
+      0.8480876279403843
+    ],
+    "brevity_penalty": 0.9873989452944472,
+    "length_ratio": 0.9874776757901732,
+    "translation_length": 47551,
+    "reference_length": 48154
+  },
+  "EM": {
+    "em_ratio": 0.609,
+    "matches": 609,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 88.18366329188521,
+    "ngram_match_score": 0.8812283416483733,
+    "weighted_ngram_match_score": 0.8817082224547765,
+    "syntax_match_score": 0.8550119331742243,
+    "dataflow_match_score": 0.9093980343980343
+  }
+}

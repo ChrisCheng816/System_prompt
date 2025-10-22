@@ -1,0 +1,2 @@
+python	{"correct": 34, "accuracy": 0.68, "total_count": 50, "fim_result": {"single": {"correct": 0, "accuracy": 0, "total_count": 0}, "multi": {"correct": 0, "accuracy": 0, "total_count": 0}, "span": {"correct": 0, "accuracy": 0, "total_count": 0}}}
+python	{"correct": 34, "accuracy": 0.68, "total_count": 50, "fim_result": {"single": {"correct": 0, "accuracy": 0, "total_count": 0}, "multi": {"correct": 0, "accuracy": 0, "total_count": 0}, "span": {"correct": 0, "accuracy": 0, "total_count": 0}}}

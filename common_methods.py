@@ -14,6 +14,7 @@ from exact_match import em_compute, exact_match_no_punct
 from vllm import LLM, SamplingParams
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModel
+import os
 
 bleu_metric = evaluate.load("bleu")
 em_metric = evaluate.load("exact_match")
@@ -21,34 +22,48 @@ em_metric = evaluate.load("exact_match")
 # ---------------------
 # Public methods
 # ---------------------
-os.environ["CUDA_VISIBLE_DEVICES"] = "1,2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 logging.getLogger("vllm").setLevel(logging.ERROR)
+logging.getLogger("vllm").propagate = False
+logging.basicConfig(level=logging.ERROR)
 
-def load_model(model_name, dataset):
+def load_model(model_name):
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
-    # model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
     # model = torch.compile(model)
     llm = LLM(
         model=model_name,
-        tensor_parallel_size=2,   # 三张 GPU
+        tensor_parallel_size=4,   # 四张 GPU
         dtype="auto",
-        gpu_memory_utilization=0.95        # FP16 / BF16 自动选择
+        gpu_memory_utilization=0.2       # FP16 / BF16 自动选择
     )
-    # print(f"Model dtype: {next(llm.parameters()).dtype}")
-    # print(f"Model loaded into {llm.device} successfully")
-    batch_size = 16
+    batch_size = 32
     return tokenizer, llm, batch_size
 
+def load_model(model_name):
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
+    batch_size = 32
+    return tokenizer, batch_size
+
 def load_prompt(length, task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length=4096):
+    src_data = list(test_data[src_key])
+    tgt_data = list(test_data[tgt_key])
     references = []
     prompts = []
     counter = 0
     for idx in range(length):
+        if tgt_key == "docstring_tokens":
+            references.append(smart_join(tgt_data[idx]).strip())
+            input_block = f"{task_description}Input:\n{smart_join(src_data[idx])}\nOutput:\n"
+        else:
+            references.append(tgt_data[idx].strip())
+            input_block = f"{task_description}Input:\n{src_data[idx]}\nOutput:\n"
+
         counter += 1
         if counter % 500 == 0:
             print(f"Processing \033[1;32m{counter}\033[0m instances...")
-        input_block = f"{task_description}Input:\n{test_data[src_key][idx]}\nOutput:\n"
+        
         if isinstance(base_prompt, list):
             prompt = base_prompt[idx]
         else:
@@ -60,39 +75,32 @@ def load_prompt(length, task_description, src_key, tgt_key, test_data, base_prom
 
         prompts.append(messages)
 
-        if tgt_key == "docstring_tokens":
-            references.append(smart_join(test_data[tgt_key][idx]))
-        else:
-            references.append(test_data[tgt_key][idx].strip())
-
     full_prompt = tokenizer.apply_chat_template(prompts, tokenize=False, add_generation_prompt=True, return_tensors="pt", padding=True, padding_side="left", truncation=True, max_length=max_length)
     return full_prompt, references
 
-# def load_prompt(length, task_description, src_key, tgt_key, test_data, base_prompt, system_prompt):
-#     references = []
-#     prompts = []
-#     counter = 0
-#     for idx in range(length):
-#         counter += 1
-#         if counter % 500 == 0:
-#             print(f"Processing \033[1;32m{counter}\033[0m instances...")
-#         input_block = f"{task_description}Input:\n{test_data[src_key][idx]}\nOutput:\n"
-#         if isinstance(base_prompt, list):
-#             prompt = base_prompt[idx]
-#         else:
-#             prompt = base_prompt
-#         messages = [
-#             {"role": "system", "content": system_prompt},
-#             {"role": "user", "content": f"{prompt}{input_block}"}
-#         ]
+def load_prompt_gen(length, task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, max_length=4096):
+    src_data = list(test_data[src_key])
+    prompts = []
+    counter = 0
+    for idx in range(length):
+        input_block = f"{task_description}Input:\n{src_data[idx]}\nOutput:\n"
+        counter += 1
+        if counter % 500 == 0:
+            print(f"Processing \033[1;32m{counter}\033[0m instances...")
+        
+        if isinstance(base_prompt, list):
+            prompt = base_prompt[idx]
+        else:
+            prompt = base_prompt
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"{prompt}{input_block}"}
+        ]
 
-#         prompts.append(messages)
+        prompts.append(messages)
 
-#         if tgt_key == "docstring_tokens":
-#             references.append(smart_join(test_data[tgt_key][idx]))
-#         else:
-#             references.append(test_data[tgt_key][idx].strip())
-#     return prompts, references
+    full_prompt = tokenizer.apply_chat_template(prompts, tokenize=False, add_generation_prompt=True, return_tensors="pt", padding=True, padding_side="left", truncation=True, max_length=max_length)
+    return full_prompt
 
 def evaluate_metric_sum(predictions, references, path):
     counter = 0
@@ -103,6 +111,11 @@ def evaluate_metric_sum(predictions, references, path):
     with open(f"{filepath}/predictions.txt", "w", encoding="utf-8") as f:
         for i, item in enumerate(predictions):
             f.write(f"{i}\t{item}\n")
+    
+    with open(f"{filepath}/predictions.jsonl", "w", encoding="utf-8") as f:
+        for i, item in enumerate(predictions):
+            record = {"id": i, "prediction": item}
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
     with open(f"{filepath}/references.txt", "w", encoding="utf-8") as f:
         for i, item in enumerate(references):
@@ -132,15 +145,17 @@ def evaluate_metric_tran(predictions, references, path, lang):
             s = "".join(lines)
             f.write(f"{s}\n")
 
+    with open(f"{filepath}/predictions.jsonl", "w", encoding="utf-8") as f:
+        for i, item in enumerate(predictions):
+            record = {"id": i, "prediction": item}
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
     with open(f"{filepath}/references.txt", "w", encoding="utf-8") as f:
         for i, item in enumerate(references):
             f.write(f"{item}\n")
-
     try:
-        # cmd = f"python3 evaluator_cc/evaluator.py -ref {filepath}/references.txt -pre {filepath}/predictions.txt"
-        # result1 = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        cmd = f"python3 calc_code_bleu.py --refs {filepath}/references.txt --hyp {filepath}/predictions.txt --lang {lang} --params 0.25,0.25,0.25,0.25"
-        codebleu = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        cmd = f"python3 calc_code_bleu.py --refs ../{filepath}/references.txt --hyp ../{filepath}/predictions.txt --lang {lang} --params 0.25,0.25,0.25,0.25"
+        codebleu = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd="./Tools")
     except Exception as e:
         print(f"Error occurred while running evaluation: {e}")
 
@@ -158,6 +173,63 @@ def evaluate_metric_tran(predictions, references, path, lang):
     
     return filepath, BLEU_Smooth, EM, CodeBleu
 
+def evaluate_metric_gen1(predictions, path, saving_name = None, lang=None):
+    counter = 0
+    while os.path.exists(f"{path}_{counter}"):
+        counter += 1
+    filepath = f"{path}_{counter}"
+    os.makedirs(filepath, exist_ok=True)
+    
+    # with open(f"{filepath}/predictions.jsonl", "w", encoding="utf-8") as f:
+    #     for i, item in enumerate(predictions):
+    #         record = {"id": i, "prediction": item}
+    #         f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+    data = []
+    with open(f"Tools/{saving_name}.jsonl", "r", encoding="utf-8") as f:
+        for line in f:
+            item = json.loads(line)
+            data.append(item)
+
+    # 2. 给每条数据加新字段
+    for i, item in enumerate(data):
+        item["raw_generation"] = [predictions[i]]
+
+    # 3. 覆盖写回 jsonl
+    with open(f"{filepath}/{lang}.jsonl", "w", encoding="utf-8") as f:
+        for item in data:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+
+    try:
+        cmd = f"python3 -u eval_all.py --result_path ../{filepath} --save_path ../{filepath}"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd="./eval")
+    except Exception as e:
+        print(f"Error occurred while running evaluation: {e}")
+    print("bingo!!!!!!!!!!!")
+
+    for filename in os.listdir("generation_results_mceval/tmp"):
+        file_path = os.path.join("generation_results_mceval/tmp", filename)
+        if os.path.isfile(file_path) or os.path.islink(file_path):
+            os.remove(file_path)
+    return filepath, result.stdout
+
+def evaluate_metric_gen2(predictions, path, test_data = None, lang=None):
+    counter = 0
+    while os.path.exists(f"{path}_{counter}"):
+        counter += 1
+    filepath = f"{path}_{counter}"
+    os.makedirs(filepath, exist_ok=True)
+
+    data = []
+    ids = test_data["id"]
+    # 3. 覆盖写回 jsonl
+    with open(f"{filepath}/predictions.jsonl", "w", encoding="utf-8") as f:
+        for i, item in enumerate(predictions):
+            record = {"_id": ids[i], "generate_results": [item]}
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+    return filepath
+
 def extract_value(text):
     pattern = r"ngram match:\s*([0-9.]+),\s*weighted ngram match:\s*([0-9.]+)"
 
@@ -168,7 +240,6 @@ def extract_value(text):
         return ngram_match, weighted_ngram_match
     else:
         print("No match found")
-
 
 def compute_metric(prompts, batch_size, tokenizer, model, references, max_length):
     predictions = []
@@ -215,6 +286,27 @@ def compute_metric_tran(prompts, batch_size, tokenizer, model, references, max_l
 
     return predictions
 
+def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length):
+    predictions = []
+    counter = 1
+    for i in range(0, len(prompts), batch_size):
+        batch_prompts = prompts[i:i+batch_size]
+        batch_predictions = run_batch(batch_prompts, tokenizer, model, max_length, 512)
+        predictions.extend(batch_predictions)
+
+        if (i // 200) == counter:
+            print(f"\033[1;32m{i}\033[0m instances generated successfully")
+            counter += 1
+
+        # Strong explicit cleanup
+        gc.collect()
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
+
+    print("Starting to compute...")
+
+    return predictions
+
 def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens):
     predictions = []
     # Tokenize with padding and truncation
@@ -226,28 +318,9 @@ def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token 
 
-    # model_inputs = tokenizer.apply_chat_template(
-    #     batch_prompts,
-    #     return_tensors="pt",
-    #     padding=True,
-    #     tokenize=False,
-    #     add_generation_prompt=True,
-    #     padding_side="left",
-    #     truncation=True,
-    #     max_length=input_max_len,
-    # )
-
-    # with torch.inference_mode():
-    #     outputs = model.generate(
-    #         **model_inputs,
-    #         max_new_tokens=output_max_tokens,
-    #         eos_token_id=tokenizer.eos_token_id,
-    #         pad_token_id=pad_token_id,
-    #         use_cache=True
-    #     )
-
     sampling_params = SamplingParams(
         max_tokens=output_max_tokens,
+        temperature=0.0,
         stop_token_ids=[tokenizer.eos_token_id] if tokenizer.eos_token_id is not None else None
     )
 
@@ -256,14 +329,6 @@ def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens)
 
     predictions = [output.outputs[0].text.strip() for output in outputs]
 
-    # decoded_batch = tokenizer.batch_decode(outputs, skip_special_tokens=True)
-    # input_texts = tokenizer.batch_decode(model_inputs.input_ids, skip_special_tokens=True)
-    
-    # for prompt, decoded in zip(batch_prompts, decoded_batch):
-    #     pred = decoded.outputs[0].text[len(prompt):].strip()
-    #     predictions.append(pred)
-
-    # All local variables will be released once function returns
     return predictions
 
 # Construct Prompt
@@ -272,36 +337,39 @@ def build_prompt(top_k_examples):
     counter = 0
     for ex in top_k_examples:
         counter = counter + 1
-        prompt += f"### Example {counter}:\nInput:\n{ex['source_code']}\nOutput:\n{ex['target_code']}\n"
+        prompt += f"### Example {counter}:\nInput:\n{ex['source_code'].strip()}\nOutput:\n{ex['target_code'].strip()}\n\n"
     return prompt
-
+    
 def get_retrieval_prompt(query_code_arr, example_db, k=3):
-    retriever = SentenceTransformer("BAAI/bge-code-v1", device="cuda:2")
+    # jinaai/jina-code-embeddings-1.5b
+    retriever = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cuda:2",
+        # model_kwargs={"dtype": torch.bfloat16},
+        # tokenizer_kwargs={"padding_side": "left"}
+    )
+
+    print("Retriever model loaded.")
     support_inputs = [item["source_code"] for item in example_db]
-    support_embeddings = retriever.encode(support_inputs, normalize_embeddings=True).astype("float32")
+    query_inputs = query_code_arr
 
-    # searcher = scann.scann_ops_pybind.builder(support_embeddings, k, "dot_product") \
-    #     .tree(num_leaves=50, num_leaves_to_search=10, training_sample_size=len(support_embeddings)) \
-    #     .score_ah(2, anisotropic_quantization_threshold=0.2) \
-    #     .reorder(20) \
-    #     .build()
-    searcher = scann.scann_ops_pybind.builder(support_embeddings, k, "dot_product") \
-        .score_brute_force() \
-        .build()
+    support_embeddings = retriever.encode(support_inputs, normalize_embeddings=True)
+    query_embeddings = retriever.encode(query_inputs, normalize_embeddings=True)
 
+    print("Support set encoded.")
+    similarity_matrix = retriever.similarity(query_embeddings, support_embeddings)
+    print("Starting retrieval...")
     prompts = []
-    counter = 0
-    for query_code in query_code_arr:
-        counter += 1
-        query_emb = retriever.encode([query_code], normalize_embeddings=True).astype("float32")[0]
-        neighbors, distances = searcher.search(query_emb)
-        retrieved_examples = [example_db[i] for i in neighbors]
+    top_k_sims_list = []
+    for i, sim in enumerate(similarity_matrix):
+        topk = torch.topk(sim, k=k)  #return values 和 indices
+        top_k_idx = topk.indices.cpu().tolist()      # top-k index
+        top_k_sims = topk.values.cpu().tolist()     # top-k sims
+
+        retrieved_examples = [example_db[idx] for idx in top_k_idx]
         final_prompt = build_prompt(retrieved_examples)
         prompts.append(final_prompt)
-        if counter % 200 == 0:
-            print(f"Retrieved \033[1;32m{counter}\033[0m queries")
+        top_k_sims_list.append(top_k_sims)
 
-    return prompts
+    return prompts, top_k_sims_list
 
 def print_info(model_name, style, example_num, system_prompt, language=None, direction=None):
     var = "Direction" if direction is not None else "Language"
@@ -315,6 +383,12 @@ def smart_join(arr):
     for i, word in enumerate(arr):
         if word in {'.', ',', '?', '!', ';', ':'}:
             result = result.rstrip() + word  # 去掉末尾空格再加标点
+        elif word == '(':
+            # 左括号前要保留空格，但后面不加空格
+            result += word
+        elif word == ')':
+            # 右括号前去掉空格，不加空格
+            result = result.rstrip() + word
         else:
             result += word + ' '
     return result.strip()
@@ -326,34 +400,122 @@ def clean_code_blocks(text: str) -> str:
     text = re.sub(r"\n?```$", "", text.strip())
     return text.strip()
 
-def check_prompt(style, example_num, language, task, prompt=None):
-    code = prompt_to_code(prompt)
-    prompts_file = f"Intermediate_output/{task}/{style}_{example_num}_{language}_{code}.jsonl"
-    references_file = f"Intermediate_output/{task}/{language}_references.jsonl"
-    return os.path.exists(prompts_file) and os.path.exists(references_file)
+def check_prompt(number, language, task):
+    prompts_file = f"Intermediate_output/{task}/{number}_{language}.jsonl"
+    return os.path.exists(prompts_file)
 
-def save_prompt(prompts, references, style, example_num, language, task, prompt=None):
+def save_prompt(number, language, task, prompts, sims):
     # Save prompts and references to disk
-    code = prompt_to_code(prompt)
     os.makedirs(f"Intermediate_output/{task}", exist_ok=True)
-    with open(f"Intermediate_output/{task}/{style}_{example_num}_{language}_{code}.jsonl", "w", encoding="utf-8") as f:
+    with open(f"Intermediate_output/{task}/{number}_{language}.jsonl", "w", encoding="utf-8") as f:
         json.dump(prompts, f, ensure_ascii=False, indent=2)
 
-    with open(f"Intermediate_output/{task}/{language}_references.jsonl", "w", encoding="utf-8") as f:
-        json.dump(references, f, ensure_ascii=False, indent=2)
+    with open(f"Intermediate_output/{task}/{number}_{language}_sims.jsonl", "w", encoding="utf-8") as f:
+        json.dump(sims, f, ensure_ascii=False, indent=2)
 
-    print(f"Prompts and references saved for {style}_{example_num}-shot_{language}_{code}.")
+    print(f"Prompts saved for {language}.")
 
-def extract_prompt(style, example_num, language, task, prompt=None):
-    code = prompt_to_code(prompt)
-    with open(f"Intermediate_output/{task}/{style}_{example_num}_{language}_{code}.jsonl", "r", encoding="utf-8") as f:
+def extract_prompt(number, language, task, prompt=None):
+    with open(f"Intermediate_output/{task}/{number}_{language}.jsonl", "r", encoding="utf-8") as f:
         prompts = json.load(f)
 
-    with open(f"Intermediate_output/{task}/{language}_references.jsonl", "r", encoding="utf-8") as f:
-        references = json.load(f)
+    return prompts
 
-    return prompts, references
+def save_result_trans(filepath, model_name, direction, style, example_num, counter, elapsed_time, system_prompt, BLEU_Smooth, EM, CodeBleu):
+    with open(f"{filepath}/output.json", "a", encoding="utf-8") as f:
+        json.dump({
+            "model_name": model_name,
+            "direction": direction,
+            "style": style,
+            "example_num": example_num,
+            "counter": counter[0],
+            "elapsed_time": elapsed_time,
+            "system_prompt": system_prompt,
+            "BLEU_Smooth": BLEU_Smooth,
+            "EM": EM,
+            "CodeBleu": CodeBleu
+        }, f, ensure_ascii=False, indent=2)
 
-def prompt_to_code(prompt: str) -> str:
-    total = sum(ord(c) for c in prompt)
-    return f"{total % 1000:03d}"
+def save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt):
+    with open(f"{filepath}/output.json", "a", encoding="utf-8") as f:
+        json.dump({
+            "model_name": model_name,
+            "language": lang,
+            "style": style,
+            "example_num": example_num,
+            "counter": counter[0],
+            "elapsed_time": elapsed_time,
+            "system_prompt": system_prompt
+        }, f, ensure_ascii=False, indent=2)
+
+def save_result_sum(filepath, model_name, language, style, example_num, counter, elapsed_time, system_prompt, result, bleu_result):
+    with open(f"{filepath}/output.json", "a", encoding="utf-8") as f:
+        json.dump({
+            "model_name": model_name,
+            "language": language,
+            "style": style,
+            "example_num": example_num,
+            "counter": counter[0],
+            "elapsed_time": elapsed_time,
+            "system_prompt": system_prompt,
+            "BLEU_Normal": result,
+            "Bleu_HF": bleu_result
+        }, f, ensure_ascii=False, indent=2)
+
+def generation_data_selector(datatype):
+    if datatype == 0:
+        source = "instruction"
+        prompt = "prompt"
+        output = "output"
+        lang = "java"
+        saving_name = "mceval_java"
+    elif datatype == 1:
+        source = "instruction"
+        prompt = "prompt"
+        output = "output"
+        lang = "python"
+        saving_name = "mceval_python"
+    elif datatype == 2:
+        source = "instruction"
+        prompt = "instruction"
+        output = "output"
+        lang = "java"
+        saving_name = "codereval_java"
+    elif datatype == 3:
+        source = "instruction"
+        prompt = "instruction"
+        output = "output"
+        lang = "python"
+        saving_name = "codereval_python"
+    else:
+        raise ValueError("Unsupported datatype.")
+
+    return source, prompt, output, lang, saving_name
+
+# def get_retrieval_prompt(query_code_arr, example_db, k=3):
+#     retriever = SentenceTransformer("BAAI/bge-code-v1", device="cuda:2")
+#     print("Retriever model loaded.")
+#     support_inputs = [item["source_code"] for item in example_db]
+#     support_embeddings = retriever.encode(support_inputs, normalize_embeddings=True).astype("float32")
+#     print("Support set encoded.")
+#     # searcher = scann.scann_ops_pybind.builder(support_embeddings, k, "dot_product") \
+#     #     .tree(num_leaves=50, num_leaves_to_search=10, training_sample_size=len(support_embeddings)) \
+#     #     .score_ah(2, anisotropic_quantization_threshold=0.2) \
+#     #     .reorder(20) \
+#     #     .build()
+#     searcher = scann.scann_ops_pybind.builder(support_embeddings, k, "dot_product") \
+#         .score_brute_force() \
+#         .build()
+#     print("Starting retrieval...")
+#     prompts = []
+#     counter = 0
+#     for query_code in query_code_arr:
+#         counter += 1
+#         query_emb = retriever.encode([query_code], normalize_embeddings=True).astype("float32")[0]
+#         neighbors, distances = searcher.search(query_emb)
+#         retrieved_examples = [example_db[i] for i in neighbors]
+#         final_prompt = build_prompt(retrieved_examples)
+#         prompts.append(final_prompt)
+#         if counter % 200 == 0:
+#             print(f"Retrieved \033[1;32m{counter}\033[0m queries")
+#     return prompts

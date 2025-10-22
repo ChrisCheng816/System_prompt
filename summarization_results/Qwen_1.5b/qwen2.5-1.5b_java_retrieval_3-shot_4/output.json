@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "language": "java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:03:15",
+  "system_prompt": "You are an expert writer that writes summary for methods. Generate a one-line summary describing the method's core actions or behavior.\nInclude key operations performed by the code (e.g., 'sorts a list', 'calculates average').\nThe summarization should be very concise and accurate in natural language, with an approximate limitation of around 15 tokens in length.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "16.906843143639957\n",
+  "Bleu_HF": {
+    "bleu": 0.08860175107978704,
+    "precisions": [
+      0.34649687681112756,
+      0.12153393892846738,
+      0.061764590907314024,
+      0.038696403948433974
+    ],
+    "brevity_penalty": 0.8845869667793159,
+    "length_ratio": 0.8907619061276584,
+    "translation_length": 124231,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.6107099145270003,
+    "CodeT5_plus_cosine_median": 0.6234883069992065,
+    "BERTScore_F1_mean": 0.33599287271499634,
+    "BERTScore_F1_median": 0.31652846932411194,
+    "METEOR_mean": 0.31309120527711115,
+    "METEOR_median": 0.25242702444330894
+  }
+}

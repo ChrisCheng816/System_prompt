@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "language": "python",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:06:24",
+  "system_prompt": "You are an expert writer that writes summary for methods. Generate a one-line summary describing the method's core actions or behavior.\nInclude key operations performed by the code (e.g., 'sorts a list', 'calculates average').\nThe summarization should be very concise and accurate in natural language, with an approximate limitation of around 15 tokens in length.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "16.039161229780248\n",
+  "Bleu_HF": {
+    "bleu": 0.06126962648227829,
+    "precisions": [
+      0.3408483599519148,
+      0.0986399504044942,
+      0.04098877647119813,
+      0.02011405901314158
+    ],
+    "brevity_penalty": 0.8444045224246493,
+    "length_ratio": 0.8553415514060425,
+    "translation_length": 145574,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.5838803688493982,
+    "CodeT5_plus_cosine_median": 0.5928947627544403,
+    "BERTScore_F1_mean": 0.3179040849208832,
+    "BERTScore_F1_median": 0.3012416958808899,
+    "METEOR_mean": 0.2891703981417114,
+    "METEOR_median": 0.23387928022361987
+  }
+}

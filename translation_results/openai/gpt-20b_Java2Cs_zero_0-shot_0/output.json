@@ -1,0 +1,34 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "direction": "Java2Cs",
+  "style": "zero",
+  "example_num": 0,
+  "counter": 0,
+  "elapsed_time": "0:03:13",
+  "system_prompt": "You are a code translator trained to translate source code between Java and C#.",
+  "BLEU_Smooth": {
+    "bleu": 0.09504101703451245,
+    "precisions": [
+      0.12969575304822867,
+      0.09950638073068858,
+      0.08477630728968247,
+      0.07457497548734482
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 6.3102545998255595,
+    "translation_length": 303864,
+    "reference_length": 48154
+  },
+  "EM": {
+    "em_ratio": 0.0,
+    "matches": 0,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 48.22233180501338,
+    "ngram_match_score": 0.09504101703451245,
+    "weighted_ngram_match_score": 0.6135582099562119,
+    "syntax_match_score": 0.5363259862417521,
+    "dataflow_match_score": 0.683968058968059
+  }
+}

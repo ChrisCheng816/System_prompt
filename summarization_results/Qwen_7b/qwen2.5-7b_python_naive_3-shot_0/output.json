@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "language": "python",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:04:34",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.",
+  "BLEU_Normal": "15.814639903641053\n",
+  "Bleu_HF": {
+    "bleu": 0.06653281899057069,
+    "precisions": [
+      0.3345108233236904,
+      0.09628876984713924,
+      0.037771281022598746,
+      0.016106314407352884
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.001316145104998,
+    "translation_length": 170418,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.6110807125522681,
+    "CodeT5_plus_cosine_median": 0.6150015592575073,
+    "BERTScore_F1_mean": 0.3334128260612488,
+    "BERTScore_F1_median": 0.31891053915023804,
+    "METEOR_mean": 0.31493647198370767,
+    "METEOR_median": 0.2660805752561072
+  }
+}

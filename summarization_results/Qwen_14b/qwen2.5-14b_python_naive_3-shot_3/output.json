@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "language": "python",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:07:36",
+  "system_prompt": "You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. \nCompose the summarization by naturalizing the identifier of variables and function names in the code as keywords. \nThe summarization should be very concise, with an approximate limitation of around 15 tokens in length.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "16.403591307201793\n",
+  "Bleu_HF": {
+    "bleu": 0.057870309174541223,
+    "precisions": [
+      0.36608900576223935,
+      0.10431017833000708,
+      0.040934282003914184,
+      0.01749481086118524
+    ],
+    "brevity_penalty": 0.8002549180127748,
+    "length_ratio": 0.817778535083493,
+    "translation_length": 139181,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.5872832634806521,
+    "CodeT5_plus_cosine_median": 0.5915895104408264,
+    "BERTScore_F1_mean": 0.32641246914863586,
+    "BERTScore_F1_median": 0.31408053636550903,
+    "METEOR_mean": 0.3038812348800569,
+    "METEOR_median": 0.25
+  }
+}

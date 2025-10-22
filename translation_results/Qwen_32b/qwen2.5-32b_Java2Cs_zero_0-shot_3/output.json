@@ -1,0 +1,34 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-32B-Instruct",
+  "direction": "Java2Cs",
+  "style": "zero",
+  "example_num": 0,
+  "counter": 0,
+  "elapsed_time": "0:04:57",
+  "system_prompt": "You are a professional code translator trained to translate source code between Java and C#.\nRequirements:\n1. Translate the given source code into the specified target language (Java or C#).\n2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.\n3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.\n4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.\n5. Output only the translated code, with no explanations, quotes, or extra text.",
+  "BLEU_Smooth": {
+    "bleu": 0.5773969091509173,
+    "precisions": [
+      0.8594286836163738,
+      0.7307034316192009,
+      0.6378909879219573,
+      0.5740966408816361
+    ],
+    "brevity_penalty": 0.8337845413032219,
+    "length_ratio": 0.846181002616605,
+    "translation_length": 40747,
+    "reference_length": 48154
+  },
+  "EM": {
+    "em_ratio": 0.095,
+    "matches": 95,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 57.115369046901826,
+    "ngram_match_score": 0.5773969091509173,
+    "weighted_ngram_match_score": 0.5840320464704177,
+    "syntax_match_score": 0.5515232345921662,
+    "dataflow_match_score": 0.5716625716625716
+  }
+}

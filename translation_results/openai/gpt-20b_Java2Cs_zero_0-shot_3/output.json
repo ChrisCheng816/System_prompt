@@ -1,0 +1,34 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "direction": "Java2Cs",
+  "style": "zero",
+  "example_num": 0,
+  "counter": 0,
+  "elapsed_time": "0:03:21",
+  "system_prompt": "You are a professional code translator trained to translate source code between Java and C#.\nRequirements:\n1. Translate the given source code into the specified target language (Java or C#).\n2. Preserve all method names, variable names, identifiers, parameters, and return values exactly as in the source.\n3. Ensure semantic equivalence: the translated code must execute with the same behavior as the original program.\n4. Translate standard library calls and language-specific constructs into their closest valid equivalents in the target language.\n5. Output only the translated code, with no explanations, quotes, or extra text.",
+  "BLEU_Smooth": {
+    "bleu": 0.07689972474552159,
+    "precisions": [
+      0.11043114556099079,
+      0.0816390248415064,
+      0.06735031732639825,
+      0.05759305405727611
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 7.204219794824937,
+    "translation_length": 346912,
+    "reference_length": 48154
+  },
+  "EM": {
+    "em_ratio": 0.0,
+    "matches": 0,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 46.827423827983225,
+    "ngram_match_score": 0.07689972474552159,
+    "weighted_ngram_match_score": 0.5678674634372755,
+    "syntax_match_score": 0.5258318124385792,
+    "dataflow_match_score": 0.7024979524979525
+  }
+}

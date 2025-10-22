@@ -1,0 +1,2 @@
+java	{"correct": 34, "accuracy": 0.6415094339622641, "total_count": 53, "fim_result": {"single": {"correct": 0, "accuracy": 0, "total_count": 0}, "multi": {"correct": 0, "accuracy": 0, "total_count": 0}, "span": {"correct": 0, "accuracy": 0, "total_count": 0}}}
+java	{"correct": 34, "accuracy": 0.6415094339622641, "total_count": 53, "fim_result": {"single": {"correct": 0, "accuracy": 0, "total_count": 0}, "multi": {"correct": 0, "accuracy": 0, "total_count": 0}, "span": {"correct": 0, "accuracy": 0, "total_count": 0}}}

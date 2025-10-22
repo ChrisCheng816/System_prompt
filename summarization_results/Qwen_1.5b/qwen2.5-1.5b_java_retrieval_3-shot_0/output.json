@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "language": "java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:06:27",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.",
+  "BLEU_Normal": "13.910100799927585\n",
+  "Bleu_HF": {
+    "bleu": 0.034701868210108816,
+    "precisions": [
+      0.1330734854508671,
+      0.04336316847669987,
+      0.020431315945054887,
+      0.012299927308636558
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 2.849518879153342,
+    "translation_length": 397411,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.6718107568730045,
+    "CodeT5_plus_cosine_median": 0.67994225025177,
+    "BERTScore_F1_mean": 0.26074692606925964,
+    "BERTScore_F1_median": 0.2464011013507843,
+    "METEOR_mean": 0.2926080154118347,
+    "METEOR_median": 0.234375
+  }
+}

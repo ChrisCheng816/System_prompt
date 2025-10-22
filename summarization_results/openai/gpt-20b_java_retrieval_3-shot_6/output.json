@@ -1,0 +1,32 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "language": "java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:20:44",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.",
+  "BLEU_Normal": "3.1381173372317708\n",
+  "Bleu_HF": {
+    "bleu": 0.009470498576914451,
+    "precisions": [
+      0.039500380910134136,
+      0.012760388264805323,
+      0.005401375196752547,
+      0.0029547575712294506
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 14.870857413276354,
+    "translation_length": 2073979,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.7037804645450896,
+    "CodeT5_plus_cosine_median": 0.7210071682929993,
+    "BERTScore_F1_mean": 0.2844898998737335,
+    "BERTScore_F1_median": 0.26761236786842346,
+    "METEOR_mean": 0.3197494059191907,
+    "METEOR_median": 0.26922113698973205
+  }
+}

@@ -2,7 +2,7 @@
 # Licensed under the MIT license.
 import logging
 import sys
-
+sys.path.append("../evaluator_cc/")
 from bleu import _bleu
 
 def main():

@@ -1,0 +1,32 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "language": "python",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:26:26",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.",
+  "BLEU_Normal": "2.7070770034571123\n",
+  "Bleu_HF": {
+    "bleu": 0.005430084114887359,
+    "precisions": [
+      0.0292239352119474,
+      0.008458585702603374,
+      0.0029608487672138422,
+      0.001187882687206617
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 20.938570102353786,
+    "translation_length": 3563619,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.6838709004450589,
+    "CodeT5_plus_cosine_median": 0.6899859309196472,
+    "BERTScore_F1_mean": 0.28401124477386475,
+    "BERTScore_F1_median": 0.28512901067733765,
+    "METEOR_mean": 0.30986141787159177,
+    "METEOR_median": 0.26315789473684215
+  }
+}

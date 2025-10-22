@@ -1,0 +1,9 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-32B-Instruct",
+  "language": "java",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:00:36",
+  "system_prompt": "You are a highly skilled code generator."
+}

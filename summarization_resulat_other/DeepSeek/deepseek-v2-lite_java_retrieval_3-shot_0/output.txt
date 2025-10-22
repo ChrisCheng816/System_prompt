@@ -1,7 +1,0 @@
-deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Language:java retrieval 3-shot counter=0 Time: 1:08:11:
-You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
-Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
-The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
-Bleu: 13.91284115372941
-
-

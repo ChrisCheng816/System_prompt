@@ -1,0 +1,32 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "language": "java",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:14:35",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.\nYour task is to read the given method and produce a summary of what the method does in one line.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "3.247747755959256\n",
+  "Bleu_HF": {
+    "bleu": 0.008014849654589611,
+    "precisions": [
+      0.048985612053514524,
+      0.012785571168537015,
+      0.004172807676118873,
+      0.0015789358264924965
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 11.025447062366455,
+    "translation_length": 1537675,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.7072712662447429,
+    "CodeT5_plus_cosine_median": 0.7165628671646118,
+    "BERTScore_F1_mean": 0.2772761881351471,
+    "BERTScore_F1_median": 0.27224549651145935,
+    "METEOR_mean": 0.30518713930923386,
+    "METEOR_median": 0.2651515151515152
+  }
+}

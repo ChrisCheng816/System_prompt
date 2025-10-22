@@ -1,0 +1,9 @@
+{
+  "model_name": "unsloth/Meta-Llama-3.1-8B-Instruct",
+  "language": "java",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:00:28",
+  "system_prompt": "You are a highly skilled code generator."
+}

@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "language": "java",
+  "style": "zero",
+  "example_num": 0,
+  "counter": 0,
+  "elapsed_time": "0:06:53",
+  "system_prompt": "You are a helpful assistant that writes summary for methods.\nYour task is to read the given method and produce a summary of what the method does in one line.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "11.916191240927834\n",
+  "Bleu_HF": {
+    "bleu": 0.04657519639707467,
+    "precisions": [
+      0.25880337060373715,
+      0.07030317704640182,
+      0.025567972038299653,
+      0.010115273204753453
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.3223079460226865,
+    "translation_length": 184417,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.7021406860506083,
+    "CodeT5_plus_cosine_median": 0.7072260975837708,
+    "BERTScore_F1_mean": 0.27861273288726807,
+    "BERTScore_F1_median": 0.26999831199645996,
+    "METEOR_mean": 0.3065242756692556,
+    "METEOR_median": 0.26548672566371684
+  }
+}

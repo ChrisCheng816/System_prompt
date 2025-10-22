@@ -1,0 +1,32 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "language": "python",
+  "style": "zero",
+  "example_num": 0,
+  "counter": 0,
+  "elapsed_time": "0:15:13",
+  "system_prompt": "You are a helpful assistant that writes summary for methods. \nWrite a concise, compressed summary of the code method in one line, capturing only the core idea and omitting unnecessary details.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "2.3251051881073574\n",
+  "Bleu_HF": {
+    "bleu": 0.0067874106493570055,
+    "precisions": [
+      0.04909534019630039,
+      0.010880053610924515,
+      0.003359877102223733,
+      0.001182556231449229
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 11.02990704725196,
+    "translation_length": 1877224,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.7425855782324003,
+    "CodeT5_plus_cosine_median": 0.7478585243225098,
+    "BERTScore_F1_mean": 0.20986740291118622,
+    "BERTScore_F1_median": 0.205885648727417,
+    "METEOR_mean": 0.2732924085444896,
+    "METEOR_median": 0.2358490566037736
+  }
+}

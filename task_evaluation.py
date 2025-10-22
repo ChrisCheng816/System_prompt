@@ -6,7 +6,7 @@ import thought_chain as t
 from datasets import DatasetDict
 from datetime import timedelta
 from model_map import model_map
-from generate_prompts import generate_translation_prompt, generate_summarization_prompt, generate_bugfixing_prompt
+from generate_prompts import generate_translation_prompt, generate_summarization_prompt, generate_generation_prompt
 
 GREEN = "\033[92m"
 RESET = "\033[0m"
@@ -24,44 +24,53 @@ def evaluate_summarization(model_name, style, example_num = None, test_num = Non
     base_prompt = ""
     language = dataset_summarization['test']['language'][0] if isinstance(dataset_summarization, DatasetDict) else dataset_summarization['language'][0]
     print_info(model_name, style, example_num, system_prompt, language = language, direction = None)
-    tokenizer, model, batch_size = load_model(model_name, dataset_summarization)
+    tokenizer, model, batch_size = load_model(model_name)
     train_data = dataset_summarization["train"].select(range(example_num)) if example_num else dataset_summarization["train"]
     test_data = dataset_summarization["test"].select(range(test_num)) if test_num else dataset_summarization["test"]
+    length = len(test_data["code_tokens"])
+    print(length)
     # Build shared prompt using training examples
     counter = [0]
     if style == "naive" or style == "cot":
         base_prompt = train_data.map(lambda e: generate_summarization_prompt(e, style, counter, t.summarization[language]), load_from_cache_file=False)["prompt"]
-        pre_prompt = "The following are a few example(s) for code summarization.\n" if style == "naive" else "The following are a few example(s) with thought steps for code summarization.\n"
+        pre_prompt = "The following are a few examples for code summarization.\n" if style == "naive" else "The following are a few examples with thought steps for code summarization.\n"
         base_prompt = "".join(base_prompt)
         base_prompt = pre_prompt + base_prompt
         print(f"Counter = {counter[0]}")
-    elif style == "retrieval" and check_prompt(style, example_num, language, task="summarization") == False:
-        example_db = [
-            {
-                "source_code": dataset_summarization["train"][i]["code"],
-                "target_code": smart_join(dataset_summarization["train"][i]["docstring_tokens"])  # Join tokens into a single string
-            }
-            for i in range(5000)
-        ]
-        print("Starting to integrate example database...")
-        query_code_arr = [test_data["code"][i] for i in range(len(test_data["code"]))]
-        base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
-        pre_prompt = "The following are a few retrieval-based example(s) for code summarization."
-        base_prompt = [pre_prompt + prompt for prompt in base_prompt]
-        print("Retrieval data integration completed")
-        
+    elif style == "retrieval":
+        if check_prompt(example_num, language, task = "summarization") == False:
+            example_db = [
+                {
+                    "source_code": smart_join(dataset_summarization["train"][i]["code_tokens"]),  # Join tokens into a single string
+                    "target_code": smart_join(dataset_summarization["train"][i]["docstring_tokens"])  # Join tokens into a single string
+                }
+                for i in range(100000)
+            ]
+            print("Example database constructed.")
+            query_code_arr = []
+            for i in range(0, length, 500):
+                batch = test_data["code_tokens"][i:i+500]
+                query_code_arr.extend(smart_join(tokens) for tokens in batch)
+            # query_code_arr = [smart_join(test_data["code_tokens"][i]) for i in range(length)]
+            print("Starting to integrate example database...")
+            base_prompt, top_k_sims_list = get_retrieval_prompt(query_code_arr, example_db, example_num)
+            pre_prompt = "The following are a few retrieval-based examples for code summarization.\n"
+            base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            print("Retrieval data integration completed")
+            save_prompt(example_num, language, task = "summarization", prompts = base_prompt, sims = top_k_sims_list)
+        else:
+            base_prompt = extract_prompt(example_num, language, task = "summarization")
 
-    after_description = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n" if style == "cot" else "Please output the answer directly as shown in the example(s) if provided.###\n"
+    after_description = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n" if style == "cot" else "Please output the answer directly as shown in the examples if provided.###\n"
     task_description = f"### It is your turn now! Summarizing the follwing code into summary. {after_description}"
 
     if system_prompt == None:
         system_prompt = "You are a software documentation assistant. Given a code snippet, your task is to generate a concise and informative natural language summary that describes the purpose and behavior of the code."
-    src_key, tgt_key = "code", "docstring_tokens"
+    src_key, tgt_key = "code_tokens", "docstring_tokens"
 
     predictions= []
     print(f"Loading {len(test_data[src_key])} prompts...")
-    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length) if check_prompt(style, example_num, language, task = "summarization", prompt=system_prompt) == False else extract_prompt(style, example_num, language, task = "summarization", prompt=system_prompt)
-    save_prompt(prompts, references, style, example_num, language, task = "summarization", prompt=system_prompt) if check_prompt(style, example_num, language, task = "summarization", prompt=system_prompt) == False else None
+    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length)
     print("Prompts loaded successfully")
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
     print("Starting to generate...")
@@ -72,8 +81,10 @@ def evaluate_summarization(model_name, style, example_num = None, test_num = Non
     filepath, result, bleu_result = evaluate_metric_sum(predictions=predictions, references=references, path=f"summarization_results/{model_map[model_name]}_{language}_{style}_{example_num}-shot")
     print("---------BLEU RESULT------------")
     print(f"Normal {result}, HF: {bleu_result}")
-    with open(f"{filepath}/output.txt", "a", encoding="utf-8") as f:
-        f.write(f"{model_name} Language:{dataset_summarization['test']['language'][0]} {style} {example_num}-shot counter={counter[0]} Time: {elapsed_time}:\n{system_prompt}\n\nBleu: {result}\nHFBleu: {bleu_result}\n")
+
+    save_result_sum(filepath, model_name, language, style, example_num, counter, elapsed_time, system_prompt, result, bleu_result)
+    # with open(f"{filepath}/output.txt", "a", encoding="utf-8") as f:
+    #     f.write(f"{model_name} Language:{dataset_summarization['test']['language'][0]} {style} {example_num}-shot counter={counter[0]} Time: {elapsed_time}:\n{system_prompt}\n\nBleu: {result}\nHFBleu: {bleu_result}\n")
     del train_data, test_data, base_prompt, prompts, references, predictions, model, tokenizer, result
     gc.collect()
     torch.cuda.empty_cache()
@@ -88,7 +99,9 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
     lang = "c_sharp" if order == 0 else "java"
     direction = "Java2Cs" if order == 0 else "Cs2Java"
     print_info(model_name, style, example_num, system_prompt, direction = direction)
-    tokenizer, model, batch_size = load_model(model_name, dataset_translation)
+    tokenizer, model, batch_size = load_model(model_name)
+    length = len(dataset_translation["train"])
+    print(length)
     train_data = dataset_translation["train"].select(range(example_num)) if example_num else dataset_translation["train"]
     test_data = dataset_translation["test"].select(range(test_num)) if test_num else dataset_translation["test"]
     counter = [0]
@@ -100,34 +113,38 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
         base_prompt = pre_prompt + base_prompt
         print(f"Counter = {counter[0]}")
     elif style == "retrieval":
-        if order == 0:
-            example_db = [
-                {
-                    "source_code": dataset_translation["train"][i]["java"],
-                    "target_code": dataset_translation["train"][i]["cs"]
-                }
-                for i in range(5000)
-            ]
-            query_code_arr = [test_data["java"][i] for i in range(len(test_data["java"]))]
-            base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
-            pre_prompt = "The following are a few retrieval-based example(s) for code translation."
-            base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+        if check_prompt(example_num, language, task="translation") == False:
+            if order == 0:
+                example_db = [
+                    {
+                        "source_code": dataset_translation["train"][i]["java"],
+                        "target_code": dataset_translation["train"][i]["cs"]
+                    }
+                    for i in range(length)
+                ]
+                query_code_arr = [test_data["java"][i] for i in range(len(test_data["java"]))]
+                base_prompt, top_k_sims_list = get_retrieval_prompt(query_code_arr, example_db, example_num)
+                pre_prompt = "The following are a few retrieval-based example(s) for code translation."
+                base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            else:
+                example_db = [
+                    {
+                        "source_code": dataset_translation["train"][i]["cs"],
+                        "target_code": dataset_translation["train"][i]["java"]
+                    }
+                    for i in range(length)
+                ]
+                query_code_arr = [test_data["cs"][i] for i in range(len(test_data["cs"]))]
+                base_prompt, top_k_sims_list = get_retrieval_prompt(query_code_arr, example_db, example_num)
+                pre_prompt = "The following are a few retrieval-based example(s) for code translation."
+                base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            save_prompt(example_num, language, task = "translation", prompts = base_prompt, sims = top_k_sims_list)
         else:
-            example_db = [
-                {
-                    "source_code": dataset_translation["train"][i]["cs"],
-                    "target_code": dataset_translation["train"][i]["java"]
-                }
-                for i in range(3000)
-            ]
-            query_code_arr = [test_data["cs"][i] for i in range(len(test_data["cs"]))]
-            base_prompt = get_retrieval_prompt(query_code_arr, example_db, example_num)
-            pre_prompt = "The following are a few retrieval-based example(s) for code translation."
-            base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+            base_prompt = extract_prompt(example_num, language, task = "translation")
     else:
         base_prompt = ""
 
-    after_description = "Let's think step-by-step to understand this translation first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly." if style == "cot" else "Please output the answer directly as shown in the example(s) if provided."
+    after_description = "Let's think step-by-step to understand this translation first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly." if style == "cot" else "Please output the answer directly as shown in the examples if provided."
     task_description = f"### It is your turn now! {after_description} Translate the following Java code into Csharp code.\n" if order == 0 else f"### It is your turn now! {after_description} Translate the following Csharp code into Java code.\n"
     if system_prompt == None:
         system_prompt = "You are a professional code translator trained to convert source code between programming languages while preserving the original behavior and semantics."
@@ -137,8 +154,7 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
 
     predictions= []
     print(f"Loading {len(test_data[src_key])} prompts...")
-    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length) if check_prompt(style, example_num, language, task = "translation", prompt=system_prompt) == False else extract_prompt(style, example_num, language, task = "translation", prompt=system_prompt)
-    save_prompt(prompts, references, style, example_num, language, task = "translation", prompt=system_prompt) if check_prompt(style, example_num, language, task = "translation", prompt=system_prompt) == False else None
+    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length)
     print(f"{len(prompts)} Prompts loaded successfully")
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
     print("Starting to generate...")
@@ -150,51 +166,131 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
     print("----------BLEU RESULT------------")
     print(BLEU_Smooth)
 
-    with open(f"{filepath}/output.txt", "a", encoding="utf-8") as f:
-        f.write(f"{model_name} Direction:{direction} {style} {example_num}-shot counter={counter[0]} Time: {elapsed_time}:\n{system_prompt}\n\nBLEU_Smooth:{BLEU_Smooth}\nEM: {EM}\nCodeBleu: {CodeBleu}\n")
+    save_result_trans(filepath, model_name, direction, style, example_num, counter, elapsed_time, system_prompt, BLEU_Smooth, EM, CodeBleu)
+
     del train_data, test_data, base_prompt, prompts, references, predictions, model, tokenizer
     gc.collect()
     torch.cuda.empty_cache()
     torch.cuda.ipc_collect()
 
 # ---------------------
-# bugfixing
+# Code generation
 # ---------------------
-def evaluate_bugfixing(model_name, style, example_num = None, test_num = None, max_length=256, shuffled = False, system_prompt = None, dataset_refinement = None):
-    tokenizer, model, batch_size = load_model(model_name, dataset_refinement)
-    train_data = dataset_refinement["train"].select(range(example_num)) if example_num else dataset_refinement["train"]
-    test_data = dataset_refinement["test"].select(range(test_num)) if test_num else dataset_refinement["test"]
+def evaluate_generation(model_name, style, example_num = None, test_num = None, max_length=256, shuffled = False, system_prompt = None, dataset_generation = None, datatype = None):
+    source, prompt_input, output, lang, saving_name = generation_data_selector(datatype)
+    base_prompt = ""
+    print_info(model_name, style, example_num, system_prompt, language = lang, direction = None)
+    tokenizer, model, batch_size = load_model(model_name)
+    train_data = dataset_generation["train"].select(range(example_num)) if example_num else dataset_generation["train"]
+    test_data = dataset_generation["test"].select(range(test_num)) if test_num else dataset_generation["test"]
+    length = len(test_data)
+    print(length)
+    print(len(dataset_generation["train"]))
     # Build shared prompt using training examples
+    counter = [0]
     if style == "naive" or style == "cot":
-        base_prompt = train_data.map(lambda e: generate_bugfixing_prompt(e, style))["prompt"]
+        base_prompt = train_data.map(lambda e: generate_generation_prompt(e, style, counter), load_from_cache_file=False)["prompt"]
+        pre_prompt = "The following are a few examples for code generation.\n" if style == "naive" else "The following are a few examples with thought steps for code generation.\n"
         base_prompt = "".join(base_prompt)
+        base_prompt = pre_prompt + base_prompt
+        print(f"Counter = {counter[0]}")
     elif style == "retrieval":
         example_db = [
             {
-                "source_code": dataset_refinement["train"][i]["buggy"],
-                "target_code": dataset_refinement["train"][i]["fixed"]
+                "source_code": dataset_generation["train"][i][source],  # Join tokens into a single string
+                "target_code": dataset_generation["train"][i][output]  # Join tokens into a single string
             }
-            for i in range(50)
+            for i in range(100000)
         ]
-        query_code_arr = [test_data["buggy"][i] for i in range(len(test_data["buggy"]))]
-        base_prompt = get_retrieval_prompt(query_code_arr, example_db, len(example_num))
-    else:
-        base_prompt = ""
-    
-    task_description = "Now, fix the following Java code to make it correct.\n"
-    if system_prompt == None: 
-        system_prompt = "You are a code repair assistant. Your task is to fix buggy code by correcting syntax or logic errors while preserving the original intent."
-    src_key, tgt_key, src_label, tgt_label = "buggy", "fixed", "Buggy", "Fixed"
+        print("Example database constructed.")
+        # query_code_arr = []
+        # for i in range(0, length, 500):
+        #     batch = test_data[source][i:i+500]
+        #     query_code_arr.extend(batch)
+            
+        print("Starting to integrate example database...")
+        base_prompt, top_k_sims_list = get_retrieval_prompt(test_data[source], example_db, example_num)
+        pre_prompt = "The following are a few retrieval-based examples for code generation.\n"
+        base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+        print("Retrieval data integration completed")
+        save_prompt(example_num, lang, task = "generation", prompts = base_prompt, sims = top_k_sims_list)
+
+    after_description = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n" if style == "cot" else "Please output the complete method directly as shown in the examples if provided.###\n"
+    task_description = f"### It is your turn now! Generating the code based on the instruction provided. {after_description}"
+    src_key = source
 
     predictions= []
-    
-    prompts, references = load_prompt(len(test_data[src_key]), task_description, src_key, tgt_key, src_label, tgt_label, test_data, base_prompt, tokenizer, system_prompt)
+    print(f"Loading {len(test_data[src_key])} prompts...")
+    prompts = load_prompt_gen(len(test_data[src_key]), task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length)
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
-    bleu_result = compute_metric(prompts, batch_size, tokenizer, model, references, max_length)
+    start_time = time.time()
+    predictions = compute_metric_gen(prompts, batch_size, tokenizer, model, max_length)
+    elapsed_time = str(timedelta(seconds=int(time.time() - start_time)))
 
-    print("---------Bleu result------------")
-    print(bleu_result)
-    del train_data, test_data, base_prompt, prompts, references, predictions, model, tokenizer, bleu_result
+    if datatype == 0 or datatype == 1:
+        filepath, result = evaluate_metric_gen1(predictions=predictions, path=f"generation_results_mceval/{model_map[model_name]}_{lang}_{style}_{example_num}-shot", saving_name = saving_name, lang=lang)
+    else:
+        filepath = evaluate_metric_gen2(predictions=predictions, path=f"generation_results_codereval/predictions/{model_map[model_name]}_{lang}_{style}_{example_num}-shot", test_data = test_data, lang=lang)
+
+    save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt)
+    del train_data, test_data, base_prompt, prompts, predictions, model, tokenizer
+    gc.collect()
+    torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()
+
+def generation_test(model_name, style, example_num = None, test_num = None, max_length=256, shuffled = False, system_prompt = None, dataset_generation = None, datatype = None):
+    source, prompt_input, output, lang, saving_name = generation_data_selector(datatype)
+    base_prompt = ""
+    print_info(model_name, style, example_num, system_prompt, language = lang, direction = None)
+    tokenizer, batch_size = load_model(model_name)
+    train_data = dataset_generation["train"].select(range(example_num)) if example_num else dataset_generation["train"]
+    test_data = dataset_generation["test"].select(range(test_num)) if test_num else dataset_generation["test"]
+    length = len(test_data)
+    print(length)
+    print(len(dataset_generation["train"]))
+    # Build shared prompt using training examples
+    counter = [0]
+    if style == "naive" or style == "cot":
+        base_prompt = train_data.map(lambda e: generate_generation_prompt(e, style, counter), load_from_cache_file=False)["prompt"]
+        pre_prompt = "The following are a few examples for code generation.\n" if style == "naive" else "The following are a few examples with thought steps for code generation.\n"
+        base_prompt = "".join(base_prompt)
+        base_prompt = pre_prompt + base_prompt
+        print(f"Counter = {counter[0]}")
+    elif style == "retrieval":
+        example_db = [
+            {
+                "source_code": dataset_generation["train"][i][source],  # Join tokens into a single string
+                "target_code": dataset_generation["train"][i][output]  # Join tokens into a single string
+            }
+            for i in range(100000)
+        ]
+        print("Example database constructed.")
+        # query_code_arr = []
+        # for i in range(0, length, 500):
+        #     batch = test_data[source][i:i+500]
+        #     query_code_arr.extend(batch)
+            
+        print("Starting to integrate example database...")
+        base_prompt, top_k_sims_list = get_retrieval_prompt(test_data[source], example_db, example_num)
+        pre_prompt = "The following are a few retrieval-based examples for code generation.\n"
+        base_prompt = [pre_prompt + prompt for prompt in base_prompt]
+        print("Retrieval data integration completed")
+        save_prompt(example_num, lang, task = "generation", prompts = base_prompt, sims = top_k_sims_list)
+
+    after_description = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n" if style == "cot" else "Please output the complete method directly as shown in the examples if provided.###\n"
+    task_description = f"### It is your turn now! Generating the code based on the instruction provided. {after_description}"
+    src_key = source
+
+    predictions= []
+    print(f"Loading {len(test_data[src_key])} prompts...")
+    predictions = load_prompt_HF(len(test_data[src_key]), task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, max_length)
+    start_time = time.time()
+    elapsed_time = str(timedelta(seconds=int(time.time() - start_time)))
+
+    filepath = evaluate_metric_gen2(predictions=predictions, path=f"generation_results_codereval/server/{model_map[model_name]}_{lang}_{style}_{example_num}-shot", test_data = test_data, lang=lang)
+
+    save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt)
+    del train_data, test_data, base_prompt, prompts, predictions, model, tokenizer
     gc.collect()
     torch.cuda.empty_cache()
     torch.cuda.ipc_collect()

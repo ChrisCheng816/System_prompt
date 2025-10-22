@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "language": "java",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:03:14",
+  "system_prompt": "You are a helpful assistant that writes summary for methods. \nWrite a concise, compressed summary of the code method in one line, capturing only the core idea and omitting unnecessary details.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "15.125671702963324\n",
+  "Bleu_HF": {
+    "bleu": 0.061550534606282854,
+    "precisions": [
+      0.3488326013011459,
+      0.10599170365529323,
+      0.04085108956397283,
+      0.01741465459613184
+    ],
+    "brevity_penalty": 0.8594685059981219,
+    "length_ratio": 0.8684769047653191,
+    "translation_length": 121123,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.6259326439301536,
+    "CodeT5_plus_cosine_median": 0.6320326924324036,
+    "BERTScore_F1_mean": 0.33144068717956543,
+    "BERTScore_F1_median": 0.3184549808502197,
+    "METEOR_mean": 0.307348689854719,
+    "METEOR_median": 0.25532268795741847
+  }
+}

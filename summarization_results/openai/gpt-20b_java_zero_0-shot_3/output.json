@@ -1,0 +1,32 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "language": "java",
+  "style": "zero",
+  "example_num": 0,
+  "counter": 0,
+  "elapsed_time": "0:16:51",
+  "system_prompt": "You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. \nCompose the summarization by naturalizing the identifier of variables and function names in the code as keywords. \nThe summarization should be very concise, with an approximate limitation of around 15 tokens in length.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "1.6546621321034216\n",
+  "Bleu_HF": {
+    "bleu": 0.003013876236477973,
+    "precisions": [
+      0.03260744032180713,
+      0.005518313608084605,
+      0.001229254779748213,
+      0.00037302390585871345
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 14.652022715213743,
+    "translation_length": 2043459,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.6334427323850362,
+    "CodeT5_plus_cosine_median": 0.6378530263900757,
+    "BERTScore_F1_mean": 0.2173675000667572,
+    "BERTScore_F1_median": 0.21508517861366272,
+    "METEOR_mean": 0.20409786711913425,
+    "METEOR_median": 0.1626603390763094
+  }
+}

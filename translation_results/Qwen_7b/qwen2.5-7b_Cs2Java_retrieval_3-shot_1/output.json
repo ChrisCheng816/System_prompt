@@ -1,0 +1,34 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "direction": "Cs2Java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:01:32",
+  "system_prompt": "Your role is to serve as a professional code translator, converting source code to the designated target code.\nEnsure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.\nYour output should only contain your translated code.",
+  "BLEU_Smooth": {
+    "bleu": 0.8785031170734862,
+    "precisions": [
+      0.9325988176088338,
+      0.8934241498472479,
+      0.8603534186058458,
+      0.8308904940159224
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.0081523077680903,
+    "translation_length": 40933,
+    "reference_length": 40602
+  },
+  "EM": {
+    "em_ratio": 0.642,
+    "matches": 642,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 87.77342403598988,
+    "ngram_match_score": 0.878503117073486,
+    "weighted_ngram_match_score": 0.8868912659527126,
+    "syntax_match_score": 0.8559020923805764,
+    "dataflow_match_score": 0.8896404860328198
+  }
+}

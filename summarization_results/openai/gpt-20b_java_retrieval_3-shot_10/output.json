@@ -1,0 +1,32 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "language": "java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:20:23",
+  "system_prompt": "You are an expert writer that writes summary for methods. Generate a one-line summary describing the method's core actions or behavior.\nInclude key operations performed by the code (e.g., 'sorts a list', 'calculates average').\nThe summarization should be very concise and accurate in natural language, with an approximate limitation of around 15 tokens in length.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "2.304333583134155\n",
+  "Bleu_HF": {
+    "bleu": 0.006352058626724233,
+    "precisions": [
+      0.03640105310117411,
+      0.008651837618701528,
+      0.003205116474350964,
+      0.0016128421570751551
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 13.870592115641088,
+    "translation_length": 1934476,
+    "reference_length": 139466
+  },
+  "summary": {
+    "num_samples": 10955,
+    "CodeT5_plus_cosine_mean": 0.6564495303297848,
+    "CodeT5_plus_cosine_median": 0.6648699641227722,
+    "BERTScore_F1_mean": 0.2829541265964508,
+    "BERTScore_F1_median": 0.269186407327652,
+    "METEOR_mean": 0.28396373377952083,
+    "METEOR_median": 0.2243589743589744
+  }
+}

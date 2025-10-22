@@ -1,0 +1,34 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "direction": "Cs2Java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:03:36",
+  "system_prompt": "Your role is to serve as a professional code translator, converting source code to the designated target code.\nEnsure that all keywords, method names, identifiers, and values in the code are precisely equivalent between the source and target versions.\nYour output should only contain your translated code.",
+  "BLEU_Smooth": {
+    "bleu": 0.10952003736800121,
+    "precisions": [
+      0.12612388511578432,
+      0.11348165175272966,
+      0.10427147681410098,
+      0.09640195025204529
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 7.524850992561943,
+    "translation_length": 305524,
+    "reference_length": 40602
+  },
+  "EM": {
+    "em_ratio": 0.0,
+    "matches": 0,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 57.29362138480785,
+    "ngram_match_score": 0.10952003736800121,
+    "weighted_ngram_match_score": 0.8523233604312702,
+    "syntax_match_score": 0.7014409790761942,
+    "dataflow_match_score": 0.6284604785168483
+  }
+}

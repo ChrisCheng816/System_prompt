@@ -1,0 +1,34 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-3B-Instruct",
+  "direction": "Cs2Java",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:00:48",
+  "system_prompt": "You are a code translator trained to translate source code between Java and C#.",
+  "BLEU_Smooth": {
+    "bleu": 0.8125940815452432,
+    "precisions": [
+      0.8994538952252078,
+      0.83651941362916,
+      0.7839985781027828,
+      0.7391360983743226
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.0192355056401163,
+    "translation_length": 41383,
+    "reference_length": 40602
+  },
+  "EM": {
+    "em_ratio": 0.471,
+    "matches": 471,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 82.0476527929899,
+    "ngram_match_score": 0.8125940815452432,
+    "weighted_ngram_match_score": 0.829758051004542,
+    "syntax_match_score": 0.7801026450848796,
+    "dataflow_match_score": 0.8594513340849305
+  }
+}

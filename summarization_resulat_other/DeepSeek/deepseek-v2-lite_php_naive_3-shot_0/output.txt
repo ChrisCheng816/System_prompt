@@ -1,8 +1,0 @@
-deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct Language:php naive 3-shot counter=3 Time: 0:59:03:
-You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
-Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
-The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
-
-Bleu: 17.637686555286976
-
-HFBleu: {'bleu': 0.05245041317369172, 'precisions': [0.3306571036057735, 0.08623220912687085, 0.03284167955275366, 0.013360739979445015], 'brevity_penalty': 0.8819076371047099, 'length_ratio': 0.8883614404361885, 'translation_length': 112097, 'reference_length': 126184}

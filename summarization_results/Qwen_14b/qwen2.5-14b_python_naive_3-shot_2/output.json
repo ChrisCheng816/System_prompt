@@ -1,0 +1,32 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "language": "python",
+  "style": "naive",
+  "example_num": 3,
+  "counter": 3,
+  "elapsed_time": "0:07:56",
+  "system_prompt": "You are a helpful assistant that writes summary for methods. \nWrite a concise, compressed summary of the code method in one line, capturing only the core idea and omitting unnecessary details.\nOutput only the summary in plain text, without additional markup or formatting.",
+  "BLEU_Normal": "16.1023859720263\n",
+  "Bleu_HF": {
+    "bleu": 0.06329562272283752,
+    "precisions": [
+      0.3497332772946235,
+      0.10148350114858627,
+      0.04002595758658538,
+      0.016887926406493118
+    ],
+    "brevity_penalty": 0.9044010594942901,
+    "length_ratio": 0.9086924333407759,
+    "translation_length": 154654,
+    "reference_length": 170194
+  },
+  "summary": {
+    "num_samples": 14918,
+    "CodeT5_plus_cosine_mean": 0.6051841012744965,
+    "CodeT5_plus_cosine_median": 0.6088416874408722,
+    "BERTScore_F1_mean": 0.32744720578193665,
+    "BERTScore_F1_median": 0.31383633613586426,
+    "METEOR_mean": 0.3155121500500601,
+    "METEOR_median": 0.2634593356242841
+  }
+}

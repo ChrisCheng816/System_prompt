@@ -1,0 +1,34 @@
+{
+  "model_name": "openai/gpt-oss-20b",
+  "direction": "Cs2Java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:03:36",
+  "system_prompt": "Your role is to translate source code to target code with high accuracy and consistency.\nEnsure that the number of return parameters, method names, variable names, identifiers, and method parameters are exactly preserved from the source program. \nBegin with a concise checklist (3-7 bullets) of what you will do; keep items conceptual, not implementation-level. \nSet reasoning_effort = minimal, as this task is highly deterministic and requires precision over elaboration. \nOutput only the translated code, do not include any code fencing, extra text, or formatting characters such as triple quotes or backticks.",
+  "BLEU_Smooth": {
+    "bleu": 0.11186673812369001,
+    "precisions": [
+      0.1290090671181749,
+      0.11584965062072546,
+      0.10648055765061606,
+      0.09840532936956381
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 7.331362987044973,
+    "translation_length": 297668,
+    "reference_length": 40602
+  },
+  "EM": {
+    "em_ratio": 0.0,
+    "matches": 0,
+    "total": 1000
+  },
+  "CodeBleu": {
+    "codebleu": 57.322156284681995,
+    "ngram_match_score": 0.11186673812369001,
+    "weighted_ngram_match_score": 0.8480848384693084,
+    "syntax_match_score": 0.7111133043821556,
+    "dataflow_match_score": 0.6218213704121258
+  }
+}

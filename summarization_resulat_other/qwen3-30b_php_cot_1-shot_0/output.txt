@@ -1,8 +1,0 @@
-Qwen/Qwen3-Coder-30B-A3B-Instruct Language:php cot 1-shot counter=1 Time: 2:04:14:
-You are a helpful assistant that writes summary for methods. Generate one line of semantic focused and abstract summary of the code. 
-Compose the summarization by naturalizing the identifier of variables and function names in the code as keywords. 
-The summarization should be very concise, with an approximate limitation of around 15 tokens in length.
-
-Bleu: 14.786522903669622
-
-HFBleu: {'bleu': 0.032536667107174004, 'precisions': [0.28579985828347687, 0.05763393256781061, 0.015588113718826069, 0.004364740487712307], 'brevity_penalty': 1.0, 'length_ratio': 1.084860204146326, 'translation_length': 136892, 'reference_length': 126184}
