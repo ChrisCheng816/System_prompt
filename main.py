@@ -20,18 +20,18 @@ if __name__ == "__main__":
     # ---------------------
     models = [
         # "Qwen/Qwen2.5-Coder-1.5B-Instruct",
-        # "Qwen/Qwen2.5-Coder-3B-Instruct",
+        "Qwen/Qwen2.5-Coder-3B-Instruct",
         # "Qwen/Qwen2.5-Coder-7B-Instruct",
-        "Qwen/Qwen2.5-Coder-32B-Instruct",
-        "Qwen/Qwen2.5-Coder-14B-Instruct",
+        # "Qwen/Qwen2.5-Coder-32B-Instruct",
+        # "Qwen/Qwen2.5-Coder-14B-Instruct",
         # "openai/gpt-oss-20b",
         # "unsloth/Meta-Llama-3.1-8B-Instruct"
     ]
 
-    methods = ["zero", "naive", "retrieval"]
+    methods = ["zero"]
     example_nums = [0, 3]
     max_lengths = {0: 1024, 3: 8196}
-    indexs = [0,1,2,3,4]
+    indexs = [3,4]
 
     for model in models:
         for method in methods:
@@ -46,5 +46,5 @@ if __name__ == "__main__":
                     continue  # cot 只有 example_num=1 和 3 的情况
                 for index in indexs:
                     # evaluate_generation(model, method, example_num=example_num, max_length=max_lengths[example_num], system_prompt = GEN[index], dataset_generation = mceval_python_all, datatype = 1)
-                    generation_test(model, method, example_num=example_num, max_length=max_lengths[example_num], system_prompt = GEN[index], dataset_generation = codereval_java, datatype = 2)
+                    evaluate_generation(model, method, example_num=example_num, max_length=max_lengths[example_num], system_prompt = GEN[index], dataset_generation = codereval_java, datatype = 2)
                     # evaluate_generation(model, method, example_num=example_num, max_length=max_lengths[example_num], system_prompt = GEN[index], dataset_generation = codereval_python, datatype = 3)

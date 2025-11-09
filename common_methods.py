@@ -35,16 +35,10 @@ def load_model(model_name):
         model=model_name,
         tensor_parallel_size=4,   # 四张 GPU
         dtype="auto",
-        gpu_memory_utilization=0.2       # FP16 / BF16 自动选择
+        gpu_memory_utilization=0.3       # FP16 / BF16 自动选择
     )
     batch_size = 32
     return tokenizer, llm, batch_size
-
-def load_model(model_name):
-
-    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
-    batch_size = 32
-    return tokenizer, batch_size
 
 def load_prompt(length, task_description, src_key, tgt_key, test_data, base_prompt, tokenizer, system_prompt, model, max_length=4096):
     src_data = list(test_data[src_key])

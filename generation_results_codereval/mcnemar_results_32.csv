@@ -1,0 +1,19 @@
+ID,Model,Task,Method,Shot,Compare,OR,p_value
+1,qwen2.5-14b,python,zero,0-shot,STRUCT vs SELFC,0.833,1.0
+1,gpt-20b,python,naive,3-shot,STRUCT vs SELFC,0.7,0.60558
+1,qwen2.5-32b,python,naive,3-shot,STRUCT vs SELFC,0.917,1.0
+1,qwen2.5-14b,python,naive,3-shot,STRUCT vs SELFC,1.0,0.68309
+1,gpt-20b,python,zero,0-shot,STRUCT vs SELFC,1.2,1.0
+1,qwen2.5-7b,python,zero,0-shot,STRUCT vs SELFC,2.25,0.2278
+1,qwen2.5-3b,python,zero,0-shot,STRUCT vs SELFC,1.286,0.78927
+1,qwen2.5-7b,python,retrieval,3-shot,STRUCT vs SELFC,3.5,0.13057
+1,qwen2.5-1.5b,python,zero,0-shot,STRUCT vs SELFC,0.714,0.75183
+1,qwen2.5-32b,python,zero,0-shot,STRUCT vs SELFC,1.0,0.83117
+1,gpt-20b,python,retrieval,3-shot,STRUCT vs SELFC,0.833,1.0
+1,qwen2.5-1.5b,python,retrieval,3-shot,STRUCT vs SELFC,1.0,0.68309
+1,qwen2.5-3b,python,naive,3-shot,STRUCT vs SELFC,0.833,1.0
+1,qwen2.5-7b,python,naive,3-shot,STRUCT vs SELFC,0.714,0.75183
+1,qwen2.5-32b,python,retrieval,3-shot,STRUCT vs SELFC,0.615,0.3588
+1,qwen2.5-14b,python,retrieval,3-shot,STRUCT vs SELFC,2.333,0.28884
+1,qwen2.5-1.5b,python,naive,3-shot,STRUCT vs SELFC,1.667,0.68309
+1,qwen2.5-3b,python,retrieval,3-shot,STRUCT vs SELFC,0.625,0.54649
