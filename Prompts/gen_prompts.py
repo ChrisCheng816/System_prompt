@@ -7,7 +7,7 @@ import re
 # ---------- generation -----------
 gen_prompt_1 = """You are a highly skilled code generator."""
 
-gen_prompt_2 = """You are a highly skilled code  generator.
+gen_prompt_2 = """You are a highly skilled code generator.
 Your task is to generate executable method without errors from the natural language description.
 Output only code, no explanations or comments."""
 
