@@ -40,11 +40,23 @@ def extract_java_python_blocks(text: str) -> str:
     if matches1:
         return "".join(code for _, code in matches1)
     elif matches2:
-        print("``` without ending found.")
         return "".join(code for _, code in matches2)
     else:
         return text
 
+# def exclude_import_statements(text: str) -> str:
+#     # Match import statements at the beginning, until the next ``` ends
+#     pattern1 = r"^import\b[\s\S]*?;\\n$"
+#     matches1 = re.findall(pattern1, text, re.DOTALL)
+#     pattern2 = r"```(java|python)\n(.*)"
+#     matches2 = re.findall(pattern2, text, re.DOTALL)
+#     if matches1:
+#         return "".join(code for _, code in matches1)
+#     elif matches2:
+#         print("``` without ending found.")
+#         return "".join(code for _, code in matches2)
+#     else:
+#         return text
 
 for dirpath, dirnames, filenames in os.walk(root_dir):
     if "predictions.jsonl" in filenames:
@@ -56,17 +68,22 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
                 data = json.loads(line)
                 # Determine whether `generate_results` exists and is not empty.
                 if "generate_results" in data and len(data["generate_results"]) > 0:
-                    code = data["generate_results"][0]
-                    # Remove leading ```java\n or ```python\n
-                    if "openai" in dirpath:
-                        print(f"{dirpath} has been cleaned. :-）")
-                        code = remove_assistant(code)
+                    for idx, code in enumerate(data["generate_results"]):
+                        if "openai" in dirpath:
+                            code = remove_assistant(code)
 
-                    code = extract_java_python_blocks(code)
-                    code = process_code(code)
-                    data["generate_results"][0] = code
+                        code = extract_java_python_blocks(code)
+                        code = process_code(code)
+                        data["generate_results"][idx] = code
+                    # code = data["generate_results"][0]
+                    # if "openai" in dirpath:
+                    #     code = remove_assistant(code)
+
+                    # code = extract_java_python_blocks(code)
+                    # code = process_code(code)
+                    # data["generate_results"][0] = code
                 lines.append(data)
-
+            print(f"{dirpath} has been cleaned. :-）")
         # Write back to the JSONL file
         with open(output_path, "w", encoding="utf-8") as f:
             for data in lines:

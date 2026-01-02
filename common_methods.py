@@ -35,7 +35,7 @@ def load_model(model_name):
         model=model_name,
         tensor_parallel_size=4,   # 四张 GPU
         dtype="auto",
-        gpu_memory_utilization=0.3       # FP16 / BF16 自动选择
+        gpu_memory_utilization=0.8      # FP16 / BF16 自动选择
     )
     batch_size = 32
     return tokenizer, llm, batch_size
@@ -219,7 +219,8 @@ def evaluate_metric_gen2(predictions, path, test_data = None, lang=None):
     # 3. 覆盖写回 jsonl
     with open(f"{filepath}/predictions.jsonl", "w", encoding="utf-8") as f:
         for i, item in enumerate(predictions):
-            record = {"_id": ids[i], "generate_results": [item]}
+            generate_results = item if isinstance(item, list) else [item]
+            record = {"_id": ids[i], "generate_results": generate_results}
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
     return filepath
@@ -280,12 +281,12 @@ def compute_metric_tran(prompts, batch_size, tokenizer, model, references, max_l
 
     return predictions
 
-def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length):
+def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_name):
     predictions = []
     counter = 1
     for i in range(0, len(prompts), batch_size):
         batch_prompts = prompts[i:i+batch_size]
-        batch_predictions = run_batch(batch_prompts, tokenizer, model, max_length, 512)
+        batch_predictions = run_batch(batch_prompts, tokenizer, model, max_length, 2048, model_name)
         predictions.extend(batch_predictions)
 
         if (i // 200) == counter:
@@ -301,7 +302,7 @@ def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length):
 
     return predictions
 
-def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens):
+def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens, model_name):
     predictions = []
     # Tokenize with padding and truncation
     if tokenizer.pad_token_id is None:
@@ -314,16 +315,28 @@ def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens)
 
     sampling_params = SamplingParams(
         max_tokens=output_max_tokens,
-        temperature=0.0,
+        # n=5,
+        # temperature=0.0,
         stop_token_ids=[tokenizer.eos_token_id] if tokenizer.eos_token_id is not None else None
     )
 
     outputs = model.generate(batch_prompts, sampling_params)
     # Decode input and output to strings
+    # predictions = [output.outputs[0].text.strip() for output in outputs]
+    # return predictions
 
-    predictions = [output.outputs[0].text.strip() for output in outputs]
-
-    return predictions
+    sample_predictions = []
+    token_predictions = []
+    for output in outputs:
+        samples = [o.text.strip() for o in output.outputs]
+        if "openai" in model_name:
+            tokens = [o.token_ids for o in output.outputs]
+            responses = [tokenizer.decode(t).split("<|channel|>final<|message|>")[-1].strip() for t in tokens]
+            token_predictions.append(responses)
+        sample_predictions.append(samples)
+    if "openai" in model_name:
+        return token_predictions
+    return sample_predictions
 
 # Construct Prompt
 def build_prompt(top_k_examples):

@@ -41,14 +41,12 @@ for i in range(len(hypothesis)):
     references.append(ref_for_instance)
 assert len(references) == len(pre_references)*len(hypothesis)
 
-
 # calculate ngram match (BLEU)
 # tokenized_hyps = [x.split() for x in hypothesis]
 # tokenized_refs = [[x.split() for x in reference] for reference in references]
 
 tokenized_refs = [[tokenizer(r) for r in ref] for ref in references]
 tokenized_hyps = [tokenizer(p) for p in hypothesis]
-
 
 ngram_match_score = bleu.corpus_bleu(tokenized_refs,tokenized_hyps)
 

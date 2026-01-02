@@ -215,7 +215,9 @@ def evaluate_generation(model_name, style, example_num = None, test_num = None, 
         print("Retrieval data integration completed")
         save_prompt(example_num, lang, task = "generation", prompts = base_prompt, sims = top_k_sims_list)
 
-    after_description = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n" if style == "cot" else "Please output the complete method directly as shown in the examples if provided.###\n"
+    # x = "Let's think step-by-step to understand this method first, as shown in the example(s) if provided. Please do not output your thought steps if exist, just output the answer directly ###\n"
+    
+    after_description = "Please only output the complete method directly as shown in the examples if provided. Do NOT include any import statements or class declarations. Do not wrap the output in markdown code fences or quote blocks, output raw code only.###\n"
     task_description = f"### It is your turn now! Generating the code based on the instruction provided. {after_description}"
     src_key = source
 
@@ -224,7 +226,7 @@ def evaluate_generation(model_name, style, example_num = None, test_num = None, 
     prompts = load_prompt_gen(len(test_data[src_key]), task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, max_length)
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
     start_time = time.time()
-    predictions = compute_metric_gen(prompts, batch_size, tokenizer, model, max_length)
+    predictions = compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_name)
     elapsed_time = str(timedelta(seconds=int(time.time() - start_time)))
 
     if datatype == 0 or datatype == 1:
