@@ -6,10 +6,17 @@ InsertDeleteGetRandomO1.java:55: error: cannot find symbol
   symbol:   variable set
   location: class InsertDeleteGetRandomO1
 1 error
-InsertDeleteGetRandomO1.java:91: error: illegal start of expression
-    public boolean remove(int val) {
+InsertDeleteGetRandomO1.java:44: error: cannot find symbol
+    if (set.contains(val)) {
+        ^
+  symbol:   variable set
+  location: class InsertDeleteGetRandomO1
+InsertDeleteGetRandomO1.java:48: error: cannot find symbol
+    set.add(val);
     ^
-1 error
+  symbol:   variable set
+  location: class InsertDeleteGetRandomO1
+2 errors
 ArrayUtils.java:2566: warning: [removal] Character(char) in Character has been deprecated and marked for removal
             result[i] = new Character(array[i]);
                         ^
@@ -989,7 +996,10 @@ Note: Recompile with -Xlint:unchecked for details.
 CharUtils.java:71: warning: [removal] Character(char) in Character has been deprecated and marked for removal
             CharUtils.CHAR_ARRAY[i] = new Character((char) i);
                                       ^
-1 warning
+CharUtils.java:91: warning: [removal] Character(char) in Character has been deprecated and marked for removal
+        return new Character(ch);
+               ^
+2 warnings
 CharUtils.java:71: warning: [removal] Character(char) in Character has been deprecated and marked for removal
             CharUtils.CHAR_ARRAY[i] = new Character((char) i);
                                       ^
@@ -1004,9 +1014,9 @@ CharUtils.java:105: warning: [removal] Character(char) in Character has been dep
         return new Character(ch);
                ^
 2 warnings
-CommonCodeUtils.java:92: error: cannot find symbol
-    return Base64.getDecoder().decode(s);
-                 ^
+CommonCodeUtils.java:93: error: cannot find symbol
+        return Base64.getDecoder().decode(s);
+                     ^
   symbol:   method getDecoder()
   location: class Base64
 1 error
@@ -1198,1063 +1208,50 @@ SymbolTable.java:1009: error: cannot find symbol
 Note: /home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/ClassReader.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 4 errors
+ClassReader.java:3125: error: cannot find symbol
+    if (offset < 0 || offset >= this.data.length) {
+                                    ^
+  symbol: variable data
+ClassReader.java:3130: error: cannot find symbol
+    long value = this.data[offset] & 0xFF;
+                     ^
+  symbol: variable data
+ClassReader.java:3131: error: cannot find symbol
+    value |= (this.data[offset + 1] & 0xFF) << 8;
+                  ^
+  symbol: variable data
+ClassReader.java:3132: error: cannot find symbol
+    value |= (this.data[offset + 2] & 0xFF) << 16;
+                  ^
+  symbol: variable data
+ClassReader.java:3133: error: cannot find symbol
+    value |= (this.data[offset + 3] & 0xFF) << 24;
+                  ^
+  symbol: variable data
 Note: ClassReader.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Exception in thread "main" java.lang.StackOverflowError
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-	at net.hasor.utils.asm.ClassReader.readLong(ClassReader.java:3125)
-ByteVector.java:327: error: cannot find symbol
-        System.arraycopy(nullBytes, 0, this.bytes, byteOffset, byteLength);
-                                           ^
-  symbol: variable bytes
-ByteVector.java:329: error: cannot find symbol
-        System.arraycopy(byteArrayValue, byteOffset, this.bytes, byteOffset, byteLength);
-                                                         ^
-  symbol: variable bytes
-2 errors
+5 errors
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at net.hasor.utils.asm.ByteVector_putByteArray.main(ByteVector_putByteArray.java:37)
 Note: /home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/ClassReader.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Exception in thread "main" java.lang.NullPointerException: Cannot load from int array because "frame.initializations" is null
 	at net.hasor.utils.asm.Frame_addInitializedType.main(Frame_addInitializedType.java:27)
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 21 out of bounds for length 11
 	at net.hasor.utils.asm.MethodWriter_putAbstractTypes.main(MethodWriter_putAbstractTypes.java:25)
-ClassReader.java:3101: error: cannot find symbol
-    if (offset < 0 || offset + 2 > this.bytes.length) {
-                                       ^
-  symbol: variable bytes
-ClassReader.java:3106: error: cannot find symbol
-    byte highByte = this.bytes[offset];
-                        ^
-  symbol: variable bytes
-ClassReader.java:3107: error: cannot find symbol
-    byte lowByte = this.bytes[offset + 1];
-                       ^
-  symbol: variable bytes
+ClassReader.java:3100: error: cannot find symbol
+    if (offset < 0 || offset >= contentStartPosition) {
+                                ^
+  symbol:   variable contentStartPosition
+  location: class ClassReader
+ClassReader.java:3103: error: cannot find symbol
+    return content.getShort(offset);
+           ^
+  symbol:   variable content
+  location: class ClassReader
 Note: ClassReader.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-3 errors
+2 errors
 ClassReader.java:2276: error: constructor Label in class Label cannot be applied to given types;
         labels[bytecodeOffset] = new Label(bytecodeOffset);
                                  ^
@@ -2266,9 +1263,6 @@ Note: Recompile with -Xlint:deprecation for details.
 1 error
 Note: ClassReader.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Exception in thread "main" java.lang.IllegalArgumentException: Buffer is not large enough
-	at net.hasor.utils.asm.ClassReader.readUtf(ClassReader.java:3161)
-	at net.hasor.utils.asm.ClassReader_readUtf.main(ClassReader_readUtf.java:15)
 Type.java:832: error: cannot find symbol
     return Objects.hash();
            ^
@@ -2304,7 +1298,7 @@ SymbolTable.java:659: error: cannot find symbol
   symbol:   method add(Symbol)
   location: variable constantPool of type ByteVector
 SymbolTable.java:660: error: cannot find symbol
-    return constantPool.size() - 1;
+    return constantPool.size() - 1; // Return the new index
                        ^
   symbol:   method size()
   location: variable constantPool of type ByteVector
@@ -2342,11 +1336,6 @@ ToStringStyle.java:1534: warning: [dep-ann] deprecated item is not annotated wit
 Note: ToStringStyle.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 2 warnings
-ReflectionToStringBuilder.java:314: error: cannot find symbol
-                                .filter(Objects::nonNull)
-                                        ^
-  symbol:   variable Objects
-  location: class ReflectionToStringBuilder
 /home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/builder/ToStringStyle.java:1520: warning: [dep-ann] deprecated item is not annotated with @Deprecated
     protected boolean isShortClassName() {
                       ^
@@ -2355,8 +1344,11 @@ ReflectionToStringBuilder.java:314: error: cannot find symbol
                    ^
 Note: /home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/builder/ToStringStyle.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-1 error
 2 warnings
+Exception in thread "main" java.lang.IllegalArgumentException: Collection cannot be null
+	at net.hasor.utils.builder.ReflectionToStringBuilder.toNoNullStringArray(ReflectionToStringBuilder.java:314)
+	at net.hasor.utils.builder.ReflectionToStringBuilder_toNoNullStringArray.testToNoNullStringArrayCollection(ReflectionToStringBuilder_toNoNullStringArray.java:44)
+	at net.hasor.utils.builder.ReflectionToStringBuilder_toNoNullStringArray.main(ReflectionToStringBuilder_toNoNullStringArray.java:79)
 ToStringStyle.java:1503: warning: [dep-ann] deprecated item is not annotated with @Deprecated
     protected boolean isShortClassName() {
                       ^
@@ -2437,18 +1429,32 @@ Note: BeanMap.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
 2 errors
-/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-web/src/main/java/net/hasor/web/upload/ParameterParser.java:116: error: cannot find symbol
-    while ((currentChar = input.read()) != -1) {
-                          ^
-  symbol:   variable input
-  location: class ParameterParser
-1 error
 MultipartStream.java:187: error: cannot find symbol
-    return buffer.read();
-                 ^
-  symbol:   method read()
-  location: variable buffer of type byte[]
-1 error
+    if (deadBytes != null && deadBytes.hasRemaining()) {
+        ^
+  symbol:   variable deadBytes
+  location: class MultipartStream
+MultipartStream.java:187: error: cannot find symbol
+    if (deadBytes != null && deadBytes.hasRemaining()) {
+                             ^
+  symbol:   variable deadBytes
+  location: class MultipartStream
+MultipartStream.java:188: error: cannot find symbol
+        return deadBytes.get();
+               ^
+  symbol:   variable deadBytes
+  location: class MultipartStream
+MultipartStream.java:190: error: cannot find symbol
+    int b = fileChannel.read(ByteBuffer.allocate(1));
+            ^
+  symbol:   variable fileChannel
+  location: class MultipartStream
+MultipartStream.java:190: error: cannot find symbol
+    int b = fileChannel.read(ByteBuffer.allocate(1));
+                             ^
+  symbol:   variable ByteBuffer
+  location: class MultipartStream
+5 errors
 ParameterParser.java:115: error: cannot find symbol
     for (int i = 0; i < input.length; i++) {
                         ^
@@ -2473,12 +1479,9 @@ ParameterParser.java:119: error: cannot find symbol
 Exception in thread "main" java.lang.IllegalArgumentException: Both str and searchStr must not be null
 	at net.hasor.dataql.fx.basic.StringUdfSource.lastIndexOf(StringUdfSource.java:162)
 	at net.hasor.dataql.fx.basic.StringUdfSource_lastIndexOf.main(StringUdfSource_lastIndexOf.java:8)
-Exception in thread "main" java.lang.IllegalArgumentException: Input string cannot be null
+Exception in thread "main" java.lang.IllegalArgumentException: String cannot be null
 	at net.hasor.dataql.fx.basic.StringUdfSource.sub(StringUdfSource.java:233)
 	at net.hasor.dataql.fx.basic.StringUdfSource_sub.main(StringUdfSource_sub.java:8)
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because "<parameter1>" is null
-	at net.hasor.dataql.fx.basic.StringUdfSource.containsAnyIgnoreCase(StringUdfSource.java:213)
-	at net.hasor.dataql.fx.basic.StringUdfSource_containsAnyIgnoreCase.main(StringUdfSource_containsAnyIgnoreCase.java:26)
 230
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/interviews/codereval/src/main/java//LoggerRateLimiter.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/ArrayUtils.class
@@ -2513,7 +1516,7 @@ javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-com
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/ArrayUtils.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/CharUtils.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/CharUtils.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/ClassReader.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/ByteVector.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/Frame.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/Frame.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/asm/MethodWriter.class
@@ -2525,6 +1528,7 @@ javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-com
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/io/output/WriterOutputStream.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/builder/ReflectionToStringBuilder.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/builder/ToStringStyle.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/builder/ReflectionToStringBuilder.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/builder/ToStringStyle.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/json/TypeUtil.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-commons/src/main/java/net/hasor/utils/json/TypeUtil.class
@@ -2538,7 +1542,9 @@ javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-web
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-web/src/main/java/net/hasor/web/upload/MultipartStream.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/basic/StringUdfSource.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/basic/StringUdfSource.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/basic/StringUdfSource.class
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because "<parameter1>" is null
+	at net.hasor.dataql.fx.basic.StringUdfSource.containsAnyIgnoreCase(StringUdfSource.java:213)
+	at net.hasor.dataql.fx.basic.StringUdfSource_containsAnyIgnoreCase.main(StringUdfSource_containsAnyIgnoreCase.java:26)
 Exception in thread "main" java.lang.IllegalArgumentException: Both str and searchStr must not be null
 	at net.hasor.dataql.fx.basic.StringUdfSource.indexOf(StringUdfSource.java:136)
 	at net.hasor.dataql.fx.basic.StringUdfSource_indexOf.main(StringUdfSource_indexOf.java:11)
@@ -2619,27 +1625,27 @@ PaginationHelper.java:165: warning: [removal] Integer(String) in Integer has bee
 PaginationHelper.java:166: warning: [removal] Integer(String) in Integer has been deprecated and marked for removal
                     drc.setLimit(new Integer(limit));
                                  ^
-PaginationHelper.java:230: error: cannot find symbol
-    return "bytes " + getOffset() + "-" + (getOffset() + getContentSize()) + "/" + getTotalSize();
+PaginationHelper.java:229: error: cannot find symbol
+    return "bytes " + offset + "-" + (offset + contentSize - 1) + "/" + contentLength;
                       ^
-  symbol:   method getOffset()
+  symbol:   variable offset
   location: class PaginationHelper
-PaginationHelper.java:230: error: cannot find symbol
-    return "bytes " + getOffset() + "-" + (getOffset() + getContentSize()) + "/" + getTotalSize();
-                                           ^
-  symbol:   method getOffset()
+PaginationHelper.java:229: error: cannot find symbol
+    return "bytes " + offset + "-" + (offset + contentSize - 1) + "/" + contentLength;
+                                      ^
+  symbol:   variable offset
   location: class PaginationHelper
-PaginationHelper.java:230: error: cannot find symbol
-    return "bytes " + getOffset() + "-" + (getOffset() + getContentSize()) + "/" + getTotalSize();
-                                                         ^
-  symbol:   method getContentSize()
+PaginationHelper.java:229: error: cannot find symbol
+    return "bytes " + offset + "-" + (offset + contentSize - 1) + "/" + contentLength;
+                                               ^
+  symbol:   variable contentSize
   location: class PaginationHelper
-PaginationHelper.java:230: error: cannot find symbol
-    return "bytes " + getOffset() + "-" + (getOffset() + getContentSize()) + "/" + getTotalSize();
-                                                                                   ^
-  symbol:   method getTotalSize()
+PaginationHelper.java:229: error: cannot find symbol
+    return "bytes " + offset + "-" + (offset + contentSize - 1) + "/" + contentLength;
+                                                                        ^
+  symbol:   variable contentLength
   location: class PaginationHelper
-PaginationHelper.java:295: warning: [removal] Integer(int) in Integer has been deprecated and marked for removal
+PaginationHelper.java:294: warning: [removal] Integer(int) in Integer has been deprecated and marked for removal
             drc.setOffset(new Integer(0));
                           ^
 /home/travis/builds/java/CoderEval-Java-projects/framework/demoiselle-crud/src/main/java/org/demoiselle/jee/crud/AbstractREST.java:28: error: package io.swagger.annotations does not exist
@@ -2698,10 +1704,13 @@ import io.swagger.jaxrs.PATCH;
     I extends Object declared in class AbstractREST
 12 errors
 4 warnings
+Exception in thread "main" java.lang.IllegalArgumentException: Charset cannot be null or empty
+	at net.hasor.web.upload.util.MimeUtility.javaCharset(MimeUtility.java:231)
+	at net.hasor.web.upload.util.MimeUtility_javaCharset.main(MimeUtility_javaCharset.java:10)
 Exception in thread "main" java.lang.StackOverflowError
+	at org.jgrapht.util.AVLTree.rotateLeft(AVLTree.java:510)
+	at org.jgrapht.util.AVLTree.balanceNode(AVLTree.java:570)
 	at org.jgrapht.util.AVLTree.balance(AVLTree.java:545)
-	at org.jgrapht.util.AVLTree.balance(AVLTree.java:548)
-	at org.jgrapht.util.AVLTree.balance(AVLTree.java:548)
 	at org.jgrapht.util.AVLTree.balance(AVLTree.java:548)
 	at org.jgrapht.util.AVLTree.balance(AVLTree.java:548)
 	at org.jgrapht.util.AVLTree.balance(AVLTree.java:548)
@@ -3727,47 +2736,42 @@ SupplierUtil.java:187: error: local variables referenced from a lambda expressio
     return () -> String.valueOf(start++);
                                 ^
 1 error
-DoublyLinkedList.java:1289: error: ';' expected
+DoublyLinkedList.java:1349: error: ';' expected
         public void add(E e)
                        ^
-DoublyLinkedList.java:1289: error: ';' expected
+DoublyLinkedList.java:1349: error: ';' expected
         public void add(E e)
                            ^
-DoublyLinkedList.java:1310: error: ';' expected
+DoublyLinkedList.java:1370: error: ';' expected
         public void set(E e)
                        ^
-DoublyLinkedList.java:1310: error: ';' expected
+DoublyLinkedList.java:1370: error: ';' expected
         public void set(E e)
                            ^
-DoublyLinkedList.java:1333: error: ';' expected
+DoublyLinkedList.java:1393: error: ';' expected
         public void remove()
                           ^
-DoublyLinkedList.java:1356: error: illegal start of expression
+DoublyLinkedList.java:1416: error: illegal start of expression
         public void checkForComodification()
         ^
 6 errors
-DoublyLinkedList.java:143: error: incompatible types: E cannot be converted to ListNode<E>
-        ListNode<E> node = list.removeFirst();
-                                           ^
+DoublyLinkedList.java:139: error: incompatible types: E cannot be converted to ListNode<E>
+    for (ListNode<E> node : list) {
+                            ^
   where E is a type-variable:
     E extends Object declared in class DoublyLinkedList
-DoublyLinkedList.java:144: error: incompatible types: ListNode<E> cannot be converted to E
-        tempList.addLast(node);
-                         ^
+DoublyLinkedList.java:141: error: incompatible types: ListNode<E> cannot be converted to ListNodeImpl<E>
+        list.removeListNode(node);
+                            ^
   where E is a type-variable:
     E extends Object declared in class DoublyLinkedList
-DoublyLinkedList.java:152: error: incompatible types: E cannot be converted to ListNode<E>
-        ListNode<E> node = tempList.removeFirst();
-                                               ^
-  where E is a type-variable:
-    E extends Object declared in class DoublyLinkedList
-DoublyLinkedList.java:153: error: incompatible types: ListNode<E> cannot be converted to E
-        list.addLast(node);
-                     ^
+DoublyLinkedList.java:143: error: incompatible types: ListNode<E> cannot be converted to ListNodeImpl<E>
+        addListNode(node);
+                    ^
   where E is a type-variable:
     E extends Object declared in class DoublyLinkedList
 Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-4 errors
+3 errors
 IsomorphicGraphMapping.java:340: error: cannot infer type arguments for IsomorphicGraphMapping<>
     IsomorphicGraphMapping<V,E> mapping = new IsomorphicGraphMapping<>();
                                           ^
@@ -3814,37 +2818,6 @@ PathGrowingWeightedMatching.java:140: error: cannot find symbol
     V extends Object declared in class PathGrowingWeightedMatching
     E extends Object declared in class PathGrowingWeightedMatching
 2 errors
-BlossomVTreeEdge.java:102: error: cannot find symbol
-    if (leftEdge != null) {
-        ^
-  symbol:   variable leftEdge
-  location: class BlossomVTreeEdge
-BlossomVTreeEdge.java:103: error: cannot find symbol
-        leftEdge.rightEdge = rightEdge;
-        ^
-  symbol:   variable leftEdge
-  location: class BlossomVTreeEdge
-BlossomVTreeEdge.java:103: error: cannot find symbol
-        leftEdge.rightEdge = rightEdge;
-                             ^
-  symbol:   variable rightEdge
-  location: class BlossomVTreeEdge
-BlossomVTreeEdge.java:106: error: cannot find symbol
-    if (rightEdge != null) {
-        ^
-  symbol:   variable rightEdge
-  location: class BlossomVTreeEdge
-BlossomVTreeEdge.java:107: error: cannot find symbol
-        rightEdge.leftEdge = leftEdge;
-        ^
-  symbol:   variable rightEdge
-  location: class BlossomVTreeEdge
-BlossomVTreeEdge.java:107: error: cannot find symbol
-        rightEdge.leftEdge = leftEdge;
-                             ^
-  symbol:   variable leftEdge
-  location: class BlossomVTreeEdge
-6 errors
 Boxes.java:58: error: cannot find symbol
     double x = box.getX();
                   ^
@@ -3861,15 +2834,6 @@ Boxes.java:63: error: cannot find symbol
   symbol:   method getY()
   location: variable box of type Box2D
 3 errors
-Exception in thread "main" java.lang.NoClassDefFoundError: org/jgrapht/util/SupplierUtil$1
-	at org.jgrapht.util.SupplierUtil.createStringSupplier(SupplierUtil.java:187)
-	at org.jgrapht.util.SupplierUtil.createStringSupplier(SupplierUtil.java:172)
-	at org.jgrapht.alg.drawing.model.Points_equals.main(Points_equals.java:14)
-Caused by: java.lang.ClassNotFoundException: org.jgrapht.util.SupplierUtil$1
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 3 more
 FixedSizeIntegerQueue.java:98: error: cannot find symbol
             "elements=" + elements +
                           ^
@@ -3888,7 +2852,7 @@ BoyerMyrvoldPlanarityInspector.java:671: error: missing return statement
 }
 ^
 1 error
-BoyerMyrvoldPlanarityInspector.java:1735: error: missing return statement
+BoyerMyrvoldPlanarityInspector.java:1736: error: missing return statement
 }
 ^
 1 error
@@ -3912,9 +2876,9 @@ Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of b
 	at java.base/java.util.ArrayList.get(ArrayList.java:427)
 	at org.jgrapht.alg.cycle.WeakChordalityInspector.reload(WeakChordalityInspector.java:462)
 	at org.jgrapht.alg.cycle.WeakChordalityInspector_reload.main(WeakChordalityInspector_reload.java:38)
-CycleDetector.java:222: error: missing return statement
-}    }
-^
+CycleDetector.java:319: error: reached end of file while parsing
+}
+ ^
 1 error
 WeakChordalityInspector.java:224: error: missing return statement
 }
@@ -3925,19 +2889,11 @@ Distributor.java:147: error: incompatible types: long cannot be converted to Int
                       ^
 Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
 1 error
-Distributor.java:107: error: bad operand types for binary operator '-'
-        lowerBounds.add(key - 1); // Placeholder logic
+Distributor.java:127: error: bad operand types for binary operator '+'
+        upperBounds.add(key + 1);
                             ^
   first type:  K
   second type: int
-  where K is a type-variable:
-    K extends Object declared in class Distributor
-1 error
-Distributor.java:131: error: bad operand types for binary operator '<='
-            if (keys.get(i) <= key) {
-                            ^
-  first type:  K
-  second type: K
   where K is a type-variable:
     K extends Object declared in class Distributor
 1 error
@@ -3950,19 +2906,18 @@ CliqueMinimalSeparatorDecomposition.java:301: error: cannot find symbol
     V extends Object declared in method <V,E>isClique(Graph<V,E>,Set<V>)
     E extends Object declared in method <V,E>isClique(Graph<V,E>,Set<V>)
 1 error
-CSRBooleanMatrix.java:126: error: cannot find symbol
-    return countNonZeroEntries(row);
-           ^
-  symbol:   method countNonZeroEntries(int)
-  location: class CSRBooleanMatrix
-1 error
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.regex.MatchResult.groupCount()" because "matchResult" is null
-	at org.atmosphere.util.uri.UriPattern_match.main(UriPattern_match.java:16)
-UriTemplate.java:291: error: cannot find symbol
-    return templateMembers.contains(name);
-           ^
-  symbol:   variable templateMembers
-  location: class UriTemplate
+CSRBooleanMatrix.java:125: error: cannot find symbol
+    if (row < 0 || row >= this.rows) {
+                              ^
+  symbol: variable rows
+CSRBooleanMatrix.java:132: error: cannot find symbol
+        if (this.data[row][i] != 0) {
+                ^
+  symbol: variable data
+2 errors
+UriPattern.java:260: error: missing return statement
+}
+^
 1 error
 IntrospectionUtils.java:163: warning: [removal] Integer(String) in Integer has been deprecated and marked for removal
                             params[0] = new Integer(value);
@@ -4019,9 +2974,17 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.l
 AtmosphereRequestImpl.java:1404: error: AtmosphereRequest is abstract; cannot be instantiated
     return new AtmosphereRequest(request);
            ^
-/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.java:2066: warning: [dep-ann] deprecated item is not annotated with @Deprecated
+Note: AtmosphereRequestImpl.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: AtmosphereRequestImpl.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 error
+AtmosphereFramework.java:2057: warning: [dep-ann] deprecated item is not annotated with @Deprecated
     public AsyncSupport getCometSupport() {
                         ^
+AtmosphereFramework.java:752: error: missing return statement
+}
+^
 /home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.java:163: warning: [removal] Integer(String) in Integer has been deprecated and marked for removal
                             params[0] = new Integer(value);
                                         ^
@@ -4043,7 +3006,7 @@ Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 1 error
 6 warnings
-AtmosphereFramework.java:2057: warning: [dep-ann] deprecated item is not annotated with @Deprecated
+/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.java:2066: warning: [dep-ann] deprecated item is not annotated with @Deprecated
     public AsyncSupport getCometSupport() {
                         ^
 /home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.java:163: warning: [removal] Integer(String) in Integer has been deprecated and marked for removal
@@ -4061,24 +3024,11 @@ AtmosphereFramework.java:2057: warning: [dep-ann] deprecated item is not annotat
 /home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.java:832: warning: [removal] Boolean(String) in Boolean has been deprecated and marked for removal
             result = new Boolean(object);
                      ^
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-6 warnings
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Exception in thread "main" java.lang.NoSuchMethodError: 'org.atmosphere.cpr.AtmosphereFramework org.atmosphere.cpr.AtmosphereFramework.removeAtmosphereHandler(java.lang.String)'
-	at org.atmosphere.cpr.AtmosphereFramework_removeAtmosphereHandler.main(AtmosphereFramework_removeAtmosphereHandler.java:117)
-/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.java:2066: warning: [dep-ann] deprecated item is not annotated with @Deprecated
-    public AsyncSupport getCometSupport() {
-                        ^
 Note: /home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-1 warning
+6 warnings
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
@@ -4116,10 +3066,10 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.booleanValue()" because the return value of "java.util.concurrent.atomic.AtomicReference.get()" is null
 	at org.atmosphere.cpr.AtmosphereResourceImpl_addEventListener.main(AtmosphereResourceImpl_addEventListener.java:126)
-InputStreamIterator.java:67: error: missing return statement
-}
-^
-1 error
+Exception in thread "main" java.lang.IllegalArgumentException: Files array cannot be null or empty
+	at org.atmosphere.util.annotation.FileIterator.addReverse(FileIterator.java:132)
+	at org.atmosphere.util.annotation.FileIterator.<init>(FileIterator.java:81)
+	at org.atmosphere.util.annotation.InputStreamIterator_next.main(InputStreamIterator_next.java:9)
 ClassFileIterator.java:195: error: cannot find symbol
     return ClassLoader.getSystemClassLoader().getResources("").toArray(new File[0]);
                                                               ^
@@ -4166,8 +3116,8 @@ Note: Objects.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 Note: /home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Objects.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because "<parameter1>" is null
-	at io.jsonwebtoken.lang.Strings.startsWithIgnoreCase(Strings.java:291)
+Exception in thread "main" java.lang.IllegalArgumentException: Both str and prefix must not be null
+	at io.jsonwebtoken.lang.Strings.startsWithIgnoreCase(Strings.java:292)
 	at io.jsonwebtoken.lang.Strings_startsWithIgnoreCase.main(Strings_startsWithIgnoreCase.java:8)
 Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.Collection.iterator()" because "<parameter2>" is null
 	at io.jsonwebtoken.lang.Collections.findFirstMatch(Collections.java:204)
@@ -4182,8 +3132,8 @@ Exception in thread "main" java.lang.NullPointerException
 	at java.base/java.lang.System.arraycopy(Native Method)
 	at io.jsonwebtoken.lang.Strings.concatenateStringArrays(Strings.java:744)
 	at io.jsonwebtoken.lang.Strings_concatenateStringArrays.main(Strings_concatenateStringArrays.java:14)
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.indexOf(String)" because "<parameter1>" is null
-	at io.jsonwebtoken.lang.Strings.split(Strings.java:862)
+Exception in thread "main" java.lang.IllegalArgumentException: Input strings cannot be null
+	at io.jsonwebtoken.lang.Strings.split(Strings.java:863)
 	at io.jsonwebtoken.lang.Strings_split.main(Strings_split.java:12)
 Strings.java:576: error: cannot find symbol
     return path + File.separator + relativePath;
@@ -4195,13 +3145,75 @@ Note: /home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/j
 Note: Recompile with -Xlint:deprecation for details.
 Note: /home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/helpers/OptionConverter.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-TempFileAppender.java:169: error: class, interface, enum, or record expected
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/basic/StringUdfSource.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/basic/StringUdfSource.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-db/src/main/java/net/hasor/db/jdbc/core/ParsedSql.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-rsf/rsf-framework/src/main/java/net/hasor/rsf/protocol/rsf/v1/ArrayUtils.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/web/WebUdfSource.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/framework/demoiselle-crud/src/main/java/org/demoiselle/jee/crud/pagination/PaginationHelper.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-web/src/main/java/net/hasor/web/upload/util/MimeUtility.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/AVLTree.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/ArrayUtil.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/MathUtil.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/DoublyLinkedList.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/ArrayUtil.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/generate/CompleteBipartiteGraphGenerator.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/traverse/LexBreadthFirstIterator.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/traverse/LexBreadthFirstIterator.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/matching/blossom/v5/BlossomVTreeEdge.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/graph/specifics/FastLookupDirectedSpecifics.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/drawing/model/Points.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/util/ToleranceDoubleComparator.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/TransitiveClosure.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/flow/PadbergRaoOddMinimumCutset.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/cycle/WeakChordalityInspector.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/generate/netgen/Distributor.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/DOTEventDrivenImporter.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriComponent.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriComponent.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriTemplate.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriComponent.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/StringEscapeUtils.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/QueryStringDecoder.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/config/managed/TypeResolver.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/DefaultBroadcaster.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereRequestImpl.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/Meteor.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereResourceImpl.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/annotation/InputStreamIterator.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/annotation/FileIterator.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/websocket/WebSocket.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Objects.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Collections.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Collections.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
+PatternLayout.java:498: error: incompatible types: Object cannot be converted to String
+    return event.getMessage();
+                           ^
+1 error
+TempFileAppender.java:175: error: class, interface, enum, or record expected
   public boolean requiresLayout() {
          ^
-TempFileAppender.java:171: error: class, interface, enum, or record expected
+TempFileAppender.java:177: error: class, interface, enum, or record expected
   }
   ^
-TempFileAppender.java:173: error: class, interface, enum, or record expected
+TempFileAppender.java:179: error: class, interface, enum, or record expected
   public void close() {
          ^
 3 errors
@@ -5232,83 +4244,24 @@ Exception in thread "main" java.lang.StackOverflowError
 	at org.apache.log4j.NDC.peek(NDC.java:309)
 	at org.apache.log4j.NDC.peek(NDC.java:309)
 	at org.apache.log4j.NDC.peek(NDC.java:309)
-Hierarchy.java:312: warning: [dep-ann] deprecated item is not annotated with @Deprecated
+Hierarchy.java:313: warning: [dep-ann] deprecated item is not annotated with @Deprecated
   Enumeration getCurrentCategories() {
               ^
-Hierarchy.java:350: warning: [dep-ann] deprecated item is not annotated with @Deprecated
+Hierarchy.java:351: warning: [dep-ann] deprecated item is not annotated with @Deprecated
   void overrideAsNeeded(String override) {
        ^
-Hierarchy.java:398: warning: [dep-ann] deprecated item is not annotated with @Deprecated
+Hierarchy.java:399: warning: [dep-ann] deprecated item is not annotated with @Deprecated
   void setDisableOverride(String override) {
        ^
 Note: Hierarchy.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 3 warnings
-EnhancedPatternLayout.java:578: error: illegal start of expression
+EnhancedPatternLayout.java:686: error: illegal start of expression
   public boolean ignoresThrowable() {
   ^
 1 error
 Note: EnhancedThrowableRenderer.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/basic/StringUdfSource.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-db/src/main/java/net/hasor/db/jdbc/core/ParsedSql.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-rsf/rsf-framework/src/main/java/net/hasor/rsf/protocol/rsf/v1/ArrayUtils.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-dataql/dataql-fx/src/main/java/net/hasor/dataql/fx/web/WebUdfSource.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/framework/demoiselle-crud/src/main/java/org/demoiselle/jee/crud/pagination/PaginationHelper.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/hasor/hasor-web/src/main/java/net/hasor/web/upload/util/MimeUtility.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/AVLTree.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/ArrayUtil.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/MathUtil.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/DoublyLinkedList.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/util/ArrayUtil.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/generate/CompleteBipartiteGraphGenerator.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/traverse/LexBreadthFirstIterator.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/traverse/LexBreadthFirstIterator.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/graph/specifics/FastLookupDirectedSpecifics.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/drawing/model/Points.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/util/ToleranceDoubleComparator.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/TransitiveClosure.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/flow/PadbergRaoOddMinimumCutset.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/alg/cycle/WeakChordalityInspector.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jgrapht/jgrapht-core/src/main/java/org/jgrapht/DOTEventDrivenImporter.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriComponent.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriComponent.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriPattern.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/uri/UriComponent.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/IntrospectionUtils.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/StringEscapeUtils.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/QueryStringDecoder.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/config/managed/TypeResolver.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/DefaultBroadcaster.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereFramework.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereRequestImpl.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/Meteor.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/cpr/AtmosphereResourceImpl.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/util/annotation/FileIterator.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/atmosphere/modules/cpr/src/main/java/org/atmosphere/websocket/WebSocket.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Objects.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Collections.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Collections.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/jjwt/api/src/main/java/io/jsonwebtoken/lang/Strings.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/CompositeRollingAppender.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/PatternLayout.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/NDC.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/Hierarchy.class
 LogBrokerMonitor.java:1386: warning: [dep-ann] deprecated item is not annotated with @Deprecated
   protected void trackTableScrollPane() {
                  ^
@@ -5338,7 +4291,7 @@ Note: TelnetAppender.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: TelnetAppender.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-TelnetAppender.java:221: error: class, interface, enum, or record expected
+TelnetAppender.java:224: error: class, interface, enum, or record expected
 }
 ^
 1 error
@@ -5357,7 +4310,7 @@ Note: OptionConverter.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: OptionConverter.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-AppenderAttachableImpl.java:111: error: cannot find symbol
+AppenderAttachableImpl.java:112: error: cannot find symbol
     return attachedAppenders.contains(appender);
            ^
   symbol:   variable attachedAppenders
@@ -5369,8 +4322,14 @@ Note: OptionConverter.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: OptionConverter.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
+AppenderAttachableImpl.java:167: error: cannot find symbol
+    appenders.remove(name);
+    ^
+  symbol:   variable appenders
+  location: class AppenderAttachableImpl
 Note: AppenderAttachableImpl.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
+1 error
 AppenderAttachableImpl.java:56: error: cannot find symbol
     for (Appender appender : appenders) {
                              ^
@@ -5384,10 +4343,14 @@ AppenderAttachableImpl.java:59: error: cannot find symbol
 Note: AppenderAttachableImpl.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 2 errors
+CategoryNodeEditor.java:259: error: missing return statement
+}
+^
 Note: CategoryNodeEditor.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: CategoryNodeEditor.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
+1 error
 MyTableModel.java:49: error: missing return statement
 }        };
 ^
@@ -5421,6 +4384,8 @@ Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 Note: NameAbbreviator.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "org.apache.skywalking.oap.server.core.query.PointOfTime.id(String)" is null
+	at org.apache.skywalking.oap.server.core.query.PointOfTime_id.main(PointOfTime_id.java:7)
 warning: Implicitly compiled files were not subject to annotation processing.
   Use -proc:none to disable annotation processing or -implicit to specify a policy for implicit compilation.
 1 warning
@@ -5454,22 +4419,60 @@ StorageModels.java:278: error: cannot find symbol
 Note: StorageModels.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 1 error
-warning: Implicitly compiled files were not subject to annotation processing.
-  Use -proc:none to disable annotation processing or -implicit to specify a policy for implicit compilation.
-1 warning
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" because the return value of "org.apache.skywalking.oap.server.core.analysis.metrics.DataTable.get(String)" is null
-	at org.apache.skywalking.oap.server.core.analysis.metrics.DataTable.valueAccumulation(DataTable.java:61)
-	at org.apache.skywalking.oap.server.core.analysis.meter.function.HistogramFunction.accept(HistogramFunction.java:76)
-	at org.apache.skywalking.oap.server.core.analysis.meter.function.BucketedValues_isCompatible.main(BucketedValues_isCompatible.java:30)
-IndexStructures.java:69: error: missing return statement
-}
-^
+BucketedValues.java:75: error: cannot find symbol
+    if (dataset.isEmpty()) {
+               ^
+  symbol:   method isEmpty()
+  location: variable dataset of type DataTable
+BucketedValues.java:80: error: cannot find symbol
+    if (!dataset.hasColumn("column1") || !dataset.hasColumn("column2")) {
+                ^
+  symbol:   method hasColumn(String)
+  location: variable dataset of type DataTable
+BucketedValues.java:80: error: cannot find symbol
+    if (!dataset.hasColumn("column1") || !dataset.hasColumn("column2")) {
+                                                 ^
+  symbol:   method hasColumn(String)
+  location: variable dataset of type DataTable
+BucketedValues.java:85: error: cannot find symbol
+    if (!dataset.getColumn("column1").getType().equals(String.class) || !dataset.getColumn("column2").getType().equals(int.class)) {
+                ^
+  symbol:   method getColumn(String)
+  location: variable dataset of type DataTable
+BucketedValues.java:85: error: cannot find symbol
+    if (!dataset.getColumn("column1").getType().equals(String.class) || !dataset.getColumn("column2").getType().equals(int.class)) {
+                                                                                ^
+  symbol:   method getColumn(String)
+  location: variable dataset of type DataTable
+BucketedValues.java:90: error: cannot find symbol
+    if (!dataset.getValue("column1", 0).equals("value1") || !dataset.getValue("column2", 0).equals(1)) {
+                ^
+  symbol:   method getValue(String,int)
+  location: variable dataset of type DataTable
+BucketedValues.java:90: error: cannot find symbol
+    if (!dataset.getValue("column1", 0).equals("value1") || !dataset.getValue("column2", 0).equals(1)) {
+                                                                    ^
+  symbol:   method getValue(String,int)
+  location: variable dataset of type DataTable
+7 errors
+IndexStructures.java:77: error: cannot find symbol
+    for (String fieldName : mappings.getFields()) {
+                                    ^
+  symbol:   method getFields()
+  location: variable mappings of type Mappings
+IndexStructures.java:79: error: cannot find symbol
+        if (!mappings.getFields().contains(fieldName)) {
+                     ^
+  symbol:   method getFields()
+  location: variable mappings of type Mappings
+IndexStructures.java:81: error: cannot find symbol
+            diffMappings.addField(fieldName);
+                        ^
+  symbol:   method addField(String)
+  location: variable diffMappings of type Mappings
 Note: IndexStructures.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-1 error
+3 errors
 IndexStructures.java:121: error: class, interface, enum, or record expected
     public boolean containsMapping(String tableName, Mappings mappings) {
            ^
@@ -5505,10 +4508,52 @@ MultipleChannelsConsumer.java:97: error: cannot find symbol
 Note: MultipleChannelsConsumer.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 2 errors
-ProfiledBasicInfo.java:196: error: reached end of file while parsing
-}
- ^
-1 error
+ProfiledBasicInfo.java:76: error: cannot find symbol
+        List<BasicTrace> taskTraces = taskQueryService.getTaskTraces(config.getTaskId());
+                                                                           ^
+  symbol:   method getTaskId()
+  location: variable config of type ExporterConfig
+ProfiledBasicInfo.java:77: error: cannot find symbol
+        BasicTrace profiledTrace = taskTraces.stream().filter(t -> t.getTraceIds().contains(config.getTraceId())).findFirst().orElse(null);
+                                                                                                  ^
+  symbol:   method getTraceId()
+  location: variable config of type ExporterConfig
+ProfiledBasicInfo.java:79: error: cannot find symbol
+            throw new IllegalArgumentException("Cannot fount profiled segment in current task: " + config.getTaskId()
+                                                                                                         ^
+  symbol:   method getTaskId()
+  location: variable config of type ExporterConfig
+ProfiledBasicInfo.java:80: error: cannot find symbol
+                    + ", segment id: " + config.getTraceId() + ", current task total profiled trace count is " + taskTraces.size());
+                                               ^
+  symbol:   method getTraceId()
+  location: variable config of type ExporterConfig
+ProfiledBasicInfo.java:93: error: cannot find symbol
+        Trace trace = traceQueryService.queryTrace(config.getTraceId());
+                                                         ^
+  symbol:   method getTraceId()
+  location: variable config of type ExporterConfig
+ProfiledBasicInfo.java:114: error: cannot find symbol
+        File file = new File(config.getAnalyzeResultDist() + File.separator + "basic.yml");
+                                   ^
+  symbol:   method getAnalyzeResultDist()
+  location: variable config of type ExporterConfig
+/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-tools/profile-exporter/tool-profile-snapshot-bootstrap/src/main/java/org/apache/skywalking/oap/server/tool/profile/exporter/ExporterConfig.java:47: error: cannot find symbol
+        config.setTaskId(args[0]);
+              ^
+  symbol:   method setTaskId(String)
+  location: variable config of type ExporterConfig
+/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-tools/profile-exporter/tool-profile-snapshot-bootstrap/src/main/java/org/apache/skywalking/oap/server/tool/profile/exporter/ExporterConfig.java:48: error: cannot find symbol
+        config.setTraceId(args[1]);
+              ^
+  symbol:   method setTraceId(String)
+  location: variable config of type ExporterConfig
+/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-tools/profile-exporter/tool-profile-snapshot-bootstrap/src/main/java/org/apache/skywalking/oap/server/tool/profile/exporter/ExporterConfig.java:49: error: cannot find symbol
+        config.setAnalyzeResultDist(args[2]);
+              ^
+  symbol:   method setAnalyzeResultDist(String)
+  location: variable config of type ExporterConfig
+9 errors
 ProfileSnapshotDumper.java:53: error: cannot find symbol
         String segmentId = basicInfo.getSegmentId();
                                     ^
@@ -5615,8 +4660,32 @@ ProfileSnapshotDumper.java:86: error: cannot find symbol
   symbol:   method setAnalyzeResultDist(String)
   location: variable config of type ExporterConfig
 21 errors
-Exception in thread "main" java.lang.NullPointerException: Cannot load from int array because "methodWriter.currentFrame" is null
-	at com.alibaba.fastjson2.internal.asm.MethodWriter_visitFrameStart.main(MethodWriter_visitFrameStart.java:8)
+Frame.java:723: error: illegal start of expression
+    public void pop(final int elements) {
+    ^
+1 error
+MethodWriter.java:785: error: illegal start of expression
+    void visitAbstractType(final int frameIndex, final int abstractType) {
+    ^
+MethodWriter.java:785: error: ';' expected
+    void visitAbstractType(final int frameIndex, final int abstractType) {
+                          ^
+MethodWriter.java:785: error: <identifier> expected
+    void visitAbstractType(final int frameIndex, final int abstractType) {
+                                                ^
+MethodWriter.java:785: error: ';' expected
+    void visitAbstractType(final int frameIndex, final int abstractType) {
+                                                                       ^
+MethodWriter.java:794: error: illegal start of expression
+    void visitFrameEnd() {
+    ^
+MethodWriter.java:794: error: ';' expected
+    void visitFrameEnd() {
+                      ^
+MethodWriter.java:809: error: illegal start of expression
+    public void putFrame() {
+    ^
+7 errors
 ByteVector.java:328: error: cannot find symbol
     int newSize = this.size + size;
                       ^
@@ -5691,7 +4760,11 @@ ProtobufIOUtil.java:239: error: cannot find symbol
   location: variable schema of type Schema<T>
   where T is a type-variable:
     T extends Object declared in method <T>writeDelimitedTo(OutputStream,T,Schema<T>,LinkedBuffer)
-2 errors
+ProtobufIOUtil.java:257: error: incompatible types: DataOutput cannot be converted to OutputStream
+        final int msgSize = LinkedBuffer.writeTo(out, buffer);
+                                                 ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+3 errors
 ByteString.java:340: error: cannot find symbol
         if (data[offset + i] != this.data[offset + i]) {
                                     ^
@@ -5772,12 +4845,13 @@ use --help for a list of possible options
 error: file not found: ByteBufferInput.java
 Usage: javac <options> <source files>
 use --help for a list of possible options
-ByteBufferInput.java:121: error: cannot find symbol
-        int b = inputStream.read();
-                ^
-  symbol:   variable inputStream
-  location: class ByteBufferInput
+ByteBufferInput.java:267: error: illegal start of expression
+    public void checkLastTagWas(final int value) throws ProtobufException
+    ^
 1 error
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/CompositeRollingAppender.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/NDC.class
+javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/Hierarchy.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/EnhancedThrowableRenderer.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/lf5/viewer/LogBrokerMonitor.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/lf5/viewer/LF5SwingUtils.class
@@ -5786,20 +4860,15 @@ javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/helpers/OptionConverter.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/helpers/OptionConverter.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/helpers/CyclicBuffer.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/helpers/AppenderAttachableImpl.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/lf5/LogRecord.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/lf5/viewer/categoryexplorer/CategoryNodeEditor.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/logging-log4j1/src/main/java/org/apache/log4j/pattern/NameAbbreviator.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-core/src/main/java/org/apache/skywalking/oap/server/core/query/PointOfTime.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-core/src/main/java/org/apache/skywalking/oap/server/core/analysis/data/MergableBufferedData.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-core/src/main/java/org/apache/skywalking/oap/server/core/analysis/metrics/Metrics.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-core/src/main/java/org/apache/skywalking/oap/server/core/storage/model/SQLDatabaseExtension.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-core/src/main/java/org/apache/skywalking/oap/server/core/analysis/meter/function/BucketedValues.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-storage-plugin/storage-elasticsearch-plugin/src/main/java/org/apache/skywalking/oap/server/storage/plugin/elasticsearch/base/TimeSeriesUtils.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-tools/profile-exporter/tool-profile-snapshot-bootstrap/src/main/java/org/apache/skywalking/oap/server/tool/profile/exporter/ExporterConfig.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/skywalking/oap-server/server-receiver-plugin/skywalking-ebpf-receiver-plugin/src/main/java/org/apache/skywalking/oap/server/receiver/ebpf/provider/handler/EBPFProcessServiceHandler.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/fastjson2/core/src/main/java/com/alibaba/fastjson2/internal/asm/Frame.class
-javac success!!!/home/travis/builds/java/CoderEval-Java-projects/fastjson2/core/src/main/java/com/alibaba/fastjson2/internal/asm/MethodWriter.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/fastjson2/core/src/main/java/com/alibaba/fastjson2/internal/asm/Frame.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/fastjson2/core/src/main/java/com/alibaba/fastjson2/internal/asm/Frame.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/fastjson2/core/src/main/java/com/alibaba/fastjson2/JSONArray.class
@@ -5809,13 +4878,13 @@ javac success!!!/home/travis/builds/java/CoderEval-Java-projects/protostuff/prot
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/protostuff/protostuff-api/src/main/java/io/protostuff/StringSerializer.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/protostuff/protostuff-api/src/main/java/io/protostuff/UnsignedNumberUtil.class
 javac success!!!/home/travis/builds/java/CoderEval-Java-projects/protostuff/protostuff-api/src/main/java/io/protostuff/ByteString.class
-[77.0]
-0.3347826086956522
- 33.48%
+[76.0]
+0.33043478260869563
+ 33.04%
 finish_overall
 self_contained	55
 
-  60.00%	
+  58.18%	
 
 
 slib_runnable	25

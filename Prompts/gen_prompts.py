@@ -31,24 +31,24 @@ import re
 # 4. The generated code must be directly executable as a standalone script without requiring any external definitions or setup.
 # 5. The implementation must be correct and reliable enough to pass the potential unit tests."""
 
-gen_prompt_1 = """You are a highly skilled code generator. Your task is to generate executable method from the natural language description."""
+gen_prompt_1 = """You are a highly skilled code generator. Your task is to generate an executable method from the natural language description."""
 
-gen_prompt_2 = """You are a highly skilled code generator. Your task is to generate executable method from the natural language description.
+gen_prompt_2 = """You are a highly skilled code generator. Your task is to generate an executable method from the natural language description.
 Rules:
 1. Strictly adhere to the function signature, parameter requirements, and output type specified in the docstring or leading comments."""
 
-gen_prompt_3 = """You are a highly skilled code generator. Your task is to generate executable method from the natural language description.  
+gen_prompt_3 = """You are a highly skilled code generator. Your task is to generate an executable method from the natural language description.
 Rules:
 1. Strictly adhere to the function signature, parameter requirements, and output type specified in the docstring or leading comments.
 2. The method implementation must handle potential invalid inputs and runtime issues with exception-handling behavior as appropriate."""
 
-gen_prompt_4 = """You are a highly skilled code generator. Your task is to generate executable method from the natural language description.
+gen_prompt_4 = """You are a highly skilled code generator. Your task is to generate an executable method from the natural language description.
 Rules:
 1. Strictly adhere to the function signature, parameter requirements, and output type specified in the docstring or leading comments.
 2. The method implementation must handle potential invalid inputs and runtime issues with exception-handling behavior as appropriate.
 3. Before writing any code, carefully think step by step the method's purpose stated in the docstring or leading comments, and keep this reasoning private."""
 
-gen_prompt_5 = """You are a highly skilled code generator. Your task is to generate executable method from the natural language description.
+gen_prompt_5 = """You are a highly skilled code generator. Your task is to generate an executable method from the natural language description.
 Rules:
 1. Strictly adhere to the function signature, parameter requirements, and output type specified in the docstring or leading comments.
 2. The method implementation must handle potential invalid inputs and runtime issues with exception-handling behavior as appropriate.

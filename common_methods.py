@@ -315,7 +315,7 @@ def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens,
 
     sampling_params = SamplingParams(
         max_tokens=output_max_tokens,
-        # n=5,
+        n=5,
         # temperature=0.0,
         stop_token_ids=[tokenizer.eos_token_id] if tokenizer.eos_token_id is not None else None
     )
