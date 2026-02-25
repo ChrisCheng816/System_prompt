@@ -118,8 +118,28 @@ def dashed_rect(c, H, x0, y0, x1, y1, dash=DASH, gap=GAP, width=DASH_W, outline=
 
     c.setDash()
 
-def draw_java_badge(c, H, x1, y0):
-    cx, cy = x1 - 44, y0 + 40
+def draw_number_badge(c, H, x1, y0, number):
+    cx, cy = x1 - 38, y0 + 38
+    c.setLineWidth(1.5)
+    c.setStrokeColor(rgb255((170, 190, 220)))
+    c.setFillColor(rgb255((66, 133, 244)))
+    c.circle(cx, H - cy, 24, stroke=1, fill=1)
+
+    label = str(number)
+    label_w = text_width(label, FONT_BADGE_NAME, FONT_BADGE_SIZE + 8)
+    draw_text_top_left(
+        c,
+        H,
+        cx - label_w / 2,
+        cy - 12,
+        label,
+        FONT_BADGE_NAME,
+        FONT_BADGE_SIZE + 8,
+        (255, 255, 255),
+    )
+
+def draw_java_badge_bottom_right(c, H, x1, y1):
+    cx, cy = x1 - 38, y1 - 38
     r = 24
     pts = []
     for i in range(6):
@@ -399,13 +419,23 @@ def draw_tokens_wrapped(c, H, tokens_line, x, y, max_w, font_name, font_size, li
 
     return cur_y
 
-def draw_code_block(c, H, box, title, code, ok=True, show_java_badge=False):
+def draw_code_block(
+    c,
+    H,
+    box,
+    title,
+    code,
+    ok=True,
+    badge_number=None,
+    show_status_icon=True,
+    show_java_badge_bottom_right=False,
+):
     x0, y0, x1, y1 = box
     dashed_rect(c, H, x0, y0, x1, y1)
 
     draw_text_top_left(c, H, x0 + 12, y0 + 10, title, FONT_TITLE_NAME, FONT_TITLE_SIZE, TITLE_COLOR)
-    if show_java_badge:
-        draw_java_badge(c, H, x1, y0)
+    if badge_number is not None:
+        draw_number_badge(c, H, x1, y0, badge_number)
 
     icon_space = 78
     pad_left = 20
@@ -426,13 +456,15 @@ def draw_code_block(c, H, box, title, code, ok=True, show_java_badge=False):
         if cur_y > y1 - pad_bottom:
             break
 
-    draw_status_icon(c, H, x1 - 38, y1 - 38, ok=ok)
+    if show_status_icon:
+        draw_status_icon(c, H, x1 - 38, y1 - 38, ok=ok)
+    if show_java_badge_bottom_right:
+        draw_java_badge_bottom_right(c, H, x1, y1)
 
 CODE_BLOCKS = [
     {
         "title": "Baseline:",
         "ok": False,
-        "java_badge": True,
         "code": """public void readFrom(final InputStream in) throws IOException {
     buffer.clear();
     int read;
@@ -445,7 +477,6 @@ CODE_BLOCKS = [
     {
         "title": "Structure-Constrained:",
         "ok": False,
-        "java_badge": False,
         "code": """public void readFrom(final InputStream in) throws IOException {
     buffer.clear();
     int read;
@@ -458,7 +489,6 @@ CODE_BLOCKS = [
     {
         "title": "Robust-Handling:",
         "ok": False,
-        "java_badge": False,
         "code": """public void readFrom(final InputStream in) throws IOException {
     if (in == null) {
         throw new IllegalArgumentException("InputStream cannot be null");
@@ -479,7 +509,6 @@ CODE_BLOCKS = [
     {
         "title": "Reasoning-Guided:",
         "ok": True,
-        "java_badge": False,
         "code": """public void readFrom(final InputStream in) throws IOException {
     if (in == null) {
         throw new IllegalArgumentException("InputStream cannot be null");
@@ -499,7 +528,6 @@ CODE_BLOCKS = [
     {
         "title": "Edge-Coverage:",
         "ok": False,
-        "java_badge": False,
         "code": """public void readFrom(final InputStream in) throws IOException {
     if (in == null) {
         throw new IllegalArgumentException("InputStream cannot be null");
@@ -522,7 +550,6 @@ CODE_BLOCKS = [
     {
         "title": "Official-Implementation:",
         "ok": True,
-        "java_badge": False,
         "code": """public void readFrom(final InputStream in) throws IOException {
     pointer = 0;
     size = 0;
@@ -580,7 +607,8 @@ def main(out_path="example.pdf"):
     c.rect(OUTER_MARGIN, OUTER_MARGIN, W - OUTER_MARGIN * 2, H - OUTER_MARGIN * 2, stroke=1, fill=0)
 
     y = OUTER_MARGIN + INNER_MARGIN
-    for blk, bh in zip(CODE_BLOCKS, block_heights):
+    total_blocks = len(CODE_BLOCKS)
+    for idx, (blk, bh) in enumerate(zip(CODE_BLOCKS, block_heights)):
         box = (x0, y, x1, y + bh)
         draw_code_block(
             c,
@@ -589,7 +617,9 @@ def main(out_path="example.pdf"):
             blk["title"],
             blk["code"],
             ok=blk["ok"],
-            show_java_badge=blk.get("java_badge", False),
+            badge_number=(idx + 1) if idx < 5 else None,
+            show_status_icon=idx != (total_blocks - 1),
+            show_java_badge_bottom_right=idx == (total_blocks - 1),
         )
         y += bh + gap
 

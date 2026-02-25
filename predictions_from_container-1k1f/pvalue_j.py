@@ -57,7 +57,7 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
                 "Method": method,
                 "Shot": shot,
                 "Compare": f"{base_col} vs {col}",
-                "OR": round(float(or_smooth), 3),
+                "OR": round(float(or_smooth), 4),
                 "p_value": round(float(result.pvalue), 5)
             })
             row_indices.append(len(all_results) - 1)
