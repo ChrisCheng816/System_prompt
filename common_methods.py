@@ -1,9 +1,12 @@
 import re
 import gc
 import os
+
+os.environ.setdefault("USE_TF", "0")
+os.environ.setdefault("USE_TORCH", "1")
+
 import torch
 import json
-import scann
 import subprocess
 import numpy as np
 import logging
@@ -14,7 +17,6 @@ from exact_match import em_compute, exact_match_no_punct
 from vllm import LLM, SamplingParams
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModel
-import os
 
 bleu_metric = evaluate.load("bleu")
 em_metric = evaluate.load("exact_match")
@@ -35,6 +37,7 @@ def load_model(model_name):
         model=model_name,
         tensor_parallel_size=4,   # 四张 GPU
         dtype="auto",
+        max_model_len=10240,
         gpu_memory_utilization=0.8      # FP16 / BF16 自动选择
     )
     batch_size = 32
@@ -72,7 +75,7 @@ def load_prompt(length, task_description, src_key, tgt_key, test_data, base_prom
     full_prompt = tokenizer.apply_chat_template(prompts, tokenize=False, add_generation_prompt=True, return_tensors="pt", padding=True, padding_side="left", truncation=True, max_length=max_length)
     return full_prompt, references
 
-def load_prompt_gen(length, task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, max_length=4096):
+def build_generation_messages(length, task_description, src_key, test_data, base_prompt, system_prompt):
     src_data = list(test_data[src_key])
     prompts = []
     counter = 0
@@ -93,6 +96,10 @@ def load_prompt_gen(length, task_description, src_key, test_data, base_prompt, t
 
         prompts.append(messages)
 
+    return prompts
+
+def load_prompt_gen(length, task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, max_length=4096):
+    prompts = build_generation_messages(length, task_description, src_key, test_data, base_prompt, system_prompt)
     full_prompt = tokenizer.apply_chat_template(prompts, tokenize=False, add_generation_prompt=True, return_tensors="pt", padding=True, padding_side="left", truncation=True, max_length=max_length)
     return full_prompt
 
@@ -281,12 +288,12 @@ def compute_metric_tran(prompts, batch_size, tokenizer, model, references, max_l
 
     return predictions
 
-def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_name):
+def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_name, temperature=1.0, num_samples=5):
     predictions = []
     counter = 1
     for i in range(0, len(prompts), batch_size):
         batch_prompts = prompts[i:i+batch_size]
-        batch_predictions = run_batch(batch_prompts, tokenizer, model, max_length, 2048, model_name)
+        batch_predictions = run_batch(batch_prompts, tokenizer, model, max_length, 2048, model_name, temperature=temperature, num_samples=num_samples)
         predictions.extend(batch_predictions)
 
         if (i // 200) == counter:
@@ -302,7 +309,7 @@ def compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_
 
     return predictions
 
-def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens, model_name):
+def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens, model_name, temperature=1.0, num_samples=5):
     predictions = []
     # Tokenize with padding and truncation
     if tokenizer.pad_token_id is None:
@@ -315,8 +322,8 @@ def run_batch(batch_prompts, tokenizer, model, input_max_len, output_max_tokens,
 
     sampling_params = SamplingParams(
         max_tokens=output_max_tokens,
-        n=5,
-        # temperature=0.0,
+        n=num_samples,
+        temperature=temperature,
         stop_token_ids=[tokenizer.eos_token_id] if tokenizer.eos_token_id is not None else None
     )
 
@@ -443,7 +450,7 @@ def save_result_trans(filepath, model_name, direction, style, example_num, count
             "CodeBleu": CodeBleu
         }, f, ensure_ascii=False, indent=2)
 
-def save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt):
+def save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt, temperature=None, num_samples=None):
     with open(f"{filepath}/output.json", "a", encoding="utf-8") as f:
         json.dump({
             "model_name": model_name,
@@ -452,6 +459,8 @@ def save_result_gen(filepath, model_name, lang, style, example_num, counter, ela
             "example_num": example_num,
             "counter": counter[0],
             "elapsed_time": elapsed_time,
+            "temperature": temperature,
+            "num_samples": num_samples,
             "system_prompt": system_prompt
         }, f, ensure_ascii=False, indent=2)
 

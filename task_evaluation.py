@@ -176,7 +176,7 @@ def evaluate_translation(model_name, style, example_num = None, test_num = None,
 # ---------------------
 # Code generation
 # ---------------------
-def evaluate_generation(model_name, style, example_num = None, test_num = None, max_length=256, shuffled = False, system_prompt = None, dataset_generation = None, datatype = None):
+def evaluate_generation(model_name, style, example_num = None, test_num = None, max_length=256, shuffled = False, system_prompt = None, dataset_generation = None, datatype = None, output_root = "generation_results_codereval", temperature = 1.0, num_samples = 5):
     source, prompt_input, output, lang, saving_name = generation_data_selector(datatype)
     base_prompt = ""
     print_info(model_name, style, example_num, system_prompt, language = lang, direction = None)
@@ -226,15 +226,15 @@ def evaluate_generation(model_name, style, example_num = None, test_num = None, 
     prompts = load_prompt_gen(len(test_data[src_key]), task_description, src_key, test_data, base_prompt, tokenizer, system_prompt, max_length)
     prompts = random.sample(prompts, len(prompts)) if shuffled == True else prompts
     start_time = time.time()
-    predictions = compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_name)
+    predictions = compute_metric_gen(prompts, batch_size, tokenizer, model, max_length, model_name, temperature=temperature, num_samples=num_samples)
     elapsed_time = str(timedelta(seconds=int(time.time() - start_time)))
 
     if datatype == 0 or datatype == 1:
         filepath, result = evaluate_metric_gen1(predictions=predictions, path=f"generation_results_mceval/{model_map[model_name]}_{lang}_{style}_{example_num}-shot", saving_name = saving_name, lang=lang)
     else:
-        filepath = evaluate_metric_gen2(predictions=predictions, path=f"generation_results_codereval/predictions/{model_map[model_name]}_{lang}_{style}_{example_num}-shot", test_data = test_data, lang=lang)
+        filepath = evaluate_metric_gen2(predictions=predictions, path=f"{output_root}/predictions/{model_map[model_name]}_{lang}_{style}_{example_num}-shot", test_data = test_data, lang=lang)
 
-    save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt)
+    save_result_gen(filepath, model_name, lang, style, example_num, counter, elapsed_time, system_prompt, temperature=temperature, num_samples=num_samples)
     del train_data, test_data, base_prompt, prompts, predictions, model, tokenizer
     gc.collect()
     torch.cuda.empty_cache()

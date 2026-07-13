@@ -1,0 +1,11 @@
+{
+  "model_name": "deepseek-ai/deepseek-coder-33b-instruct",
+  "language": "java",
+  "style": "retrieval",
+  "example_num": 3,
+  "counter": 0,
+  "elapsed_time": "0:02:21",
+  "temperature": 1.0,
+  "num_samples": 1,
+  "system_prompt": "You are a highly skilled code generator. Your task is to generate an executable method from the natural language description."
+}

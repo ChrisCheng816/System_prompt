@@ -10,12 +10,16 @@ model_map = {
     # DeepSeek
     "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct": "DeepSeek/deepseek-v2-lite",
     "deepseek-ai/deepseek-coder-7b-instruct-v1.5": "DeepSeek/deepseek-7b-v1.5",
+    "deepseek-ai/deepseek-coder-33b-instruct": "DeepSeek/deepseek-33b",
+    "deepseek-ai/deepseek-coder-6.7b-instruct": "DeepSeek/deepseek-6.7b",
 
     # CodeLlama
     "codellama/CodeLlama-7b-Instruct-hf": "CodeLlama/CodeLlama-7b",
     "codellama/CodeLlama-13b-Instruct-hf": "CodeLlama/CodeLlama-13b",
 
     "openai/gpt-oss-20b": "openai/gpt-20b",
+    "gpt-5.1": "gpt5.1/gpt5.1",
+    "gpt-5.1-mini": "gpt5.1mini/gpt5.1mini",
     "unsloth/Meta-Llama-3.1-8B-Instruct": "MetaLlama/Llama-8B",
 }
 # McNemar with ORs
